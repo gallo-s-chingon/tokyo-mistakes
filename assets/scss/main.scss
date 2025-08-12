@@ -914,3 +914,143 @@ a {
     opacity: 1;
   }
 }
+// Homepage Styles
+.home-header {
+  text-align: center;
+  margin-bottom: $spacing-xxl;
+}
+
+.home-title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  margin-bottom: $spacing-md;
+}
+
+.home-description {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+}
+
+.featured-content {
+  margin-bottom: $spacing-xxl;
+  
+  h2 {
+    text-align: center;
+    margin-bottom: $spacing-xl;
+  }
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: $spacing-lg;
+}
+
+.featured-post {
+  background-color: var(--bg-secondary);
+  padding: $spacing-lg;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  
+  h3 {
+    margin: 0 0 $spacing-sm 0;
+    
+    a {
+      color: var(--text-primary);
+    }
+  }
+}
+
+.featured-meta {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: $spacing-sm;
+}
+
+.featured-summary {
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.home-links {
+  text-align: center;
+}
+
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  gap: $spacing-lg;
+  flex-wrap: wrap;
+}
+
+.home-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $spacing-xl;
+  background-color: var(--accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  min-width: 200px;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    background-color: var(--accent-secondary);
+  }
+  
+  i {
+    font-size: 2rem;
+    margin-bottom: $spacing-sm;
+  }
+  
+  span {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+}
+
+// Taxonomy Styles
+.taxonomy-terms {
+  max-width: $content-max-width;
+  margin: 0 auto;
+}
+
+.terms-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: $spacing-md;
+}
+
+.term-item {
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.term-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $spacing-lg;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  
+  &:hover {
+    background-color: var(--bg-tertiary);
+  }
+}
+
+.term-name {
+  font-weight: 500;
+}
+
+.term-count {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  background-color: var(--bg-tertiary);
+  padding: $spacing-xs $spacing-sm;
+  border-radius: 12px;
+}
