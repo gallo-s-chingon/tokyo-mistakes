@@ -18,16 +18,19 @@ I had the honor of appearing on the **Modern Love** podcast with host Anna Marti
 Anna and I talked about:
 
 ### The Grief That Never Fully Goes Away
+
 - How grief changes but doesn't disappear
 - The guilt of feeling ready to love again
 - Why "moving on" is the wrong phrase entirely
 
 ### Relearning How to Date
+
 - The awkwardness of explaining you're a widower on first dates
 - How loss changes what you value in relationships
 - Why I had to learn to date myself first
 
 ### The Unexpected Lessons
+
 - What my late wife taught me about love that I couldn't learn while she was alive
 - How trauma can actually make you a better partner (if you do the work)
 - The difference between replacing someone and honoring their memory while building something new
@@ -40,7 +43,7 @@ Anna asked me about the first time I said "I love you" to someone after my wife 
 
 ## What Surprised Me
 
-The response to this episode was overwhelming. I received hundreds of messages from people who had experienced loss - not just death, but divorce, estrangement, and other forms of relationship endings. 
+The response to this episode was overwhelming. I received hundreds of messages from people who had experienced loss - not just death, but divorce, estrangement, and other forms of relationship endings.
 
 The common thread? We're all just trying to figure out how to love again without betraying what we've lost.
 
@@ -54,15 +57,16 @@ The common thread? We're all just trying to figure out how to love again without
 
 The episode generated more listener mail than any other Modern Love episode that season. Here are some messages that particularly moved me:
 
-**From Sarah in Denver:** *"Your story gave me permission to stop feeling guilty about being ready to date again two years after my divorce. Thank you for showing that healing isn't betrayal."*
+**From Sarah in Denver:** _"Your story gave me permission to stop feeling guilty about being ready to date again two years after my divorce. Thank you for showing that healing isn't betrayal."_
 
-**From Marcus in Atlanta:** *"As a fellow widower, hearing you talk about the guilt of happiness hit me right in the chest. I thought I was the only one who felt like I was cheating on her memory by smiling again."*
+**From Marcus in Atlanta:** _"As a fellow widower, hearing you talk about the guilt of happiness hit me right in the chest. I thought I was the only one who felt like I was cheating on her memory by smiling again."_
 
-**From Dr. Jennifer (therapist):** *"I've been working with grief clients for 15 years, and your conversation perfectly captured something I struggle to put into words with my patients. Thank you for the beautiful articulation of complex loss."*
+**From Dr. Jennifer (therapist):** _"I've been working with grief clients for 15 years, and your conversation perfectly captured something I struggle to put into words with my patients. Thank you for the beautiful articulation of complex loss."_
 
 ## Behind the Scenes
 
 What you don't hear in the interview:
+
 - We had to take three breaks because I got emotional
 - Anna shared her own story of loss off-mic
 - The sound engineer (who lost his father recently) joined our conversation afterward
@@ -71,6 +75,7 @@ What you don't hear in the interview:
 ## The Ripple Effect
 
 This appearance led to:
+
 - Starting The S Chingon Show podcast
 - Speaking at three grief support groups
 - Connecting with other widowed content creators
@@ -81,13 +86,13 @@ This appearance led to:
 {{< figure src="modern-love-logo.jpg" title="Modern Love Podcast" alt="Modern Love podcast logo" >}}
 
 The episode is available wherever you listen to podcasts:
+
 - [Spotify](https://open.spotify.com/episode/example)
-- [Apple Podcasts](https://podcasts.apple.com/example)  
 - [Modern Love Website](https://example.com/modern-love/gallo-chingon)
 
-*Episode Title: "The Heart's Capacity: Love After Loss"*
-*Runtime: 47 minutes*
-*Released: January 28, 2024*
+_Episode Title: "The Heart's Capacity: Love After Loss"_
+_Runtime: 47 minutes_
+_Released: January 28, 2024_
 
 ## What I Learned
 
@@ -107,12 +112,13 @@ If my story resonates with you - whether you've lost through death, divorce, or 
 ## Connect
 
 If this conversation moved you, I'd love to hear from you:
+
 - Email me directly: gallo@schingon.com
 - Follow my journey: [@gallo.s.chingon](https://instagram.com/gallo.s.chingon)
 - Listen to my podcast: [The S Chingon Show](/podcast/)
 
 ---
 
-*Sometimes the most important conversations are the hardest ones to have. Thank you to Anna Martin and the Modern Love team for creating a space where these stories can be shared with dignity and grace.*
+_Sometimes the most important conversations are the hardest ones to have. Thank you to Anna Martin and the Modern Love team for creating a space where these stories can be shared with dignity and grace._
 
 **Listen to the full episode to hear the complete conversation, including the parts that made us both cry.**

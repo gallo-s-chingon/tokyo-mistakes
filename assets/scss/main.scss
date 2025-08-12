@@ -650,13 +650,38 @@ a {
   }
 }
 
-.audio-players {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: $spacing-lg;
+// Spotify player container (single, centered)
+.spotify-player {
+  display: flex;
+  justify-content: center;
+  margin: $spacing-xl 0;
 
-  @media (min-width: $tablet-breakpoint) {
-    grid-template-columns: 1fr 1fr;
+  .embed-container {
+    width: 100%;
+    max-width: 500px; /* Reasonable max width for Spotify player */
+  }
+}
+
+// Episode details styling
+.episode-details {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: $spacing-lg;
+  margin: $spacing-xl 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: $spacing-md;
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+
+    strong {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
   }
 }
 
@@ -932,7 +957,7 @@ a {
 
 .featured-content {
   margin-bottom: $spacing-xxl;
-  
+
   h2 {
     text-align: center;
     margin-bottom: $spacing-xl;
@@ -950,10 +975,10 @@ a {
   padding: $spacing-lg;
   border-radius: 8px;
   border: 1px solid var(--border);
-  
+
   h3 {
     margin: 0 0 $spacing-sm 0;
-    
+
     a {
       color: var(--text-primary);
     }
@@ -993,18 +1018,18 @@ a {
   border-radius: 12px;
   min-width: 200px;
   transition: all 0.2s ease;
-  
+
   &:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
     background-color: var(--accent-secondary);
   }
-  
+
   i {
     font-size: 2rem;
     margin-bottom: $spacing-sm;
   }
-  
+
   span {
     font-size: 1.1rem;
     font-weight: 600;
@@ -1037,7 +1062,7 @@ a {
   color: var(--text-primary);
   text-decoration: none;
   transition: background-color 0.2s ease;
-  
+
   &:hover {
     background-color: var(--bg-tertiary);
   }

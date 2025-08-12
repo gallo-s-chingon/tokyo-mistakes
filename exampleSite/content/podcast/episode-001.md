@@ -10,7 +10,6 @@ guest_name: "Dr. Sarah Chen"
 duration: "52 minutes"
 youtube: "dQw4w9WgXcQ"
 spotify: "4rOoJ6Egrf8K2IrywzwOMk"
-apple_podcast: "https://embed.podcasts.apple.com/us/podcast/episode-1-why-communication-is-sexy/id1234567890?i=1000123456789"
 featured_image: "episodes/episode-001-cover.jpg"
 ---
 
@@ -25,21 +24,25 @@ I'm joined by **Dr. Sarah Chen**, a licensed sex therapist and relationship coun
 ## What We Cover
 
 ### The Communication Crisis
+
 - Why most people think they're communicating when they're actually just talking
 - The difference between hearing and listening (spoiler: it's huge)
 - How poor communication kills more relationships than infidelity
 
 ### The Sexy Science of Good Communication
+
 - Why vulnerability is the ultimate turn-on
 - The neuroscience behind feeling heard and understood
 - How active listening literally changes your brain chemistry
 
 ### Practical Communication Tools
+
 - The "Yes, No, Maybe" technique for exploring boundaries
-- How to bring up difficult conversations without triggering defensiveness  
+- How to bring up difficult conversations without triggering defensiveness
 - The 24-hour rule for processing emotional discussions
 
 ### Red Flags and Green Flags
+
 - Warning signs that someone isn't ready for mature communication
 - What healthy conflict resolution actually looks like
 - How to tell if you're being heard vs. being managed
@@ -63,7 +66,7 @@ Dr. Chen and I spent a good chunk of time talking about how this applies in alte
 ## Resources Mentioned
 
 - **Book**: "Come As You Are" by Emily Nagoski
-- **Book**: "Nonviolent Communication" by Marshall Rosenberg  
+- **Book**: "Nonviolent Communication" by Marshall Rosenberg
 - **Website**: [Dr. Chen's Communication Worksheets](https://example.com)
 - **App**: Lasting - Relationship counseling app
 
@@ -97,8 +100,8 @@ Episode 002 drops next Wednesday, where we're diving into "The Myth of Sexual Co
 
 **Thanks for listening to the very first episode! If you enjoyed it, please subscribe, leave a review, and share it with someone who needs to hear this message. Until next time, keep it real and keep it spicy!**
 
-*- Gallo*
+_- Gallo_
 
 ## Episode Transcript
 
-*Full transcript available for accessibility. [Read the full transcript here](/transcripts/episode-001/).*
+_Full transcript available for accessibility. [Read the full transcript here](/transcripts/episode-001/)._
