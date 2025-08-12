@@ -1,11 +1,10 @@
 ---
 title: "Why Your Mechanical Keyboard Obsession is Actually Healthy"
-date: 2024-01-15T10:30:00-06:00
+date: 2025-01-18T10:30:00-06:00
 draft: false
 author: "Gallo Chingon"
 tags: ["technology", "mechanical-keyboards", "hobbies", "mental-health"]
 description: "A deep dive into why spending $400 on a keyboard isn't crazy - it's therapeutic."
-featured_image: "keyboards/custom-build.jpg"
 ---
 
 Let me start with a confession: I've spent more money on mechanical keyboards than most people spend on their cars. And you know what? I regret absolutely nothing.
@@ -14,7 +13,7 @@ Let me start with a confession: I've spent more money on mechanical keyboards th
 
 It started innocently enough. I was tired of the mushy membrane keyboard that came with my setup. "I'll just get something basic," I told myself. Famous last words.
 
-Three custom builds, two dozen switches, and one very understanding bank account later, I'm here to tell you why this "expensive hobby" is actually one of the best investments in your mental health.
+Three dozen keebs (keyboards), five dozen switches, and one very understanding bank account later, I'm here to tell you why this "expensive hobby" is actually one of the best investments in your mental health.
 
 ## The Therapy of Building
 
@@ -25,25 +24,26 @@ There's something deeply satisfying about:
 - **Building**: The meditative process of lubing switches and assembling your creation
 - **Typing**: That first keystroke on your custom creation
 
-{{< figure src="keyboard-build-process.jpg" title="The build process is half the fun" alt="Custom mechanical keyboard mid-assembly" >}}
-
 ## Why It's Not Just About the Keyboard
 
 ### 1. Mindfulness in Action
-When you're lubing 87 switches, you're forced to be present. No scrolling, no multitasking - just you, the switch, and the perfect amount of Krytox 205g0.
+
+When you're lubing 40 plus switches, you're forced to be present. No scrolling, no multitasking - just you, the switch, and the perfect amount of Krytox 205g0.
 
 ### 2. Problem-Solving Skills
+
 Plate flex, case foam, switch films - every build presents unique challenges that require creative solutions.
 
 ### 3. Community Connection
-The mechanical keyboard community is surprisingly wholesome. We're all just nerds who appreciate good engineering and satisfying clicks.
+
+The mechanical keyboard community is surprisingly wholesome. We're all just nerds who appreciate good engineering and satisfying (or sometimes silent) clicks.
 
 ## The Real Cost Analysis
 
 Let's be honest about the money:
 
-- **Entry Level**: $150-300 for a solid first build
-- **Enthusiast**: $300-600 for premium materials and switches
+- **Entry Level**: $150-300 for a decent first build
+- **Enthusiast**: $300-600 for solid materials and switches
 - **Endgame**: $600+ for artisan keycaps and limited edition cases
 
 But consider this: How much do you spend on things that provide temporary happiness? That daily coffee runs $1,500/year. This hobby gives you daily satisfaction every time you sit at your desk.
@@ -51,9 +51,11 @@ But consider this: How much do you spend on things that provide temporary happin
 ## My Current Setup
 
 Currently typing this on my latest build:
-- **Case**: Tofu65 in e-white
-- **Switches**: Gateron Oil Kings (lubed with 205g0)
-- **Keycaps**: GMK Olivia++ 
+
+- **Case**: custom CNC milled anodized purple aluminum
+- **Keyboard**: Corne MX V3
+- **Switches**: Gazzew's Bobagum Silent Linear switches (lubed with 205g0)
+- **Keycaps**: GMK Dots
 - **Total Cost**: $487
 - **Daily Joy**: Priceless
 
@@ -67,15 +69,15 @@ That lesson applies to everything - relationships, career, life choices. Sometim
 
 If you're thinking about getting into mechanical keyboards:
 
-1. **Start modest** - Don't go straight to endgame
+1. **Start modest** - Don't go straight to endgame (there's never and endgame)
 2. **Join the community** - r/mechanicalkeyboards is surprisingly helpful
 3. **Budget accordingly** - This hobby has no ceiling
 4. **Enjoy the process** - The build is half the experience
 
 And to those who think we're crazy? You're probably right. But we're happily crazy, typing away on our $400 happiness machines.
 
-*Currently typing this at 95 WPM with zero typos because these Oil Kings are just that smooth.*
+_Currently typing this at 75 WPM with zero typos because these Bobagums are just that smooth._
 
 ---
 
-**What's your most expensive hobby that others don't understand? Drop a comment and let's normalize our "weird" passions.**
+**What's your most expensive hobby that others don't understand? Drop a comment and let's normalize our "not normal" passions.**
