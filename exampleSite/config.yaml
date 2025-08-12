@@ -1,7 +1,7 @@
 # Tokyo-Mistakes Theme Configuration
 baseURL: "https://schingon.com"
 languageCode: "en-us"
-title: "The S Chingon Show"
+title: "Your Site Title"
 theme: "tokyo-mistakes"
 
 # Build settings
@@ -38,15 +38,11 @@ params:
   # Social sharing
   socialSharing: true
   shareButtons:
-    [
-      "facebook",
-      "reddit",
-      "linkedin",
-      "twitter",
-      "instagram",
-      "rumble",
-      "truth",
-    ]
+  size: "medium" # small, medium, large
+  icon: "normal" # normal, solid, circle, solidcircle
+  buttonmargin: "0.3em"
+  networks: ["facebook", "reddit", "linkedin", "twitter"] # Remove or add as needed
+  # Available: facebook, twitter, tumblr, email, pinterest, linkedin, reddit, xing, whatsapp, hackernews, vk, telegram
 
   # Comments (Remark42)
   comments:
