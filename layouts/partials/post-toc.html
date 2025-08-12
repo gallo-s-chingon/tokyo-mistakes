@@ -1,0 +1,10 @@
+{{ if and .Site.Params.showToc .TableOfContents }}
+  {{ $tocHTML := .TableOfContents }}
+  {{ $tocItemCount := len (findRE "<li>" $tocHTML) }}
+  {{ if le $tocItemCount .Site.Params.tocMaxItems }}
+    <aside class="toc">
+      <h2 class="toc-title">Table of Contents</h2>
+      {{ .TableOfContents }}
+    </aside>
+  {{ end }}
+{{ end }}

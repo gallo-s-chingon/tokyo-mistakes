@@ -1,0 +1,71 @@
+{{ define "main" }}
+<article class="post post--podcast">
+  <div class="container">
+    <div class="post-content">
+      {{ partial "post-header.html" . }}
+      
+      <!-- YouTube Embed -->
+      {{ if .Params.youtube }}
+      <div class="embed-container embed-youtube">
+        <iframe src="https://www.youtube.com/embed/{{ .Params.youtube }}" 
+                title="{{ .Title }} - YouTube"
+                frameborder="0" 
+                allowfullscreen></iframe>
+      </div>
+      {{ end }}
+      
+      <!-- Audio Players (side by side on desktop, stacked on mobile) -->
+      {{ if or .Params.spotify .Params.apple_podcast }}
+      <div class="audio-players">
+        {{ if .Params.spotify }}
+        <div class="embed-container embed-spotify">
+          <iframe src="https://open.spotify.com/embed/episode/{{ .Params.spotify }}" 
+                  title="{{ .Title }} - Spotify"
+                  frameborder="0"></iframe>
+        </div>
+        {{ end }}
+        
+        {{ if .Params.apple_podcast }}
+        <div class="embed-container embed-apple">
+          <iframe src="{{ .Params.apple_podcast }}" 
+                  title="{{ .Title }} - Apple Podcasts"
+                  frameborder="0"></iframe>
+        </div>
+        {{ end }}
+      </div>
+      {{ end }}
+      
+      <!-- Episode Details -->
+      {{ if or .Params.episode_number .Params.guest_name .Params.duration }}
+        <div class="episode-details">
+          {{ if .Params.episode_number }}
+            <div class="episode-number">
+              <strong>Episode:</strong> #{{ .Params.episode_number }}
+            </div>
+          {{ end }}
+          
+          {{ if .Params.guest_name }}
+            <div class="episode-guest">
+              <strong>Guest:</strong> {{ .Params.guest_name }}
+            </div>
+          {{ end }}
+          
+          {{ if .Params.duration }}
+            <div class="episode-duration">
+              <strong>Duration:</strong> {{ .Params.duration }}
+            </div>
+          {{ end }}
+        </div>
+      {{ end }}
+      
+      <div class="post-body">
+        {{ .Content }}
+      </div>
+      
+      {{ partial "social-share.html" . }}
+      {{ partial "comments.html" . }}
+      {{ partial "related-posts.html" . }}
+    </div>
+  </div>
+</article>
+{{ end }}

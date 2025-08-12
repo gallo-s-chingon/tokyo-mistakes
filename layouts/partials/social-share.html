@@ -1,0 +1,75 @@
+{{ if .Site.Params.socialSharing }}
+<div class="social-share">
+  <h3 class="social-share-title">Share this post</h3>
+  <div class="social-share-buttons">
+    {{ $url := .Permalink }}
+    {{ $title := .Title }}
+    {{ $description := .Description | default .Summary }}
+    
+    {{ if in .Site.Params.shareButtons "facebook" }}
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ $url | urlquery }}" 
+       class="share-btn share-facebook" 
+       target="_blank" 
+       rel="noopener"
+       aria-label="Share on Facebook">
+      <i class="fab fa-facebook-f"></i>
+      <span>Facebook</span>
+    </a>
+    {{ end }}
+    
+    {{ if in .Site.Params.shareButtons "reddit" }}
+    <a href="https://reddit.com/submit?url={{ $url | urlquery }}&title={{ $title | urlquery }}" 
+       class="share-btn share-reddit" 
+       target="_blank" 
+       rel="noopener"
+       aria-label="Share on Reddit">
+      <i class="fab fa-reddit-alien"></i>
+      <span>Reddit</span>
+    </a>
+    {{ end }}
+    
+    {{ if in .Site.Params.shareButtons "linkedin" }}
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ $url | urlquery }}" 
+       class="share-btn share-linkedin" 
+       target="_blank" 
+       rel="noopener"
+       aria-label="Share on LinkedIn">
+      <i class="fab fa-linkedin-in"></i>
+      <span>LinkedIn</span>
+    </a>
+    {{ end }}
+    
+    {{ if in .Site.Params.shareButtons "twitter" }}
+    <a href="https://twitter.com/intent/tweet?url={{ $url | urlquery }}&text={{ $title | urlquery }}" 
+       class="share-btn share-twitter" 
+       target="_blank" 
+       rel="noopener"
+       aria-label="Share on Twitter">
+      <i class="fab fa-twitter"></i>
+      <span>Twitter</span>
+    </a>
+    {{ end }}
+    
+    {{ if in .Site.Params.shareButtons "instagram" }}
+    <button class="share-btn share-instagram" onclick="copyToClipboard('{{ $url }}')" aria-label="Copy link for Instagram">
+      <i class="fab fa-instagram"></i>
+      <span>Instagram</span>
+    </button>
+    {{ end }}
+    
+    {{ if in .Site.Params.shareButtons "rumble" }}
+    <button class="share-btn share-rumble" onclick="copyToClipboard('{{ $url }}')" aria-label="Copy link for Rumble">
+      <i class="fas fa-video"></i>
+      <span>Rumble</span>
+    </button>
+    {{ end }}
+    
+    {{ if in .Site.Params.shareButtons "truth" }}
+    <button class="share-btn share-truth" onclick="copyToClipboard('{{ $url }}')" aria-label="Copy link for Truth Social">
+      <i class="fas fa-flag-usa"></i>
+      <span>Truth Social</span>
+    </button>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

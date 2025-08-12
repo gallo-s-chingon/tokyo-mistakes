@@ -1,0 +1,59 @@
+<header class="site-header">
+  <div class="container">
+    <div class="header-content">
+      <!-- Logo/Site Title -->
+      <div class="site-branding">
+        <a href="{{ .Site.BaseURL }}" class="site-title">
+          {{ .Site.Title }}
+        </a>
+      </div>
+      
+      <!-- Desktop Navigation (excludes blog per your request) -->
+      <nav class="site-nav desktop-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          {{ range .Site.Menus.main }}
+            <li class="nav-item">
+              <a href="{{ .URL }}" class="nav-link{{ if $.IsMenuCurrent "main" . }} active{{ end }}">
+                {{ .Name }}
+              </a>
+            </li>
+          {{ end }}
+        </ul>
+      </nav>
+      
+      <!-- Mobile Navigation Toggle & Search & Theme -->
+      <div class="header-controls">
+        {{ if .Site.Params.search.enabled }}
+          <button id="search-toggle" class="btn-icon" aria-label="Search">
+            <i class="fas fa-search"></i>
+          </button>
+        {{ end }}
+        
+        <button id="theme-toggle" class="btn-icon" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        
+        <button id="mobile-nav-toggle" class="btn-icon mobile-only" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Navigation -->
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+      <ul class="mobile-nav-list">
+        {{ range .Site.Menus.main }}
+          <li class="mobile-nav-item">
+            <a href="{{ .URL }}" class="mobile-nav-link{{ if $.IsMenuCurrent "main" . }} active{{ end }}">
+              {{ .Name }}
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
+  
+  {{ if .Site.Params.search.enabled }}
+    {{ partial "search-overlay.html" . }}
+  {{ end }}
+</header>

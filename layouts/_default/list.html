@@ -1,0 +1,83 @@
+{{ define "main" }}
+<div class="archive">
+  <div class="container">
+    <header class="archive-header">
+      <h1 class="archive-title">
+        {{ if .IsHome }}
+          {{ .Site.Title }}
+        {{ else if eq .Section "blog" }}
+          Random Rants
+        {{ else if eq .Section "podcast" }}
+          The S Chingon Show
+        {{ else if eq .Section "featured" }}
+          Guest Appearances
+        {{ else if .Data.Singular }}
+          {{ .Data.Singular | title }}: {{ .Title }}
+        {{ else }}
+          {{ .Title }}
+        {{ end }}
+      </h1>
+      
+      {{ if .Description }}
+        <p class="archive-description">{{ .Description }}</p>
+      {{ else if eq .Section "blog" }}
+        <p class="archive-description">Random rants that no one else can own</p>
+      {{ else if eq .Section "podcast" }}
+        <p class="archive-description">Spice up your love life with our sizzling podcast! Expert advice on dating, relationships, intimacy, and sex, all with a playful kink twist.</p>
+      {{ else if eq .Section "featured" }}
+        <p class="archive-description">Interviews and guest appearances across podcasts and media</p>
+      {{ end }}
+      
+      {{ if and .Data.Singular (ne .Data.Singular "tag") }}
+        <p class="archive-count">{{ len .Pages }} {{ if eq (len .Pages) 1 }}post{{ else }}posts{{ end }}</p>
+      {{ end }}
+    </header>
+
+    {{ if .Pages }}
+      <div class="post-list">
+        {{ range .Pages }}
+          <article class="post-preview">
+            <header class="post-preview-header">
+              <h2 class="post-preview-title">
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+              </h2>
+              
+              <div class="post-preview-meta">
+                <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+                  {{ .Date.Format "January 2, 2006" }}
+                </time>
+                
+                {{ if .ReadingTime }}
+                  <span class="reading-time">{{ .ReadingTime }} min read</span>
+                {{ end }}
+                
+                {{ if .Section }}
+                  <span class="post-section">{{ .Section | title }}</span>
+                {{ end }}
+              </div>
+            </header>
+            
+            {{ if .Summary }}
+              <div class="post-preview-summary">
+                {{ .Summary }}
+              </div>
+            {{ end }}
+            
+            {{ if .Params.tags }}
+              <div class="post-preview-tags">
+                {{ range first 3 .Params.tags }}
+                  <a href="{{ "/tags/" | relURL }}{{ . | urlize }}" class="tag">#{{ . }}</a>
+                {{ end }}
+              </div>
+            {{ end }}
+          </article>
+        {{ end }}
+      </div>
+    {{ else }}
+      <div class="no-posts">
+        <p>No posts found.</p>
+      </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

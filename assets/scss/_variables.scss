@@ -1,0 +1,60 @@
+// Tokyo Night & Day Color Schemes
+:root {
+  // Tokyo Day (Light Theme)
+  --bg-primary: #d5d6db;
+  --bg-secondary: #e9e9ed;
+  --bg-tertiary: #c4c8da;
+  --text-primary: #565a6e;
+  --text-secondary: #6172b0;
+  --text-muted: #8990b3;
+  --accent: #8c6c3e;
+  --accent-secondary: #b15c00;
+  --link: #34548a;
+  --link-hover: #166775;
+  --border: #e9e9ed;
+  --code-bg: #e1e2e7;
+  --success: #33635c;
+  --warning: #8c6c3e;
+  --error: #8c4351;
+}
+
+[data-theme="dark"] {
+  // Tokyo Night (Dark Theme)  
+  --bg-primary: #1a1b26;
+  --bg-secondary: #24283b;
+  --bg-tertiary: #32344a;
+  --text-primary: #c0caf5;
+  --text-secondary: #9aa5ce;
+  --text-muted: #565f89;
+  --accent: #7aa2f7;
+  --accent-secondary: #bb9af7;
+  --link: #73daca;
+  --link-hover: #2ac3de;
+  --border: #32344a;
+  --code-bg: #24283b;
+  --success: #9ece6a;
+  --warning: #e0af68;
+  --error: #f7768e;
+}
+
+// Typography
+$font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-mono: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, monospace;
+
+// Breakpoints
+$mobile-breakpoint: 768px;
+$tablet-breakpoint: 1024px;
+$desktop-breakpoint: 1200px;
+
+// Spacing
+$spacing-xs: 0.25rem;
+$spacing-sm: 0.5rem; 
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+$spacing-xxl: 3rem;
+
+// Layout
+$container-max-width: 1200px;
+$content-max-width: 800px;
+$wide-content-max-width: 1000px;

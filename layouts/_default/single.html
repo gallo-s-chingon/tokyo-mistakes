@@ -1,0 +1,18 @@
+{{ define "main" }}
+<article class="post">
+  <div class="container">
+    <div class="post-content">
+      {{ partial "post-header.html" . }}
+      {{ partial "post-toc.html" . }}
+      
+      <div class="post-body">
+        {{ .Content }}
+      </div>
+      
+      {{ partial "social-share.html" . }}
+      {{ partial "comments.html" . }}
+      {{ partial "related-posts.html" . }}
+    </div>
+  </div>
+</article>
+{{ end }}

@@ -1,0 +1,46 @@
+{{ define "main" }}
+<article class="post post--featured">
+  <div class="container">
+    <div class="post-content">
+      {{ partial "post-header.html" . }}
+      
+      <!-- Featured appearance details -->
+      {{ if or .Params.podcast_name .Params.host_name .Params.episode_url }}
+        <div class="featured-details">
+          {{ if .Params.podcast_name }}
+            <div class="featured-podcast">
+              <strong>Podcast:</strong> {{ .Params.podcast_name }}
+            </div>
+          {{ end }}
+          
+          {{ if .Params.host_name }}
+            <div class="featured-host">
+              <strong>Host:</strong> {{ .Params.host_name }}
+            </div>
+          {{ end }}
+          
+          {{ if .Params.episode_url }}
+            <div class="featured-link">
+              <a href="{{ .Params.episode_url }}" 
+                 class="btn btn-primary" 
+                 target="_blank" 
+                 rel="noopener">
+                <i class="fas fa-external-link-alt"></i>
+                Listen to Episode
+              </a>
+            </div>
+          {{ end }}
+        </div>
+      {{ end }}
+      
+      <div class="post-body">
+        {{ .Content }}
+      </div>
+      
+      {{ partial "social-share.html" . }}
+      {{ partial "comments.html" . }}
+      {{ partial "related-posts.html" . }}
+    </div>
+  </div>
+</article>
+{{ end }}

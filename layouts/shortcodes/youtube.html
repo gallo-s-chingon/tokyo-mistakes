@@ -1,0 +1,24 @@
+{{ $id := .Get "id" | default (.Get 0) }}
+{{ $title := .Get "title" | default "YouTube Video" }}
+{{ $start := .Get "start" }}
+{{ $end := .Get "end" }}
+
+{{ $url := printf "https://www.youtube.com/embed/%s" $id }}
+{{ if $start }}
+  {{ $url = printf "%s?start=%s" $url $start }}
+{{ end }}
+{{ if and $start $end }}
+  {{ $url = printf "%s&end=%s" $url $end }}
+{{ else if $end }}
+  {{ $url = printf "%s?end=%s" $url $end }}
+{{ end }}
+
+<div class="embed-container embed-youtube">
+  <iframe 
+    src="{{ $url }}" 
+    title="{{ $title }}"
+    frameborder="0" 
+    allowfullscreen
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+  </iframe>
+</div>

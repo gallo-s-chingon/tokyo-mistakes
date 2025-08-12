@@ -1,0 +1,77 @@
+# Tokyo-Mistakes Theme Configuration
+baseURL: "https://schingon.com"
+languageCode: "en-us"
+title: "The S Chingon Show"
+theme: "tokyo-mistakes"
+
+# Build settings
+buildDrafts: false
+buildFuture: false
+canonifyURLs: true
+
+# Markup settings
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: "tokyo-night"
+    lineNos: true
+  tableOfContents:
+    startLevel: 1
+    endLevel: 2
+    ordered: false
+
+# Params for theme
+params:
+  # Site settings
+  author: "Your Name"
+  description: "Your site description"
+  imageBase: "/images/"
+
+  # Theme settings
+  colorScheme: "auto" # auto, light, dark
+  showReadingTime: true
+  showToc: true
+  tocMaxItems: 12
+
+  # Social sharing
+  socialSharing: true
+  shareButtons:
+    [
+      "facebook",
+      "reddit",
+      "linkedin",
+      "twitter",
+      "instagram",
+      "rumble",
+      "truth",
+    ]
+
+  # Comments (Remark42)
+  comments:
+    enabled: true
+    remark42:
+      host: "https://remark42.domain.com"
+      site_id: "yoursiteid"
+
+  # Search
+  search:
+    enabled: true
+
+  # Navigation
+  navigation:
+    mobile: "hamburger"
+
+# Menu configuration
+menu:
+  main:
+    - name: "Home"
+      url: "/"
+      weight: 10
+    - name: "About"
+      url: "/about"
+      weight: 20
+    - name: "Blog"
+      url: "/blog"
+      weight: 30

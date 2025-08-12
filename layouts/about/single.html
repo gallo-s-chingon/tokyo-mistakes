@@ -1,0 +1,91 @@
+{{ define "main" }}
+<div class="about-page">
+  <div class="container">
+    <article class="about-content">
+      <header class="about-header">
+        <h1 class="about-title">{{ .Title }}</h1>
+      </header>
+      
+      <div class="about-body">
+        {{ .Content }}
+      </div>
+      
+      <div class="social-links">
+        <h3>Connect With Me</h3>
+        <div class="social-buttons">
+          <a href="https://github.com/gallo-s-chingon/" 
+             class="social-btn social-github" 
+             target="_blank" 
+             rel="noopener"
+             aria-label="GitHub">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+          
+          <a href="https://www.instagram.com/gallo.s.chingon/" 
+             class="social-btn social-instagram" 
+             target="_blank" 
+             rel="noopener"
+             aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+            <span>Instagram</span>
+          </a>
+          
+          <a href="https://www.tiktok.com/@gallo.s.chingon" 
+             class="social-btn social-tiktok" 
+             target="_blank" 
+             rel="noopener"
+             aria-label="TikTok">
+            <i class="fab fa-tiktok"></i>
+            <span>TikTok</span>
+          </a>
+          
+          <a href="https://www.reddit.com/user/gallo-s-chingon" 
+             class="social-btn social-reddit" 
+             target="_blank" 
+             rel="noopener"
+             aria-label="Reddit">
+            <i class="fab fa-reddit"></i>
+            <span>Reddit</span>
+          </a>
+          
+          <a href="https://www.youtube.com/@gallo.s.chingon" 
+             class="social-btn social-youtube" 
+             target="_blank" 
+             rel="noopener"
+             aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+            <span>YouTube</span>
+          </a>
+        </div>
+      </div>
+      
+      <div class="linktree-section">
+        <h3>Quick Links</h3>
+        <div class="linktree-buttons">
+          <a href="/podcast/" class="linktree-btn">
+            <i class="fas fa-podcast"></i>
+            <span>Listen to The Podcast</span>
+            <small>The S Chingon Show - Relationship advice with a kink twist</small>
+          </a>
+          
+          <a href="https://www.youtube.com/@gallo.s.chingon" 
+             class="linktree-btn" 
+             target="_blank" 
+             rel="noopener">
+            <i class="fab fa-youtube"></i>
+            <span>Subscribe to YouTube</span>
+            <small>Watch episodes and behind-the-scenes content</small>
+          </a>
+          
+          <a href="mailto:gallo@schingon.com" class="linktree-btn">
+            <i class="fas fa-envelope"></i>
+            <span>Contact Me</span>
+            <small>For business inquiries and collaborations</small>
+          </a>
+        </div>
+      </div>
+    </article>
+  </div>
+</div>
+{{ end }}

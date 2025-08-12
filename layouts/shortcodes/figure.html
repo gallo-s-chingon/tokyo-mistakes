@@ -1,0 +1,19 @@
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default (.Get "title") | default $src -}}
+{{- $title := .Get "title" -}}
+{{- $caption := .Get "caption" | default $title -}}
+{{- $class := .Get "class" -}}
+{{- $width := .Get "width" -}}
+{{- $height := .Get "height" -}}
+{{- $loading := .Get "loading" | default "lazy" -}}
+
+<figure{{ with $class }} class="{{ . }}"{{ end }}>
+  <img 
+    src="{{ $.Site.Params.imageBase }}{{ $src }}" 
+    alt="{{ $alt }}"
+    {{ with $width }}width="{{ . }}"{{ end }}
+    {{ with $height }}height="{{ . }}"{{ end }}
+    loading="{{ $loading }}"
+  />
+  {{ with $caption }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
+</figure>
