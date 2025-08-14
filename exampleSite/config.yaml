@@ -1,7 +1,8 @@
+# saved as config.yaml in tokyo-mistakes/exampleSite
 # Tokyo-Mistakes Theme Configuration
 baseURL: "https://schingon.com"
 languageCode: "en-us"
-title: "Your Site Title"
+title: "The S Chingon Experience"
 theme: "tokyo-mistakes"
 
 # Build settings
@@ -25,8 +26,8 @@ markup:
 # Params for theme
 params:
   # Site settings
-  author: "Your Name"
-  description: "Your site description"
+  author: "Gallo Chingon"
+  description: "From Army veteran to kink educator - one Texan's journey through life, love, and everything in between."
   imageBase: "/images/"
 
   # Theme settings
@@ -35,39 +36,58 @@ params:
   showToc: true
   tocMaxItems: 12
 
-  # Social sharing
+  # Social sharing (FIXED STRUCTURE)
   socialSharing: true
   shareButtons:
-  size: "medium" # small, medium, large
-  icon: "normal" # normal, solid, circle, solidcircle
-  buttonmargin: "0.3em"
-  networks: ["facebook", "reddit", "linkedin", "twitter"] # Remove or add as needed
-  # Available: facebook, twitter, tumblr, email, pinterest, linkedin, reddit, xing, whatsapp, hackernews, vk, telegram
-
+    size: "medium"
+    icon: "normal"
+    buttonmargin: "0.3em"
+  sharePresets:
+    text:
+      - facebook
+      - twitter
+      - reddit
+      - linkedin
+      - email
+      - telegram
+    media:
+      - facebook
+      - twitter
+      - pinterest
+      - whatsapp
+      - telegram
+      - instagram
   # Comments (Remark42)
   comments:
     enabled: true
-    remark42:
-      host: "https://remark42.domain.com"
-      site_id: "yoursiteid"
+    giscus:
+      repo: "githubUsername/repoName"
+      repoId: "R_kgDOLXYZ12" # Replace with your repo ID
+      category: "Announcements"
+      categoryId: "DIC_kwDOLXYZ12abc" # Replace with your category ID
+      mapping: "pathname"
+      reactionsEnabled: "1"
+      emitMetadata: "0"
+      inputPosition: "bottom"
+      lang: "en"
+      loading: "lazy"
 
   # Search
   search:
     enabled: true
 
-  # Navigation
-  navigation:
-    mobile: "hamburger"
-
-# Menu configuration
+# Menu configuration (removed blog per your request)
 menu:
   main:
     - name: "Home"
       url: "/"
       weight: 10
+    - name: "Podcast"
+      url: "/podcast"
+      weight: 20
+    - name: "Featured"
+      url: "/featured"
+      weight: 30
     - name: "About"
       url: "/about"
-      weight: 20
-    - name: "Blog"
-      url: "/blog"
-      weight: 30
+      weight: 40

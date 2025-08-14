@@ -11,6 +11,8 @@ episode_url: "https://example.com/modern-love/gallo-chingon"
 featured_image: "appearances/modern-love-cover.jpg"
 ---
 
+<!-- saved as modern-love-podcast.md in tokyo-mistakes/exampleSite/content/featured -->
+
 I had the honor of appearing on the **Modern Love** podcast with host Anna Martin, where we dove deep into one of the most challenging topics I've ever discussed publicly: finding love again after losing your spouse.
 
 ## The Conversation
@@ -115,7 +117,7 @@ If this conversation moved you, I'd love to hear from you:
 
 - Email me directly: gallo@schingon.com
 - Follow my journey: [@gallo.s.chingon](https://instagram.com/gallo.s.chingon)
-- Listen to my podcast: [The S Chingon Show](/podcast/)
+- Listen to my podcast: [The S Chingon Show](https://show.schingon.com)
 
 ---
 

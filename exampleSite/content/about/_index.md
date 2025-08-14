@@ -1,7 +1,9 @@
 ---
 title: "The S Chingon Show"
-description: "Spice up your love life with our sizzling podcast! Expert advice on dating, relationships, intimacy, and sex, all with a playful kink twist."
+description: "Spice up your love life with our sizzling podcast! Expert advice on dating, relationships, intimacy, and sex, all with a kink twist."
 ---
+
+<!-- saved as _index.md in tokyo-mistakes/exampleSite/about -->
 
 # The S Chingon Show
 
@@ -22,6 +24,7 @@ Tune in for bold, relatable content that keeps it real and fun!
 ## Listen Everywhere
 
 Find us on your favorite podcast platform:
+
 - 📺 [YouTube](https://www.youtube.com/@gallo.s.chingon)
 - 🎵 Spotify
 - 🍎 Apple Podcasts
@@ -29,4 +32,4 @@ Find us on your favorite podcast platform:
 
 ---
 
-*New episodes drop weekly. Subscribe to never miss the conversation!*
+_New episodes drop weekly. Subscribe to never miss the conversation!_

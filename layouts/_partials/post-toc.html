@@ -1,0 +1,10 @@
+{{/* saved as post-toc.html in tokyo-mistakes/layouts/partials */}}
+{{ if and .Site.Params.showToc .TableOfContents }}
+  {{ $tocContent := .TableOfContents }}
+  {{ if not (eq $tocContent "<nav id=\"TableOfContents\"></nav>") }}
+  <aside class="toc">
+    <h2 class="toc-title">Table of Contents</h2>
+    {{ .TableOfContents }}
+  </aside>
+  {{ end }}
+{{ end }}

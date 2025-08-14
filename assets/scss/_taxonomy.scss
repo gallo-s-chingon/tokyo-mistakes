@@ -1,0 +1,270 @@
+// Archives Page
+// saved as _taxonomy.scss in tokyo-mistakes/assets/scss
+.archives-page {
+  max-width: $content-max-width;
+  margin: 0 auto;
+}
+
+.archives-header {
+  text-align: center;
+  margin-bottom: $spacing-xl;
+}
+
+.archive-year {
+  margin-bottom: $spacing-xl;
+}
+
+.year-heading {
+  font-size: 2rem;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: $spacing-sm;
+  margin-bottom: $spacing-lg;
+}
+
+.archive-month {
+  margin-bottom: $spacing-lg;
+}
+
+.month-heading {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  margin-bottom: $spacing-md;
+}
+
+.archive-posts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.archive-post {
+  display: flex;
+  align-items: center;
+  padding: $spacing-sm 0;
+  border-bottom: 1px solid var(--border);
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .post-date {
+    flex: 0 0 100px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+
+  .post-title {
+    flex: 1;
+    color: var(--text-primary);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+  }
+
+  .post-type {
+    flex: 0 0 100px;
+    text-align: right;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    background-color: var(--bg-tertiary);
+    padding: 2px 8px;
+    border-radius: 4px;
+  }
+}
+
+// Tag Cloud
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-xl;
+  justify-content: center;
+}
+
+.tag-cloud-item {
+  display: inline-block;
+  padding: $spacing-xs $spacing-sm;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: var(--accent);
+    color: white;
+    transform: translateY(-2px);
+  }
+
+  .tag-count {
+    font-size: 0.8em;
+    opacity: 0.8;
+    margin-left: 4px;
+  }
+}
+
+// Taxonomy pages
+.taxonomy-page {
+  padding-bottom: $spacing-xl;
+}
+
+.taxonomy-header {
+  text-align: center;
+  margin-bottom: $spacing-xl;
+}
+
+.taxonomy-title {
+  font-size: 2.5rem;
+  margin-bottom: $spacing-sm;
+}
+
+.taxonomy-description {
+  color: var(--text-secondary);
+  margin-bottom: $spacing-md;
+}
+
+.taxonomy-meta {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+// Reading Progress Bar
+.reading-progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  z-index: 1000;
+  background-color: transparent;
+}
+
+.reading-progress-bar {
+  height: 100%;
+  background-color: var(--accent);
+  width: 0%;
+  transition: width 0.1s ease;
+}
+
+// Breadcrumbs
+.breadcrumbs {
+  margin-bottom: $spacing-lg;
+  font-size: 0.9rem;
+}
+
+.breadcrumb-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+
+  a {
+    color: var(--text-secondary);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+  }
+
+  &:not(:last-child)::after {
+    content: "/";
+    margin: 0 $spacing-sm;
+    color: var(--text-muted);
+  }
+
+  &.active {
+    color: var(--text-muted);
+  }
+}
+
+// Pinned Posts
+.pinned-heading {
+  text-align: center;
+  margin-bottom: $spacing-lg;
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+.post-card--pinned {
+  border: 2px solid var(--accent);
+
+  .post-card-pin {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--accent);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+
+    i {
+      font-size: 0.9rem;
+      transform: rotate(45deg);
+    }
+  }
+}
+// Pagination styling
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: $spacing-xl 0;
+  list-style: none;
+  padding: 0;
+
+  li {
+    margin: 0 2px;
+    display: inline-block;
+
+    &::before {
+      display: none; // Remove bullet points
+    }
+
+    a,
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 40px;
+      height: 40px;
+      padding: 0 10px;
+      border-radius: 4px;
+      background-color: var(--bg-secondary);
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background-color: var(--bg-tertiary);
+        color: var(--text-primary);
+      }
+    }
+
+    &.active a {
+      background-color: var(--accent);
+      color: white;
+    }
+
+    &.disabled span {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+}

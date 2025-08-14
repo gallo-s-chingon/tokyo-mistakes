@@ -1,0 +1,43 @@
+{{/* saved as post-header.html in tokyo-mistakes/layouts/partials */}}
+<header class="post-header">
+  {{ if .Params.post_image }}
+  <div
+    class="post-header-background"
+    style="background-image: url('{{ .Params.post_image }}')"
+  ></div>
+  {{ else if and (eq .Type "podcast") (fileExists
+  "static/images/podcast-logo-banner.png") }}
+  <div
+    class="post-header-background"
+    style="background-image: url(&quot;/images/podcast-logo-banner.png&quot;)"
+  ></div>
+  {{ else if .Params.image }}
+  <div
+    class="post-header-background"
+    style="background-image: url('{{ .Params.image }}')"
+  ></div>
+  {{ end }}
+
+  <div class="post-header-content">
+    <h1 class="post-title">{{ .Title }}</h1>
+
+    <div class="post-meta">
+      <span class="post-date">
+        <i class="far fa-calendar-alt"></i>
+        {{ .Date.Format "Jan 2, 2006" }}
+      </span>
+
+      {{ if .Params.author }}
+      <span class="post-author">
+        <i class="far fa-user"></i>
+        {{ .Params.author }}
+      </span>
+      {{ end }} {{ if .Site.Params.showReadingTime }}
+      <span class="post-reading-time">
+        <i class="far fa-clock"></i>
+        {{ .ReadingTime }} min read
+      </span>
+      {{ end }}
+    </div>
+  </div>
+</header>

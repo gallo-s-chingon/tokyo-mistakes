@@ -1,3 +1,5 @@
+<!-- saved as README.md in tokyo-mistakes/ -->
+
 # Tokyo-Mistakes Hugo Theme
 
 A clean, fast Hugo theme inspired by [Minimal-Mistakes](https://github.com/mmistakes/minimal-mistakes) and [mademistakes.com](https://mademistakes.com/) by [Micheal Rose](https://mademistakes.com/about/) and my favorite color scheme Tokyo Night, with built-in support for subdomains (blogs, podcasts, and guest appearances).

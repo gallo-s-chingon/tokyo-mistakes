@@ -1,4 +1,5 @@
-{{ define "main" }}
+{{/* saved as single.html in tokyo-mistakes/layouts/_default */}} {{ define
+"main" }}
 <div class="taxonomy-terms">
   <div class="container">
     <header class="archive-header">
@@ -8,12 +9,14 @@
 
     <div class="terms-list">
       {{ range .Data.Terms.Alphabetical }}
-        <div class="term-item">
-          <a href="{{ .Page.Permalink }}" class="term-link">
-            <span class="term-name">{{ .Page.Title }}</span>
-            <span class="term-count">{{ .Count }} {{ if eq .Count 1 }}post{{ else }}posts{{ end }}</span>
-          </a>
-        </div>
+      <div class="term-item">
+        <a href="{{ .Page.Permalink }}" class="term-link">
+          <span class="term-name">{{ .Page.Title }}</span>
+          <span class="term-count"
+            >{{ .Count }} {{ if eq .Count 1 }}post{{ else }}posts{{ end }}</span
+          >
+        </a>
+      </div>
       {{ end }}
     </div>
   </div>

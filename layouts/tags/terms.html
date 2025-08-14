@@ -1,0 +1,35 @@
+{{/* saved as terms.html in tokyo-mistakes/layouts/tags */}} {{ define "main" }}
+<div class="taxonomy-page">
+  <div class="container">
+    <header class="taxonomy-header">
+      <h1 class="taxonomy-title">Tags</h1>
+      <p class="taxonomy-description">Browse all content by tag</p>
+    </header>
+
+    <div class="tag-cloud">
+      {{ range .Data.Terms.Alphabetical }}
+      <a
+        href="{{ .Page.RelPermalink }}"
+        class="tag-cloud-item"
+        style="font-size: {{ (add 0.8 (mul 0.4 (div (float .Count) (float (len $.Data.Terms))))) }}rem"
+      >
+        {{ .Page.Title }} <span class="tag-count">{{ .Count }}</span>
+      </a>
+      {{ end }}
+    </div>
+
+    <div class="taxonomy-terms">
+      <div class="terms-list">
+        {{ range .Data.Terms.Alphabetical }}
+        <div class="term-item">
+          <a href="{{ .Page.RelPermalink }}" class="term-link">
+            <span class="term-name">{{ .Page.Title }}</span>
+            <span class="term-count">{{ .Count }}</span>
+          </a>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}

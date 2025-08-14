@@ -1,3 +1,4 @@
+{{/* saved as single.html in tokyo-mistakes/layouts/_default */}}
 {{ define "main" }}
 <div class="taxonomy">
   <div class="container">
@@ -16,7 +17,7 @@
               <h2 class="post-preview-title">
                 <a href="{{ .Permalink }}">{{ .Title }}</a>
               </h2>
-              
+
               <div class="post-preview-meta">
                 <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
                   {{ .Date.Format "January 2, 2006" }}
@@ -24,7 +25,7 @@
                 <span class="post-section">{{ .Section | title }}</span>
               </div>
             </header>
-            
+
             {{ if .Summary }}
               <div class="post-preview-summary">
                 {{ .Summary }}

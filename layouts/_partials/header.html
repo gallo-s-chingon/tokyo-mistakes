@@ -1,3 +1,4 @@
+{{/* saved as header.html in tokyo-mistakes/layouts/partials */}}
 <header class="site-header">
   <div class="container">
     <div class="header-content">
@@ -7,7 +8,7 @@
           {{ .Site.Title }}
         </a>
       </div>
-      
+
       <!-- Desktop Navigation (excludes blog per your request) -->
       <nav class="site-nav desktop-nav" aria-label="Main navigation">
         <ul class="nav-list">
@@ -20,7 +21,7 @@
           {{ end }}
         </ul>
       </nav>
-      
+
       <!-- Mobile Navigation Toggle & Search & Theme -->
       <div class="header-controls">
         {{ if .Site.Params.search.enabled }}
@@ -28,17 +29,17 @@
             <i class="fas fa-search"></i>
           </button>
         {{ end }}
-        
+
         <button id="theme-toggle" class="btn-icon" aria-label="Toggle theme">
           <i class="fas fa-moon"></i>
         </button>
-        
+
         <button id="mobile-nav-toggle" class="btn-icon mobile-only" aria-label="Toggle navigation">
           <i class="fas fa-bars"></i>
         </button>
       </div>
     </div>
-    
+
     <!-- Mobile Navigation -->
     <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
       <ul class="mobile-nav-list">

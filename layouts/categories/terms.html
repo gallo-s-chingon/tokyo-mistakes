@@ -1,0 +1,24 @@
+{{/* saved as terms.html in tokyo-mistakes/layouts/categories */}} {{ define
+"main" }}
+<div class="taxonomy-page">
+  <div class="container">
+    <header class="taxonomy-header">
+      <h1 class="taxonomy-title">Categories</h1>
+      <p class="taxonomy-description">Browse all content by category</p>
+    </header>
+
+    <div class="taxonomy-terms">
+      <div class="terms-list">
+        {{ range .Data.Terms.Alphabetical }}
+        <div class="term-item">
+          <a href="{{ .Page.RelPermalink }}" class="term-link">
+            <span class="term-name">{{ .Page.Title }}</span>
+            <span class="term-count">{{ .Count }}</span>
+          </a>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}

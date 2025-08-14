@@ -1,56 +1,171 @@
-<!DOCTYPE html>
-<html lang="{{ site.Language.Lang }}" data-theme="{{ .Site.Params.colorScheme }}">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>
-    {{- if .IsHome -}}
-      {{ .Site.Title }}
-    {{- else -}}
-      {{ .Title }} | {{ .Site.Title }}
-    {{- end -}}
-  </title>
-  
-  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-  <meta name="author" content="{{ .Site.Params.author }}">
-  
-  <!-- Favicon -->
-  <link rel="icon" href="/favicon.ico">
-  
-  <!-- Styles -->
-  {{ $styles := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}">
-  
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Theme Script (prevents FOUC) -->
-  <script>
-    // Load saved theme or detect system preference
-    const getTheme = () => {
-      const saved = localStorage.getItem('theme');
-      if (saved) return saved;
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    };
-    document.documentElement.setAttribute('data-theme', getTheme());
-  </script>
-</head>
+{{/* saved as baseof.html in tokyo-mistakes/layouts/_default */}}
+<!doctype html>
+<html
+  lang="{{ site.Language.Lang }}"
+  data-theme="{{ .Site.Params.colorScheme }}"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {{- if .IsHome -}} {{ .Site.Title }} {{- else -}} {{ .Title }} | {{
+      .Site.Title }} {{- end -}}
+    </title>
 
-<body>
-  {{ partial "header.html" . }}
-  
-  <main id="main-content" class="main-content">
-    {{ block "main" . }}{{ end }}
-  </main>
-  
-  {{ partial "footer.html" . }}
-  
-  <!-- Scripts -->
-  {{ $js := resources.Get "js/main.js" | minify | fingerprint }}
-  <script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
-  
-  {{ if .Site.Params.search.enabled }}
-    {{ partial "search-script.html" . }}
-  {{ end }}
-</body>
+    <!-- Basic Meta Tags -->
+    <meta
+      name="description"
+      content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}"
+    />
+    <meta name="author" content="{{ .Site.Params.author }}" />
+    <link rel="canonical" href="{{ .Permalink }}" />
+
+    <!-- Open Graph / Facebook -->
+    <meta
+      property="og:type"
+      content="{{ if .IsPage }}article{{ else }}website{{ end }}"
+    />
+    <meta property="og:url" content="{{ .Permalink }}" />
+    <meta
+      property="og:title"
+      content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}"
+    />
+    <meta
+      property="og:description"
+      content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}"
+    />
+    {{ $ogImage := .Params.image | default .Params.post_image | default
+    .Site.Params.defaultImage }} {{ with $ogImage }}
+    <meta property="og:image" content="{{ . | absURL }}" />
+    {{ end }}
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="{{ .Permalink }}" />
+    <meta
+      name="twitter:title"
+      content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}"
+    />
+    <meta
+      name="twitter:description"
+      content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}"
+    />
+    {{ with $ogImage }}
+    <meta name="twitter:image" content="{{ . | absURL }}" />
+    {{ end }}
+
+    <!-- JSON-LD Structured Data -->
+    {{ if .IsPage }}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "{{ if eq .Type "podcast" }}PodcastEpisode{{ else }}BlogPosting{{ end }}",
+        "headline": "{{ .Title }}",
+        "description": "{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}",
+        "url": "{{ .Permalink }}",
+        {{ with $ogImage }}
+        "image": "{{ . | absURL }}",
+        {{ end }}
+        "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+        {{ with .Lastmod }}
+        "dateModified": "{{ .Format "2006-01-02T15:04:05Z07:00" }}",
+        {{ end }}
+        "author": {
+          "@type": "Person",
+          "name": "{{ .Site.Params.author }}"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "{{ .Site.Title }}",
+          {{ with .Site.Params.logo }}
+          "logo": {
+            "@type": "ImageObject",
+            "url": "{{ . | absURL }}"
+          },
+          {{ end }}
+          "url": "{{ .Site.BaseURL }}"
+        }
+        {{ if eq .Type "podcast" }}
+        ,
+        "audio": {
+          "@type": "AudioObject",
+          {{ with .Params.spotify }}
+          "contentUrl": "https://open.spotify.com/episode/{{ . }}",
+          {{ end }}
+          "duration": "{{ .Params.duration | default "PT1H" }}"
+        }
+        {{ end }}
+      }
+    </script>
+    {{ else if .IsHome }}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "{{ .Site.Title }}",
+        "description": "{{ .Site.Params.description }}",
+        "url": "{{ .Site.BaseURL }}",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "{{ .Site.BaseURL }}search/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+    {{ end }}
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" />
+
+    <!-- Styles -->
+    {{ $styles := resources.Get "scss/main.scss" | toCSS | minify | fingerprint
+    }}
+    <link
+      rel="stylesheet"
+      href="{{ $styles.Permalink }}"
+      integrity="{{ $styles.Data.Integrity }}"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Theme Script (prevents FOUC) -->
+    <script>
+      // Load saved theme or detect system preference
+      const getTheme = () => {
+        const saved = localStorage.getItem("theme");
+        if (saved) return saved;
+        return window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+      };
+      document.documentElement.setAttribute("data-theme", getTheme());
+    </script>
+  </head>
+
+  <body>
+    {{ partial "header.html" . }}
+
+    <div class="reading-progress-container">
+      <div class="reading-progress-bar" id="reading-progress"></div>
+    </div>
+    <main id="main-content" class="main-content">
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    {{ partial "footer.html" . }}
+
+    <!-- Scripts -->
+    {{ $js := resources.Get "js/main.js" | minify | fingerprint }}
+    <script
+      src="{{ $js.Permalink }}"
+      integrity="{{ $js.Data.Integrity }}"
+    ></script>
+
+    {{ if .Site.Params.search.enabled }} {{ partial "search-script.html" . }} {{
+    end }}
+  </body>
 </html>

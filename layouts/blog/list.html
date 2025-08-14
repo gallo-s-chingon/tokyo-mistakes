@@ -1,0 +1,78 @@
+{{/* saved as list.html in tokyo-mistakes/layouts/blog */}}
+{{ define "main" }}
+<div class="blog-list">
+  <div class="container">
+    <header class="list-header">
+      <h1 class="list-title">{{ .Title }}</h1>
+      <p class="list-description">{{ .Description }}</p>
+    </header>
+
+    <!-- Pinned Posts -->
+    {{ $pinnedPosts := where .Pages "Params.pinned" true }}
+    {{ if $pinnedPosts }}
+    <div class="pinned-posts">
+      <h2 class="pinned-heading">Pinned Posts</h2>
+      <div class="post-grid">
+        {{ range $pinnedPosts }}
+        <div class="post-card post-card--pinned">
+          {{ $postImage := .Params.post_image | default .Params.image }}
+          {{ if $postImage }}
+          <div class="post-card-image" style="background-image: url('{{ $postImage }}');">
+            <a href="{{ .Permalink }}" class="post-card-link" aria-label="{{ .Title }}"></a>
+            <div class="post-card-pin"><i class="fas fa-thumbtack"></i></div>
+          </div>
+          {{ end }}
+          <div class="post-card-content">
+            <h2 class="post-card-title">
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </h2>
+            <div class="post-card-meta">
+              <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+              <span class="post-card-type">{{ .Type | title }}</span>
+            </div>
+            {{ if .Summary }}
+            <div class="post-card-excerpt">
+              {{ .Summary | truncate 120 }}
+            </div>
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+
+    <!-- Regular Posts -->
+    {{ $regularPosts := where .Pages "Params.pinned" "!=" true }}
+    <div class="post-grid">
+      {{ range $regularPosts }}
+      <div class="post-card">
+        {{ $postImage := .Params.post_image | default .Params.image }}
+        {{ if $postImage }}
+        <div class="post-card-image" style="background-image: url('{{ $postImage }}');">
+          <a href="{{ .Permalink }}" class="post-card-link" aria-label="{{ .Title }}"></a>
+        </div>
+        {{ end }}
+        <div class="post-card-content">
+          <h2 class="post-card-title">
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+          </h2>
+          <div class="post-card-meta">
+            <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+            <span class="post-card-type">{{ .Type | title }}</span>
+          </div>
+          {{ if .Summary }}
+          <div class="post-card-excerpt">
+            {{ .Summary | truncate 120 }}
+          </div>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+
+    <!-- Pagination -->
+    {{ template "_internal/pagination.html" . }}
+  </div>
+</div>
+{{ end }}

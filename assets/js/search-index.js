@@ -1,3 +1,4 @@
+// saved as search-index.js in tokyo-mistakes/assets/js
 {{ $pages := where .Site.RegularPages "Type" "in" (slice "blog" "podcast" "featured") }}
 {{ $searchIndex := slice }}
 {{ range $pages }}

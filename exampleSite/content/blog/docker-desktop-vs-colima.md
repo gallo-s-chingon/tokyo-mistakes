@@ -5,7 +5,10 @@ draft: false
 author: "Gallo Chingon"
 tags: ["docker", "macos", "development", "homelab"]
 description: "Sometimes the GUI solution is just better. Here's why I switched to Docker Desktop from Colima."
+post_image: /images/terminal.png
 ---
+
+<!-- saved as docker-desktop-vs-colima.md in tokyo-mistakes/exampleSite/content/blog -->
 
 I spent months trying to make Colima work. I really did, well weeks for sure, there was also a brief stint in getting Podman up and running. I'm all about that open-source life, avoiding subscription fees, and having control over my tools. But sometimes, you just have to admit defeat.
 
@@ -140,4 +143,3 @@ Now back to building my homelab without networking headaches.
 ---
 
 **Have you made similar switches from open-source to commercial tools? What was your breaking point?**
-

@@ -1,8 +1,71 @@
+{{/* saved as single.html in tokyo-mistakes/layouts/podcast */}}
 {{ define "main" }}
 <article class="post post--podcast">
+  {{ $postImage := .Params.post_image | default "/images/podcast-logo-banner.png" }}
+  <div class="post-hero" style="background-image: url('{{ $postImage }}');">
+    <div class="post-hero-content">
+      <h1 class="post-title">{{ .Title }}</h1>
+      <div class="post-meta">
+        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "January 2, 2006" }}</time>
+        {{ if .Params.episode_number }}
+        <span class="post-meta-divider">•</span>
+        <span class="post-meta-item">Episode #{{ .Params.episode_number }}</span>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+
   <div class="container">
     <div class="post-content">
-      {{ partial "post-header.html" . }}
+      <!-- Episode Details -->
+      <div class="episode-details">
+        {{ if .Params.episode_number }}
+        <div class="episode-number">
+          <strong>Episode:</strong> #{{ .Params.episode_number }}
+        </div>
+        {{ end }}
+        
+        {{ if .Params.podcast_name }}
+        <div class="episode-podcast">
+          <strong>Podcast:</strong> 
+          {{ if .Params.podcast_link }}
+            <a href="{{ .Params.podcast_link }}" target="_blank" rel="noopener">{{ .Params.podcast_name }}</a>
+          {{ else }}
+            {{ .Params.podcast_name }}
+          {{ end }}
+        </div>
+        {{ end }}
+        
+        {{ if .Params.guest_name }}
+        <div class="episode-guest">
+          <strong>Guest:</strong> {{ .Params.guest_name }}
+        </div>
+        {{ end }}
+        
+        {{ if .Params.duration }}
+        <div class="episode-duration">
+          <strong>Duration:</strong> {{ .Params.duration }}
+        </div>
+        {{ end }}
+      </div>
+
+      <!-- Spotify Player -->
+      {{ if .Params.spotify }}
+      <div class="spotify-player">
+        <div class="embed-container embed-spotify">
+          <iframe
+            src="https://open.spotify.com/embed/episode/{{ .Params.spotify }}?theme={{ .Site.Params.colorScheme | default "auto" }}"
+            title="{{ .Title }} - Spotify"
+            width="100%"
+            height="232"
+            frameborder="0"
+            allowtransparency="true"
+            allow="encrypted-media"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+      {{ end }}
 
       <!-- YouTube Embed -->
       {{ if .Params.youtube }}
@@ -10,49 +73,20 @@
         <iframe
           src="https://www.youtube.com/embed/{{ .Params.youtube }}"
           title="{{ .Title }} - YouTube"
+          width="100%"
+          height="480"
           frameborder="0"
           allowfullscreen
+          loading="lazy"
         ></iframe>
-      </div>
-      {{ end }}
-
-      <!-- Spotify Player (ADD THIS BACK) -->
-      {{ if .Params.spotify }}
-      <div class="spotify-player">
-        <div class="embed-container embed-spotify">
-          <iframe
-            src="https://open.spotify.com/embed/episode/{{ .Params.spotify }}"
-            title="{{ .Title }} - Spotify"
-            frameborder="0"
-          >
-          </iframe>
-        </div>
-      </div>
-      {{ end }}
-
-      <!-- Episode Details -->
-      {{ if or .Params.episode_number .Params.guest_name .Params.duration }}
-      <div class="episode-details">
-        {{ if .Params.episode_number }}
-        <div class="episode-number">
-          <strong>Episode:</strong> #{{ .Params.episode_number }}
-        </div>
-        {{ end }} {{ if .Params.guest_name }}
-        <div class="episode-guest">
-          <strong>Guest:</strong> {{ .Params.guest_name }}
-        </div>
-        {{ end }} {{ if .Params.duration }}
-        <div class="episode-duration">
-          <strong>Duration:</strong> {{ .Params.duration }}
-        </div>
-        {{ end }}
       </div>
       {{ end }}
 
       <div class="post-body">{{ .Content }}</div>
 
-      {{ partial "social-share.html" . }} {{ partial "comments.html" . }} {{
-      partial "related-posts.html" . }}
+      {{ partial "social-share.html" . }}
+      {{ partial "comments.html" . }}
+      {{ partial "related-posts.html" . }}
     </div>
   </div>
 </article>

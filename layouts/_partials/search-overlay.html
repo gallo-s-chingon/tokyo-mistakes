@@ -1,23 +1,24 @@
-{{ if .Site.Params.search.enabled }}
+{{/* saved as search-overlay.html in tokyo-mistakes/layouts/partials */}} {{ if
+.Site.Params.search.enabled }}
 <div id="search-overlay" class="search-overlay">
   <div class="search-container">
     <div class="search-header">
       <div class="search-input-wrapper">
         <i class="fas fa-search search-icon"></i>
-        <input 
-          type="text" 
-          id="search-input" 
-          class="search-input" 
-          placeholder="Search posts..." 
+        <input
+          type="text"
+          id="search-input"
+          class="search-input"
+          placeholder="Search posts..."
           autocomplete="off"
           aria-label="Search"
-        >
+        />
       </div>
       <button id="search-close" class="search-close" aria-label="Close search">
         <i class="fas fa-times"></i>
       </button>
     </div>
-    
+
     <div id="search-results" class="search-results">
       <div class="search-no-results">
         <i class="fas fa-search"></i>

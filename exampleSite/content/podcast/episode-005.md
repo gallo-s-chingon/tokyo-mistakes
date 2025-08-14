@@ -12,6 +12,8 @@ spotify: "1Ab2Cd3Ef4Gh5Ij6Kl"
 featured_image: "episodes/episode-005-cover.jpg"
 ---
 
+<!-- saved as episode-005.md in tokyo-mistakes/exampleSite/content/podcast -->
+
 This is a solo episode - just me, my thoughts, and probably too much coffee. We're talking about something I wish someone had told me years ago: you need to learn how to date yourself before you can successfully date anyone else.
 
 ## Why This Episode Exists

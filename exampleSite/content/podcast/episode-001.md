@@ -8,10 +8,12 @@ description: "In our debut episode, we dive deep into why communication is the u
 episode_number: 1
 guest_name: "Dr. Sarah Chen"
 duration: "52 minutes"
-youtube: "dQw4w9WgXcQ"
-spotify: "4rOoJ6Egrf8K2IrywzwOMk"
-featured_image: "episodes/episode-001-cover.jpg"
+youtube: "aBcDeFgHiJk"
+spotify: "1a2B3c4D5e6F7g8H9i0J"
+post_image: "episodes/episode-001-cover.jpg"
 ---
+
+<!-- saved as episode-001.md in tokyo-mistakes/exampleSite/content/podcast -->
 
 Welcome to the very first episode of The S Chingon Show! I'm your host, Gallo Chingon, and today we're kicking things off with what I believe is the foundation of every great relationship: communication.
 

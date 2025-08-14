@@ -7,6 +7,8 @@ tags: ["technology", "mechanical-keyboards", "hobbies", "mental-health"]
 description: "A deep dive into why spending $400 on a keyboard isn't crazy - it's therapeutic."
 ---
 
+<!-- saved as first-rant.md in tokyo-mistakes/exampleSite/content/blog -->
+
 Let me start with a confession: I've spent more money on mechanical keyboards than most people spend on their cars. And you know what? I regret absolutely nothing.
 
 ## The Rabbit Hole

@@ -1,32 +1,32 @@
-{{ define "main" }}
+{{/* saved as index.html in tokyo-mistakes/layouts */}} {{ define "main" }}
 <div class="home">
   <div class="container">
     <header class="home-header">
       <h1 class="home-title">{{ .Site.Title }}</h1>
       {{ if .Site.Params.description }}
-        <p class="home-description">{{ .Site.Params.description }}</p>
+      <p class="home-description">{{ .Site.Params.description }}</p>
       {{ end }}
     </header>
 
     <!-- Featured Content -->
-    {{ $recentPosts := where .Site.RegularPages "Type" "in" (slice "podcast" "featured") | first 3 }}
-    {{ if $recentPosts }}
-      <section class="featured-content">
-        <h2>Latest Content</h2>
-        <div class="featured-grid">
-          {{ range $recentPosts }}
-            <article class="featured-post">
-              <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-              <p class="featured-meta">
-                {{ .Date.Format "Jan 2, 2006" }} • {{ .Section | title }}
-              </p>
-              {{ if .Summary }}
-                <p class="featured-summary">{{ .Summary | truncate 150 }}</p>
-              {{ end }}
-            </article>
+    {{ $recentPosts := where .Site.RegularPages "Type" "in" (slice "podcast"
+    "featured") | first 3 }} {{ if $recentPosts }}
+    <section class="featured-content">
+      <h2>Latest Content</h2>
+      <div class="featured-grid">
+        {{ range $recentPosts }}
+        <article class="featured-post">
+          <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+          <p class="featured-meta">
+            {{ .Date.Format "Jan 2, 2006" }} • {{ .Section | title }}
+          </p>
+          {{ if .Summary }}
+          <p class="featured-summary">{{ .Summary | truncate 150 }}</p>
           {{ end }}
-        </div>
-      </section>
+        </article>
+        {{ end }}
+      </div>
+    </section>
     {{ end }}
 
     <!-- Quick Links -->

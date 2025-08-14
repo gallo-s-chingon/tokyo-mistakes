@@ -1,4 +1,6 @@
+// saved as main.scss in tokyo-mistakes/assets/scss
 @import "variables";
+@import "taxonomy";
 
 // Reset & Base Styles
 * {
@@ -1078,4 +1080,458 @@ a {
   background-color: var(--bg-tertiary);
   padding: $spacing-xs $spacing-sm;
   border-radius: 12px;
+}
+// Additional social share button styles
+.share-btn {
+  &.share-mastodon:hover {
+    background-color: #6364ff;
+    color: white;
+    border-color: #6364ff;
+  }
+
+  &.share-email:hover {
+    background-color: #777777;
+    color: white;
+    border-color: #777777;
+  }
+
+  &.share-whatsapp:hover {
+    background-color: #25d366;
+    color: white;
+    border-color: #25d366;
+  }
+
+  &.share-telegram:hover {
+    background-color: #0088cc;
+    color: white;
+    border-color: #0088cc;
+  }
+}
+// Hero image with overlay
+.post-hero {
+  position: relative;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 2rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); // 60% opacity overlay
+    z-index: 1;
+  }
+
+  .post-hero-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    color: #fff;
+    z-index: 2;
+
+    .post-title {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .post-meta {
+      font-size: 1rem;
+      opacity: 0.9;
+
+      a {
+        color: #fff;
+        text-decoration: underline;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+      .post-meta-divider {
+        margin: 0 0.5rem;
+      }
+    }
+  }
+}
+
+// Post cards with background images
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.post-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--bg-secondary);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  .post-card-image {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.4); // 60% opacity overlay
+      z-index: 1;
+    }
+
+    .post-card-link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+    }
+  }
+
+  .post-card-content {
+    padding: 1.25rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    .post-card-title {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+
+      a {
+        color: var(--text-primary);
+        text-decoration: none;
+
+        &:hover {
+          color: var(--accent);
+        }
+      }
+    }
+
+    .post-card-meta {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+
+      .post-card-type {
+        margin-left: 0.5rem;
+        padding: 0.125rem 0.375rem;
+        background-color: var(--bg-tertiary);
+        border-radius: 4px;
+        font-size: 0.75rem;
+      }
+    }
+
+    .post-card-excerpt {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-top: auto;
+    }
+  }
+}
+// Archives Page
+.archives-page {
+  max-width: $content-max-width;
+  margin: 0 auto;
+}
+
+.archives-header {
+  text-align: center;
+  margin-bottom: $spacing-xl;
+}
+
+.archive-year {
+  margin-bottom: $spacing-xl;
+}
+
+.year-heading {
+  font-size: 2rem;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: $spacing-sm;
+  margin-bottom: $spacing-lg;
+}
+
+.archive-month {
+  margin-bottom: $spacing-lg;
+}
+
+.month-heading {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  margin-bottom: $spacing-md;
+}
+
+.archive-posts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.archive-post {
+  display: flex;
+  align-items: center;
+  padding: $spacing-sm 0;
+  border-bottom: 1px solid var(--border);
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .post-date {
+    flex: 0 0 100px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+
+  .post-title {
+    flex: 1;
+    color: var(--text-primary);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+  }
+
+  .post-type {
+    flex: 0 0 100px;
+    text-align: right;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    background-color: var(--bg-tertiary);
+    padding: 2px 8px;
+    border-radius: 4px;
+  }
+}
+
+// Tag Cloud
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-xl;
+  justify-content: center;
+}
+
+.tag-cloud-item {
+  display: inline-block;
+  padding: $spacing-xs $spacing-sm;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: var(--accent);
+    color: white;
+    transform: translateY(-2px);
+  }
+
+  .tag-count {
+    font-size: 0.8em;
+    opacity: 0.8;
+    margin-left: 4px;
+  }
+}
+
+// Taxonomy pages
+.taxonomy-page {
+  padding-bottom: $spacing-xl;
+}
+
+.taxonomy-header {
+  text-align: center;
+  margin-bottom: $spacing-xl;
+}
+
+.taxonomy-title {
+  font-size: 2.5rem;
+  margin-bottom: $spacing-sm;
+}
+
+.taxonomy-description {
+  color: var(--text-secondary);
+  margin-bottom: $spacing-md;
+}
+
+.taxonomy-meta {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+// Reading Progress Bar
+.reading-progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  z-index: 1000;
+  background-color: transparent;
+}
+
+.reading-progress-bar {
+  height: 100%;
+  background-color: var(--accent);
+  width: 0%;
+  transition: width 0.1s ease;
+}
+// Podcast intro styling
+.podcast-intro {
+  margin-bottom: $spacing-xl;
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary);
+  }
+  
+  ul, ol {
+    margin-left: $spacing-lg;
+  }
+  
+  a {
+    color: var(--link);
+    text-decoration: none;
+    
+    &:hover {
+      color: var(--link-hover);
+      text-decoration: underline;
+    }
+  }
+}
+
+.no-episodes {
+  text-align: center;
+  padding: $spacing-xl;
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  margin: $spacing-xl 0;
+  
+  p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+  }
+}
+// Collapsible sections
+.collapsible-content {
+  margin-bottom: $spacing-xl;
+}
+
+.collapsible-section {
+  margin-bottom: $spacing-md;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.collapsible-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: $spacing-md $spacing-lg;
+  background-color: var(--bg-secondary);
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+  &:hover {
+    background-color: var(--bg-tertiary);
+  }
+  
+  h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--text-primary);
+  }
+  
+  i {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    transition: transform 0.3s ease;
+  }
+  
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--accent);
+  }
+}
+
+.collapsible-body {
+  padding: 0 $spacing-lg $spacing-lg $spacing-lg;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  
+  h2 {
+    display: none; // Hide the duplicate h2
+  }
+}
+
+// Appearances section
+.appearances-section {
+  scroll-margin-top: 80px; // For the jump link
+}
+
+.appearances-title {
+  text-align: center;
+  margin-bottom: $spacing-xl;
+  font-size: 2rem;
+  color: var(--accent);
+}
+
+.list-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: $spacing-md;
+  
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: $spacing-xs;
+    padding: $spacing-sm $spacing-md;
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    
+    &:hover {
+      background-color: var(--accent-secondary);
+      transform: translateY(-2px);
+    }
+    
+    i {
+      font-size: 0.9rem;
+    }
+  }
 }
