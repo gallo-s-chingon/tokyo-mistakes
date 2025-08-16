@@ -1,9 +1,10 @@
 ---
-title: "The S Chingon Show"
+title: "S Chingon"
 description: "Spice up your love life with our sizzling podcast! Expert advice on dating, relationships, intimacy, and sex, all with a kink twist."
+layout: "single"
 ---
 
-<!-- saved as _index.md in tokyo-mistakes/exampleSite/about -->
+<!-- saved as _index.md in tokyo-mistakes/exampleSite/content/about -->
 
 # The S Chingon Show
 

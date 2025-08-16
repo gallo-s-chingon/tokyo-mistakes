@@ -1,4 +1,4 @@
-{{/* saved as single.html in tokyo-mistakes/layouts/about */}}
+{{/* saved as list.html in tokyo-mistakes/layouts/about */}}
 {{ define "main" }}
 <article class="post about">
   <div class="container">
@@ -6,15 +6,6 @@
       <h1 class="post-title">{{ .Title }}</h1>
       {{ with .Description }}<p class="post-description">{{ . }}</p>{{ end }}
     </header>
-    
-    <!-- Debug info -->
-    <div style="background: #f0f0f0; padding: 10px; margin-bottom: 20px; border-radius: 5px;">
-      <p>Layout: {{ .Layout }}</p>
-      <p>Type: {{ .Type }}</p>
-      <p>Kind: {{ .Kind }}</p>
-      <p>Section: {{ .Section }}</p>
-    </div>
-    
     <div class="post-body" style="display: block !important; visibility: visible !important;">
       {{ .Content }}
     </div>

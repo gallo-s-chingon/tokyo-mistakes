@@ -1,5 +1,5 @@
-// saved as search-index.js in tokyo-mistakes/assets/js
-{{ $pages := where .Site.RegularPages "Type" "in" (slice "blog" "podcast" "featured") }}
+// assets/js/search-index.js
+{{ $pages := where .Site.RegularPages "Section" "in" (slice "blog" "podcast" "featured") }}
 {{ $searchIndex := slice }}
 {{ range $pages }}
   {{ $searchItem := dict 
@@ -13,6 +13,4 @@
   }}
   {{ $searchIndex = $searchIndex | append $searchItem }}
 {{ end }}
-
-// Search index data
 window.searchIndex = {{ $searchIndex | jsonify }};

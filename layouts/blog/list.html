@@ -6,6 +6,11 @@
       <h1 class="list-title">{{ .Title }}</h1>
       <p class="list-description">{{ .Description }}</p>
     </header>
+    {{ with .Content }}
+    <div class="section-intro">
+      {{ . }}
+    </div>
+    {{ end }}
 
     <!-- Pinned Posts -->
     {{ $pinnedPosts := where .Pages "Params.pinned" true }}

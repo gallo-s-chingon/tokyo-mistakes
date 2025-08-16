@@ -1,13 +1,13 @@
-{{/* saved as list.html in themes/tokyo-mistakes/layouts/featured */}}
+{{/* layouts/featured/list.html */}}
 {{ define "main" }}
 <div class="featured-list">
   <div class="container">
     {{ partial "breadcrumbs.html" . }}
-    
+
     <header class="list-header">
       <h1 class="list-title">{{ .Title }}</h1>
       <p class="list-description">{{ .Description }}</p>
-      
+
       {{ if eq .Paginator.PageNumber 1 }}
       <div class="list-actions">
         <a href="#appearances" class="btn btn-primary">
@@ -18,46 +18,17 @@
       {{ end }}
     </header>
 
-    <!-- Page Content (only on first page) -->
     {{ if eq .Paginator.PageNumber 1 }}
     <div class="featured-intro">
-      <div class="collapsible-content">
-        {{ $content := .Content }}
-        {{ $sections := split $content "<h2" }}
-        
-        {{ range $index, $section := $sections }}
-          {{ if eq $index 0 }}
-            {{ $section | safeHTML }}
-          {{ else }}
-            {{ $sectionID := index (findRE "id=\"([^\"]+)\"" $section 1) 0 }}
-            {{ $sectionID = replace $sectionID "id=\"" "" }}
-            {{ $sectionID = replace $sectionID "\"" "" }}
-            
-            {{ $sectionTitle := index (findRE ">([^<]+)</h2>" $section 1) 0 }}
-            {{ $sectionTitle = replace $sectionTitle ">" "" }}
-            {{ $sectionTitle = replace $sectionTitle "</h2>" "" }}
-            
-            <div class="collapsible-section">
-              <button class="collapsible-header" onclick="toggleSection('section-{{ $index }}')">
-                <h2 id="{{ $sectionID }}">{{ $sectionTitle }}</h2>
-                <i class="fas fa-chevron-down"></i>
-              </button>
-              <div id="section-{{ $index }}" class="collapsible-body">
-                {{ $sectionContent := replace $section (printf ">%s</h2>" $sectionTitle) "</h2>" }}
-                <h2 {{ $sectionID }}></h2>{{ $sectionContent | safeHTML }}
-              </div>
-            </div>
-          {{ end }}
-        {{ end }}
+      <div class="content">
+        {{ .Content | safeHTML }}
       </div>
     </div>
     {{ end }}
 
-    <!-- Appearances Section -->
     <div id="appearances" class="appearances-section">
       <h2 class="appearances-title">Guest Appearances</h2>
-      
-      <!-- Pinned Appearances -->
+
       {{ $pinnedPosts := where .Pages "Params.pinned" true }}
       {{ if $pinnedPosts }}
       <div class="pinned-posts">
@@ -73,20 +44,12 @@
             </div>
             {{ end }}
             <div class="post-card-content">
-              <h2 class="post-card-title">
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
-              </h2>
+              <h2 class="post-card-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
               <div class="post-card-meta">
                 <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
-                {{ if .Params.podcast_name }}
-                <span class="post-card-podcast">{{ .Params.podcast_name }}</span>
-                {{ end }}
+                {{ if .Params.podcast_name }}<span class="post-card-podcast">{{ .Params.podcast_name }}</span>{{ end }}
               </div>
-              {{ if .Summary }}
-              <div class="post-card-excerpt">
-                {{ .Summary | truncate 120 }}
-              </div>
-              {{ end }}
+              {{ with .Summary }}<div class="post-card-excerpt">{{ . | truncate 120 }}</div>{{ end }}
             </div>
           </div>
           {{ end }}
@@ -94,7 +57,6 @@
       </div>
       {{ end }}
 
-      <!-- Regular Appearances -->
       {{ $regularPosts := where .Pages "Params.pinned" "!=" true }}
       {{ if $regularPosts }}
       <div class="post-grid">
@@ -107,60 +69,22 @@
           </div>
           {{ end }}
           <div class="post-card-content">
-            <h2 class="post-card-title">
-              <a href="{{ .Permalink }}">{{ .Title }}</a>
-            </h2>
+            <h2 class="post-card-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
             <div class="post-card-meta">
               <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
-              {{ if .Params.podcast_name }}
-              <span class="post-card-podcast">{{ .Params.podcast_name }}</span>
-              {{ end }}
+              {{ if .Params.podcast_name }}<span class="post-card-podcast">{{ .Params.podcast_name }}</span>{{ end }}
             </div>
-            {{ if .Summary }}
-            <div class="post-card-excerpt">
-              {{ .Summary | truncate 120 }}
-            </div>
-            {{ end }}
+            {{ with .Summary }}<div class="post-card-excerpt">{{ . | truncate 120 }}</div>{{ end }}
           </div>
         </div>
         {{ end }}
       </div>
       {{ else }}
-      <div class="no-appearances">
-        <p>No appearances available yet. Check back soon!</p>
-      </div>
+      <div class="no-appearances"><p>No appearances available yet. Check back soon!</p></div>
       {{ end }}
 
-      <!-- Pagination -->
       {{ template "_internal/pagination.html" . }}
     </div>
   </div>
 </div>
-
-<!-- JavaScript for collapsible sections -->
-<script>
-  function toggleSection(id) {
-    const section = document.getElementById(id);
-    const header = section.previousElementSibling;
-    const icon = header.querySelector('i');
-    
-    if (section.style.maxHeight) {
-      section.style.maxHeight = null;
-      icon.classList.remove('fa-chevron-up');
-      icon.classList.add('fa-chevron-down');
-    } else {
-      section.style.maxHeight = section.scrollHeight + "px";
-      icon.classList.remove('fa-chevron-down');
-      icon.classList.add('fa-chevron-up');
-    }
-  }
-  
-  // Initialize all sections as collapsed
-  document.addEventListener('DOMContentLoaded', function() {
-    const sections = document.querySelectorAll('.collapsible-body');
-    sections.forEach(section => {
-      section.style.maxHeight = null;
-    });
-  });
-</script>
 {{ end }}

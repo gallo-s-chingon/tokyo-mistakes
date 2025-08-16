@@ -1,6 +1,8 @@
 // saved as main.scss in tokyo-mistakes/assets/scss
-@import "variables";
-@import "taxonomy";
+@import "variables"; // This must come first
+@import "taxonomy"; // This uses variables from _variables.scss
+@import "images"; // Import other partials
+@import "embeds"; // Import other partials
 
 // Reset & Base Styles
 * {
@@ -322,6 +324,34 @@ a {
 // Post Content
 .post-body {
   line-height: 1.8;
+
+  /* Heading/link/code colors derived from variables */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--heading);
+  }
+  a {
+    color: var(--link);
+  }
+  a:hover {
+    color: var(--link-hover);
+  }
+  code,
+  pre code {
+    color: var(--code);
+  }
+  code {
+    background: var(--inline-code-bg);
+    padding: 0 0.25em;
+    border-radius: 4px;
+  }
+  blockquote {
+    border-left: 3px solid var(--blockquote);
+  }
 
   img {
     max-width: 100%;
@@ -749,6 +779,14 @@ a {
   flex-wrap: wrap;
 }
 
+/* Force About page visibility */
+.about .post-body,
+.post .post-body {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
 // About Page Styles
 .about-page {
   max-width: $content-max-width;
@@ -847,8 +885,8 @@ a {
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     background-color: var(--accent-secondary);
+    color: var(--bg-primary);
   }
-
   i {
     font-size: 2rem;
     margin-bottom: $spacing-sm;
@@ -1024,7 +1062,7 @@ a {
   &:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    background-color: var(--accent-secondary);
+    background-color: var(--bg-primary);
   }
 
   i {
@@ -1406,19 +1444,25 @@ a {
 // Podcast intro styling
 .podcast-intro {
   margin-bottom: $spacing-xl;
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: var(--text-primary);
   }
-  
-  ul, ol {
+
+  ul,
+  ol {
     margin-left: $spacing-lg;
   }
-  
+
   a {
     color: var(--link);
     text-decoration: none;
-    
+
     &:hover {
       color: var(--link-hover);
       text-decoration: underline;
@@ -1432,7 +1476,7 @@ a {
   background-color: var(--bg-secondary);
   border-radius: 8px;
   margin: $spacing-xl 0;
-  
+
   p {
     font-size: 1.1rem;
     color: var(--text-secondary);
@@ -1461,23 +1505,23 @@ a {
   text-align: left;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  
+
   &:hover {
     background-color: var(--bg-tertiary);
   }
-  
+
   h2 {
     margin: 0;
     font-size: 1.5rem;
     color: var(--text-primary);
   }
-  
+
   i {
     font-size: 1.2rem;
     color: var(--text-secondary);
     transition: transform 0.3s ease;
   }
-  
+
   &:focus {
     outline: none;
     box-shadow: 0 0 0 2px var(--accent);
@@ -1489,7 +1533,7 @@ a {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
-  
+
   h2 {
     display: none; // Hide the duplicate h2
   }
@@ -1511,7 +1555,7 @@ a {
   display: flex;
   justify-content: center;
   margin-top: $spacing-md;
-  
+
   .btn {
     display: inline-flex;
     align-items: center;
@@ -1524,14 +1568,88 @@ a {
     text-decoration: none;
     font-weight: 500;
     transition: all 0.2s ease;
-    
+
     &:hover {
       background-color: var(--accent-secondary);
       transform: translateY(-2px);
     }
-    
+
     i {
       font-size: 0.9rem;
+    }
+  }
+}
+
+.collapse-content.collapsed {
+  display: none;
+}
+.collapse-toggle {
+  all: unset;
+  cursor: pointer;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading);
+}
+a {
+  color: var(--link);
+}
+a:hover {
+  color: var(--link-hover);
+}
+
+code,
+pre code {
+  color: var(--code);
+}
+code {
+  background: var(--inline-code-bg);
+  padding: 0 0.25em;
+  border-radius: 4px;
+}
+blockquote {
+  border-left: 3px solid var(--blockquote);
+}
+// Post metadata below image
+.post-meta-below-image {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  margin: $spacing-lg 0;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  
+  .post-meta-divider {
+    margin: 0 $spacing-xs;
+  }
+  
+  a {
+    color: var(--link);
+    text-decoration: none;
+    
+    &:hover {
+      color: var(--link-hover);
+      text-decoration: underline;
+    }
+  }
+}
+
+// Modify hero content to only show title
+.post-hero {
+  .post-hero-content {
+    .post-title {
+      margin-bottom: 0;
+    }
+    
+    // Hide metadata in hero
+    .post-meta {
+      display: none;
     }
   }
 }

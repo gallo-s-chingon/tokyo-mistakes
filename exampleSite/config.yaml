@@ -2,13 +2,16 @@
 # Tokyo-Mistakes Theme Configuration
 baseURL: "https://schingon.com"
 languageCode: "en-us"
-title: "The S Chingon Experience"
+title: "S Chingon"
 theme: "tokyo-mistakes"
 
 # Build settings
 buildDrafts: false
 buildFuture: false
 canonifyURLs: true
+taxonomies:
+  tag: "tags"
+  category: "categories"
 
 # Markup settings
 markup:
@@ -27,14 +30,14 @@ markup:
 params:
   # Site settings
   author: "Gallo Chingon"
-  description: "From Army veteran to kink educator - one Texan's journey through life, love, and everything in between."
+  description: "From Army veteran to kink educator - one widowed Texan's journey through life, love, and everything in between."
   imageBase: "/images/"
 
   # Theme settings
-  colorScheme: "auto" # auto, light, dark
+  colorScheme: "colorful" # auto, light, dark
   showReadingTime: true
   showToc: true
-  tocMaxItems: 12
+  tocMaxItems: 9
 
   # Social sharing (FIXED STRUCTURE)
   socialSharing: true

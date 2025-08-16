@@ -1,10 +1,11 @@
 {{/* saved as post-toc.html in tokyo-mistakes/layouts/partials */}}
-{{ if and .Site.Params.showToc .TableOfContents }}
-  {{ $tocContent := .TableOfContents }}
-  {{ if not (eq $tocContent "<nav id=\"TableOfContents\"></nav>") }}
-  <aside class="toc">
-    <h2 class="toc-title">Table of Contents</h2>
-    {{ .TableOfContents }}
-  </aside>
+{{ $enable := or (.Param "toc") .Site.Params.showToc }}
+{{ if $enable }}
+  {{ $toc := .TableOfContents }}
+  {{ if and $toc (ne $toc "<nav id=\"TableOfContents\"></nav>") }}
+    <aside class="toc">
+      <h2 class="toc-title">Table of Contents</h2>
+      {{ $toc | safeHTML }}
+    </aside>
   {{ end }}
 {{ end }}

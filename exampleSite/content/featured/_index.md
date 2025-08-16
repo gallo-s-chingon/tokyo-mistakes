@@ -1,6 +1,14 @@
 ---
 title: "Guest Appearances"
 description: "Catch Gallo as a guest on other podcasts and shows, sharing his story and insights."
+collapsedSections: true
+sections:
+  - id: "core-topics"
+    title: "Core Topics"
+    collapsed: true
+  - id: "fun-topics"
+    title: "Fun Topics"
+    collapsed: true
 ---
 
 <!-- saved as _index.md in tokyo-mistakes/exampleSite/content/featured -->
