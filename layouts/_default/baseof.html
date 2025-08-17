@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language.Lang | default "en-us" }}" data-theme="auto">
+<html lang="{{ .Site.Language.Lang | default "en-us" }}" data-theme="{{ .Site.Params.defaultTheme | default "auto" }}">
   <head>
     {{- partial "head.html" . -}}
   </head>

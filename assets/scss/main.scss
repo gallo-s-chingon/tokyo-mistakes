@@ -1778,3 +1778,12 @@ blockquote {
     display: none; // ...hide the element.
   }
 }
+
+/* Style for the active search result item (for keybind navigation) */
+.search__item.active {
+  background-color: var(--accent);
+  color: var(--bg-primary);
+}
+.search__item.active .search__desc {
+  color: var(--bg-primary);
+}

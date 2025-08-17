@@ -45,10 +45,7 @@ params:
   description: "From Army veteran to kink educator - one widowed Texan's journey through life, love, and everything in between."
   imageBase: "/images/"
 
-  # Theme modes (group + scheme replaces colorScheme)
-  schemeGroup: "color" # neutral | color
-  scheme: "auto" # auto | light | dark
-
+  defaultTheme: "colorful"
   # Reading experience
   showReadingTime: true
   showToc: true

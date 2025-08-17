@@ -107,14 +107,40 @@
       searchOverlay.setAttribute("aria-hidden", "true");
       document.dispatchEvent(new Event("search:close"));
     };
-
+    // --- Event Listeners for Search ---
     document.addEventListener("keydown", (e) => {
+      // Close with Escape
+      if (e.key === "Escape") {
+        closeSearch();
+      }
+      // Open with forward slash
       if (e.key === "/" && !e.metaKey && !e.ctrlKey && !e.altKey) {
         e.preventDefault();
         openSearch();
       }
-      if (e.key === "Escape") {
-        closeSearch();
+
+      // --- Keybind Navigation for Search Results ---
+      const items = Array.from(searchResults.children);
+      const active = searchResults.querySelector(".active");
+      if (items.length === 0) return;
+
+      if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+        e.preventDefault();
+        let next = active
+          ? e.key === "ArrowDown"
+            ? items[items.indexOf(active) + 1]
+            : items[items.indexOf(active) - 1]
+          : items[0];
+        if (next) {
+          if (active) active.classList.remove("active");
+          next.classList.add("active");
+          next.scrollIntoView({ block: "nearest" });
+        }
+      }
+
+      if (e.key === "Enter" && active) {
+        e.preventDefault();
+        active.click();
       }
     });
 
