@@ -1,0 +1,8 @@
+{{- $author := or .Params.author .Site.Params.author -}}
+{{- $date := .Date.Format "Jan 2, 2006" -}}
+{{- $reading := .ReadingTime -}}
+<span class="meta__date">{{ $date }}</span>
+<span class="meta__sep">•</span>
+<span class="meta__author">{{ $author }}</span>
+<span class="meta__sep">•</span>
+<span class="meta__read">{{ $reading }} min read</span>

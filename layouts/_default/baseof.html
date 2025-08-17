@@ -1,9 +1,6 @@
 {{/* saved as baseof.html in tokyo-mistakes/layouts/_default */}}
 <!doctype html>
-<html
-  lang="{{ site.Language.Lang }}"
-  data-theme="{{ .Site.Params.colorScheme }}"
->
+<html lang="{{ site.Language.Lang }}">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -61,77 +58,56 @@
     {{ $styles := resources.Get "scss/main.scss" | toCSS (dict "targetPath" "assets/main.css") | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" />
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-    <!-- Theme Script -->
-    <script>
-      // Force colorful theme
-      (function () {
-        const cfgScheme = "{{ .Site.Params.colorScheme | default "auto" }}";
-        
-        // Always apply colorful if configured
-        if (cfgScheme === "colorful") {
-          document.documentElement.setAttribute("data-theme", "colorful");
-          console.log("Applying colorful theme from config");
-        } else {
-          // Otherwise use saved preference or auto-detect
-          const savedTheme = localStorage.getItem("theme");
-          const defaultTheme = cfgScheme === "auto" 
-            ? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
-            : cfgScheme;
-
-          document.documentElement.setAttribute("data-theme", savedTheme || defaultTheme);
-        }
-      })();
-    </script>
-
     {{ if .Site.Params.search.enabled }}
       <!-- Include raw search index (Hugo-rendered JS) -->
       <script src="{{ (resources.Get "js/search-index.js").RelPermalink }}" defer></script>
     {{ end }}
   </head>
+    <!-- Font Awesome (CDN) -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-2sJ4vTn0vR5F4mM0q3q3kM1x0y3v1+0bY3xKp7gq3N7Xjz8WcW4zFf8YvFv3x0Cgl1W8hI8l2Q0qgq7T4o6H8A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    {{/* Theme data attributes for group + scheme */}}
+    <script>
+      (function(){
+        var html = document.documentElement;
+        html.dataset.schemeGroup = "{{ default "neutral" .Site.Params.schemeGroup }}";
+        html.dataset.scheme = "{{ default "auto" .Site.Params.scheme }}";
+      })();
+    </script>
 
   <body>
-    {{ partial "header.html" . }}
+      {{ partial "header.html" . }}
 
-    <div class="reading-progress-container">
-      <div class="reading-progress-bar" id="reading-progress"></div>
-    </div>
+  <!-- Search Overlay -->
+  {{ if .Site.Params.search.enabled }}
+    {{ partial "search/overlay.html" . }}
+  {{ end }}
 
-    <main id="main-content" class="main-content">
-      {{ block "main" . }}{{ end }}
-    </main>
+  <!-- Page Content -->
+  <main id="main" tabindex="-1">
+    {{ block "main" . }}{{ end }}
+  </main>
 
-    {{ partial "footer.html" . }}
+  {{ partial "footer.html" . }}
 
-    <!-- Scripts (Hugo Pipes) -->
-    {{ $js := resources.Get "js/main.js" | js.Build (dict "minify" true "targetPath" "assets/main.js") | fingerprint }}
-    <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+  <!-- Floating Buttons -->
+  {{ partial "floating/buttons.html" . }}
 
-    <!-- Debug search -->
-    {{ if .Site.Params.search.enabled }}
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        console.log('Search index available:', typeof window.searchIndex !== 'undefined');
-        if (window.searchIndex) {
-          console.log('Search index items:', window.searchIndex.length);
-        } else {
-          console.error('Search index not found!');
-        }
+  <!-- Scripts -->
+  {{ $hideHeader := resources.Get "js/header-hide-on-scroll.js" | minify }}
+  <script>{{ $hideHeader.Content | safeJS }}</script>
 
-        // Debug search toggle
-        const searchToggle = document.getElementById('search-toggle');
-        if (searchToggle) {
-          console.log('Search toggle found');
-          searchToggle.addEventListener('click', function() {
-            console.log('Search toggle clicked');
-          });
-        } else {
-          console.error('Search toggle not found!');
-        }
-      });
-    </script>
-    {{ end }}
+  {{ if .Site.Params.search.enabled }}
+    {{ $search := resources.Get "js/search-init.js" | minify }}
+    <script>{{ $search.Content | safeJS }}</script>
+  {{ end }}
+
+  {{ $toc := resources.Get "js/toc-compact-h1.js" | minify }}
+  <script>{{ $toc.Content | safeJS }}</script>
+
+  {{ $spotify := resources.Get "js/lazy-spotify.js" | minify }}
+  <script>{{ $spotify.Content | safeJS }}</script>
+
   </body>
 </html>

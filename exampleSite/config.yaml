@@ -1,5 +1,6 @@
 # saved as config.yaml in tokyo-mistakes/exampleSite
-# Tokyo-Mistakes Theme Configuration
+# Tokyo-Mistakes Theme Configuration (YAML)
+
 baseURL: "https://schingon.com"
 languageCode: "en-us"
 title: "S Chingon"
@@ -9,9 +10,20 @@ theme: "tokyo-mistakes"
 buildDrafts: false
 buildFuture: false
 canonifyURLs: true
+
 taxonomies:
   tag: "tags"
   category: "categories"
+
+# Output formats (enable JSON on home for /index.json)
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+  page:
+    - HTML
+    - RSS
 
 # Markup settings
 markup:
@@ -23,7 +35,7 @@ markup:
     lineNos: true
   tableOfContents:
     startLevel: 1
-    endLevel: 2
+    endLevel: 3
     ordered: false
 
 # Params for theme
@@ -33,13 +45,16 @@ params:
   description: "From Army veteran to kink educator - one widowed Texan's journey through life, love, and everything in between."
   imageBase: "/images/"
 
-  # Theme settings
-  colorScheme: "colorful" # auto, light, dark
+  # Theme modes (group + scheme replaces colorScheme)
+  schemeGroup: "color" # neutral | color
+  scheme: "auto" # auto | light | dark
+
+  # Reading experience
   showReadingTime: true
   showToc: true
   tocMaxItems: 9
 
-  # Social sharing (FIXED STRUCTURE)
+  # Social sharing (fixed structure)
   socialSharing: true
   shareButtons:
     size: "medium"
@@ -60,7 +75,9 @@ params:
       - whatsapp
       - telegram
       - instagram
-  # Comments (Remark42)
+
+  # Comments (giscus preferred)
+  commentsDefault: true
   comments:
     enabled: true
     giscus:
@@ -75,9 +92,17 @@ params:
       lang: "en"
       loading: "lazy"
 
-  # Search
+  # Search (LoveIt/Lunr style)
   search:
     enabled: true
+
+  # Media autoplay (global + per-surface)
+  autoplay: "off" # off | on (master switch)
+  autoplay_list_page: "off" # default off
+  autoplay_single_page: "on" # default on (only applies if autoplay == "on")
+
+  # Floating buttons
+  backToTopThreshold: 600
 
 # Menu configuration (removed blog per your request)
 menu:
@@ -94,3 +119,6 @@ menu:
     - name: "About"
       url: "/about"
       weight: 40
+
+# Robots and sitemap (SEO)
+enableRobotsTXT: true

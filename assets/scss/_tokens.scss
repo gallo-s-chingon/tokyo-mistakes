@@ -1,0 +1,138 @@
+/* Theme tokens and mode switching */
+
+:root {
+  --header-height: 64px;
+
+  /* Neutral (light) defaults */
+  --color-bg: #ffffff;
+  --color-text: #1f2335;
+  --color-muted: #6b7280;
+  --color-border: #e5e7eb;
+  --color-accent: #0ea5e9;
+
+  --h1-color: var(--color-text);
+  --h2-color: var(--color-text);
+  --h3-color: var(--color-text);
+  --heading: var(--color-text);
+}
+
+/* Neutral + auto (dark) */
+@media (prefers-color-scheme: dark) {
+  html[data-scheme-group="neutral"][data-scheme="auto"] {
+    --color-bg: #1a1b26;
+    --color-text: #c0caf5;
+    --color-muted: #a0a3b1;
+    --color-border: #2b2f40;
+    --color-accent: #7aa2f7;
+
+    --h1-color: var(--color-text);
+    --h2-color: var(--color-text);
+    --h3-color: var(--color-text);
+    --heading: var(--color-text);
+  }
+}
+
+/* Neutral explicit dark */
+html[data-scheme-group="neutral"][data-scheme="dark"] {
+  --color-bg: #1a1b26;
+  --color-text: #c0caf5;
+  --color-muted: #a0a3b1;
+  --color-border: #2b2f40;
+  --color-accent: #7aa2f7;
+
+  --h1-color: var(--color-text);
+  --h2-color: var(--color-text);
+  --h3-color: var(--color-text);
+  --heading: var(--color-text);
+}
+
+/* Color group (light) */
+html[data-scheme-group="color"] {
+  --color-bg: #ffffff;
+  --color-text: #0f172a;
+  --color-muted: #475569;
+  --color-border: #e2e8f0;
+  --color-accent: #7c3aed; /* violet */
+
+  --h1-color: #dc2626;
+  --h2-color: #2563eb;
+  --h3-color: #16a34a;
+  --heading: var(--color-text); /* body headings default */
+}
+
+/* Color + auto (dark) */
+@media (prefers-color-scheme: dark) {
+  html[data-scheme-group="color"][data-scheme="auto"] {
+    --color-bg: #0b1020;
+    --color-text: #e5e7eb;
+    --color-muted: #a1a1aa;
+    --color-border: #1f2937;
+    --color-accent: #a78bfa;
+
+    --h1-color: #f87171;
+    --h2-color: #60a5fa;
+    --h3-color: #86efac;
+    --heading: var(--color-text);
+  }
+}
+
+/* Color explicit dark */
+html[data-scheme-group="color"][data-scheme="dark"] {
+  --color-bg: #0b1020;
+  --color-text: #e5e7eb;
+  --color-muted: #a1a1aa;
+  --color-border: #1f2937;
+  --color-accent: #a78bfa;
+
+  --h1-color: #f87171;
+  --h2-color: #60a5fa;
+  --h3-color: #86efac;
+  --heading: var(--color-text);
+}
+
+/* Global application */
+body { background: var(--color-bg); color: var(--color-text); }
+h1 { color: var(--h1-color); }
+h2 { color: var(--h2-color); }
+h3 { color: var(--h3-color); }
+h1, h2, h3, h4, h5, h6 { scroll-margin-top: var(--header-height); }
+
+/* Header hide-on-scroll */
+.header { position: sticky; top: 0; z-index: 50; transition: transform 160ms ease; background: var(--color-bg); border-bottom: 1px solid var(--color-border); }
+.header--hide { transform: translateY(calc(-1 * var(--header-height))); }
+
+/* TOC */
+.toc { position: sticky; top: calc(var(--header-height) + 16px); max-height: calc(100vh - var(--header-height) - 32px); overflow: auto; border-left: 2px solid var(--color-border); padding-left: 12px; font-size: .95rem; }
+.toc__title { font-weight: 600; margin-bottom: 8px; color: var(--color-muted); }
+.toc__body ul { list-style: none; padding-left: .75rem; }
+.toc--compact .toc__body > ul > li:not(.is-current-h1) > ul { display: none; }
+
+/* Floating buttons */
+.fab { position: fixed; right: 16px; z-index: 60; width: 44px; height: 44px; border-radius: 9999px; display: grid; place-items: center; background: var(--color-accent); color: #fff; box-shadow: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -2px rgba(0,0,0,.05); opacity: 0; pointer-events: none; transition: opacity .2s ease; }
+.fab--show { opacity: 1; pointer-events: auto; }
+.fab--top { bottom: 84px; }
+.fab--comments { bottom: 24px; }
+
+/* Aliases for your existing CSS variable names */
+:root {
+  --bg-primary: var(--color-bg);
+  --bg-secondary: color-mix(in srgb, var(--color-bg) 95%, black 5%);
+  --bg-tertiary: color-mix(in srgb, var(--color-bg) 90%, black 10%);
+  --text-primary: var(--color-text);
+  --text-secondary: var(--color-muted);
+  --text-muted: var(--color-muted);
+  --border: var(--color-border);
+  --accent: var(--color-accent);
+  --accent-secondary: color-mix(in srgb, var(--color-accent) 70%, white 30%);
+  --link: var(--color-accent);
+  --link-hover: color-mix(in srgb, var(--color-accent) 70%, black 30%);
+  --code: var(--color-accent);
+  --inline-code-bg: rgba(127,127,127,.12);
+  --code-bg: rgba(127,127,127,.08);
+  --blockquote: var(--color-accent);
+}
+
+/* Ensure accents are applied when color group is active, even if main.scss sets --heading */
+html[data-scheme-group="color"] h1 { color: var(--h1-color) !important; }
+html[data-scheme-group="color"] h2 { color: var(--h2-color) !important; }
+html[data-scheme-group="color"] h3 { color: var(--h3-color) !important; }

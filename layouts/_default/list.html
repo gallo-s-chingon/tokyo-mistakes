@@ -1,27 +1,51 @@
-{{/* saved as list.html in tokyo-mistakes/layouts/_default */}}
-<div class="post-grid">
-  {{ range .Paginator.Pages }}
-  <div class="post-card">
-    {{ $postImage := .Params.post_image | default .Params.image }}
-    {{ if $postImage }}
-    <div class="post-card-image" style="background-image: url('{{ $postImage }}');">
-      <a href="{{ .Permalink }}" class="post-card-link" aria-label="{{ .Title }}"></a>
-    </div>
-    {{ end }}
-    <div class="post-card-content">
-      <h2 class="post-card-title">
-        <a href="{{ .Permalink }}">{{ .Title }}</a>
-      </h2>
-      <div class="post-card-meta">
-        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
-        <span class="post-card-type">{{ .Type | title }}</span>
-      </div>
-      {{ if .Summary }}
-      <div class="post-card-excerpt">
-        {{ .Summary | truncate 120 }}
-      </div>
-      {{ end }}
-    </div>
-  </div>
+{{/* saved as list.html in tokyo-mistakes/layouts/_default */}} {{ define "main"
+}}
+<div class="container list-page">
+  {{/* Intro-aware pagination sizes */}} {{ $raw := .RawContent | default "" }}
+  {{ $lines := split (replace $raw "\r\n" "\n") "\n" }} {{ $contentLines := len
+  $lines }} {{ $firstPageSize := 3 }} {{ $pageSize := 9 }} {{ if le
+  $contentLines 20 }} {{/* If intro <=20 lines, use normal page size for first
+  page too */}} {{ $firstPageSize = $pageSize }} {{ end }} {{/* Build pages
+  slice to support custom first page size */}} {{ $all := .Pages.ByDate.Reverse
+  }} {{ $isFirst := eq .Paginator.PageNumber 1 }} {{ $perPage := cond $isFirst
+  $firstPageSize $pageSize }} {{ $offset := mul (sub .Paginator.PageNumber 1)
+  $pageSize }} {{ if $isFirst }}{{ $offset = 0 }}{{ end }} {{ $paged := (first
+  $perPage (after $offset $all)) }} {{/* Range indicator (start–end of total)
+  */}} {{ $total := len $all }} {{ $start := add $offset 1 }} {{ $endCandidate
+  := add $offset $perPage }} {{ $end := $endCandidate }} {{ if gt $endCandidate
+  $total }}{{ $end = $total }}{{ end }} {{ if .Content }}
+  <div class="list-intro">{{ .Content }}</div>
   {{ end }}
+
+  <div class="list-meta" style="text-align: right; margin: 8px 0 16px">
+    {{ printf "%d–%d of %d" $start $end $total }}
+  </div>
+
+  <div class="cards">
+    {{ range $paged }} {{/* Card with hero: youtube if present else post_image;
+    spotify (click to activate) for podcast/featured */}}
+    <article class="card">
+      <a class="card__media" href="{{ .Permalink }}">
+        {{ with .Params.youtube }} {{ partial "embeds/youtube-card.html" (dict
+        "ctx" $ "page" . "id" .) }} {{ else }} {{ with (or .Params.post_image
+        .Params.image) }}
+        <img src="{{ . | absURL }}" alt="{{ $.Title }}" loading="lazy" />
+        {{ end }} {{ end }}
+      </a>
+      <div class="card__body">
+        <h2 class="card__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <div class="card__meta">{{ partial "meta/post-meta.html" . }}</div>
+        <p class="card__excerpt">{{ .Summary }}</p>
+
+        {{ if in (slice "podcast" "featured") .Section }} {{ with
+        .Params.spotify }} {{ partial "embeds/spotify-inline.html" (dict "ctx" $
+        "page" . "id" .) }} {{ end }} {{ end }}
+      </div>
+    </article>
+    {{ end }}
+  </div>
+
+  {{/* Standard pagination nav (still uses Hugo's paginator UI) */}} {{ template
+  "_internal/pagination.html" . }}
 </div>
+{{ end }}

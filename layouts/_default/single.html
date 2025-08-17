@@ -1,16 +1,29 @@
-{{/* saved as single.html in tokyo-mistakes/layouts/_default */}}
-{{ define "main" }}
-<article class="post">
-  <div class="container">
-    <div class="post-content">
-      {{ partial "post-header.html" . }}
-      {{ partial "post-toc.html" . }}
-      <div class="post-body">{{ .Content }}</div>
+{{/* saved as single.html in tokyo-mistakes/layouts/_default */}} {{ define
+"main" }}
+<article class="container post">
+  <header class="post__header">
+    <h1 class="post__title">{{ .Title }}</h1>
+    <div class="post__meta">{{ partial "meta/post-meta.html" . }}</div>
+    {{ with (or .Params.post_image .Params.image) }}
+    <figure class="post__hero">
+      <img src="{{ . | absURL }}" alt="{{ $.Title }}" />
+    </figure>
+    {{ end }} {{ with .Params.youtube }} {{ partial "embeds/youtube-single.html"
+    (dict "ctx" $ "page" . "id" .) }} {{ end }} {{ with .Params.spotify }} {{
+    partial "embeds/spotify-single.html" (dict "ctx" $ "page" . "id" .) }} {{
+    end }}
+  </header>
 
-      {{ partial "social-share.html" . }}
-      {{ partial "comments.html" . }}
-      {{ partial "related-posts.html" . }}
-    </div>
+  <div class="post__body">
+    <div class="post__content">{{ .Content }}</div>
+    <aside class="post__toc">{{ partial "post-toc.html" . }}</aside>
   </div>
+
+  {{ if or (and (isset .Params "comments") .Params.comments) (and (not (isset
+  .Params "comments")) .Site.Params.commentsDefault) }}
+  <section id="comments" data-comments-anchor>
+    {{ partial "comments/giscus.html" . }}
+  </section>
+  {{ end }}
 </article>
 {{ end }}

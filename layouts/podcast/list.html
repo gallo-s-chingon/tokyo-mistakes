@@ -1,91 +1,61 @@
-{{/* saved as list.html in tokyo-mistakes/layouts/podcast */}}
 {{ define "main" }}
-<div class="podcast-list">
-  <div class="container">
-    {{ partial "breadcrumbs.html" . }}
-    
-    <header class="list-header">
-      <h1 class="list-title">{{ .Title }}</h1>
-      <p class="list-description">{{ .Description }}</p>
-    </header>
+<div class="container list-page">
 
-    <!-- Page Content -->
-    <div class="podcast-intro">
+  {{ $raw := .RawContent | default "" }}
+  {{ $lines := split (replace $raw "\r\n" "\n") "\n" }}
+  {{ $contentLines := len $lines }}
+
+  {{ $firstPageSize := 3 }}
+  {{ $pageSize := 9 }}
+  {{ if le $contentLines 20 }}{{ $firstPageSize = $pageSize }}{{ end }}
+
+  {{ $all := .Pages.ByDate.Reverse }}
+  {{ $isFirst := eq .Paginator.PageNumber 1 }}
+  {{ $perPage := cond $isFirst $firstPageSize $pageSize }}
+  {{ $offset := mul (sub .Paginator.PageNumber 1) $pageSize }}
+  {{ if $isFirst }}{{ $offset = 0 }}{{ end }}
+  {{ $paged := (first $perPage (after $offset $all)) }}
+
+  {{ $total := len $all }}
+  {{ $start := add $offset 1 }}
+  {{ $endCandidate := add $offset $perPage }}
+  {{ $end := $endCandidate }}
+  {{ if gt $endCandidate $total }}{{ $end = $total }}{{ end }}
+
+  {{ if .Content }}
+    <div class="list-intro">
       {{ .Content }}
     </div>
+  {{ end }}
 
-    <!-- Pinned Episodes -->
-    {{ $pinnedPosts := where .Pages "Params.pinned" true }}
-    {{ if $pinnedPosts }}
-    <div class="pinned-posts">
-      <h2 class="pinned-heading">Featured Episodes</h2>
-      <div class="post-grid">
-        {{ range $pinnedPosts }}
-        <div class="post-card post-card--pinned">
-          {{ $postImage := .Params.post_image | default .Params.image | default "/images/podcast-logo-banner.png" }}
-          <div class="post-card-image" style="background-image: url('{{ $postImage }}');">
-            <a href="{{ .Permalink }}" class="post-card-link" aria-label="{{ .Title }}"></a>
-            <div class="post-card-pin"><i class="fas fa-thumbtack"></i></div>
-          </div>
-          <div class="post-card-content">
-            <h2 class="post-card-title">
-              <a href="{{ .Permalink }}">{{ .Title }}</a>
-            </h2>
-            <div class="post-card-meta">
-              <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
-              {{ if .Params.episode_number }}
-              <span class="post-card-episode">Episode #{{ .Params.episode_number }}</span>
-              {{ end }}
-            </div>
-            {{ if .Summary }}
-            <div class="post-card-excerpt">
-              {{ .Summary | truncate 120 }}
-            </div>
-            {{ end }}
-          </div>
-        </div>
-        {{ end }}
-      </div>
-    </div>
-    {{ end }}
+  <div class="list-meta" style="text-align:right;margin:8px 0 16px;">
+    {{ printf "%d–%d of %d" $start $end $total }}
+  </div>
 
-    <!-- Regular Episodes -->
-    {{ $regularPosts := where .Pages "Params.pinned" "!=" true }}
-    {{ if $regularPosts }}
-    <div class="post-grid">
-      {{ range $regularPosts }}
-      <div class="post-card">
-        {{ $postImage := .Params.post_image | default .Params.image | default "/images/podcast-logo-banner.png" }}
-        <div class="post-card-image" style="background-image: url('{{ $postImage }}');">
-          <a href="{{ .Permalink }}" class="post-card-link" aria-label="{{ .Title }}"></a>
-        </div>
-        <div class="post-card-content">
-          <h2 class="post-card-title">
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
-          </h2>
-          <div class="post-card-meta">
-            <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
-            {{ if .Params.episode_number }}
-            <span class="post-card-episode">Episode #{{ .Params.episode_number }}</span>
+  <div class="cards">
+    {{ range $paged }}
+      <article class="card">
+        <a class="card__media" href="{{ .Permalink }}">
+          {{ with .Params.youtube }}
+            {{ partial "embeds/youtube-card.html" (dict "ctx" $ "page" . "id" .) }}
+          {{ else }}
+            {{ with (or .Params.post_image .Params.image) }}
+              <img src="{{ . | absURL }}" alt="{{ $.Title }}" loading="lazy" />
             {{ end }}
-          </div>
-          {{ if .Summary }}
-          <div class="post-card-excerpt">
-            {{ .Summary | truncate 120 }}
-          </div>
+          {{ end }}
+        </a>
+        <div class="card__body">
+          <h2 class="card__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+          <div class="card__meta">{{ partial "meta/post-meta.html" . }}</div>
+          <p class="card__excerpt">{{ .Summary }}</p>
+          {{ with .Params.spotify }}
+            {{ partial "embeds/spotify-inline.html" (dict "ctx" $ "page" . "id" .) }}
           {{ end }}
         </div>
-      </div>
-      {{ end }}
-    </div>
-    {{ else }}
-    <div class="no-episodes">
-      <p>No episodes available yet. Check back soon!</p>
-    </div>
+      </article>
     {{ end }}
-
-    <!-- Pagination -->
-    {{ template "_internal/pagination.html" . }}
   </div>
+
+  {{ template "_internal/pagination.html" . }}
 </div>
 {{ end }}

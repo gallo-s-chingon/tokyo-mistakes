@@ -1,5 +1,4 @@
-{{/* saved as header.html in tokyo-mistakes/layouts/partials */}}
-<header class="site-header">
+<header class="header">
   <div class="container">
     <div class="header-content">
       <!-- Logo/Site Title -->
@@ -9,7 +8,7 @@
         </a>
       </div>
 
-      <!-- Desktop Navigation (excludes blog per your request) -->
+      <!-- Desktop Navigation -->
       <nav class="site-nav desktop-nav" aria-label="Main navigation">
         <ul class="nav-list">
           {{ range .Site.Menus.main }}
@@ -22,20 +21,18 @@
         </ul>
       </nav>
 
-      <!-- Mobile Navigation Toggle & Search & Theme -->
+      <!-- Header Controls -->
       <div class="header-controls">
         {{ if .Site.Params.search.enabled }}
-          <button id="search-toggle" class="btn-icon" aria-label="Search">
-            <i class="fas fa-search"></i>
+          <button class="btn-icon nav__search" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         {{ end }}
-
         <button id="theme-toggle" class="btn-icon" aria-label="Toggle theme">
-          <i class="fas fa-moon"></i>
+          <i class="fa-regular fa-circle-half-stroke"></i>
         </button>
-
         <button id="mobile-nav-toggle" class="btn-icon mobile-only" aria-label="Toggle navigation">
-          <i class="fas fa-bars"></i>
+          <i class="fa-solid fa-bars"></i>
         </button>
       </div>
     </div>
@@ -53,8 +50,4 @@
       </ul>
     </nav>
   </div>
-  
-  {{ if .Site.Params.search.enabled }}
-    {{ partial "search-overlay.html" . }}
-  {{ end }}
 </header>

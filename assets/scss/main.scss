@@ -3,6 +3,7 @@
 @import "taxonomy"; // This uses variables from _variables.scss
 @import "images"; // Import other partials
 @import "embeds"; // Import other partials
+@import "tokens";
 
 // Reset & Base Styles
 * {
@@ -1624,15 +1625,15 @@ blockquote {
   margin: $spacing-lg 0;
   font-size: 0.95rem;
   color: var(--text-secondary);
-  
+
   .post-meta-divider {
     margin: 0 $spacing-xs;
   }
-  
+
   a {
     color: var(--link);
     text-decoration: none;
-    
+
     &:hover {
       color: var(--link-hover);
       text-decoration: underline;
@@ -1646,7 +1647,7 @@ blockquote {
     .post-title {
       margin-bottom: 0;
     }
-    
+
     // Hide metadata in hero
     .post-meta {
       display: none;
