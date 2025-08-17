@@ -1,228 +1,174 @@
-// Tokyo Mistakes Theme JavaScript
-// saved as main.js in tokyo-mistakes/assets/js
+// Immediately invoked function to ensure a clean, private scope.
 (function () {
   "use strict";
 
-  // Theme Toggle Functionality (2-state: light/dark; colorful overlay is config-driven)
+  // =========================================================================
+  // 1. HEADER HIDE ON SCROLL
+  // =========================================================================
+  const header = document.querySelector(".header");
+  if (header) {
+    let lastY = window.scrollY || 0;
+    let headerDisabled = false;
 
-  function initThemeToggle() {
-    const themeToggle = document.getElementById("theme-toggle");
-    if (!themeToggle) return;
-    const themeIcon = themeToggle.querySelector("i");
+    const setHeaderDisabled = (state) => {
+      headerDisabled = !!state;
+      if (!headerDisabled) {
+        header.classList.remove("header--hide");
+      }
+    };
 
-    // Check if colorful mode is active from config
-    const isColorfulConfig =
-      document.documentElement.getAttribute("data-theme") === "colorful";
+    const handleScroll = () => {
+      if (headerDisabled) return;
+      let y = window.scrollY || 0;
+      if (y > lastY && y > 100) {
+        header.classList.add("header--hide");
+      } else {
+        header.classList.remove("header--hide");
+      }
+      lastY = y;
+    };
 
-    function updateThemeIcon(theme) {
-      if (!themeIcon) return;
-      themeIcon.className = theme === "dark" ? "fas fa-sun" : "fas fa-moon";
-    }
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    // Link to search and mobile nav events
+    document.addEventListener("search:open", () => setHeaderDisabled(true));
+    document.addEventListener("search:close", () => setHeaderDisabled(false));
+    document.addEventListener("mobile-nav:open", () => setHeaderDisabled(true));
+    document.addEventListener("mobile-nav:close", () =>
+      setHeaderDisabled(false),
+    );
+  }
 
-    function getBase() {
-      const attr = document.documentElement.getAttribute("data-theme");
-      // If colorful overlay was applied at load, data-theme might be "colorful"
-      // Infer base using prefers-color-scheme when ambiguous.
-      if (attr === "dark" || attr === "light") return attr;
-      return window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light";
-    }
+  // =========================================================================
+  // 2. THEME TOGGLE (LIGHT/DARK/AUTO)
+  // =========================================================================
+  const themeToggle = document.getElementById("theme-toggle");
+  if (themeToggle) {
+    const docElement = document.documentElement;
+    const savedTheme = localStorage.getItem("theme") || "auto";
+    docElement.setAttribute("data-theme", savedTheme);
 
-    function toggleTheme() {
-      // If we're in colorful mode from config, toggle between dark and light
-      // but remember the user's preference
-      if (isColorfulConfig) {
-        // Get the current base or default to system preference
-        const savedBase = localStorage.getItem("theme");
-        const currentBase =
-          savedBase ||
-          (window.matchMedia("(prefers-color-scheme: dark)").matches
+    themeToggle.addEventListener("click", () => {
+      const currentTheme = docElement.getAttribute("data-theme");
+      const nextTheme =
+        currentTheme === "auto"
+          ? "light"
+          : currentTheme === "light"
             ? "dark"
-            : "light");
-        const nextBase = currentBase === "dark" ? "light" : "dark";
+            : "auto";
+      docElement.setAttribute("data-theme", nextTheme);
+      localStorage.setItem("theme", nextTheme);
+    });
+  }
 
-        // Save the preference but keep colorful active
-        localStorage.setItem("theme", nextBase);
-        updateThemeIcon(nextBase);
+  // =========================================================================
+  // 3. MOBILE NAVIGATION TOGGLE
+  // =========================================================================
+  const mobileNavToggle = document.getElementById("mobile-nav-toggle");
+  const mobileNav = document.getElementById("mobile-nav"); // Get the nav element itself
 
-        // Notify listeners
-        document.dispatchEvent(
-          new CustomEvent("themeChanged", {
-            detail: { theme: "colorful", base: nextBase },
-          }),
-        );
+  if (mobileNavToggle && mobileNav) {
+    mobileNavToggle.addEventListener("click", (e) => {
+      // When the hamburger is clicked, toggle the 'active' class on the nav menu
+      const isOpen = mobileNav.classList.toggle("active");
+      document.body.classList.toggle("mobile-nav--is-open", isOpen); // Also toggle class on body
 
+      // Dispatch event so other scripts can react
+      const eventName = isOpen ? "mobile-nav:open" : "mobile-nav:close";
+      document.dispatchEvent(new Event(eventName));
+      e.stopPropagation(); // prevent event from bubbling up
+    });
+  }
+
+  // =========================================================================
+  // 4. SEARCH OVERLAY & LUNR INITIALIZATION
+  // =========================================================================
+  const searchOverlay = document.getElementById("search-overlay");
+  if (searchOverlay) {
+    const searchInput = searchOverlay.querySelector('input[type="search"]');
+    const searchResults = searchOverlay.querySelector(".search__results");
+    const searchOpenBtn = document.querySelector(".nav__search");
+    const searchCloseBtn = searchOverlay.querySelector(".search__close");
+
+    let lunrIdx,
+      store = [],
+      ready = false;
+
+    const openSearch = () => {
+      searchOverlay.hidden = false;
+      searchOverlay.setAttribute("aria-hidden", "false");
+      searchInput.value = "";
+      searchResults.innerHTML = "";
+      searchInput.focus();
+      document.dispatchEvent(new Event("search:open"));
+    };
+
+    const closeSearch = () => {
+      searchOverlay.hidden = true;
+      searchOverlay.setAttribute("aria-hidden", "true");
+      document.dispatchEvent(new Event("search:close"));
+    };
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "/" && !e.metaKey && !e.ctrlKey && !e.altKey) {
+        e.preventDefault();
+        openSearch();
+      }
+      if (e.key === "Escape") {
+        closeSearch();
+      }
+    });
+
+    if (searchOpenBtn) searchOpenBtn.addEventListener("click", openSearch);
+    if (searchCloseBtn) searchCloseBtn.addEventListener("click", closeSearch);
+
+    fetch("/index.json")
+      .then((r) => r.json())
+      .then((data) => {
+        store = data;
+        lunrIdx = lunr(function () {
+          this.ref("permalink");
+          this.field("title");
+          this.field("description");
+          this.field("content");
+          data.forEach((d) => this.add(d));
+        });
+        ready = true;
+      });
+
+    searchInput.addEventListener("input", () => {
+      const q = searchInput.value.trim();
+      if (!ready || q.length < 2) {
+        searchResults.innerHTML = "";
         return;
       }
-
-      // Normal light/dark toggle
-      const current = getBase();
-      const next = current === "dark" ? "light" : "dark";
-      document.documentElement.setAttribute("data-theme", next);
-      localStorage.setItem("theme", next);
-      updateThemeIcon(next);
-
-      // Notify listeners
-      document.dispatchEvent(
-        new CustomEvent("themeChanged", { detail: { theme: next } }),
-      );
-    }
-
-    // Initialize icon based on the effective theme
-    const effectiveTheme = isColorfulConfig
-      ? localStorage.getItem("theme") ||
-        (window.matchMedia("(prefers-color-scheme: dark)").matches
-          ? "dark"
-          : "light")
-      : getBase();
-
-    updateThemeIcon(effectiveTheme);
-    themeToggle.addEventListener("click", toggleTheme);
-
-    // Debug
-    console.log("Theme toggle initialized:", {
-      isColorfulConfig,
-      effectiveTheme,
-      dataTheme: document.documentElement.getAttribute("data-theme"),
+      const hits = lunrIdx.search(q).slice(0, 12);
+      const html = hits
+        .map((h) => {
+          const doc = store.find((s) => s.permalink === h.ref) || {};
+          return `<a class="search__item" href="${doc.permalink}"><div class="search__title">${doc.title || ""}</div><div class="search__desc">${doc.description || doc.summary || ""}</div></a>`;
+        })
+        .join("");
+      searchResults.innerHTML =
+        html || '<div class="search__empty">No results</div>';
     });
   }
 
-  // Mobile Navigation
-  function initMobileNav() {
-    const mobileToggle = document.getElementById("mobile-nav-toggle");
-    const mobileNav = document.getElementById("mobile-nav");
-    const body = document.body;
-    if (!mobileToggle || !mobileNav) return;
-
-    function toggleMobileNav() {
-      const isOpen = mobileNav.classList.contains("active");
-      if (isOpen) {
-        mobileNav.classList.remove("active");
-        body.classList.remove("mobile-nav-open");
-        mobileToggle.setAttribute("aria-expanded", "false");
-      } else {
-        mobileNav.classList.add("active");
-        body.classList.add("mobile-nav-open");
-        mobileToggle.setAttribute("aria-expanded", "true");
-      }
-    }
-
-    mobileToggle.addEventListener("click", toggleMobileNav);
-
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && mobileNav.classList.contains("active"))
-        toggleMobileNav();
-    });
-
-    document.addEventListener("click", function (e) {
-      if (
-        mobileNav.classList.contains("active") &&
-        !mobileNav.contains(e.target) &&
-        !mobileToggle.contains(e.target)
-      ) {
-        toggleMobileNav();
-      }
-    });
-  }
-
-  // Search Toggle
-  function initSearch() {
-    const searchToggle = document.getElementById("search-toggle");
-    const searchOverlay = document.getElementById("search-overlay");
-    const searchInput = document.getElementById("search-input");
-    const searchClose = document.getElementById("search-close");
-
-    if (!searchToggle || !searchOverlay) {
-      console.error("Search elements not found:", {
-        searchToggle: !!searchToggle,
-        searchOverlay: !!searchOverlay,
-      });
-      return;
-    }
-
-    function openSearch() {
-      console.log("Opening search overlay");
-      searchOverlay.classList.add("active");
-      document.body.classList.add("search-open");
-      setTimeout(() => searchInput && searchInput.focus(), 100);
-    }
-
-    function closeSearch() {
-      console.log("Closing search overlay");
-      searchOverlay.classList.remove("active");
-      document.body.classList.remove("search-open");
-      if (searchInput) searchInput.value = "";
-      const results = document.getElementById("search-results");
-      if (results) {
-        results.innerHTML = `
-        <div class="search-no-results">
-          <i class="fas fa-search"></i>
-          <p>Start typing to search...</p>
-        </div>
-      `;
-      }
-    }
-
-    // Add event listeners
-    console.log("Adding search event listeners");
-    searchToggle.addEventListener("click", openSearch);
-    if (searchClose) searchClose.addEventListener("click", closeSearch);
-
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && searchOverlay.classList.contains("active"))
-        closeSearch();
-    });
-  }
-
-  // Make sure to call this function on DOMContentLoaded
-  document.addEventListener("DOMContentLoaded", function () {
-    initThemeToggle();
-    initMobileNav();
-    initSearch();
-    initReadingProgress();
-  });
-
-  // Copy to clipboard
-  window.copyToClipboard = function (text) {
-    navigator.clipboard.writeText(text).then(
-      function () {
-        showCopyNotification("Link copied to clipboard!");
+  // =========================================================================
+  // 5. FLOATING ACTION BUTTONS (Back to Top)
+  // =========================================================================
+  const topBtn = document.getElementById("fabTop");
+  if (topBtn) {
+    const scrollThreshold = 600;
+    window.addEventListener(
+      "scroll",
+      () => {
+        topBtn.classList.toggle("fab--show", window.scrollY > scrollThreshold);
       },
-      function (err) {
-        console.error("Could not copy text: ", err);
-      },
+      { passive: true },
     );
-  };
 
-  function showCopyNotification(message) {
-    const notification = document.createElement("div");
-    notification.className = "copy-notification";
-    notification.textContent = message;
-    document.body.appendChild(notification);
-    setTimeout(() => notification.classList.add("show"), 100);
-    setTimeout(() => {
-      notification.classList.remove("show");
-      setTimeout(() => document.body.removeChild(notification), 300);
-    }, 2000);
-  }
-
-  // Reading Progress Indicator
-  function initReadingProgress() {
-    const progressBar = document.getElementById("reading-progress");
-    if (!progressBar) return;
-    function updateReadingProgress() {
-      const scrollTop =
-        document.documentElement.scrollTop || document.body.scrollTop;
-      const scrollHeight =
-        document.documentElement.scrollHeight || document.body.scrollHeight;
-      const clientHeight =
-        document.documentElement.clientHeight || window.innerHeight;
-      const readableHeight = scrollHeight - clientHeight;
-      const progress = (scrollTop / readableHeight) * 100;
-      progressBar.style.width = `${progress}%`;
-    }
-    window.addEventListener("scroll", updateReadingProgress);
-    updateReadingProgress();
+    topBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
   }
 })();

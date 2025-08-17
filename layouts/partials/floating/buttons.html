@@ -1,5 +1,5 @@
 <button class="fab fab--top" id="fabTop" aria-label="Back to top" title="Back to top">
-  <i class="fa-regular fa-circle-up"></i>
+  <i class="fa-solid fa-circle-up"></i>
 </button>
 
 {{ $commentsEnabled := or (and (isset .Params "comments") .Params.comments) (and (not (isset .Params "comments")) .Site.Params.commentsDefault) }}
@@ -8,28 +8,3 @@
   <i class="fa-regular fa-comments"></i>
 </button>
 {{ end }}
-
-<script>
-(function(){
-  var topBtn = document.getElementById('fabTop');
-  var commentsBtn = document.getElementById('fabComments');
-  var thresh = {{ default 600 .Site.Params.backToTopThreshold }};
-
-  function vis(el, show){ if(!el) return; el.classList.toggle('fab--show', !!show); }
-  window.addEventListener('scroll', function(){
-    vis(topBtn, window.scrollY > thresh);
-  }, { passive:true });
-
-  if (topBtn) topBtn.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
-
-  if (commentsBtn) commentsBtn.addEventListener('click', function(){
-    var el = document.getElementById('comments');
-    if(el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } else {
-      var anchor = document.querySelector('[data-comments-anchor]');
-      if (anchor) anchor.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  });
-})();
-</script>

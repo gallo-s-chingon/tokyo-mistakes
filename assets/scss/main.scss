@@ -1,9 +1,14 @@
 // saved as main.scss in tokyo-mistakes/assets/scss
-@import "variables"; // This must come first
-@import "taxonomy"; // This uses variables from _variables.scss
-@import "images"; // Import other partials
-@import "embeds"; // Import other partials
+// NOTE:Import variables FIRST. This file defines all colors and breakpoints.
+@import "variables";
+
+// Import aliases for backward compatibility.
 @import "tokens";
+
+// Import the other SCSS partials.
+@import "embeds";
+@import "images";
+@import "taxonomy";
 
 // Reset & Base Styles
 * {
@@ -1652,5 +1657,124 @@ blockquote {
     .post-meta {
       display: none;
     }
+  }
+}
+/* ==========================================================================
+   Icon Buttons & Controls
+   ========================================================================== */
+
+/* Base style for circular icon buttons in the header */
+.btn-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  background-color: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  border-radius: 50%;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.btn-icon:hover {
+  color: var(--color-text);
+  border-color: var(--color-text);
+}
+
+/* Ensure the Font Awesome icon inside the button is visible and sized */
+.btn-icon > i {
+  font-size: 1.1rem;
+}
+
+/* Specific fix for the search overlay close button */
+.search__close {
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  padding: 5px;
+}
+
+.search__close:hover {
+  color: var(--color-text);
+}
+
+/* Ensure the icon is large and visible */
+.search__close > i {
+  font-size: 1.5rem;
+}
+
+/* ==========================================================================
+   Floating Action Buttons (FAB)
+   ========================================================================== */
+
+.fab {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  /* Make FAB same size as header buttons for consistency */
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+  /* Use Flexbox for perfect icon centering */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 50;
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.fab--show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fab:hover {
+  filter: brightness(1.1);
+}
+
+/* Make the icon inside the FAB larger to fill the space */
+.fab > i {
+  font-size: 1.5rem; /* Increased size */
+  line-height: 1; /* Ensure proper alignment */
+}
+
+/* Specific button placements */
+.fab--comments {
+  bottom: 6rem; /* Position above the 'top' button */
+}
+
+/* Dark Mode Color Adjustment */
+[data-theme="dark"] .fab--top {
+  background-color: var(--color-accent-dark);
+  color: #111;
+}
+
+/* ==========================================================================
+   Responsive Visibility
+   ========================================================================== */
+
+/*
+  This class is applied to the mobile navigation toggle (hamburger icon). It should be visible by default (mobile-first), and hidden on larger screens.
+*/
+.mobile-only {
+  display: block; // Visible on mobile
+
+  // When the screen is wider than the mobile breakpoint...
+  @media (min-width: $mobile-breakpoint) {
+    display: none; // ...hide the element.
   }
 }
