@@ -1,40 +1,204 @@
-{{/* saved as single.html in tokyo-mistakes/layouts/blog */}}
-{{ define "main" }}
-<article class="post post--blog">
-  {{ if .Params.post_image }}
-  <div class="post-hero" style="background-image: url('{{ .Params.post_image }}');">
-    <div class="post-hero-content">
-      <h1 class="post-title">{{ .Title }}</h1>
-      <div class="post-meta">
-        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "January 2, 2006" }}</time>
-        {{ if .Params.categories }}
-        <span class="post-meta-divider">•</span>
-        <span class="post-meta-item">
-          {{ range $index, $category := .Params.categories }}
-            {{ if $index }}, {{ end }}
-            <a href="/categories/{{ $category | urlize }}">{{ $category }}</a>
-          {{ end }}
-        </span>
-        {{ end }}
-      </div>
-    </div>
-  </div>
-  {{ end }}
+{{- define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end -}}
 
-  <div class="container">
-    <div class="post-content">
-      {{ if not .Params.post_image }}
-        {{ partial "post-header.html" . }}
-      {{ end }}
-      
-      {{ partial "post-toc.html" . }}
+{{- define "content" -}}
+    {{- $params := .Scratch.Get "params" -}}
 
-      <div class="post-body">{{ .Content }}</div>
+    {{- $toc := $params.toc -}}
+    {{- if eq $toc true -}}
+        {{- $toc = .Site.Params.page.toc | default dict -}}
+    {{- else if eq $toc false -}}
+        {{- $toc = dict "enable" false -}}
+    {{- end -}}
 
-      {{ partial "social-share.html" . }}
-      {{ partial "comments.html" . }}
-      {{ partial "related-posts.html" . }}
-    </div>
-  </div>
-</article>
-{{ end }}
+    {{- /* Auto TOC */ -}}
+    {{- if ne $toc.enable false -}}
+        <div class="toc" id="toc-auto">
+            <h2 class="toc-title">{{ T "contents" }}</h2>
+            <div class="toc-content{{ if eq $toc.auto false }} always-active{{ end }}" id="toc-content-auto"></div>
+        </div>
+    {{- end -}}
+
+    <article class="page single blog-post">
+        {{- /* Title */ -}}
+        <h1 class="single-title animate__animated animate__flipInX">{{ .Title | emojify }}</h1>
+
+        {{- /* Subtitle */ -}}
+        {{- with $params.subtitle -}}
+            <h2 class="single-subtitle">{{ . }}</h2>
+        {{- end -}}
+
+        {{- /* Check if metadata overlay is enabled */ -}}
+        {{- $overlayEnabled := false -}}
+        {{- if isset $params "overlaymetadata" -}}
+            {{- $overlayEnabled = $params.overlaymetadata -}}
+        {{- else if .Site.Params.blog.overlay.enable -}}
+            {{- $overlayEnabled = .Site.Params.blog.overlay.enable -}}
+        {{- end -}}
+
+        {{- $overlayPosition := $params.overlayposition | default .Site.Params.blog.overlay.position | default "lower-left" -}}
+        {{- $overlayOpacity := .Site.Params.blog.overlay.opacity | default 0.85 -}}
+
+        {{- /* Featured image */ -}}
+        {{- $image := $params.featuredimage -}}
+        {{- with .Resources.GetMatch "featured-image" -}}
+            {{- $image = .RelPermalink -}}
+        {{- end -}}
+
+        {{- if and $image $overlayEnabled -}}
+            {{- /* Featured Image with Metadata Overlay */ -}}
+            {{- /* Color overlay filter (Jekyll MM style) */ -}}
+            {{- $overlayFilter := $params.overlay_filter | default "" -}}
+            {{- $overlayFilterCSS := partial "function/overlay-filter.html" $overlayFilter -}}
+            <div class="featured-image-container blog-featured-overlay" data-position="{{ $overlayPosition }}">
+                <div class="featured-image blog-featured-image">
+                    {{- dict "Src" $image "Title" $.Description "Resources" $.Resources | partial "plugin/img.html" -}}
+                    {{- if $overlayFilterCSS -}}
+                        <div class="featured-image-color-overlay" style="background: {{ $overlayFilterCSS }};"></div>
+                    {{- end -}}
+                </div>
+                <div class="featured-metadata-overlay overlay-{{ $overlayPosition }}" style="--overlay-opacity: {{ $overlayOpacity }};">
+                    <div class="overlay-content">
+                        {{- /* Blog Post Metadata in Overlay */ -}}
+                        <div class="post-meta blog-meta">
+                            <div class="post-meta-line">
+                                {{- $author := $params.author | default .Site.Params.Author.name | default (T "author") -}}
+                                {{- $authorLink := $params.authorlink | default .Site.Params.Author.link | default .Site.Home.RelPermalink -}}
+                                <span class="post-author">
+                                    <i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>&nbsp;{{ $author }}
+                                </span>&nbsp;
+                                {{- if $params.created -}}
+                                    {{- $dateStr := substr $params.created 0 10 -}}
+                                    {{- $date := time.AsTime $dateStr -}}
+                                    {{- $dateFormat := .Site.Params.dateformat | default "2006-01-02" -}}
+                                    <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="{{ $dateStr }}">{{ $date.Format $dateFormat }}</time>&nbsp;
+                                {{- else -}}
+                                    {{- with .Site.Params.dateformat | default "2006-01-02" | .PublishDate.Format -}}
+                                        <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="{{ . }}">{{ . }}</time>&nbsp;
+                                    {{- end -}}
+                                {{- end -}}
+                                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;{{ T "readingTime" .ReadingTime }}
+                            </div>
+                            {{- $categories := slice -}}
+                            {{- range .Params.categories -}}
+                                {{- $category := partialCached "function/path.html" . . | printf "/categories/%v" | $.Site.GetPage -}}
+                                {{- $categories = $categories | append $category.Title -}}
+                            {{- end -}}
+                            {{- if or $categories .Params.tags -}}
+                                <div class="post-meta-line">
+                                    {{- with $categories -}}
+                                        <span class="post-categories">
+                                            <i class="far fa-folder fa-fw" aria-hidden="true"></i>&nbsp;{{ delimit . ", " }}
+                                        </span>&nbsp;
+                                    {{- end -}}
+                                    {{- with $.Params.tags -}}
+                                        <span class="post-tags">
+                                            <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;{{ delimit . ", " }}
+                                        </span>
+                                    {{- end -}}
+                                </div>
+                            {{- end -}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {{- else -}}
+            {{- /* Standard Layout - Metadata Above Image */ -}}
+            {{- /* Meta */ -}}
+            <div class="post-meta blog-meta">
+                <div class="post-meta-line">
+                    {{- $author := $params.author | default .Site.Params.Author.name | default (T "author") -}}
+                    {{- $authorLink := $params.authorlink | default .Site.Params.Author.link | default .Site.Home.RelPermalink -}}
+                    <span class="post-author">
+                        {{- $options := dict "Class" "author" "Destination" $authorLink "Title" "Author" "Rel" "author" "Icon" (dict "Class" "fas fa-user-circle fa-fw") "Content" $author -}}
+                        {{- partial "plugin/a.html" $options -}}
+                    </span>
+
+                    {{- $categories := slice -}}
+                    {{- range .Params.categories -}}
+                        {{- $category := partialCached "function/path.html" . . | printf "/categories/%v" | $.Site.GetPage -}}
+                        {{- $categories = $categories | append (printf `<a href="%v"><i class="far fa-folder fa-fw" aria-hidden="true"></i>%v</a>` $category.RelPermalink $category.Title) -}}
+                    {{- end -}}
+                    {{- with delimit $categories "&nbsp;" -}}
+                        &nbsp;<span class="post-category">
+                            {{- dict "Categories" . | T "includedInCategories" | safeHTML -}}
+                        </span>
+                    {{- end -}}
+                </div>
+                <div class="post-meta-line">
+                    {{- if $params.created -}}
+                        {{- $dateStr := substr $params.created 0 10 -}}
+                        {{- $date := time.AsTime $dateStr -}}
+                        {{- $dateFormat := .Site.Params.dateformat | default "2006-01-02" -}}
+                        <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="{{ $dateStr }}">{{ $date.Format $dateFormat }}</time>&nbsp;
+                    {{- else -}}
+                        {{- with .Site.Params.dateformat | default "2006-01-02" | .PublishDate.Format -}}
+                            <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="{{ . }}">{{ . }}</time>&nbsp;
+                        {{- end -}}
+                    {{- end -}}
+                    <i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;{{ T "wordCount" .WordCount }}&nbsp;
+                    <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;{{ T "readingTime" .ReadingTime }}
+                </div>
+            </div>
+
+            {{- with $image -}}
+                {{- /* Color overlay filter (Jekyll MM style) */ -}}
+                {{- $overlayFilter := $params.overlay_filter | default "" -}}
+                {{- $overlayFilterCSS := partial "function/overlay-filter.html" $overlayFilter -}}
+                <div class="featured-image blog-featured-image" style="position: relative;">
+                    {{- dict "Src" . "Title" $.Description "Resources" $.Resources | partial "plugin/img.html" -}}
+                    {{- if $overlayFilterCSS -}}
+                        <div class="featured-image-color-overlay" style="background: {{ $overlayFilterCSS }};"></div>
+                    {{- end -}}
+                </div>
+            {{- end -}}
+        {{- end -}}
+
+        {{- /* Static TOC */ -}}
+        {{- if ne $toc.enable false -}}
+            <div class="details toc" id="toc-static"  data-kept="{{ if $toc.keepStatic }}true{{ end }}">
+                <div class="details-summary toc-title">
+                    <span>{{ T "contents" }}</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static">
+                    {{- dict "Content" .TableOfContents "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
+                </div>
+            </div>
+        {{- end -}}
+
+        {{- /* Content */ -}}
+        <div class="content blog-content" id="content">
+            {{- dict "Content" .Content "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
+        </div>
+
+        {{- /* Detect YouTube content for video-specific sharing */ -}}
+        {{- $isVideo := false -}}
+        {{- /* Check 1: podcast-youtube shortcode in content */ -}}
+        {{- if findRE "podcast-youtube" .Content -}}
+            {{- $isVideo = true -}}
+        {{- end -}}
+        {{- /* Check 2: embedPlayers with type:"youtube" */ -}}
+        {{- if not $isVideo -}}
+            {{- range $params.embedPlayers -}}
+                {{- if eq .type "youtube" -}}
+                    {{- $isVideo = true -}}
+                {{- end -}}
+            {{- end -}}
+        {{- end -}}
+        {{- /* Check 3: externalUrl containing youtube.com or youtu.be */ -}}
+        {{- if not $isVideo -}}
+            {{- with $params.externalurl -}}
+                {{- if or (findRE "youtube\\.com" .) (findRE "youtu\\.be" .) -}}
+                    {{- $isVideo = true -}}
+                {{- end -}}
+            {{- end -}}
+        {{- end -}}
+        {{- .Scratch.Set "isVideo" $isVideo -}}
+
+        {{- /* Footer */ -}}
+        {{- partial "single/footer.html" . -}}
+
+        {{- /* Comment */ -}}
+        {{- partial "comment.html" . -}}
+    </article>
+{{- end -}}

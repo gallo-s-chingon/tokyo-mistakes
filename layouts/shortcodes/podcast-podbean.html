@@ -1,0 +1,33 @@
+{{- /*
+  Podbean Podcast Player Shortcode
+
+  Provide embed URL as parameter.
+
+  Example: {{< podcast-podbean "https://www.podbean.com/player-v2/?i=abc123" >}}
+
+  To get embed URL from Podbean:
+  1. Go to episode in Podbean dashboard
+  2. Click "Share" → "Embed"
+  3. Copy the iframe src URL
+*/ -}}
+
+{{- $embedUrl := .Get 0 -}}
+{{- $height := .Get "height" | default "150" -}}
+{{- $playerWidth := .Site.Params.podcast.playerWidth | default 0.8 -}}
+{{- $widthPercent := mul $playerWidth 100 -}}
+
+{{- if $embedUrl -}}
+<div class="podcast-player podcast-player-podbean" style="width:{{ $widthPercent }}%;max-width:{{ $widthPercent }}%;margin:0 auto 50px auto;">
+  <iframe
+    title="Podbean Player"
+    src="{{ $embedUrl }}"
+    width="100%"
+    height="{{ $height }}"
+    style="border: none;"
+    scrolling="no"
+    data-name="pb-iframe-player">
+  </iframe>
+</div>
+{{- else -}}
+  <p><strong>Error:</strong> Podbean embed URL required. Provide embed URL as parameter.
+{{- end -}}

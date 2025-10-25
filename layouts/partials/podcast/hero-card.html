@@ -1,0 +1,141 @@
+{{- /*
+  Hero Card Component
+
+  Renders a photo-forward card with featured image background and metadata overlay.
+  Inspired by mademistakes.com layout.
+
+  Usage: {{ partial "podcast/hero-card.html" (dict "page" . "type" "episode") }}
+
+  Parameters:
+  - page: The page object to render
+  - type: Content type ("episode", "featured", "blog")
+*/ -}}
+
+{{- $page := .page -}}
+{{- $type := .type | default "episode" -}}
+{{- $params := $page.Params -}}
+
+{{- /* Get overlay filter configuration - page param overrides site param */ -}}
+{{- $overlayFilter := $params.overlay_filter | default site.Params.list.overlayFilter | default "" -}}
+
+{{- /* Parse overlay filter using the shared function */ -}}
+{{- $overlayFilterCSS := partial "function/overlay-filter.html" $overlayFilter -}}
+{{- $overlayStyle := "" -}}
+{{- if $overlayFilterCSS -}}
+    {{- $overlayStyle = printf "background: %s;" $overlayFilterCSS -}}
+{{- end -}}
+
+{{- /* Get featured image */ -}}
+{{- $image := $params.featuredImagePreview | default $params.featuredImage -}}
+{{- with $page.Resources.GetMatch "featured-image" -}}
+    {{- $image = .RelPermalink -}}
+{{- end -}}
+
+<article class="hero-card hero-card-{{ $type }}" data-type="{{ $type }}">
+    <a href="{{ $page.RelPermalink }}" class="hero-card-link">
+        {{- /* Featured Image Background with configurable overlay */ -}}
+        {{- with $image -}}
+            <div class="hero-card-image" style="background-image: url('{{ . }}');" loading="lazy">
+                {{- if $overlayStyle -}}
+                    <div class="hero-card-image-overlay" style="{{ $overlayStyle | safeCSS }}"></div>
+                {{- end -}}
+            </div>
+        {{- else -}}
+            {{- /* Fallback gradient if no image */ -}}
+            <div class="hero-card-image hero-card-image-fallback">
+                {{- if $overlayStyle -}}
+                    <div class="hero-card-image-overlay" style="{{ $overlayStyle | safeCSS }}"></div>
+                {{- end -}}
+            </div>
+        {{- end -}}
+
+        {{- /* Metadata Overlay */ -}}
+        <div class="hero-card-content">
+            {{- /* Content type specific metadata */ -}}
+            <div class="hero-card-meta">
+                {{- if eq $type "episode" -}}
+                    {{- /* Episode metadata */ -}}
+                    {{- with $params.episodenumber -}}
+                        <span class="hero-card-meta-item episode-number">Episode {{ . }}</span>
+                    {{- end -}}
+                    {{- if $params.created -}}
+                        {{- $dateStr := substr $params.created 0 10 -}}
+                        {{- $date := time.AsTime $dateStr -}}
+                        <span class="hero-card-meta-item episode-date">{{ $date.Format "Jan 2, 2006" }}</span>
+                    {{- else -}}
+                        {{- with $page.PublishDate -}}
+                            <span class="hero-card-meta-item episode-date">{{ .Format "Jan 2, 2006" }}</span>
+                        {{- end -}}
+                    {{- end -}}
+                    {{- with $params.duration -}}
+                        <span class="hero-card-meta-item episode-duration">{{ . }}</span>
+                    {{- end -}}
+                {{- else if eq $type "featured" -}}
+                    {{- /* Featured appearance metadata */ -}}
+                    {{- with $params.appearancetype -}}
+                        <span class="hero-card-meta-item appearance-type">{{ . | title }}</span>
+                    {{- end -}}
+                    {{- with $params.platform -}}
+                        <span class="hero-card-meta-item appearance-platform">{{ . }}</span>
+                    {{- end -}}
+                    {{- if $params.created -}}
+                        {{- $dateStr := substr $params.created 0 10 -}}
+                        {{- $date := time.AsTime $dateStr -}}
+                        <span class="hero-card-meta-item appearance-date">{{ $date.Format "Jan 2, 2006" }}</span>
+                    {{- else -}}
+                        {{- with $page.PublishDate -}}
+                            <span class="hero-card-meta-item appearance-date">{{ .Format "Jan 2, 2006" }}</span>
+                        {{- end -}}
+                    {{- end -}}
+                {{- else -}}
+                    {{- /* Blog post metadata */ -}}
+                    {{- if $params.created -}}
+                        {{- $dateStr := substr $params.created 0 10 -}}
+                        {{- $date := time.AsTime $dateStr -}}
+                        <span class="hero-card-meta-item blog-date">{{ $date.Format "Jan 2, 2006" }}</span>
+                    {{- else -}}
+                        {{- with $page.PublishDate -}}
+                            <span class="hero-card-meta-item blog-date">{{ .Format "Jan 2, 2006" }}</span>
+                        {{- end -}}
+                    {{- end -}}
+                    {{- with $params.categories -}}
+                        <span class="hero-card-meta-item blog-category">{{ index . 0 }}</span>
+                    {{- end -}}
+                    {{- $readingTime := $page.ReadingTime -}}
+                    {{- if gt $readingTime 0 -}}
+                        <span class="hero-card-meta-item blog-reading-time">{{ $readingTime }} min read</span>
+                    {{- end -}}
+                {{- end -}}
+            </div>
+
+            {{- /* Title */ -}}
+            <h2 class="hero-card-title">{{ $page.Title | emojify }}</h2>
+
+            {{- /* Additional metadata based on type */ -}}
+            {{- if eq $type "episode" -}}
+                {{- with $params.guests -}}
+                    <div class="hero-card-guests">
+                        <i class="fas fa-users fa-fw" aria-hidden="true"></i>&nbsp;{{ delimit . ", " }}
+                    </div>
+                {{- end -}}
+            {{- else if eq $type "featured" -}}
+                {{- with $params.hosts -}}
+                    <div class="hero-card-hosts">
+                        <i class="fas fa-microphone fa-fw" aria-hidden="true"></i>&nbsp;{{ delimit . ", " }}
+                    </div>
+                {{- end -}}
+            {{- else if eq $type "blog" -}}
+                {{- with $params.subtitle -}}
+                    <div class="hero-card-subtitle">{{ . }}</div>
+                {{- end -}}
+            {{- end -}}
+
+            {{- /* Summary */ -}}
+            {{- with $page.Summary -}}
+                <div class="hero-card-summary">
+                    {{ . | plainify | truncate 120 }}
+                </div>
+            {{- end -}}
+        </div>
+    </a>
+</article>

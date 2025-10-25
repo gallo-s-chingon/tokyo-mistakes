@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=63621&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Appearance Types Reference - My cool site</title><meta name="Description" content="This is my cool site"><meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:63621/docs/appearance-types/" /><link rel="prev" href="http://localhost:63621/docs/content-guide/" /><link rel="next" href="http://localhost:63621/docs/social-links-quickstart/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Appearance Types Reference",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:63621\/docs\/appearance-types\/"
+        },"genre": "docs","wordcount":  429 ,
+        "url": "http:\/\/localhost:63621\/docs\/appearance-types\/","datePublished": "2025-01-20T00:00:00+00:00","dateModified": "2025-01-20T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "My cool site"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          function applyTheme() {
+            const highContrast =  true ;
+            const defaultTheme = 'auto';
+
+            
+            const themeMap = {
+              dark: highContrast ? 'tokyo-night' : 'nordic',
+              light: highContrast ? 'onenord-light' : 'onenord-day'
+            };
+
+            
+            let theme = window.localStorage?.getItem('theme');
+
+            if (!theme) {
+              
+              if (defaultTheme === 'auto') {
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                theme = prefersDark ? themeMap.dark : themeMap.light;
+              } else if (defaultTheme === 'dark') {
+                theme = themeMap.dark;
+              } else {
+                theme = themeMap.light;
+              }
+            }
+
+            
+            const validThemes = ['tokyo-night', 'nordic', 'onenord-light', 'onenord-day'];
+            if (!validThemes.includes(theme)) {
+              theme = themeMap.dark;
+            }
+
+            let isDark = theme === 'tokyo-night' || theme === 'nordic';
+            document.body.setAttribute('data-theme', theme);
+            document.body.setAttribute('theme', isDark ? 'dark' : 'light');
+          }
+
+          applyTheme();
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="My cool site">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/featured/"> Featured </a><a class="menu-item" href="/episodes/"> Episodes </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="My cool site">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/featured/" title="">Feat</a><a class="menu-item" href="/episodes/" title="">Epi</a><a class="menu-item" href="/about/" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="page single special"><h1 class="single-title animate__animated animate__pulse animate__faster">Appearance Types Reference</h1><div class="content" id="content"><p>This document lists all supported appearance types for the <code>type</code> field in featured appearances.</p>
+<h2 id="supported-appearance-types">Supported Appearance Types</h2>
+<p>Use these values in the <code>type</code> field of your featured appearance front matter:</p>
+<h3 id="media-appearances">Media Appearances</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Example Use Case</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>podcast</code></td>
+          <td>Guest appearance on a podcast episode</td>
+          <td>&ldquo;Guest on Joe Rogan Experience&rdquo;</td>
+      </tr>
+      <tr>
+          <td><code>radio</code></td>
+          <td>Guest on a radio show</td>
+          <td>&ldquo;Interview on NPR Morning Edition&rdquo;</td>
+      </tr>
+      <tr>
+          <td><code>television</code></td>
+          <td>TV appearance or interview</td>
+          <td>&ldquo;Guest on The Tonight Show&rdquo;</td>
+      </tr>
+      <tr>
+          <td><code>video</code></td>
+          <td>Video interview or feature</td>
+          <td>&ldquo;YouTube interview with Casey Neistat&rdquo;</td>
+      </tr>
+      <tr>
+          <td><code>livestream</code></td>
+          <td>Live streaming appearance</td>
+          <td>&ldquo;Twitch stream with Pokimane&rdquo;</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="written--published">Written &amp; Published</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Example Use Case</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>interview</code></td>
+          <td>Published written interview</td>
+          <td>&ldquo;Q&amp;A in Rolling Stone magazine&rdquo;</td>
+      </tr>
+      <tr>
+          <td><code>article</code></td>
+          <td>Guest post or byline article</td>
+          <td>&ldquo;Guest column in TechCrunch&rdquo;</td>
+      </tr>
+      <tr>
+          <td><code>feature</code></td>
+          <td>Profile or feature article about you</td>
+          <td>&ldquo;Feature in Wired magazine&rdquo;</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="speaking-engagements">Speaking Engagements</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Example Use Case</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>conference</code></td>
+          <td>Conference speaking engagement</td>
+          <td>&ldquo;Keynote at SXSW 2024&rdquo;</td>
+      </tr>
+      <tr>
+          <td><code>talk</code></td>
+          <td>Standalone talk or presentation</td>
+          <td>&ldquo;TED Talk on innovation&rdquo;</td>
+      </tr>
+      <tr>
+          <td><code>panel</code></td>
+          <td>Panel discussion participant</td>
+          <td>&ldquo;Panel at Web Summit&rdquo;</td>
+      </tr>
+      <tr>
+          <td><code>webinar</code></td>
+          <td>Webinar speaker or guest</td>
+          <td>&ldquo;Webinar for O&rsquo;Reilly Media&rdquo;</td>
+      </tr>
+      <tr>
+          <td><code>workshop</code></td>
+          <td>Workshop leader or participant</td>
+          <td>&ldquo;React workshop at ReactConf&rdquo;</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="creative--collaborative">Creative &amp; Collaborative</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Example Use Case</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>collaboration</code></td>
+          <td>Collaborative content or project</td>
+          <td>&ldquo;Collab video with MrBeast&rdquo;</td>
+      </tr>
+      <tr>
+          <td><code>documentary</code></td>
+          <td>Documentary feature or interview</td>
+          <td>&ldquo;Featured in Netflix documentary&rdquo;</td>
+      </tr>
+      <tr>
+          <td><code>film</code></td>
+          <td>Film appearance</td>
+          <td>&ldquo;Cameo in indie film&rdquo;</td>
+      </tr>
+      <tr>
+          <td><code>book</code></td>
+          <td>Book contribution, interview, or feature</td>
+          <td>&ldquo;Chapter in &lsquo;Voices of Tech&rsquo;&rdquo;</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="usage-examples">Usage Examples</h2>
+<h3 id="podcast-appearance">Podcast Appearance</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;The Future of AI&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">type</span>: <span style="color:#ae81ff">podcast</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcastName</span>: <span style="color:#e6db74">&#34;Lex Fridman Podcast&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">hosts</span>: [<span style="color:#e6db74">&#34;Lex Fridman&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;AI&#34;</span>, <span style="color:#e6db74">&#34;machine-learning&#34;</span>, <span style="color:#e6db74">&#34;future-tech&#34;</span>]
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><h3 id="conference-talk">Conference Talk</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Building Scalable Systems&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">type</span>: <span style="color:#ae81ff">conference</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcastName</span>: <span style="color:#e6db74">&#34;NodeConf 2024&#34;</span>  <span style="color:#75715e"># Event name</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">hosts</span>: [<span style="color:#e6db74">&#34;Conference Organizers&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;nodejs&#34;</span>, <span style="color:#e6db74">&#34;scalability&#34;</span>, <span style="color:#e6db74">&#34;architecture&#34;</span>]
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><h3 id="written-interview">Written Interview</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;On the Future of Remote Work&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">type</span>: <span style="color:#ae81ff">interview</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcastName</span>: <span style="color:#e6db74">&#34;Harvard Business Review&#34;</span>  <span style="color:#75715e"># Publication name</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;remote-work&#34;</span>, <span style="color:#e6db74">&#34;productivity&#34;</span>, <span style="color:#e6db74">&#34;future-of-work&#34;</span>]
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><h3 id="documentary-feature">Documentary Feature</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;The Social Dilemma&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">type</span>: <span style="color:#ae81ff">documentary</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcastName</span>: <span style="color:#e6db74">&#34;Netflix Original&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;social-media&#34;</span>, <span style="color:#e6db74">&#34;technology&#34;</span>, <span style="color:#e6db74">&#34;society&#34;</span>]
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><h2 id="display-behavior">Display Behavior</h2>
+<p>Each appearance type displays differently:</p>
+<ul>
+<li><strong>podcast, radio, video, livestream</strong> - Shows with podcast/media player icons</li>
+<li><strong>conference, talk, panel, webinar, workshop</strong> - Shows with presentation icons</li>
+<li><strong>interview, article, feature, book</strong> - Shows with document/writing icons</li>
+<li><strong>collaboration, documentary, film</strong> - Shows with creative/production icons</li>
+</ul>
+<p>The <code>type</code> field affects:</p>
+<ol>
+<li>Icon displayed in metadata</li>
+<li>Wording of external link button</li>
+<li>Filtering and categorization</li>
+<li>RSS feed categorization</li>
+</ol>
+<h2 id="adding-new-types">Adding New Types</h2>
+<p>If you need a type not listed here, you can use any custom value. The theme will display it generically. Common custom types:</p>
+<ul>
+<li><code>masterclass</code> - Teaching or masterclass session</li>
+<li><code>ama</code> - Ask Me Anything session</li>
+<li><code>demo</code> - Product or technical demo</li>
+<li><code>review</code> - Product or content review</li>
+<li><code>award</code> - Award ceremony or recognition</li>
+</ul>
+<hr>
+<p><strong>See Also:</strong></p>
+<ul>
+<li><a href="http://localhost:63621/docs/content-guide/" rel="">Content Guide</a></li>
+<li><a href="http://localhost:63621/docs/podcast-features/" rel="">Podcast Features</a></li>
+</ul>
+</div></div></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.151.2">Hugo</a> | Theme - <a href="https://github.com/gallo-s-chingon/Tokyo-Nord" target="_blank" rel="noopener noreffer" title="Tokyo-Nord 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> Tokyo-Nord</a>
+                </div>
+                <div class="footer-line">
+                    Created by <a href="https://github.com/gallo-s-chingon" target="_blank" rel="noopener noreferrer">Gallo Chingon</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">My cool site</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="/lib/autocomplete/autocomplete.min.js"></script><script src="/lib/lunr/lunr.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script>window.config={"comment":{},"highContrast":true,"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/js/theme.min.js"></script></body>
+</html>

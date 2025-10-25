@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gradients on My cool site</title>
+    <link>http://localhost:63621/tags/gradients/</link>
+    <description>Recent content in Gradients on My cool site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 15 Jan 2025 11:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:63621/tags/gradients/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gradient Overlay Demo</title>
+      <link>http://localhost:63621/blog/2025-01-15-gradient-overlay-demo/</link>
+      <pubDate>Wed, 15 Jan 2025 11:00:00 +0000</pubDate>
+      <guid>http://localhost:63621/blog/2025-01-15-gradient-overlay-demo/</guid>
+      <description>&lt;p&gt;This post demonstrates a &lt;strong&gt;gradient overlay&lt;/strong&gt; for sophisticated visual effects.&lt;/p&gt;&#xA;&lt;p&gt;The featured image uses a gradient that fades from dark to transparent:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;overlay_filter&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0))&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This technique:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Creates a natural shadow area for text&lt;/li&gt;&#xA;&lt;li&gt;Maintains the upper portion of the image visible&lt;/li&gt;&#xA;&lt;li&gt;Provides excellent readability for overlaid metadata&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Perfect for landscape and nature photography!&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,165 @@
+{{- /*
+  Social Share Buttons Partial
+
+  Content-type aware sharing for episodes, featured appearances, and blog posts.
+
+  Platform logic:
+  - Video podcasts (YouTube): YouTube, Twitter/X, LinkedIn, Facebook, Reddit
+  - Audio podcasts: Twitter/X, LinkedIn, Facebook, Email, Reddit
+  - Blog posts: Twitter/X, LinkedIn, Facebook, Pinterest, Email
+
+  Usage: {{ partial "podcast/share-buttons.html" . }}
+*/ -}}
+
+{{- $params := .Params -}}
+{{- $contentType := .Type -}}
+{{- $isVideo := .Scratch.Get "isVideo" | default false -}}
+
+{{- /* Fallback: Check if episode has YouTube player (for backwards compatibility) */ -}}
+{{- if and (not $isVideo) (eq $contentType "episodes") $params.embedPlayers -}}
+  {{- range $params.embedPlayers -}}
+    {{- if eq .type "youtube" -}}
+      {{- $isVideo = true -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Build share URLs */ -}}
+{{- $pageURL := .Permalink | urlquery -}}
+{{- $pageTitle := .Title | urlquery -}}
+{{- $pageDescription := (.Description | default .Summary | plainify | truncate 160) | urlquery -}}
+
+<div class="social-share-buttons" data-content-type="{{ $contentType }}">
+  <h3 class="share-title">Share this {{ if eq $contentType "episodes" }}episode{{ else if eq $contentType "featured" }}appearance{{ else }}post{{ end }}</h3>
+
+  <div class="share-buttons-container">
+    {{- /* Twitter/X - All content types */ -}}
+    <a href="https://twitter.com/intent/tweet?url={{ $pageURL }}&text={{ $pageTitle }}"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="share-button share-button-twitter"
+       aria-label="Share on X">
+      <i class="fab fa-x-twitter" aria-hidden="true"></i>
+      <span class="share-label">X</span>
+    </a>
+
+    {{- /* LinkedIn - All content types */ -}}
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ $pageURL }}"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="share-button share-button-linkedin"
+       aria-label="Share on LinkedIn">
+      <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+      <span class="share-label">LinkedIn</span>
+    </a>
+
+    {{- /* Facebook - All content types */ -}}
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ $pageURL }}"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="share-button share-button-facebook"
+       aria-label="Share on Facebook">
+      <i class="fab fa-facebook-f" aria-hidden="true"></i>
+      <span class="share-label">Facebook</span>
+    </a>
+
+    {{- /* Reddit - Podcasts only */ -}}
+    {{- if or (eq $contentType "episodes") (eq $contentType "featured") -}}
+      <a href="https://www.reddit.com/submit?url={{ $pageURL }}&title={{ $pageTitle }}"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="share-button share-button-reddit"
+         aria-label="Share on Reddit">
+        <i class="fab fa-reddit-alien" aria-hidden="true"></i>
+        <span class="share-label">Reddit</span>
+      </a>
+    {{- end -}}
+
+    {{- /* Pinterest - Blog posts only */ -}}
+    {{- if eq $contentType "blog" -}}
+      {{- $image := ($params.featuredImage | default "") | urlquery -}}
+      <a href="https://pinterest.com/pin/create/button/?url={{ $pageURL }}&description={{ $pageTitle }}&media={{ $image }}"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="share-button share-button-pinterest"
+         aria-label="Share on Pinterest">
+        <i class="fab fa-pinterest-p" aria-hidden="true"></i>
+        <span class="share-label">Pinterest</span>
+      </a>
+    {{- end -}}
+
+    {{- /* Email - Audio podcasts and blog posts */ -}}
+    {{- if or (and (eq $contentType "episodes") (not $isVideo)) (eq $contentType "blog") -}}
+      <a href="mailto:?subject={{ $pageTitle }}&body={{ $pageDescription }}%0A%0A{{ $pageURL }}"
+         class="share-button share-button-email"
+         aria-label="Share via Email">
+        <i class="fas fa-envelope" aria-hidden="true"></i>
+        <span class="share-label">Email</span>
+      </a>
+    {{- end -}}
+
+    {{- /* Copy Link - All content types */ -}}
+    <button type="button"
+            class="share-button share-button-copy"
+            data-url="{{ $pageURL }}"
+            aria-label="Copy link"
+            title="Copy link to clipboard">
+      <i class="fas fa-link" aria-hidden="true"></i>
+      <span class="share-label">Copy Link</span>
+    </button>
+  </div>
+
+  {{- /* Copy confirmation message */ -}}
+  <div class="share-copy-notification" role="status" aria-live="polite"></div>
+</div>
+
+{{- /* Copy link JavaScript */ -}}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const copyButtons = document.querySelectorAll('.share-button-copy');
+
+  copyButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const url = this.getAttribute('data-url');
+      const notification = this.closest('.social-share-buttons').querySelector('.share-copy-notification');
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(() => {
+          notification.textContent = 'Link copied to clipboard!';
+          notification.classList.add('show');
+          setTimeout(() => {
+            notification.classList.remove('show');
+          }, 3000);
+        }).catch(err => {
+          console.error('Failed to copy:', err);
+          notification.textContent = 'Failed to copy link';
+          notification.classList.add('show', 'error');
+          setTimeout(() => {
+            notification.classList.remove('show', 'error');
+          }, 3000);
+        });
+      } else {
+        // Fallback for older browsers
+        const textarea = document.createElement('textarea');
+        textarea.value = url;
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = '0';
+        document.body.appendChild(textarea);
+        textarea.select();
+        try {
+          document.execCommand('copy');
+          notification.textContent = 'Link copied to clipboard!';
+          notification.classList.add('show');
+        } catch (err) {
+          notification.textContent = 'Failed to copy link';
+          notification.classList.add('show', 'error');
+        }
+        document.body.removeChild(textarea);
+        setTimeout(() => {
+          notification.classList.remove('show', 'error');
+        }, 3000);
+      }
+    });
+  });
+});
+</script>

@@ -1,0 +1,368 @@
+# Tokyo-Nord Example Site Configuration
+# Replace placeholder values with your actual podcast information
+
+baseURL = "https://yourpodcast.com/"
+title = "Your Podcast Name"
+theme = "Tokyo-Nord"
+themesDir = "../.."
+
+# Language settings
+defaultContentLanguage = "en"
+languageCode = "en-us"
+languageName = "English"
+hasCJKLanguage = false
+
+# SEO and features
+copyright = "Copyright © 2025 Your Name"
+enableRobotsTXT = true
+enableGitInfo = false
+enableEmoji = true
+
+# Build configuration
+ignoreErrors = ["error-remote-getjson"]
+
+# Pagination
+[pagination]
+  disableAliases = false
+  pagerSize = 12
+  path = "page"
+
+# Navigation Menu
+[menu]
+  [[menu.main]]
+    identifier = "featured"
+    name = "Featured"
+    url = "/featured/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "episodes"
+    name = "Episodes"
+    url = "/episodes/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/blog/"
+    weight = 3
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 4
+
+  # Optional: Guest booking page
+  # [[menu.main]]
+  #   identifier = "book"
+  #   name = "Book"
+  #   url = "/book/"
+  #   weight = 5
+
+[params]
+  # Theme appearance: "auto" (system), "light", or "dark"
+  defaultTheme = "auto"
+
+  # Contrast mode: true = Tokyo Night/OneNord Light, false = Nordic/OneNord Day
+  highContrast = true
+
+  # Git repository (if using git info for last modified dates)
+  gitRepo = "https://github.com/yourusername/yourpodcast"
+
+  # Date format for display
+  dateFormat = "January 2, 2006"
+
+  # SEO metadata
+  description = "Your podcast tagline or description for SEO and social sharing"
+  images = ["/images/podcast-cover.jpg"]
+
+  # Subresource Integrity (SRI) hash function - leave empty to disable
+  fingerprint = ""
+
+  # Author information
+  [params.author]
+    name = "Your Name"
+    email = "your@email.com"
+    link = "https://yourwebsite.com"
+
+  # Podcast Configuration
+  [params.podcast]
+    enable = true
+    name = "Your Podcast Name"
+    hostName = "Your Name"
+    description = "Your podcast description for RSS feeds"
+    artwork = "/images/podcast-cover.jpg"  # 1400x1400 to 3000x3000 pixels, JPG or PNG
+    language = "en-us"
+    category = "Technology"  # Apple Podcasts category
+    subcategory = "Tech News"  # Optional subcategory
+    explicit = false  # true if podcast contains explicit content
+
+    # Podcast platform URLs
+    spotifyUrl = "https://open.spotify.com/show/YOUR-SHOW-ID"
+    appleUrl = "https://podcasts.apple.com/us/podcast/YOUR-PODCAST-ID"
+    youtubeUrl = "https://youtube.com/@yourchannel"
+    rssUrl = "/episodes/index.xml"
+
+    # Newsletter integration - choose one provider
+    newsletter = "buttondown"  # Options: "buttondown", "mailchimp", "convertkit", "custom"
+    newsletterUsername = "your-buttondown-username"  # For Buttondown
+    # newsletterFormId = "your-form-id"  # For ConvertKit
+    # newsletterAction = "https://..."  # For Mailchimp or custom HTML
+
+    # Guest booking (optional)
+    bookingEnabled = false
+    bookingUrl = "https://calendly.com/yourusername"  # Calendly, Acuity, Cal.com, etc.
+
+  # Header configuration
+  [params.header]
+    desktopMode = "fixed"  # "fixed", "normal", or "auto"
+    mobileMode = "auto"
+
+    [params.header.title]
+      logo = "/images/logo.png"  # Optional logo
+      name = "Your Podcast"
+      pre = ""  # Optional HTML before title
+      post = ""  # Optional HTML after title
+      typeit = false  # Typing animation
+
+  # Footer configuration
+  [params.footer]
+    enable = true
+    custom = ""  # Custom HTML content
+    hugo = false  # Show "Powered by Hugo"
+    copyright = true
+    author = true
+    since = 2025  # Year podcast started
+    license = '<a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+
+  # Section and list page settings
+  [params.section]
+    paginate = 12  # Episodes per page
+    dateFormat = "Jan 2"
+    rss = 20  # Number of items in RSS feed
+
+  [params.list]
+    paginate = 12
+    dateFormat = "Jan 2"
+    rss = 20
+
+  # App icon and PWA settings
+  [params.app]
+    title = "Your Podcast"
+    noFavicon = false
+    svgFavicon = ""
+    themeColor = "#1a1b26"  # Tokyo Night background
+    iconColor = "#7aa2f7"   # Tokyo Night blue
+    tileColor = "#1a1b26"
+
+  # Search (using Lunr.js for client-side search)
+  [params.search]
+    enable = true
+    type = "lunr"  # Client-side search, no external dependencies
+    contentLength = 4000
+    placeholder = "Search episodes..."
+    maxResultLength = 10
+    snippetLength = 50
+    highlightTag = "em"
+    absoluteURL = false
+
+  # Home page configuration
+  [params.home]
+    rss = 20
+
+    [params.home.profile]
+      enable = true
+      gravatarEmail = ""
+      avatarURL = "/images/podcast-cover.jpg"
+      title = "Your Podcast Name"
+      subtitle = "Your podcast tagline"
+      typeit = false
+      social = true
+      disclaimer = ""
+
+    [params.home.posts]
+      enable = true
+      paginate = 6  # Recent episodes on homepage
+
+  # Social media links (shown in footer and home page)
+  [params.social]
+    # Podcast platforms
+    Spotify = "your-spotify-username"
+    Youtubechannel = "your-youtube-channel-id"
+
+    # Social media
+    X = "your-twitter-handle"
+    Instagram = "your-instagram-handle"
+    Facebook = "your-facebook-page"
+    Linkedin = "your-linkedin-profile"
+    Threads = "your-threads-handle"
+    Bluesky = "your-bluesky-handle"
+    Mastodon = "your-mastodon-handle"
+
+    # Community and support
+    Discord = "your-discord-server-id"
+    Patreon = "your-patreon-username"
+    GitHub = "your-github-username"
+
+    # Contact
+    Email = "your@email.com"
+    RSS = true
+
+  # Page-level configuration (episodes, blog posts)
+  [params.page]
+    hiddenFromHomePage = false
+    hiddenFromSearch = false
+    twemoji = true  # Emoji support
+    lightgallery = true  # Image gallery for show notes
+    fontawesome = true  # Icon support
+    linkToMarkdown = false  # Don't show raw markdown link
+    rssFullText = false  # Use summary in RSS
+
+    # Table of contents for episode show notes
+    [params.page.toc]
+      enable = true
+      keepStatic = false
+      auto = true
+
+    # Code blocks (for technical podcasts)
+    [params.page.code]
+      copy = true
+      maxShownLines = 50
+
+    # Social sharing buttons (content-type aware)
+    [params.page.share]
+      enable = true
+      X = true
+      Threads = true
+      Facebook = true
+      Linkedin = true
+      Reddit = true
+      Email = true
+
+    # Comments (optional - choose one provider)
+    [params.page.comment]
+      enable = false
+
+      # Utterances (GitHub-based comments)
+      [params.page.comment.utterances]
+        enable = false
+        repo = ""  # owner/repo
+        issueTerm = "pathname"
+        label = ""
+        lightTheme = "github-light"
+        darkTheme = "github-dark"
+
+      # Giscus (GitHub Discussions-based comments)
+      [params.page.comment.giscus]
+        enable = false
+        repo = ""
+        repoId = ""
+        category = "Announcements"
+        categoryId = ""
+        mapping = "pathname"
+        reactionsEnabled = "1"
+        emitMetadata = "0"
+        inputPosition = "bottom"
+        lang = ""
+        lightTheme = "light"
+        darkTheme = "dark"
+
+    # SEO settings
+    [params.page.seo]
+      images = []
+      [params.page.seo.publisher]
+        name = "Your Name"
+        logoUrl = "/images/podcast-cover.jpg"
+
+  # Analytics (choose one provider)
+  [params.analytics]
+    # Plausible Analytics (privacy-friendly, recommended for podcasts)
+    [params.analytics.plausible]
+      dataDomain = ""  # your-domain.com
+
+    # GoatCounter (privacy-friendly, open source)
+    [params.analytics.goatCounter]
+      code = ""  # your-goatcounter-code
+
+    # Google Analytics
+    [params.analytics.google]
+      id = ""  # G-XXXXXXXXXX
+      respectDoNotTrack = true
+
+  # Site verification codes
+  [params.verification]
+    google = ""
+    bing = ""
+
+  # SEO configuration
+  [params.seo]
+    image = "/images/podcast-cover.jpg"
+    thumbnailUrl = "/images/podcast-cover.jpg"
+
+  # CDN for third-party libraries
+  [params.cdn]
+    data = "jsdelivr.yml"  # Use jsDelivr CDN
+
+# Hugo markup configuration
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+
+    [markup.goldmark.renderer]
+      unsafe = true  # Allow HTML in Markdown
+
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 6
+
+# Sitemap configuration
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+# Permalinks
+[permalinks]
+  episodes = "/episodes/:slug/"
+  blog = "/blog/:slug/"
+  featured = "/featured/:slug/"
+
+# Privacy settings
+[privacy]
+  [privacy.twitter]
+    enableDNT = true
+
+  [privacy.youtube]
+    privacyEnhanced = true
+
+# Output formats
+[mediaTypes]
+  [mediaTypes."text/plain"]
+    suffixes = ["md"]
+
+[outputFormats.MarkDown]
+  mediaType = "text/plain"
+  isPlainText = true
+  isHTML = false
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]

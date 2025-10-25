@@ -1,0 +1,100 @@
+{{- define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end -}}
+
+{{- define "content" -}}
+    {{- $params := .Scratch.Get "params" -}}
+
+    <article class="page single legal-page">
+        {{- /* Title */ -}}
+        <h1 class="single-title animate__animated animate__flipInX">{{ .Title | emojify }}</h1>
+
+        {{- /* Last Updated */ -}}
+        {{- with .Lastmod -}}
+            <div class="legal-updated">
+                <em>Last updated: {{ .Format "January 2, 2006" }}</em>
+            </div>
+        {{- end -}}
+
+        {{- /* Subtitle */ -}}
+        {{- with $params.subtitle -}}
+            <h2 class="single-subtitle">{{ . }}</h2>
+        {{- end -}}
+
+        {{- /* Content with collapsible sections support */ -}}
+        <div class="content legal-content" id="content">
+            {{- dict "Content" .Content "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
+        </div>
+
+        {{- /* Contact Section */ -}}
+        {{- with $params.contactEmail -}}
+            <div class="legal-contact">
+                <h2>Questions or Concerns?</h2>
+                <p>If you have questions about this policy, contact us at: <a href="mailto:{{ . }}">{{ . }}</a></p>
+            </div>
+        {{- end -}}
+
+        {{- /* Footer */ -}}
+        {{- partial "single/footer.html" . -}}
+    </article>
+
+    {{- /* Collapsible sections JavaScript */ -}}
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add collapsible functionality to h2 headers in legal content
+        const legalContent = document.querySelector('.legal-content');
+        if (!legalContent) return;
+
+        const headers = legalContent.querySelectorAll('h2');
+        headers.forEach(header => {
+            // Skip if already has toggle
+            if (header.classList.contains('collapsible-header')) return;
+
+            // Make header collapsible
+            header.classList.add('collapsible-header');
+            header.setAttribute('role', 'button');
+            header.setAttribute('aria-expanded', 'true');
+            header.setAttribute('tabindex', '0');
+
+            // Add toggle icon
+            const icon = document.createElement('i');
+            icon.className = 'fas fa-chevron-down collapsible-icon';
+            icon.setAttribute('aria-hidden', 'true');
+            header.appendChild(icon);
+
+            // Get content until next h2 or end
+            const content = document.createElement('div');
+            content.className = 'collapsible-content';
+            let sibling = header.nextElementSibling;
+
+            while (sibling && sibling.tagName !== 'H2') {
+                const next = sibling.nextElementSibling;
+                content.appendChild(sibling);
+                sibling = next;
+            }
+
+            header.parentNode.insertBefore(content, header.nextSibling);
+
+            // Toggle function
+            function toggle() {
+                const isExpanded = header.getAttribute('aria-expanded') === 'true';
+                header.setAttribute('aria-expanded', !isExpanded);
+                content.style.maxHeight = isExpanded ? '0' : content.scrollHeight + 'px';
+                icon.style.transform = isExpanded ? 'rotate(-90deg)' : 'rotate(0deg)';
+            }
+
+            // Click handler
+            header.addEventListener('click', toggle);
+
+            // Keyboard handler
+            header.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    toggle();
+                }
+            });
+
+            // Set initial height
+            content.style.maxHeight = content.scrollHeight + 'px';
+        });
+    });
+    </script>
+{{- end -}}

@@ -1,0 +1,169 @@
+{{- /*
+  Subscribe Buttons Partial
+
+  Displays podcast subscribe options and optional newsletter signup.
+  Reads configuration from site params.
+
+  Config:
+  [params.podcast]
+    spotifyUrl = "https://..."
+    appleUrl = "https://..."
+    youtubeUrl = "https://..." # Optional, for video podcasts
+    rssUrl = "https://..."     # Podcast RSS feed
+    newsletter = "buttondown"  # Options: buttondown, mailchimp, convertkit, custom
+
+  Usage: {{ partial "podcast/subscribe-buttons.html" . }}
+*/ -}}
+
+{{- $podcast := .Site.Params.podcast -}}
+{{- $contentType := .Type -}}
+
+{{- /* Only show subscribe section for episodes */ -}}
+{{- if eq $contentType "episodes" -}}
+  <div class="podcast-subscribe-section">
+    <h3 class="subscribe-title">Subscribe to the podcast</h3>
+
+    {{- /* Podcast platform buttons */ -}}
+    <div class="subscribe-buttons-container">
+      {{- /* RSS Feed */ -}}
+      {{- with $podcast.rssUrl -}}
+        <a href="{{ . }}"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="subscribe-button subscribe-button-rss"
+           aria-label="Subscribe via RSS">
+          <i class="fas fa-rss" aria-hidden="true"></i>
+          <span class="subscribe-label">RSS Feed</span>
+        </a>
+      {{- end -}}
+
+      {{- /* Spotify */ -}}
+      {{- with $podcast.spotifyUrl -}}
+        <a href="{{ . }}"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="subscribe-button subscribe-button-spotify"
+           aria-label="Follow on Spotify">
+          <i class="fab fa-spotify" aria-hidden="true"></i>
+          <span class="subscribe-label">Spotify</span>
+        </a>
+      {{- end -}}
+
+      {{- /* Apple Podcasts */ -}}
+      {{- with $podcast.appleUrl -}}
+        <a href="{{ . }}"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="subscribe-button subscribe-button-apple"
+           aria-label="Subscribe on Apple Podcasts">
+          <i class="fas fa-podcast" aria-hidden="true"></i>
+          <span class="subscribe-label">Apple Podcasts</span>
+        </a>
+      {{- end -}}
+
+      {{- /* YouTube */ -}}
+      {{- with $podcast.youtubeUrl -}}
+        <a href="{{ . }}"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="subscribe-button subscribe-button-youtube"
+           aria-label="Subscribe on YouTube">
+          <i class="fab fa-youtube" aria-hidden="true"></i>
+          <span class="subscribe-label">YouTube</span>
+        </a>
+      {{- end -}}
+    </div>
+
+    {{- /* Newsletter signup */ -}}
+    {{- with $podcast.newsletter -}}
+      <div class="newsletter-signup">
+        <h4 class="newsletter-title">Get episodes in your inbox</h4>
+
+        {{- if eq . "buttondown" -}}
+          {{- /* Buttondown integration */ -}}
+          <form
+            action="https://buttondown.email/api/emails/embed-subscribe/{{ $.Site.Params.podcast.newsletterUsername }}"
+            method="post"
+            target="popupwindow"
+            onsubmit="window.open('https://buttondown.email/{{ $.Site.Params.podcast.newsletterUsername }}', 'popupwindow')"
+            class="newsletter-form newsletter-form-buttondown">
+            <div class="newsletter-form-group">
+              <input
+                type="email"
+                name="email"
+                id="bd-email"
+                placeholder="your@email.com"
+                required
+                class="newsletter-input"
+                aria-label="Email address" />
+              <button type="submit" class="newsletter-submit">
+                Subscribe
+              </button>
+            </div>
+            <p class="newsletter-privacy">
+              <small>No spam, unsubscribe anytime.</small>
+            </p>
+          </form>
+
+        {{- else if eq . "mailchimp" -}}
+          {{- /* Mailchimp integration - Add your form action URL in config */ -}}
+          <form
+            action="{{ $.Site.Params.podcast.newsletterFormUrl }}"
+            method="post"
+            target="_blank"
+            class="newsletter-form newsletter-form-mailchimp">
+            <div class="newsletter-form-group">
+              <input
+                type="email"
+                name="EMAIL"
+                placeholder="your@email.com"
+                required
+                class="newsletter-input"
+                aria-label="Email address" />
+              <button type="submit" class="newsletter-submit">
+                Subscribe
+              </button>
+            </div>
+            <p class="newsletter-privacy">
+              <small>No spam, unsubscribe anytime.</small>
+            </p>
+          </form>
+
+        {{- else if eq . "convertkit" -}}
+          {{- /* ConvertKit integration - Add your form ID in config */ -}}
+          <form
+            action="https://app.convertkit.com/forms/{{ $.Site.Params.podcast.newsletterFormId }}/subscriptions"
+            method="post"
+            class="newsletter-form newsletter-form-convertkit">
+            <div class="newsletter-form-group">
+              <input
+                type="email"
+                name="email_address"
+                placeholder="your@email.com"
+                required
+                class="newsletter-input"
+                aria-label="Email address" />
+              <button type="submit" class="newsletter-submit">
+                Subscribe
+              </button>
+            </div>
+            <p class="newsletter-privacy">
+              <small>No spam, unsubscribe anytime.</small>
+            </p>
+          </form>
+
+        {{- else if eq . "custom" -}}
+          {{- /* Custom HTML embed from config */ -}}
+          {{- with $.Site.Params.podcast.newsletterCustomHTML -}}
+            <div class="newsletter-form-custom">
+              {{ . | safeHTML }}
+            </div>
+          {{- end -}}
+
+        {{- else -}}
+          <p class="newsletter-error">Newsletter integration "{{ . }}" not configured.</p>
+        {{- end -}}
+      </div>
+    {{- end -}}
+  </div>
+{{- end -}}

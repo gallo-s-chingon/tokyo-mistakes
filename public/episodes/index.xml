@@ -1,0 +1,169 @@
+<rss version="2.0"
+     xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0"
+     xmlns:spotify="http://www.spotify.com/ns/rss">
+  <channel>
+    <title>Your Podcast Name</title>
+    <link>http://localhost:63621/episodes/</link>
+    <description>Your podcast description</description>
+    <language>en-us</language>
+    <copyright>Copyright 2025 My cool site</copyright>
+    <lastBuildDate>Sat, 25 Oct 2025 11:59:39 -0500</lastBuildDate>
+    <atom:link href="http://localhost:63621/episodes/index.xml" rel="self" type="application/rss+xml" /><itunes:author>My cool site</itunes:author>
+    <itunes:summary>Your podcast description</itunes:summary>
+    <itunes:type>episodic</itunes:type>
+    <itunes:owner>
+      <itunes:name>My cool site</itunes:name>
+      <itunes:email></itunes:email>
+    </itunes:owner>
+    <itunes:image href="" />
+    <itunes:explicit>false</itunes:explicit><itunes:category text="Technology" /><googleplay:author>My cool site</googleplay:author>
+    <googleplay:description>Your podcast description</googleplay:description>
+    <googleplay:image href="" />
+    <googleplay:explicit>no</googleplay:explicit><spotify:countryOfOrigin>EN-US</spotify:countryOfOrigin><item>
+        <title>NaPodMo Homeless</title>
+        <link>http://localhost:63621/episodes/2021-11-07-napodmo-homeless/</link><pubDate>Sun, 07 Nov 2021 00:00:00 &#43;0000</pubDate><guid isPermaLink="true">http://localhost:63621/episodes/2021-11-07-napodmo-homeless/</guid><description>Today I talk about the time I was homeless, what led up to it. My thoughts beforehand and my attitude about homelessness now.</description>
+        <content:encoded>&lt;![CDATA[<p>Today I talk about the time I was homeless, what led up to it. My thoughts beforehand and my attitude about homelessness now. </p>
+<p>Don&rsquo;t worry I won&rsquo;t challenge you to make friends with homeless people, but I do hope you change your perspective to neutral if it&rsquo;s negative.</p>
+]]></content:encoded><itunes:title>NaPodMo Homeless</itunes:title>
+        <itunes:summary>Today I talk about the time I was homeless, what led up to it. My thoughts beforehand and my attitude about homelessness now.</itunes:summary><itunes:explicit>false</itunes:explicit><googleplay:description>Today I talk about the time I was homeless, what led up to it. My thoughts beforehand and my attitude about homelessness now.</googleplay:description><googleplay:explicit>no</googleplay:explicit>
+      </item><item>
+        <title>NaPodMo Parrot Gaming Productions</title>
+        <link>http://localhost:63621/episodes/2021-11-06-napodmo-parrot-gaming-productions/</link><pubDate>Sat, 06 Nov 2021 00:00:00 &#43;0000</pubDate><guid isPermaLink="true">http://localhost:63621/episodes/2021-11-06-napodmo-parrot-gaming-productions/</guid><description>Getting to know a fellow veteran gamer for NaPodMo</description>
+        <content:encoded>&lt;![CDATA[<p>Getting to know a fellow veteran gamer for NaPodMo, to learn more about Jared and my preferred game genre and other useless information about me. Check out episode 94 at &ldquo;<a href="https://anchor.fm/jared-holzhaeuser/episodes/Who-and-What-is-Parrot-Gaming-Productions-eb3p49" target="_blank" rel="noopener noreffer ">Parrot Gaming Productions</a>&rdquo;</p>
+]]></content:encoded><itunes:title>NaPodMo Parrot Gaming Productions</itunes:title>
+        <itunes:summary>Getting to know a fellow veteran gamer for NaPodMo</itunes:summary><itunes:explicit>false</itunes:explicit><googleplay:description>Getting to know a fellow veteran gamer for NaPodMo</googleplay:description><googleplay:explicit>no</googleplay:explicit>
+      </item><item>
+        <title>Talking White</title>
+        <link>http://localhost:63621/episodes/2021-11-05-talking-white/</link><pubDate>Fri, 05 Nov 2021 00:00:00 &#43;0000</pubDate><guid isPermaLink="true">http://localhost:63621/episodes/2021-11-05-talking-white/</guid><description>Todays conversation is short, but something that has been an annoying fact of life for myself and others.</description>
+        <content:encoded>&lt;![CDATA[<p>Todays conversation is short, but something that has been an annoying fact of life for myself and others. Listen in as I talk with Fancy Baby about <em>Talking White</em> and a few related pet peeves and how we had to act growing up</p>
+]]></content:encoded><itunes:title>Talking White</itunes:title>
+        <itunes:summary>Todays conversation is short, but something that has been an annoying fact of life for myself and others.</itunes:summary><itunes:explicit>false</itunes:explicit><googleplay:description>Todays conversation is short, but something that has been an annoying fact of life for myself and others.</googleplay:description><googleplay:explicit>no</googleplay:explicit>
+      </item><item>
+        <title>NaPodMo - Post Modern Art Podcast</title>
+        <link>http://localhost:63621/episodes/2021-11-04-napodmo-post-modern-art-podcast/</link><pubDate>Thu, 04 Nov 2021 00:00:00 &#43;0000</pubDate><guid isPermaLink="true">http://localhost:63621/episodes/2021-11-04-napodmo-post-modern-art-podcast/</guid><description>A conversation with Nathan from Post Modern Art Podcast</description>
+        <content:encoded>&lt;![CDATA[<p>Todays National Podcast Month episode is a conversation with Nathan from Post Modern Art Podcast. We start with his journey into podcasting and the chat evolves, or devolves from there.</p>
+]]></content:encoded><itunes:title>NaPodMo - Post Modern Art Podcast</itunes:title>
+        <itunes:summary>A conversation with Nathan from Post Modern Art Podcast</itunes:summary><itunes:explicit>false</itunes:explicit><googleplay:description>A conversation with Nathan from Post Modern Art Podcast</googleplay:description><googleplay:explicit>no</googleplay:explicit>
+      </item><item>
+        <title>For Lu</title>
+        <link>http://localhost:63621/episodes/2021-11-03-for-lu/</link><pubDate>Wed, 03 Nov 2021 00:00:00 &#43;0000</pubDate><guid isPermaLink="true">http://localhost:63621/episodes/2021-11-03-for-lu/</guid><description>this episode is dedicated to my friend Leuvis Manuel Olivero</description>
+        <content:encoded>&lt;![CDATA[<p>this episode is dedicated to my friend Leuvis Manuel Olivero</p>
+]]></content:encoded><itunes:title>For Lu</itunes:title>
+        <itunes:summary>this episode is dedicated to my friend Leuvis Manuel Olivero</itunes:summary><itunes:explicit>false</itunes:explicit><googleplay:description>this episode is dedicated to my friend Leuvis Manuel Olivero</googleplay:description><googleplay:explicit>no</googleplay:explicit>
+      </item><item>
+        <title>NaPodMo What Cheating</title>
+        <link>http://localhost:63621/episodes/2021-11-02-napodmo-what-cheating/</link><pubDate>Tue, 02 Nov 2021 00:00:00 &#43;0000</pubDate><guid isPermaLink="true">http://localhost:63621/episodes/2021-11-02-napodmo-what-cheating/</guid><description>This is sort of a compilation episode where I have the responses of a few of my guests answer what they think cheating is</description>
+        <content:encoded>&lt;![CDATA[<p>This is sort of a compilation episode where I have the responses of a few of my guests answer what they think cheating is.</p>
+<p>If you agree or disagree, feel free to let me know your thoughts by reaching out at <a href="https://sucias.xyz/toca" target="_blank" rel="noopener noreffer ">sucias.xyz/contact</a></p>
+]]></content:encoded><itunes:title>NaPodMo What Cheating</itunes:title>
+        <itunes:summary>This is sort of a compilation episode where I have the responses of a few of my guests answer what they think cheating is</itunes:summary><itunes:explicit>false</itunes:explicit><googleplay:description>This is sort of a compilation episode where I have the responses of a few of my guests answer what they think cheating is</googleplay:description><googleplay:explicit>no</googleplay:explicit>
+      </item><item>
+        <title>NaPodMo Challenge Day 1</title>
+        <link>http://localhost:63621/episodes/2021-11-01-napodmo-challenge-day-1/</link><pubDate>Mon, 01 Nov 2021 00:00:00 &#43;0000</pubDate><guid isPermaLink="true">http://localhost:63621/episodes/2021-11-01-napodmo-challenge-day-1/</guid><description>This episode I let y&amp;rsquo;all know what I&amp;rsquo;m up to this month, and what my podcasting journey has been like</description>
+        <content:encoded>&lt;![CDATA[<p>This episode I let y&rsquo;all know what I&rsquo;m up to this month, and what my podcasting journey has been like.</p>
+<p>Feel free to send me a text and let me know what you think, or if you have any ideas comment suggestions and yes even complaints, I&rsquo;d like to hear them. (281) 766-7970</p>
+]]></content:encoded><itunes:title>NaPodMo Challenge Day 1</itunes:title>
+        <itunes:summary>This episode I let y&rsquo;all know what I&rsquo;m up to this month, and what my podcasting journey has been like</itunes:summary><itunes:explicit>false</itunes:explicit><googleplay:description>This episode I let y&rsquo;all know what I&rsquo;m up to this month, and what my podcasting journey has been like</googleplay:description><googleplay:explicit>no</googleplay:explicit>
+      </item><item>
+        <title>Sugar Lips</title>
+        <link>http://localhost:63621/episodes/2021-10-25-sugar-lips/</link><pubDate>Mon, 25 Oct 2021 00:00:00 &#43;0000</pubDate><guid isPermaLink="true">http://localhost:63621/episodes/2021-10-25-sugar-lips/</guid><description>Sugar Lips, a one time plaything, and I talk about her situationships</description>
+        <content:encoded>&lt;![CDATA[<p>Today I chat with Sugar Lips a one time plaything and talk about her situationships. Once again she shares what women look for most in a male that they&rsquo;re interested in.</p>
+]]></content:encoded><itunes:title>Sugar Lips</itunes:title>
+        <itunes:summary>Sugar Lips, a one time plaything, and I talk about her situationships</itunes:summary><itunes:explicit>false</itunes:explicit><googleplay:description>Sugar Lips, a one time plaything, and I talk about her situationships</googleplay:description><googleplay:explicit>no</googleplay:explicit>
+      </item><item>
+        <title>Hypnotherapy again!?</title>
+        <link>http://localhost:63621/episodes/2021-10-18-hypnotherapy-again/</link><pubDate>Mon, 18 Oct 2021 00:00:00 &#43;0000</pubDate><guid isPermaLink="true">http://localhost:63621/episodes/2021-10-18-hypnotherapy-again/</guid><description>I talk about myself. again, specifically some issues I&amp;rsquo;ve been dealing and struggling with</description>
+        <content:encoded>&lt;![CDATA[<p>What can hypnotherapy do for you? find out what it&rsquo;s done for me and learn the possibilites!</p>
+<p>This episode I talk about myself again, specifically some issues I&rsquo;ve been dealing and struggling with. Some of these things are recent, in the past few years, others I&rsquo;d done obliviously for decades. Now how does it relate to hypnotherapy? or rather my need for it, follow along today and find out.</p>
+<p>To find out more about hypnotherapy check out interviews that J Robert Parker has done, as he explains and demystifies some common misconceptions about hypnosis and hypnotherapy. </p>
+]]></content:encoded><itunes:title>Hypnotherapy again!?</itunes:title>
+        <itunes:summary>I talk about myself. again, specifically some issues I&rsquo;ve been dealing and struggling with</itunes:summary><itunes:explicit>false</itunes:explicit><googleplay:description>I talk about myself. again, specifically some issues I&rsquo;ve been dealing and struggling with</googleplay:description><googleplay:explicit>no</googleplay:explicit>
+      </item><item>
+        <title>Orgasm Statistics</title>
+        <link>http://localhost:63621/episodes/2021-10-11-orgasm-statistics/</link><pubDate>Mon, 11 Oct 2021 00:00:00 &#43;0000</pubDate><guid isPermaLink="true">http://localhost:63621/episodes/2021-10-11-orgasm-statistics/</guid><description>This episode I have a conversation with Bonita re- &lt;a href=&#34;https://pleasurebetter.com/orgasm-statistics/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;Orgasm Statistics&lt;/a&gt;</description>
+        <content:encoded>&lt;![CDATA[<p>Ever wonder how you might stack up in terms of orgasms?</p>
+<p>This episode I have a conversation with Bonita re<a href="https://pleasurebetter.com/orgasm-statistics/" target="_blank" rel="noopener noreffer ">Orgasm Statistics</a></p>
+<p>If you&rsquo;re new to the show you might want to brush up and check out an early episode <a href="https://anchor.fm/sucias/episodes/Theory-of-100--Or-how-to-tell-if-a-male-might-be-any-good-in-the-sack-and-other-useless-things-epp04s" target="_blank" rel="noopener noreffer ">Theory of 100</a> where I lay the groundwork and essentially give an unscientific version of today&rsquo;s episode. Although the website surprised me with a few facts towards the end.</p>
+]]></content:encoded><itunes:title>Orgasm Statistics</itunes:title>
+        <itunes:summary>This episode I have a conversation with Bonita re- Orgasm Statistics</itunes:summary><itunes:explicit>false</itunes:explicit><googleplay:description>This episode I have a conversation with Bonita re- Orgasm Statistics</googleplay:description><googleplay:explicit>no</googleplay:explicit>
+      </item><item>
+        <title>Dr. Andrew Huberman: Optimize Your Health</title>
+        <link>http://localhost:63621/episodes/huberman-labs-example/</link><pubDate>Sat, 10 Feb 2024 00:00:00 &#43;0000</pubDate><guid isPermaLink="true">http://localhost:63621/episodes/huberman-labs-example/</guid><description>Dr. Andrew Huberman discusses science-based tools and protocols for optimizing your health, performance, and wellbeing.</description>
+        <content:encoded>&lt;![CDATA[<h2 id="about-this-episode">About This Episode</h2>
+<p>The Huberman Lab podcast is hosted by Dr. Andrew Huberman, a neuroscientist and tenured professor in the Department of Neurobiology at Stanford School of Medicine. The podcast discusses science and science-based tools for everyday life.</p>
+<h2 id="show-notes">Show Notes</h2>
+<p>In this episode, Dr. Huberman covers:</p>
+<ul>
+<li>Neuroscience fundamentals</li>
+<li>Sleep optimization protocols</li>
+<li>Light exposure and circadian rhythms</li>
+<li>Performance enhancement strategies</li>
+<li>Mental health and wellbeing</li>
+</ul>
+<h2 id="timestamps">Timestamps</h2>
+<ul>
+<li>00:00 - Introduction</li>
+<li>10:00 - Topic overview</li>
+<li>30:00 - Science breakdown</li>
+<li>1:30:00 - Practical protocols</li>
+<li>2:00:00 - Q&amp;A</li>
+<li>2:10:00 - Summary and wrap-up</li>
+</ul>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>Morning sunlight exposure is critical for circadian rhythm</li>
+<li>Temperature manipulation affects sleep quality</li>
+<li>Proper breathing techniques enhance performance</li>
+<li>Specific supplement protocols (with scientific backing)</li>
+</ul>
+<h2 id="resources-mentioned">Resources Mentioned</h2>
+<ul>
+<li><a href="https://hubermanlab.com" target="_blank" rel="noopener noreffer ">Huberman Lab Website</a></li>
+<li>Research papers cited in the episode</li>
+<li>Recommended tools and protocols</li>
+</ul>
+<h2 id="scientific-references">Scientific References</h2>
+<ul>
+<li>Published studies on circadian biology</li>
+<li>Neuroscience research on sleep</li>
+<li>Performance optimization literature</li>
+</ul>
+]]></content:encoded><itunes:title>Dr. Andrew Huberman: Optimize Your Health</itunes:title>
+        <itunes:summary>Dr. Andrew Huberman discusses science-based tools and protocols for optimizing your health, performance, and wellbeing.</itunes:summary><itunes:episode>2</itunes:episode><itunes:season>1</itunes:season><itunes:episodeType>full</itunes:episodeType><itunes:duration>2:15:00</itunes:duration><itunes:image href="/images/huberman-cover.jpg" /><itunes:explicit>false</itunes:explicit><googleplay:description>Dr. Andrew Huberman discusses science-based tools and protocols for optimizing your health, performance, and wellbeing.</googleplay:description><googleplay:image href="/images/huberman-cover.jpg" /><googleplay:explicit>no</googleplay:explicit>
+      </item><item>
+        <title>SmartLess Example Episode</title>
+        <link>http://localhost:63621/episodes/smartless-example/</link><pubDate>Mon, 15 Jan 2024 00:00:00 &#43;0000</pubDate><guid isPermaLink="true">http://localhost:63621/episodes/smartless-example/</guid><description>SmartLess is a podcast where three friends—Jason Bateman, Sean Hayes, and Will Arnett—bring a mystery guest for a casual conversation filled with laughs.</description>
+        <content:encoded>&lt;![CDATA[<h2 id="about-this-episode">About This Episode</h2>
+<p>SmartLess is a podcast where three friends—Jason Bateman, Sean Hayes, and Will Arnett—bring a mystery guest for a casual conversation filled with laughs and unique insights.</p>
+<h2 id="show-notes">Show Notes</h2>
+<p>In this episode, the hosts discuss:</p>
+<ul>
+<li>Comedy in Hollywood</li>
+<li>Behind-the-scenes stories</li>
+<li>Career highlights and challenges</li>
+<li>Personal anecdotes</li>
+</ul>
+<h2 id="timestamps">Timestamps</h2>
+<ul>
+<li>00:00 - Introduction</li>
+<li>05:30 - Main conversation</li>
+<li>45:00 - Rapid-fire questions</li>
+<li>1:10:00 - Wrap-up</li>
+</ul>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="https://open.spotify.com/episode/6F4kzTwzIqah5u75FMXc1u" target="_blank" rel="noopener noreffer ">Listen on Spotify</a></li>
+<li><a href="https://www.smartless.com" target="_blank" rel="noopener noreffer ">SmartLess Official Website</a></li>
+</ul>
+<h2 id="resources-mentioned">Resources Mentioned</h2>
+<ul>
+<li>Various Hollywood stories and references</li>
+<li>Comedy tours and projects</li>
+</ul>
+]]></content:encoded><itunes:title>SmartLess Example Episode</itunes:title>
+        <itunes:summary>SmartLess is a podcast where three friends—Jason Bateman, Sean Hayes, and Will Arnett—bring a mystery guest for a casual conversation filled with laughs.</itunes:summary><itunes:episode>1</itunes:episode><itunes:season>1</itunes:season><itunes:episodeType>full</itunes:episodeType><itunes:duration>1:15:00</itunes:duration><itunes:image href="/images/smartless-cover.jpg" /><itunes:explicit>false</itunes:explicit><itunes:guest>Example Guest</itunes:guest><googleplay:description>SmartLess is a podcast where three friends—Jason Bateman, Sean Hayes, and Will Arnett—bring a mystery guest for a casual conversation filled with laughs.</googleplay:description><googleplay:image href="/images/smartless-cover.jpg" /><googleplay:explicit>no</googleplay:explicit>
+      </item></channel>
+</rss>

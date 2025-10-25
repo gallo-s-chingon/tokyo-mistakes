@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Third-Eye on My cool site</title>
+    <link>http://localhost:63621/tags/third-eye/</link>
+    <description>Recent content in Third-Eye on My cool site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:63621/tags/third-eye/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Santa Muerte &amp; The Third Eye</title>
+      <link>http://localhost:63621/featured/2021-09-24-santa-muerte--the-third-eye/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:63621/featured/2021-09-24-santa-muerte--the-third-eye/</guid>
+      <description>Gallo&amp;rsquo;s experiences with his ancestors attempts to reach out to him, beckoning from Santa Muerte</description>
+    </item>
+  </channel>
+</rss>

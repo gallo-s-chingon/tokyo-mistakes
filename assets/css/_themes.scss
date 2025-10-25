@@ -1,0 +1,309 @@
+// ==============================
+// Tokyo-Nord Theme Color Palettes
+// ==============================
+// Four color schemes inspired by Tokyo Night and Nord themes
+// 1. Tokyo Night (high contrast dark)
+// 2. Nordic (low contrast dark)
+// 3. OneNord Light (high contrast light)
+// 4. OneNord Day (low contrast light - TBD)
+
+// ========== Tokyo Night Theme (High Contrast Dark) ========== //
+[data-theme="tokyo-night"] {
+  // Background colors
+  --global-background-color: #1a1b26;
+  --global-background-color-secondary: #16161e;
+  --global-background-highlight: #292e42;
+
+  // Foreground/text colors
+  --global-font-color: #c0caf5;
+  --global-font-color-secondary: #a9b1d6;
+  --global-font-secondary-color: #565f89;
+
+  // Link colors
+  --global-link-color: #7aa2f7;
+  --global-link-hover-color: #7dcfff;
+
+  // Border colors
+  --global-border-color: #3b4261;
+
+  // Accent colors
+  --color-blue: #7aa2f7;
+  --color-cyan: #7dcfff;
+  --color-green: #9ece6a;
+  --color-yellow: #e0af68;
+  --color-orange: #ff9e64;
+  --color-red: #f7768e;
+  --color-magenta: #bb9af7;
+  --color-purple: #9d7cd8;
+
+  // Header
+  --header-background-color: #16161e;
+  --header-hover-color: #7dcfff;
+
+  // Search
+  --search-background-color: #292e42;
+
+  // Code
+  --code-color: #ff9e64;
+  --code-background-color: #1f2335;
+
+  // Selection
+  --selection-color: rgba(122, 162, 247, 0.3);
+
+  // Table
+  --table-background-color: #1f2335;
+  --table-thead-color: #292e42;
+
+  // Blockquote
+  --blockquote-color: #7dcfff;
+
+  // Scrollbar
+  --scrollbar-color: #565f89;
+  --scrollbar-hover-color: #737aa2;
+
+  // Links in content
+  --single-link-color: #7aa2f7;
+  --single-link-hover-color: #bb9af7;
+
+  // Pagination
+  --pagination-link-color: #7aa2f7;
+  --pagination-link-hover-color: #7dcfff;
+
+  // Content header colors (high contrast)
+  .single .content {
+    h1 {
+      color: var(--color-cyan);
+    }
+
+    h2 {
+      color: var(--color-magenta);
+    }
+
+    h3 {
+      color: var(--color-green);
+    }
+
+    h4, h5, h6 {
+      color: var(--color-yellow);
+    }
+  }
+}
+
+// ========== Nordic Theme (Low Contrast Dark) ========== //
+[data-theme="nordic"] {
+  // Background colors
+  --global-background-color: #242933;
+  --global-background-color-secondary: #1E222A;
+  --global-background-highlight: #2E3440;
+
+  // Foreground/text colors
+  --global-font-color: #BBC3D4;
+  --global-font-color-secondary: #C0C8D8;
+  --global-font-secondary-color: #4C566A;
+
+  // Link colors
+  --global-link-color: #81A1C1;
+  --global-link-hover-color: #88C0D0;
+
+  // Border colors
+  --global-border-color: #3B4252;
+
+  // Accent colors
+  --color-blue: #81A1C1;
+  --color-cyan: #88C0D0;
+  --color-green: #A3BE8C;
+  --color-yellow: #EBCB8B;
+  --color-orange: #D08770;
+  --color-red: #BF616A;
+  --color-magenta: #B48EAD;
+  --color-purple: #B988B0;
+
+  // Header
+  --header-background-color: #1E222A;
+  --header-hover-color: #88C0D0;
+
+  // Search
+  --search-background-color: #2E3440;
+
+  // Code
+  --code-color: #D08770;
+  --code-background-color: #2E3440;
+
+  // Selection
+  --selection-color: rgba(129, 161, 193, 0.25);
+
+  // Table
+  --table-background-color: #2E3440;
+  --table-thead-color: #3B4252;
+
+  // Blockquote
+  --blockquote-color: #88C0D0;
+
+  // Scrollbar
+  --scrollbar-color: #4C566A;
+  --scrollbar-hover-color: #60728A;
+
+  // Links in content
+  --single-link-color: #81A1C1;
+  --single-link-hover-color: #B48EAD;
+
+  // Pagination
+  --pagination-link-color: #81A1C1;
+  --pagination-link-hover-color: #88C0D0;
+}
+
+// ========== OneNord Light Theme (High Contrast Light) ========== //
+[data-theme="onenord-light"] {
+  // Background colors
+  --global-background-color: #F7F8FA;
+  --global-background-color-secondary: #EFF0F2;
+  --global-background-highlight: #EAEBED;
+
+  // Foreground/text colors
+  --global-font-color: #2E3440;
+  --global-font-color-secondary: #4C566A;
+  --global-font-secondary-color: #646A76;
+
+  // Link colors
+  --global-link-color: #3879C5;
+  --global-link-hover-color: #1B40A6;
+
+  // Border colors
+  --global-border-color: #DFE1E4;
+
+  // Accent colors
+  --color-blue: #3879C5;
+  --color-cyan: #3EA1AD;
+  --color-green: #48A53D;
+  --color-yellow: #BA793E;
+  --color-orange: #EE5E25;
+  --color-red: #CB4F53;
+  --color-magenta: #E85B7A;
+  --color-purple: #9F4ACA;
+
+  // Header
+  --header-background-color: #EFF0F2;
+  --header-hover-color: #1B40A6;
+
+  // Search
+  --search-background-color: #EDEEF0;
+
+  // Code
+  --code-color: #EE5E25;
+  --code-background-color: #EDEEF0;
+
+  // Selection
+  --selection-color: rgba(56, 121, 197, 0.25);
+
+  // Table
+  --table-background-color: #FFFFFF;
+  --table-thead-color: #EAEBED;
+
+  // Blockquote
+  --blockquote-color: #3EA1AD;
+
+  // Scrollbar
+  --scrollbar-color: #838FA6;
+  --scrollbar-hover-color: #646A76;
+
+  // Links in content
+  --single-link-color: #3879C5;
+  --single-link-hover-color: #9F4ACA;
+
+  // Pagination
+  --pagination-link-color: #3879C5;
+  --pagination-link-hover-color: #1B40A6;
+
+  // Content header colors (high contrast)
+  .single .content {
+    h1 {
+      color: var(--color-cyan);
+    }
+
+    h2 {
+      color: var(--color-purple);
+    }
+
+    h3 {
+      color: var(--color-green);
+    }
+
+    h4, h5, h6 {
+      color: var(--color-orange);
+    }
+  }
+}
+
+// ========== OneNord Day Theme (Low Contrast Light) ========== //
+// Softer, easier on the eyes for extended reading
+[data-theme="onenord-day"] {
+  // Background colors
+  --global-background-color: #FAFBFC;
+  --global-background-color-secondary: #F5F6F7;
+  --global-background-highlight: #F0F1F3;
+
+  // Foreground/text colors
+  --global-font-color: #3B4252;
+  --global-font-color-secondary: #4C566A;
+  --global-font-secondary-color: #6C7A96;
+
+  // Link colors
+  --global-link-color: #5E81AC;
+  --global-link-hover-color: #81A1C1;
+
+  // Border colors
+  --global-border-color: #E5E9F0;
+
+  // Accent colors
+  --color-blue: #5E81AC;
+  --color-cyan: #5F9E9D;
+  --color-green: #5F9E9D;
+  --color-yellow: #D6A846;
+  --color-orange: #D6804E;
+  --color-red: #C5666B;
+  --color-magenta: #B988B0;
+  --color-purple: #A87FBA;
+
+  // Header
+  --header-background-color: #F5F6F7;
+  --header-hover-color: #81A1C1;
+
+  // Search
+  --search-background-color: #F0F1F3;
+
+  // Code
+  --code-color: #D6804E;
+  --code-background-color: #F0F1F3;
+
+  // Selection
+  --selection-color: rgba(94, 129, 172, 0.2);
+
+  // Table
+  --table-background-color: #FFFFFF;
+  --table-thead-color: #F0F1F3;
+
+  // Blockquote
+  --blockquote-color: #5F9E9D;
+
+  // Scrollbar
+  --scrollbar-color: #A8B3C5;
+  --scrollbar-hover-color: #6C7A96;
+
+  // Links in content
+  --single-link-color: #5E81AC;
+  --single-link-hover-color: #A87FBA;
+
+  // Pagination
+  --pagination-link-color: #5E81AC;
+  --pagination-link-hover-color: #81A1C1;
+}
+
+// ========== Legacy support for auto/light/dark ========== //
+// Map old theme system to new themes
+body[theme="dark"] {
+  @extend [data-theme="tokyo-night"];
+}
+
+body[theme="light"] {
+  @extend [data-theme="onenord-light"];
+}

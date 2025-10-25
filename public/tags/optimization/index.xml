@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Optimization on My cool site</title>
+    <link>http://localhost:63621/tags/optimization/</link>
+    <description>Recent content in Optimization on My cool site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:63621/tags/optimization/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dr. Andrew Huberman: Optimize Your Health</title>
+      <link>http://localhost:63621/episodes/huberman-labs-example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:63621/episodes/huberman-labs-example/</guid>
+      <description>Dr. Andrew Huberman discusses science-based tools and protocols for optimizing your health, performance, and wellbeing.</description>
+    </item>
+  </channel>
+</rss>

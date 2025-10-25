@@ -1,23 +1,89 @@
+{{- partial "init.html" . -}}
+
 <!DOCTYPE html>
-<html lang="{{ .Site.Language.Lang | default "en-us" }}" data-theme="{{ .Site.Params.defaultTheme | default "auto" }}">
-  <head>
-    {{- partial "head.html" . -}}
-  </head>
-  <body class="body">
-    {{- partial "header.html" . -}}
+<html lang="{{ .Site.LanguageCode }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
 
-    <main id="main" class="main" tabindex="-1">
-      <div class="container">
-        {{- block "main" . }}{{- end }}
-      </div>
-    </main>
+        {{- partial "head/meta.html" . -}}
+        {{- partial "head/link.html" . -}}
+        {{- partial "head/seo.html" . -}}
+    </head>
+    <body data-header-desktop="{{ .Site.Params.header.desktopMode }}" data-header-mobile="{{ .Site.Params.header.mobileMode }}">
+        {{- /* Initialize theme before body rendering */ -}}
+        {{- $defaultTheme := .Site.Params.defaulttheme | default "auto" -}}
+        {{- $highContrast := .Site.Params.highContrast | default true -}}
+        <script>
+          function applyTheme() {
+            const highContrast = {{ $highContrast }};
+            const defaultTheme = '{{ $defaultTheme }}';
 
-    {{- partial "footer.html" . -}}
-    {{- partial "floating/buttons.html" . -}}
-    {{- partial "search/overlay.html" . -}}
+            // Theme mapping based on contrast setting
+            const themeMap = {
+              dark: highContrast ? 'tokyo-night' : 'nordic',
+              light: highContrast ? 'onenord-light' : 'onenord-day'
+            };
 
-    {{/* --- Load Master JavaScript File --- */}}
-    {{ $mainJS := resources.Get "js/main.js" | js.Build | minify | fingerprint }}
-    <script src="{{ $mainJS.RelPermalink }}" integrity="{{ $mainJS.Data.Integrity }}" defer></script>
-  </body>
+            // Get saved theme or determine from default setting
+            let theme = window.localStorage?.getItem('theme');
+
+            if (!theme) {
+              // No saved theme, use default based on system/config preference
+              if (defaultTheme === 'auto') {
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                theme = prefersDark ? themeMap.dark : themeMap.light;
+              } else if (defaultTheme === 'dark') {
+                theme = themeMap.dark;
+              } else {
+                theme = themeMap.light;
+              }
+            }
+
+            // Validate theme
+            const validThemes = ['tokyo-night', 'nordic', 'onenord-light', 'onenord-day'];
+            if (!validThemes.includes(theme)) {
+              theme = themeMap.dark;
+            }
+
+            let isDark = theme === 'tokyo-night' || theme === 'nordic';
+            document.body.setAttribute('data-theme', theme);
+            document.body.setAttribute('theme', isDark ? 'dark' : 'light');
+          }
+
+          applyTheme();
+        </script>
+
+        <div id="mask"></div>
+
+        {{- /* Body wrapper */ -}}
+        <div class="wrapper">
+            {{- partial "header.html" . -}}
+            <main class="main">
+                <div class="container">
+                    {{- block "content" . }}{{ end -}}
+                </div>
+            </main>
+            {{- partial "footer.html" . -}}
+        </div>
+
+        <div id="fixed-buttons">
+            {{- /* top button */ -}}
+            <a href="#" id="back-to-top" class="fixed-button" title="{{ T `backToTop` }}">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden">
+            {{- /* comment button */ -}}
+            <a href="#" id="view-comments" class="fixed-button" title="{{ T `viewComments` }}">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        {{- /* Load JavaScript scripts and CSS */ -}}
+        {{- partial "assets.html" . -}}
+    </body>
 </html>

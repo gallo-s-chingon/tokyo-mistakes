@@ -1,0 +1,104 @@
+{{- $podcast := .Site.Params.podcast -}}
+{{- $author := .Site.Params.author -}}
+{{- $pagesLimit := 20 -}}
+{{- $allEpisodes := where .Site.RegularPages "Type" "episodes" -}}
+{{- $pages := $allEpisodes | first $pagesLimit -}}
+<rss version="2.0"
+     xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0"
+     xmlns:spotify="http://www.spotify.com/ns/rss">
+  <channel>
+    <title>{{ $podcast.name | default .Site.Title }}</title>
+    <link>{{ .Permalink }}</link>
+    <description>{{ $podcast.description | default .Site.Params.description }}</description>
+    <language>{{ .Site.LanguageCode | default "en-us" }}</language>
+    <copyright>Copyright {{ now.Year }} {{ $author.name }}</copyright>
+    <lastBuildDate>{{ now.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</lastBuildDate>
+    <atom:link href="{{ .Permalink }}index.xml" rel="self" type="application/rss+xml" />
+
+    {{- /* iTunes/Apple Podcasts Tags */ -}}
+    <itunes:author>{{ $author.name }}</itunes:author>
+    <itunes:summary>{{ $podcast.description | default .Site.Params.description }}</itunes:summary>
+    <itunes:type>episodic</itunes:type>
+    <itunes:owner>
+      <itunes:name>{{ $author.name }}</itunes:name>
+      <itunes:email>{{ $author.email }}</itunes:email>
+    </itunes:owner>
+    <itunes:image href="{{ $podcast.artwork }}" />
+    <itunes:explicit>{{ $podcast.explicit | default false }}</itunes:explicit>
+    {{- range $podcast.categories -}}
+      <itunes:category text="{{ . }}" />
+    {{- end -}}
+
+    {{- /* Google Play Podcasts */ -}}
+    <googleplay:author>{{ $author.name }}</googleplay:author>
+    <googleplay:description>{{ $podcast.description | default .Site.Params.description }}</googleplay:description>
+    <googleplay:image href="{{ $podcast.artwork }}" />
+    <googleplay:explicit>{{ if $podcast.explicit }}yes{{ else }}no{{ end }}</googleplay:explicit>
+
+    {{- /* Spotify */ -}}
+    <spotify:countryOfOrigin>{{ .Site.LanguageCode | upper | default "US" }}</spotify:countryOfOrigin>
+
+    {{- /* Episodes */ -}}
+    {{- range $pages -}}
+      {{- $params := .Params -}}
+      <item>
+        <title>{{ .Title }}</title>
+        <link>{{ .Permalink }}</link>
+        {{- if $params.created -}}
+          {{- $dateStr := substr $params.created 0 10 -}}
+          {{- $date := time.AsTime $dateStr -}}
+          <pubDate>{{ $date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
+        {{- else -}}
+          <pubDate>{{ .PublishDate.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
+        {{- end -}}
+        <guid isPermaLink="true">{{ .Permalink }}</guid>
+
+        {{- /* Description (show notes) */ -}}
+        <description>{{ .Summary | html }}</description>
+        <content:encoded><![CDATA[{{ .Content }}]]></content:encoded>
+
+        {{- /* Audio enclosure (required for podcasts) */ -}}
+        {{- with $params.audioUrl -}}
+          {{- $audioFileSize := $params.audioFileSize | default 0 -}}
+          {{- $audioType := $params.audioType | default "audio/mpeg" -}}
+          <enclosure url="{{ . }}" length="{{ $audioFileSize }}" type="{{ $audioType }}" />
+        {{- end -}}
+
+        {{- /* iTunes episode tags */ -}}
+        <itunes:title>{{ .Title }}</itunes:title>
+        <itunes:summary>{{ .Summary | plainify | truncate 4000 }}</itunes:summary>
+        {{- with $params.episodeNumber -}}
+          <itunes:episode>{{ . }}</itunes:episode>
+        {{- end -}}
+        {{- with $params.season -}}
+          <itunes:season>{{ . }}</itunes:season>
+        {{- end -}}
+        {{- with $params.episodeType -}}
+          <itunes:episodeType>{{ . }}</itunes:episodeType>
+        {{- end -}}
+        {{- with $params.duration -}}
+          <itunes:duration>{{ . }}</itunes:duration>
+        {{- end -}}
+        {{- with $params.featuredImage -}}
+          <itunes:image href="{{ . }}" />
+        {{- end -}}
+        <itunes:explicit>{{ $params.explicit | default $podcast.explicit | default false }}</itunes:explicit>
+
+        {{- /* Guests */ -}}
+        {{- range $params.guests -}}
+          <itunes:guest>{{ . }}</itunes:guest>
+        {{- end -}}
+
+        {{- /* Google Play episode tags */ -}}
+        <googleplay:description>{{ .Summary | plainify | truncate 4000 }}</googleplay:description>
+        {{- with $params.featuredImage -}}
+          <googleplay:image href="{{ . }}" />
+        {{- end -}}
+        <googleplay:explicit>{{ if or $params.explicit $podcast.explicit }}yes{{ else }}no{{ end }}</googleplay:explicit>
+      </item>
+    {{- end -}}
+  </channel>
+</rss>

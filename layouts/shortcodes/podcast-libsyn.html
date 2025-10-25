@@ -1,0 +1,37 @@
+{{- /*
+  Libsyn Podcast Player Shortcode
+
+  Provide embed ID as parameter.
+
+  Example: {{< podcast-libsyn "12345678" >}}
+
+  To get embed ID from Libsyn:
+  1. Go to your episode in Libsyn dashboard
+  2. Click "Embed" button
+  3. Extract ID from embed code URL
+*/ -}}
+
+{{- $embedId := .Get 0 -}}
+{{- $height := .Get "height" | default "90" -}}
+{{- $theme := .Get "theme" | default "standard" -}}
+{{- $playerWidth := .Site.Params.podcast.playerWidth | default 0.8 -}}
+{{- $widthPercent := mul $playerWidth 100 -}}
+
+{{- if $embedId -}}
+<div class="podcast-player podcast-player-libsyn" style="width:{{ $widthPercent }}%;max-width:{{ $widthPercent }}%;margin:0 auto 50px auto;">
+  <iframe
+    style="border: none"
+    src="//html5-player.libsyn.com/embed/episode/id/{{ $embedId }}/height/{{ $height }}/theme/{{ $theme }}/thumbnail/yes/direction/backward/"
+    height="{{ $height }}"
+    width="100%"
+    scrolling="no"
+    allowfullscreen
+    webkitallowfullscreen
+    mozallowfullscreen
+    oallowfullscreen
+    msallowfullscreen>
+  </iframe>
+</div>
+{{- else -}}
+  <p><strong>Error:</strong> Libsyn embed ID required. Provide embed ID as parameter.
+{{- end -}}

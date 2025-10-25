@@ -1,0 +1,184 @@
+{{- /* Handle positional vs named parameters */ -}}
+{{- $platform := "" -}}
+{{- $url := "" -}}
+{{- $text := "" -}}
+{{- $icon := "" -}}
+{{- $faviconUrl := "" -}}
+
+{{- if .IsNamedParams -}}
+  {{- $platform = .Get "platform" | default "" -}}
+  {{- $url = .Get "url" | default "" -}}
+  {{- $text = .Get "text" | default "" -}}
+  {{- $icon = .Get "icon" | default "" -}}
+{{- else -}}
+  {{- $platform = .Get 0 | default "" -}}
+  {{- $text = .Get 1 | default "" -}}
+{{- end -}}
+
+{{- /* Get URL from hugo.toml if platform is specified */ -}}
+{{- if and $platform (not $url) -}}
+  {{- $socialLinks := $.Site.Params.social.links | default dict -}}
+  {{- $url = index $socialLinks $platform | default "" -}}
+{{- end -}}
+
+{{- /* Validate that we have a URL */ -}}
+{{- if not $url -}}
+  {{- errorf "social-link shortcode requires either a platform name with configured URL in hugo.toml [params.social.links] or a custom url parameter. Page: %s" $.Page.File.Path -}}
+{{- end -}}
+
+{{- /* Platform icon mapping for Font Awesome brands */ -}}
+{{- $platformIcons := dict
+  "instagram" "fab fa-instagram"
+  "twitter" "fab fa-twitter"
+  "x" "fab fa-x-twitter"
+  "github" "fab fa-github"
+  "youtube" "fab fa-youtube"
+  "linkedin" "fab fa-linkedin"
+  "tiktok" "fab fa-tiktok"
+  "discord" "fab fa-discord"
+  "twitch" "fab fa-twitch"
+  "spotify" "fab fa-spotify"
+  "facebook" "fab fa-facebook"
+  "reddit" "fab fa-reddit"
+  "pinterest" "fab fa-pinterest"
+  "snapchat" "fab fa-snapchat"
+  "telegram" "fab fa-telegram"
+  "whatsapp" "fab fa-whatsapp"
+  "mastodon" "fab fa-mastodon"
+  "medium" "fab fa-medium"
+  "dev" "fab fa-dev"
+  "devto" "fab fa-dev"
+  "stackoverflow" "fab fa-stack-overflow"
+  "gitlab" "fab fa-gitlab"
+  "bitbucket" "fab fa-bitbucket"
+  "codepen" "fab fa-codepen"
+  "dribbble" "fab fa-dribbble"
+  "behance" "fab fa-behance"
+  "patreon" "fab fa-patreon"
+  "kofi" "fas fa-mug-hot"
+  "buymeacoffee" "fas fa-mug-hot"
+  "paypal" "fab fa-paypal"
+  "venmo" "fab fa-cc-venmo"
+  "cashapp" "fas fa-dollar-sign"
+  "email" "fas fa-envelope"
+  "website" "fas fa-globe"
+  "link" "fas fa-link"
+  "blog" "fas fa-blog"
+  "podcast" "fas fa-podcast"
+  "youtube-music" "fab fa-youtube"
+  "soundcloud" "fab fa-soundcloud"
+  "bandcamp" "fab fa-bandcamp"
+  "apple-music" "fab fa-apple"
+  "apple" "fab fa-apple"
+  "google" "fab fa-google"
+  "vimeo" "fab fa-vimeo"
+  "steam" "fab fa-steam"
+  "playstation" "fab fa-playstation"
+  "xbox" "fab fa-xbox"
+  "nintendo" "fab fa-nintendo-switch"
+  "itch" "fab fa-itch-io"
+  "kickstarter" "fab fa-kickstarter"
+  "producthunt" "fab fa-product-hunt"
+  "slack" "fab fa-slack"
+  "skype" "fab fa-skype"
+  "zoom" "fas fa-video"
+  "calendly" "far fa-calendar"
+  "linktree" "fas fa-tree"
+-}}
+
+{{- /* Platform default text mapping */ -}}
+{{- $platformText := dict
+  "instagram" "Follow me on Instagram"
+  "twitter" "Follow me on Twitter"
+  "x" "Follow me on X"
+  "github" "Check out my GitHub"
+  "youtube" "Subscribe on YouTube"
+  "linkedin" "Connect on LinkedIn"
+  "tiktok" "Follow me on TikTok"
+  "discord" "Join my Discord"
+  "twitch" "Watch me on Twitch"
+  "spotify" "Listen on Spotify"
+  "facebook" "Follow on Facebook"
+  "reddit" "Join me on Reddit"
+  "pinterest" "Follow on Pinterest"
+  "snapchat" "Add me on Snapchat"
+  "telegram" "Message me on Telegram"
+  "whatsapp" "Chat on WhatsApp"
+  "mastodon" "Follow me on Mastodon"
+  "medium" "Read on Medium"
+  "dev" "Follow on DEV"
+  "devto" "Follow on DEV"
+  "stackoverflow" "View my Stack Overflow"
+  "gitlab" "Check out my GitLab"
+  "bitbucket" "View on Bitbucket"
+  "codepen" "See my CodePen"
+  "dribbble" "View my Dribbble"
+  "behance" "View my Behance"
+  "patreon" "Support on Patreon"
+  "kofi" "Buy Me a Coffee"
+  "buymeacoffee" "Buy Me a Coffee"
+  "paypal" "Support via PayPal"
+  "venmo" "Send via Venmo"
+  "cashapp" "Send via Cash App"
+  "email" "Send me an email"
+  "website" "Visit my website"
+  "link" "Visit link"
+  "blog" "Read my blog"
+  "podcast" "Listen to my podcast"
+  "soundcloud" "Listen on SoundCloud"
+  "bandcamp" "Listen on Bandcamp"
+  "apple-music" "Listen on Apple Music"
+  "apple" "View on Apple"
+  "google" "Find on Google"
+  "vimeo" "Watch on Vimeo"
+  "steam" "View Steam Profile"
+  "playstation" "PlayStation Profile"
+  "xbox" "Xbox Profile"
+  "nintendo" "Nintendo Profile"
+  "itch" "View on itch.io"
+  "kickstarter" "Support on Kickstarter"
+  "producthunt" "Check on Product Hunt"
+  "slack" "Join our Slack"
+  "skype" "Call on Skype"
+  "zoom" "Join Zoom Meeting"
+  "calendly" "Book a meeting"
+  "linktree" "View all my links"
+-}}
+
+{{- /* Auto-detect icon based on platform */ -}}
+{{- if and $platform (not $icon) -}}
+  {{- $icon = index $platformIcons $platform | default "" -}}
+{{- end -}}
+
+{{- /* Auto-detect text based on platform */ -}}
+{{- if and $platform (not $text) -}}
+  {{- $text = index $platformText $platform | default (printf "Visit my %s" (humanize $platform)) -}}
+{{- end -}}
+
+{{- /* Fallback text if still empty */ -}}
+{{- if not $text -}}
+  {{- $text = "Visit Link" -}}
+{{- end -}}
+
+{{- /* Parse URL to get domain for favicon fallback */ -}}
+{{- if not $icon -}}
+  {{- $parsedUrl := urls.Parse $url -}}
+  {{- $domain := $parsedUrl.Host -}}
+  {{- if $domain -}}
+    {{- $faviconUrl = printf "https://www.google.com/s2/favicons?domain=%s&sz=64" $domain -}}
+  {{- end -}}
+{{- end -}}
+
+<div class="social-link-container">
+  <a href="{{ $url }}" class="social-link-button" target="_blank" rel="noopener noreferrer">
+    <span class="social-link-content">
+      {{- if $icon -}}
+        <i class="{{ $icon }} social-link-icon"></i>
+      {{- else if $faviconUrl -}}
+        <img src="{{ $faviconUrl }}" alt="" class="social-link-favicon" loading="lazy">
+      {{- end -}}
+      <span class="social-link-text">{{ $text }}</span>
+    </span>
+    <i class="fas fa-external-link-alt social-link-arrow"></i>
+  </a>
+</div>

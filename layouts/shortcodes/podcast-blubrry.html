@@ -1,0 +1,31 @@
+{{- /*
+  Blubrry Podcast Player Shortcode
+
+  Provide program name and episode ID as parameters.
+
+  Example: {{< podcast-blubrry "my-podcast" "12345678" >}}
+
+  Get your Blubrry embed code from your dashboard and extract:
+  - Program name (your show slug)
+  - Episode ID (numeric ID)
+*/ -}}
+
+{{- $program := .Get 0 -}}
+{{- $episodeId := .Get 1 -}}
+{{- $height := .Get "height" | default "138" -}}
+{{- $playerWidth := .Site.Params.podcast.playerWidth | default 0.8 -}}
+{{- $widthPercent := mul $playerWidth 100 -}}
+
+{{- if and $program $episodeId -}}
+<div class="podcast-player podcast-player-blubrry" style="width:{{ $widthPercent }}%;max-width:{{ $widthPercent }}%;margin:0 auto 50px auto;">
+  <iframe
+    src="https://blubrry.com/{{ $program }}/{{ $episodeId }}/player/"
+    scrolling="no"
+    width="100%"
+    height="{{ $height }}px"
+    frameborder="0">
+  </iframe>
+</div>
+{{- else -}}
+  <p><strong>Error:</strong> Blubrry requires program name and episode ID. Provide program name and episode ID as parameters.
+{{- end -}}

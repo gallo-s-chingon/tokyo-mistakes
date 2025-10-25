@@ -1,0 +1,48 @@
+{{- /*
+  get-page-images.html
+  Returns a slice of image URLs for the current page.
+  Handles both old array format and new table/map format for images config.
+*/ -}}
+
+{{- $images := slice -}}
+
+{{- /* Check for page-specific images in front matter */ -}}
+{{- with .Params.images -}}
+  {{- if reflect.IsSlice . -}}
+    {{- /* Old format: images is an array */ -}}
+    {{- $images = . -}}
+  {{- else if reflect.IsMap . -}}
+    {{- /* New format: images is a map/table with default key */ -}}
+    {{- with .default -}}
+      {{- if reflect.IsSlice . -}}
+        {{- $images = . -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Fallback to site-level images if page images not found */ -}}
+{{- if eq (len $images) 0 -}}
+  {{- with .Site.Params.images -}}
+    {{- if reflect.IsSlice . -}}
+      {{- /* Old format: images is an array */ -}}
+      {{- $images = . -}}
+    {{- else if reflect.IsMap . -}}
+      {{- /* New format: images is a map/table with default key */ -}}
+      {{- with .default -}}
+        {{- if reflect.IsSlice . -}}
+          {{- $images = . -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Fallback to featured image if available */ -}}
+{{- if eq (len $images) 0 -}}
+  {{- with .Params.featuredImage -}}
+    {{- $images = slice . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return $images -}}

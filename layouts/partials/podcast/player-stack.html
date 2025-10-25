@@ -1,0 +1,120 @@
+{{- /*
+  Podcast Player Stack Partial
+
+  Displays up to 3 podcast players with 50px vertical spacing.
+  Reads player configuration from page front matter.
+
+  Front matter format:
+  ---
+  embedPlayers:
+    - type: "spotify"
+      id: "4rOoJ6Egrf8K2IrywzwOMk"
+    - type: "apple"
+      podcastId: "1234567890"
+      episodeId: "1000123456789"
+    - type: "youtube"
+      id: "dQw4w9WgXcQ"
+  ---
+
+  Supported types: spotify, apple, youtube, blubrry, libsyn, spreaker,
+                   podbean, transistor, simplecast, buzzsprout
+*/ -}}
+
+{{- $params := .Params -}}
+{{- $players := $params.embedPlayers -}}
+{{- $playerWidth := .Site.Params.podcast.playerWidth | default 0.8 -}}
+{{- $widthPercent := mul $playerWidth 100 -}}
+
+{{- if $players -}}
+  <div class="podcast-players-stack">
+    {{- $maxPlayers := 3 -}}
+    {{- $count := 0 -}}
+
+    {{- range $players -}}
+      {{- if lt $count $maxPlayers -}}
+        {{- $count = add $count 1 -}}
+        {{- $playerType := .type -}}
+        {{- $height := .height | default 232 -}}
+        {{- $theme := .theme | default "light" -}}
+
+        <div class="podcast-player-wrapper" style="width:{{ $widthPercent }}%;max-width:{{ $widthPercent }}%;margin:0 auto;">
+          {{- if eq $playerType "spotify" -}}
+            {{- $episodeId := .id -}}
+            <div class="podcast-player podcast-player-spotify">
+              <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/{{ $episodeId }}?utm_source=generator" width="100%" height="{{ $height }}" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+
+          {{- else if eq $playerType "apple" -}}
+            {{- $podcastId := .podcastId -}}
+            {{- $episodeId := .episodeId -}}
+            <div class="podcast-player podcast-player-apple">
+              <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="{{ $height }}" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.podcasts.apple.com/us/podcast/id{{ $podcastId }}?i={{ $episodeId }}"></iframe>
+            </div>
+
+          {{- else if eq $playerType "youtube" -}}
+            {{- $videoId := .id -}}
+            <div class="podcast-player podcast-player-youtube">
+              <iframe width="100%" height="{{ $height }}" src="https://www.youtube.com/embed/{{ $videoId }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+
+          {{- else if eq $playerType "blubrry" -}}
+            {{- $program := .program -}}
+            {{- $episodeId := .id -}}
+            <div class="podcast-player podcast-player-blubrry">
+              <iframe src="https://blubrry.com/{{ $program }}/{{ $episodeId }}/player/" scrolling="no" width="100%" height="{{ $height }}px" frameborder="0"></iframe>
+            </div>
+
+          {{- else if eq $playerType "libsyn" -}}
+            {{- $embedId := .id -}}
+            <div class="podcast-player podcast-player-libsyn">
+              <iframe style="border: none" src="//html5-player.libsyn.com/embed/episode/id/{{ $embedId }}/height/{{ $height }}/theme/{{ $theme }}/thumbnail/yes/direction/backward/" height="{{ $height }}" width="100%" scrolling="no" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+            </div>
+
+          {{- else if eq $playerType "spreaker" -}}
+            {{- $episodeId := .id -}}
+            <div class="podcast-player podcast-player-spreaker">
+              <iframe src="https://widget.spreaker.com/player?episode_id={{ $episodeId }}&theme={{ $theme }}&playlist=false&playlist-continuous=false&autoplay=false&live-autoplay=false&chapters-image=true&episode_image_position=right&hide-logo=false&hide-likes=false&hide-comments=false&hide-sharing=false&hide-download=true" width="100%" height="{{ $height }}px" frameborder="0"></iframe>
+            </div>
+
+          {{- else if eq $playerType "podbean" -}}
+            {{- $embedUrl := .embedUrl -}}
+            <div class="podcast-player podcast-player-podbean">
+              <iframe title="Podbean Player" src="{{ $embedUrl }}" width="100%" height="{{ $height }}" style="border: none;" scrolling="no" data-name="pb-iframe-player"></iframe>
+            </div>
+
+          {{- else if eq $playerType "transistor" -}}
+            {{- $shareUrl := .shareUrl -}}
+            <div class="podcast-player podcast-player-transistor">
+              <iframe src="{{ $shareUrl }}/embed" width="100%" height="{{ $height }}" frameborder="0" scrolling="no" seamless="true" style="width:100%; height:{{ $height }}px;"></iframe>
+            </div>
+
+          {{- else if eq $playerType "simplecast" -}}
+            {{- $episodeId := .id -}}
+            <div class="podcast-player podcast-player-simplecast">
+              <iframe frameborder="no" scrolling="no" seamless src="https://player.simplecast.com/{{ $episodeId }}?dark={{ if eq $theme "dark" }}true{{ else }}false{{ end }}" width="100%" height="{{ $height }}"></iframe>
+            </div>
+
+          {{- else if eq $playerType "buzzsprout" -}}
+            {{- $podcastId := .podcastId -}}
+            {{- $episodeId := .episodeId -}}
+            <div class="podcast-player podcast-player-buzzsprout">
+              <iframe src="https://www.buzzsprout.com/{{ $podcastId }}/{{ $episodeId }}-?client_source=small_player&amp;iframe=true" loading="lazy" width="100%" height="{{ $height }}" frameborder="0" scrolling="no" title="Buzzsprout Player"></iframe>
+            </div>
+
+          {{- else -}}
+            <p class="podcast-player-error">
+              <strong>Unknown player type:</strong> {{ $playerType }}
+            </p>
+          {{- end -}}
+        </div>
+
+      {{- end -}}
+    {{- end -}}
+
+    {{- if gt (len $players) $maxPlayers -}}
+      <p class="podcast-players-limit-notice">
+        <em>Note: Only the first {{ $maxPlayers }} players are displayed.</em>
+      </p>
+    {{- end -}}
+  </div>
+{{- end -}}

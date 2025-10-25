@@ -1,0 +1,35 @@
+{{- /*
+  Overlay Filter Parser
+
+  Parses Jekyll Minimal Mistakes style overlay_filter parameter and returns CSS background value.
+
+  Input formats:
+  - Numeric (0.1-1.0): Black overlay with transparency (e.g., "0.5" = rgba(0,0,0,0.5))
+  - RGBA: Color with transparency (e.g., "rgba(255, 0, 0, 0.5)")
+  - Gradient: Pass through as-is (e.g., "linear-gradient(...)")
+
+  Usage:
+  {{ $overlayStyle := partial "function/overlay-filter.html" .Params.overlay_filter }}
+
+  Returns: CSS background value or empty string
+*/ -}}
+
+{{- $filter := . -}}
+{{- $result := "" -}}
+
+{{- if $filter -}}
+    {{- if findRE `gradient` $filter -}}
+        {{- /* Gradient: pass through as-is */ -}}
+        {{- $result = $filter -}}
+    {{- else if findRE `^rgba?\(` $filter -}}
+        {{- /* RGBA format: rgba(255, 0, 0, 0.5) */ -}}
+        {{- /* Wrap in linear-gradient for consistency with Jekyll MM */ -}}
+        {{- $result = printf "linear-gradient(%s, %s)" $filter $filter -}}
+    {{- else if findRE `^0?\.\d+$|^1(\.0+)?$` $filter -}}
+        {{- /* Decimal format: 0.1 to 1.0 for black overlay */ -}}
+        {{- $rgba := printf "rgba(0, 0, 0, %s)" $filter -}}
+        {{- $result = printf "linear-gradient(%s, %s)" $rgba $rgba -}}
+    {{- end -}}
+{{- end -}}
+
+{{- return $result -}}

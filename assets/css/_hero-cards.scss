@@ -1,0 +1,263 @@
+// Hero Cards
+// Photo-forward card layout inspired by mademistakes.com
+// Features: 70% opacity images, metadata overlays, responsive grid, hover effects
+
+// Hero card grid container
+.hero-cards-grid,
+.episodes-archive,
+.featured-archive,
+.blog-archive {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+
+  // Tablet: 2 columns
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+
+  // Desktop: 3 columns
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+}
+
+// Individual hero card
+.hero-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--global-background-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  // Hover effect
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+
+    .hero-card-image {
+      transform: scale(1.05);
+    }
+  }
+
+  // Link wrapper
+  .hero-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  // Featured image background
+  .hero-card-image {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.4s ease;
+
+    @media (min-width: 768px) {
+      height: 350px;
+    }
+
+    @media (min-width: 1200px) {
+      height: 400px;
+    }
+
+    // Fallback gradient when no image
+    &.hero-card-image-fallback {
+      background: linear-gradient(135deg,
+        var(--global-link-color) 0%,
+        var(--global-link-hover-color) 100%);
+    }
+
+    // Configurable overlay (disabled by default)
+    // Configured via params.list.overlayFilter in hugo.toml
+    // Examples: "0.5" for 50% black, "rgba(255, 0, 0, 0.5)" for red
+    .hero-card-image-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      // Background color is set inline via Hugo template based on overlayFilter config
+      transition: opacity 0.3s ease;
+      opacity: 1;
+    }
+  }
+
+  // Content overlay (metadata + title + summary)
+  .hero-card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.7) 50%,
+      rgba(0, 0, 0, 0) 100%);
+    color: #ffffff;
+    z-index: 2;
+
+    @media (min-width: 768px) {
+      padding: 2rem;
+    }
+  }
+
+  // Metadata line
+  .hero-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.875rem;
+    opacity: 0.9;
+
+    .hero-card-meta-item {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.25rem 0.5rem;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 4px;
+      font-weight: 500;
+
+      &::before {
+        content: '';
+        margin-right: 0.25rem;
+      }
+    }
+
+    .episode-number::before {
+      content: '#';
+    }
+
+    .episode-duration::before,
+    .blog-reading-time::before {
+      content: '⏱';
+    }
+  }
+
+  // Title
+  .hero-card-title {
+    margin: 0 0 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #ffffff;
+
+    @media (min-width: 768px) {
+      font-size: 1.75rem;
+    }
+  }
+
+  // Guests/Hosts
+  .hero-card-guests,
+  .hero-card-hosts {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    opacity: 0.95;
+    color: #ffffff;
+
+    i {
+      opacity: 0.8;
+    }
+  }
+
+  // Subtitle (blog)
+  .hero-card-subtitle {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-style: italic;
+    opacity: 0.9;
+    color: #ffffff;
+  }
+
+  // Summary
+  .hero-card-summary {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    opacity: 0.9;
+    color: #ffffff;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 767px) {
+  .hero-card {
+    .hero-card-content {
+      padding: 1rem;
+    }
+
+    .hero-card-title {
+      font-size: 1.25rem;
+    }
+
+    .hero-card-summary {
+      font-size: 0.875rem;
+      -webkit-line-clamp: 2;
+    }
+  }
+}
+
+// Loading state
+.hero-card[loading="lazy"] {
+  .hero-card-image {
+    background-color: var(--global-background-color-secondary);
+  }
+}
+
+// Accessibility: Focus states
+.hero-card-link:focus {
+  outline: 2px solid var(--global-link-color);
+  outline-offset: 4px;
+}
+
+// Dark theme specific adjustments
+[data-theme="tokyo-night"],
+[data-theme="nordic"] {
+  .hero-card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+
+    &:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    }
+  }
+}
+
+// Light theme specific adjustments
+[data-theme="onenord-light"],
+[data-theme="onenord-day"] {
+  .hero-card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    &:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    }
+
+    .hero-card-content {
+      background: linear-gradient(to top,
+        rgba(255, 255, 255, 0.95) 0%,
+        rgba(255, 255, 255, 0.8) 50%,
+        rgba(255, 255, 255, 0) 100%);
+      color: var(--global-font-color);
+    }
+
+    .hero-card-title,
+    .hero-card-guests,
+    .hero-card-hosts,
+    .hero-card-subtitle,
+    .hero-card-summary {
+      color: var(--global-font-color);
+    }
+  }
+}

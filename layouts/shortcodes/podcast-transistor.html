@@ -1,0 +1,33 @@
+{{- /*
+  Transistor Podcast Player Shortcode
+
+  Provide share URL as parameter.
+
+  Example: {{< podcast-transistor "https://share.transistor.fm/s/abc123" >}}
+
+  To get share URL from Transistor:
+  1. Go to episode in Transistor dashboard
+  2. Click "Share" button
+  3. Copy the share URL
+*/ -}}
+
+{{- $shareUrl := .Get 0 -}}
+{{- $height := .Get "height" | default "180" -}}
+{{- $playerWidth := .Site.Params.podcast.playerWidth | default 0.8 -}}
+{{- $widthPercent := mul $playerWidth 100 -}}
+
+{{- if $shareUrl -}}
+<div class="podcast-player podcast-player-transistor" style="width:{{ $widthPercent }}%;max-width:{{ $widthPercent }}%;margin:0 auto 50px auto;">
+  <iframe
+    src="{{ $shareUrl }}/embed"
+    width="100%"
+    height="{{ $height }}"
+    frameborder="0"
+    scrolling="no"
+    seamless="true"
+    style="width:100%; height:{{ $height }}px;">
+  </iframe>
+</div>
+{{- else -}}
+  <p><strong>Error:</strong> Transistor share URL required. Provide share URL as parameter.
+{{- end -}}

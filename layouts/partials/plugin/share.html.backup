@@ -1,0 +1,242 @@
+{{- $share := (.Scratch.Get "params").share | default dict -}}
+{{- $pageURL := .Permalink | urlquery -}}
+{{- $pageTitle := .Title | urlquery -}}
+{{- $shareText := (cond (ne .Description "") .Description .Summary | plainify) | urlquery -}}
+{{- $pageDescription := $shareText -}}
+{{- $isVideo := .Scratch.Get "isVideo" | default false -}}
+
+{{- if $share.enable -}}
+    {{- /* 001: X */ -}}
+    {{- if $share.X | default $share.Twitter -}}
+        {{- $socialX := .Site.Params.Social.X | default .Site.Params.Social.Twitter -}}
+        {{- if reflect.IsMap $socialX -}}
+            {{- $socialX = $socialX.id -}}
+        {{- end -}}
+        {{- $xURL := printf "https://twitter.com/intent/tweet?url=%s&text=%s" $pageURL $shareText -}}
+        {{- with $socialX -}}
+            {{- $xURL = printf "%s&via=%s" $xURL . -}}
+        {{- end -}}
+        {{- with $.Params.tags -}}
+            {{- $hashtags := delimit . "," | urlquery -}}
+            {{- $xURL = printf "%s&hashtags=%s" $xURL $hashtags -}}
+        {{- end -}}
+        <a href="{{ $xURL }}" target="_blank" rel="noopener noreferrer" title="{{ T `shareOn` }} X">
+            {{- dict "Class" "fab fa-x-twitter fa-fw" | partial "plugin/icon.html" -}}
+        </a>
+    {{- end -}}
+
+    {{- /* 002: Threads */ -}}
+    {{- if $share.Threads -}}
+        <a href="https://threads.net/intent/post?text={{ $shareText }}%20{{ $pageURL }}" target="_blank" rel="noopener noreferrer" title="{{ T `shareOn` }} Threads">
+            {{- dict "Class" "fab fa-threads fa-fw" | partial "plugin/icon.html" -}}
+        </a>
+    {{- end -}}
+
+    {{- /* 003: Facebook */ -}}
+    {{- if $share.Facebook -}}
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ $pageURL }}" target="_blank" rel="noopener noreferrer" title="{{ T `shareOn` }} Facebook">
+            {{- dict "Class" "fab fa-facebook-f fa-fw" | partial "plugin/icon.html" -}}
+        </a>
+    {{- end -}}
+
+    {{- /* 004: Linkedin */ -}}
+    {{- if $share.Linkedin -}}
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ $pageURL }}" target="_blank" rel="noopener noreferrer" title="{{ T `shareOn` }} Linkedin">
+            {{- dict "Class" "fab fa-linkedin-in fa-fw" | partial "plugin/icon.html" -}}
+        </a>
+    {{- end -}}
+
+    {{- /* 005: WhatsApp */ -}}
+    {{- if $share.Whatsapp -}}
+        <a href="https://api.whatsapp.com/send?text={{ $shareText }}%20{{ $pageURL }}" target="_blank" rel="noopener noreferrer" title="{{ T `shareOn` }} WhatsApp">
+            {{- dict "Class" "fab fa-whatsapp fa-fw" | partial "plugin/icon.html" -}}
+        </a>
+    {{- end -}}
+
+    {{- /* 006: Viber */ -}}
+    {{- if $share.Viber -}}
+        <a href="viber://forward?text={{ $shareText }}%20{{ $pageURL }}" target="_blank" rel="noopener noreferrer" title="{{ T `shareOn` }} Viber">
+            {{- dict "Class" "fab fa-viber fa-fw" | partial "plugin/icon.html" -}}
+        </a>
+    {{- end -}}
+
+    {{- /* 007: Pinterest */ -}}
+    {{- if $share.Pinterest -}}
+        {{- $pinterestURL := printf "https://pinterest.com/pin/create/button/?url=%s&description=%s" $pageURL ($pageDescription) -}}
+        {{- with .Params.featuredImage -}}
+            {{- $pinterestURL = printf "%s&media=%s" $pinterestURL (. | urlquery) -}}
+        {{- end -}}
+        <a href="{{ $pinterestURL }}" target="_blank" rel="noopener noreferrer" title="{{ T `shareOn` }} Pinterest">
+            {{- dict "Class" "fab fa-pinterest fa-fw" | partial "plugin/icon.html" -}}
+        </a>
+    {{- end -}}
+
+    {{- /* 008: Tumblr */ -}}
+    {{- if $share.Tumblr -}}
+        {{- $tumblrURL := printf "https://www.tumblr.com/widgets/share/tool?canonicalUrl=%s&title=%s" $pageURL $pageTitle -}}
+        {{- with .Description -}}
+            {{- $tumblrURL = printf "%s&caption=%s" $tumblrURL (. | urlquery) -}}
+        {{- end -}}
+        {{- with .Params.tags -}}
+            {{- $tags := delimit . "," | urlquery -}}
+            {{- $tumblrURL = printf "%s&tags=%s" $tumblrURL $tags -}}
+        {{- end -}}
+        <a href="{{ $tumblrURL }}" target="_blank" rel="noopener noreferrer" title="{{ T `shareOn` }} Tumblr">
+            {{- dict "Class" "fab fa-tumblr fa-fw" | partial "plugin/icon.html" -}}
+        </a>
+    {{- end -}}
+
+    {{- /* 009: Hacker News */ -}}
+    {{- if $share.Hackernews -}}
+        <a href="https://news.ycombinator.com/submitlink?u={{ $pageURL }}&t={{ $pageTitle }}" target="_blank" rel="noopener noreferrer" title="{{ T `shareOn` }} Hacker News">
+            {{- dict "Class" "fab fa-hacker-news fa-fw" | partial "plugin/icon.html" -}}
+        </a>
+    {{- end -}}
+
+    {{- /* 010: Reddit */ -}}
+    {{- if $share.Reddit -}}
+        <a href="https://www.reddit.com/submit?url={{ $pageURL }}&title={{ $pageTitle }}" target="_blank" rel="noopener noreferrer" title="{{ T `shareOn` }} Reddit">
+            {{- dict "Class" "fab fa-reddit-alien fa-fw" | partial "plugin/icon.html" -}}
+        </a>
+    {{- end -}}
+
+    {{- /* 011: VK */ -}}
+    {{- if $share.VK -}}
+        {{- $vkURL := printf "https://vk.com/share.php?url=%s&title=%s" $pageURL $pageTitle -}}
+        {{- with .Description -}}
+            {{- $vkURL = printf "%s&description=%s" $vkURL (. | urlquery) -}}
+        {{- end -}}
+        {{- with .Params.featuredImage -}}
+            {{- $vkURL = printf "%s&image=%s" $vkURL (. | urlquery) -}}
+        {{- end -}}
+        <a href="{{ $vkURL }}" target="_blank" rel="noopener noreferrer" title="{{ T `shareOn` }} VK">
+            {{- dict "Class" "fab fa-vk fa-fw" | partial "plugin/icon.html" -}}
+        </a>
+    {{- end -}}
+
+    {{- /* 012: Buffer */ -}}
+    {{- if $share.Buffer -}}
+        {{- $bufferURL := printf "https://buffer.com/add?url=%s&text=%s" $pageURL $shareText -}}
+        {{- with .Site.Params.Social.Twitter -}}
+            {{- $bufferURL = printf "%s&via=%s" $bufferURL . -}}
+        {{- end -}}
+        {{- with .Params.featuredImage -}}
+            {{- $bufferURL = printf "%s&picture=%s" $bufferURL (. | urlquery) -}}
+        {{- end -}}
+        <a href="{{ $bufferURL }}" target="_blank" rel="noopener noreferrer" title="{{ T `shareOn` }} Buffer">
+            {{- dict "Class" "fab fa-buffer fa-fw" | partial "plugin/icon.html" -}}
+        </a>
+    {{- end -}}
+
+    {{- /* 013: Xing */ -}}
+    {{- if $share.Xing -}}
+        <a href="https://www.xing.com/spi/shares/new?url={{ $pageURL }}" target="_blank" rel="noopener noreferrer" title="{{ T `shareOn` }} Xing">
+            {{- dict "Class" "fab fa-xing fa-fw" | partial "plugin/icon.html" -}}
+        </a>
+    {{- end -}}
+
+    {{- /* 014: Line */ -}}
+    {{- if $share.Line -}}
+        <a href="https://social-plugins.line.me/lineit/share?url={{ $pageURL }}" target="_blank" rel="noopener noreferrer" title="{{ T `shareOn` }} Line">
+            {{- dict "Simpleicons" "line" "Prefix" (.Scratch.Get "cdn" | default dict).simpleIconsPrefix | partial "plugin/icon.html" -}}
+        </a>
+    {{- end -}}
+
+    {{- /* 015: Instapaper */ -}}
+    {{- if $share.Instapaper -}}
+        <a href="https://www.instapaper.com/text?u={{ $pageURL }}" target="_blank" rel="noopener noreferrer" title="{{ T `shareOn` }} Instapaper">
+            {{- dict "Simpleicons" "instapaper" "Prefix" (.Scratch.Get "cdn" | default dict).simpleIconsPrefix | partial "plugin/icon.html" -}}
+        </a>
+    {{- end -}}
+
+    {{- /* 016: Pocket */ -}}
+    {{- if $share.Pocket -}}
+        <a href="https://getpocket.com/save?url={{ $pageURL }}" target="_blank" rel="noopener noreferrer" title="{{ T `shareOn` }} Pocket">
+            {{- dict "Class" "fab fa-get-pocket fa-fw" | partial "plugin/icon.html" -}}
+        </a>
+    {{- end -}}
+
+    {{- /* 017: Flipboard */ -}}
+    {{- if $share.Flipboard -}}
+        <a href="https://share.flipboard.com/bookmarklet/popout?v=2&url={{ $pageURL }}&title={{ $shareText }}" target="_blank" rel="noopener noreferrer" title="{{ T `shareOn` }} Flipboard">
+            {{- dict "Class" "fab fa-flipboard fa-fw" | partial "plugin/icon.html" -}}
+        </a>
+    {{- end -}}
+
+    {{- /* 018: Weibo */ -}}
+    {{- if $share.Weibo -}}
+        {{- $weiboURL := printf "http://service.weibo.com/share/share.php?url=%s&title=%s" $pageURL $shareText -}}
+        {{- with .Params.featuredImage -}}
+            {{- $weiboURL = printf "%s&pic=%s" $weiboURL (. | urlquery) -}}
+        {{- end -}}
+        {{- with .Site.Params.Social.Weibo -}}
+            {{- $weiboURL = printf "%s&ralateUid=%s" $weiboURL . -}}
+        {{- end -}}
+        <a href="{{ $weiboURL }}" target="_blank" rel="noopener noreferrer" title="{{ T `shareOn` }} Weibo">
+            {{- dict "Class" "fab fa-weibo fa-fw" | partial "plugin/icon.html" -}}
+        </a>
+    {{- end -}}
+
+    {{- /* 019: Blogger */ -}}
+    {{- if $share.Blogger -}}
+        <a href="https://www.blogger.com/blog-this.g?u={{ $pageURL }}&n={{ $pageTitle }}&t={{ $pageDescription }}" target="_blank" rel="noopener noreferrer" title="{{ T `shareOn` }} Blogger">
+            {{- dict "Class" "fab fa-blogger fa-fw" | partial "plugin/icon.html" -}}
+        </a>
+    {{- end -}}
+
+    {{- /* 020: Baidu */ -}}
+    {{- if $share.Baidu -}}
+        <a href="http://cang.baidu.com/do/add?it={{ $shareText }}&iu={{ $pageURL }}" target="_blank" rel="noopener noreferrer" title="{{ T `shareOn` }} Baidu">
+            {{- dict "Simpleicons" "baidu" "Prefix" (.Scratch.Get "cdn" | default dict).simpleIconsPrefix | partial "plugin/icon.html" -}}
+        </a>
+    {{- end -}}
+
+    {{- /* 021: OK.RU */ -}}
+    {{- if $share.Odnoklassniki -}}
+        <a href="https://connect.ok.ru/offer?url={{ $pageURL }}&title={{ $shareText }}" target="_blank" rel="noopener noreferrer" title="{{ T `shareOn` }} OK.RU">
+            {{- dict "Class" "fab fa-odnoklassniki fa-fw" | partial "plugin/icon.html" -}}
+        </a>
+    {{- end -}}
+
+    {{- /* 022: Evernote */ -}}
+    {{- if $share.Evernote -}}
+        <a href="https://www.evernote.com/clip.action?url={{ $pageURL }}&title={{ $shareText }}" target="_blank" rel="noopener noreferrer" title="{{ T `shareOn` }} Evernote">
+            {{- dict "Class" "fab fa-evernote fa-fw" | partial "plugin/icon.html" -}}
+        </a>
+    {{- end -}}
+
+    {{- /* 023: Skype */ -}}
+    {{- if $share.Skype -}}
+        <a href="https://web.skype.com/share?url={{ $pageURL }}&text={{ $shareText }}" target="_blank" rel="noopener noreferrer" title="{{ T `shareOn` }} Skype">
+            {{- dict "Class" "fab fa-skype fa-fw" | partial "plugin/icon.html" -}}
+        </a>
+    {{- end -}}
+
+    {{- /* 024: Trello */ -}}
+    {{- if $share.Trello -}}
+        <a href="https://trello.com/add-card?url={{ $pageURL }}&name={{ $pageTitle }}&desc={{ $pageDescription }}" target="_blank" rel="noopener noreferrer" title="{{ T `shareOn` }} Trello">
+            {{- dict "Class" "fab fa-trello fa-fw" | partial "plugin/icon.html" -}}
+        </a>
+    {{- end -}}
+
+    {{- /* 025: Diaspora */ -}}
+    {{- if $share.Diaspora -}}
+        <a href="https://share.diasporafoundation.org/?url={{ $pageURL }}&title={{ $shareText }}" target="_blank" rel="noopener noreferrer" title="{{ T `shareOn` }} Diaspora">
+            {{- dict "Class" "fab fa-diaspora fa-fw" | partial "plugin/icon.html" -}}
+        </a>
+    {{- end -}}
+
+    {{- /* 026: Mix */ -}}
+    {{- if $share.Mix -}}
+        <a href="https://mix.com/add?url={{ $pageURL }}&description={{ $shareText }}" target="_blank" rel="noopener noreferrer" title="{{ T `shareOn` }} Mix">
+            {{- dict "Class" "fab fa-mix fa-fw" | partial "plugin/icon.html" -}}
+        </a>
+    {{- end -}}
+
+    {{- /* 027: Telegram */ -}}
+    {{- if $share.Telegram -}}
+        <a href="https://t.me/share/url?url={{ $pageURL }}&text={{ $shareText }}" target="_blank" rel="noopener noreferrer" title="{{ T `shareOn` }} Telegram">
+            {{- dict "Class" "fab fa-telegram fa-fw" | partial "plugin/icon.html" -}}
+        </a>
+    {{- end -}}
+{{- end -}}

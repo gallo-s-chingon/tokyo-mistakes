@@ -1,0 +1,35 @@
+{{- /*
+  Buzzsprout Podcast Player Shortcode
+
+  Provide podcast ID and episode ID as parameters.
+
+  Example: {{< podcast-buzzsprout "123456" "7891011" >}}
+
+  To get IDs from Buzzsprout:
+  1. Go to episode in Buzzsprout dashboard
+  2. Click "Embed" button
+  3. Extract podcast ID and episode ID from embed code
+     Format: https://www.buzzsprout.com/[podcast-id]/[episode-id]
+*/ -}}
+
+{{- $podcastId := .Get 0 -}}
+{{- $episodeId := .Get 1 -}}
+{{- $height := .Get "height" | default "200" -}}
+{{- $playerWidth := .Site.Params.podcast.playerWidth | default 0.8 -}}
+{{- $widthPercent := mul $playerWidth 100 -}}
+
+{{- if and $podcastId $episodeId -}}
+<div class="podcast-player podcast-player-buzzsprout" style="width:{{ $widthPercent }}%;max-width:{{ $widthPercent }}%;margin:0 auto 50px auto;">
+  <iframe
+    src="https://www.buzzsprout.com/{{ $podcastId }}/{{ $episodeId }}-?client_source=small_player&amp;iframe=true"
+    loading="lazy"
+    width="100%"
+    height="{{ $height }}"
+    frameborder="0"
+    scrolling="no"
+    title="Buzzsprout Player">
+  </iframe>
+</div>
+{{- else -}}
+  <p><strong>Error:</strong> Buzzsprout requires podcast ID and episode ID. Provide podcast ID and episode ID as parameters.
+{{- end -}}

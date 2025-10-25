@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=63621&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Gradient Overlay Demo - My cool site</title><meta name="Description" content="This is my cool site"><meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:63621/blog/2025-01-15-gradient-overlay-demo/" /><link rel="prev" href="http://localhost:63621/blog/2025-01-15-red-overlay-demo/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Gradient Overlay Demo",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:63621\/blog\/2025-01-15-gradient-overlay-demo\/"
+        },"genre": "blog","keywords": "CSS, Gradients","wordcount":  55 ,
+        "url": "http:\/\/localhost:63621\/blog\/2025-01-15-gradient-overlay-demo\/","datePublished": "2025-01-15T11:00:00+00:00","dateModified": "2025-01-15T11:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "My cool site"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          function applyTheme() {
+            const highContrast =  true ;
+            const defaultTheme = 'auto';
+
+            
+            const themeMap = {
+              dark: highContrast ? 'tokyo-night' : 'nordic',
+              light: highContrast ? 'onenord-light' : 'onenord-day'
+            };
+
+            
+            let theme = window.localStorage?.getItem('theme');
+
+            if (!theme) {
+              
+              if (defaultTheme === 'auto') {
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                theme = prefersDark ? themeMap.dark : themeMap.light;
+              } else if (defaultTheme === 'dark') {
+                theme = themeMap.dark;
+              } else {
+                theme = themeMap.light;
+              }
+            }
+
+            
+            const validThemes = ['tokyo-night', 'nordic', 'onenord-light', 'onenord-day'];
+            if (!validThemes.includes(theme)) {
+              theme = themeMap.dark;
+            }
+
+            let isDark = theme === 'tokyo-night' || theme === 'nordic';
+            document.body.setAttribute('data-theme', theme);
+            document.body.setAttribute('theme', isDark ? 'dark' : 'light');
+          }
+
+          applyTheme();
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="My cool site">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/featured/"> Featured </a><a class="menu-item" href="/episodes/"> Episodes </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="My cool site">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/featured/" title="">Feat</a><a class="menu-item" href="/episodes/" title="">Epi</a><a class="menu-item" href="/about/" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single blog-post"><h1 class="single-title animate__animated animate__flipInX">Gradient Overlay Demo</h1><h2 class="single-subtitle">Advanced gradient overlay effects</h2><div class="featured-image-container blog-featured-overlay" data-position="lower-center">
+                <div class="featured-image blog-featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200"
+        data-srcset="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200, https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200 1.5x, https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200 2x"
+        data-sizes="auto"
+        alt="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200"
+        title="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200" /><div class="featured-image-color-overlay" style="background: ZgotmplZ;"></div></div>
+                <div class="featured-metadata-overlay overlay-lower-center" style="--overlay-opacity: 0.85;">
+                    <div class="overlay-content"><div class="post-meta blog-meta">
+                            <div class="post-meta-line"><span class="post-author">
+                                    <i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>&nbsp;My cool site
+                                </span>&nbsp;<i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-01-15">2025-01-15</time>&nbsp;<i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute
+                            </div><div class="post-meta-line"><span class="post-categories">
+                                            <i class="far fa-folder fa-fw" aria-hidden="true"></i>&nbsp;Design
+                                        </span>&nbsp;<span class="post-tags">
+                                            <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;CSS, Gradients
+                                        </span></div></div>
+                    </div>
+                </div>
+            </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content blog-content" id="content"><p>This post demonstrates a <strong>gradient overlay</strong> for sophisticated visual effects.</p>
+<p>The featured image uses a gradient that fades from dark to transparent:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">overlay_filter</span>: <span style="color:#e6db74">&#34;linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0))&#34;</span></span></span></code></pre></div><p>This technique:</p>
+<ul>
+<li>Creates a natural shadow area for text</li>
+<li>Maintains the upper portion of the image visible</li>
+<li>Provides excellent readability for overlaid metadata</li>
+</ul>
+<p>Perfect for landscape and nature photography!</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span></span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A63621%2Fblog%2F2025-01-15-gradient-overlay-demo%2F&amp;text=This&#43;post&#43;demonstrates&#43;a&#43;gradient&#43;overlay&#43;for&#43;sophisticated&#43;visual&#43;effects.%0AThe&#43;featured&#43;image&#43;uses&#43;a&#43;gradient&#43;that&#43;fades&#43;from&#43;dark&#43;to&#43;transparent%3A%0Aoverlay_filter%3A&#43;%26%2334%3Blinear-gradient%28to&#43;top%2C&#43;rgba%280%2C0%2C0%2C0.9%29%2C&#43;rgba%280%2C0%2C0%2C0%29%29%26%2334%3BThis&#43;technique%3A%0ACreates&#43;a&#43;natural&#43;shadow&#43;area&#43;for&#43;text&#43;Maintains&#43;the&#43;upper&#43;portion&#43;of&#43;the&#43;image&#43;visible&#43;Provides&#43;excellent&#43;readability&#43;for&#43;overlaid&#43;metadata&#43;Perfect&#43;for&#43;landscape&#43;and&#43;nature&#43;photography%21%0A&amp;hashtags=CSS%2CGradients" target="_blank" rel="noopener noreferrer" title="Share on X"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="https://www.facebook.com/sharer/sharer.php?u=http%253A%252F%252Flocalhost%253A63621%252Fblog%252F2025-01-15-gradient-overlay-demo%252F" target="_blank" rel="noopener noreferrer" title="Share on Facebook"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="https://www.linkedin.com/sharing/share-offsite/?url=http%253A%252F%252Flocalhost%253A63621%252Fblog%252F2025-01-15-gradient-overlay-demo%252F" target="_blank" rel="noopener noreferrer" title="Share on Linkedin"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="https://news.ycombinator.com/submitlink?u=http%253A%252F%252Flocalhost%253A63621%252Fblog%252F2025-01-15-gradient-overlay-demo%252F&t=Gradient%2bOverlay%2bDemo" target="_blank" rel="noopener noreferrer" title="Share on Hacker News"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="https://www.reddit.com/submit?url=http%253A%252F%252Flocalhost%253A63621%252Fblog%252F2025-01-15-gradient-overlay-demo%252F&title=Gradient%2bOverlay%2bDemo" target="_blank" rel="noopener noreferrer" title="Share on Reddit"><i class="fab fa-reddit fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%253A%252F%252Flocalhost%253A63621%252Fblog%252F2025-01-15-gradient-overlay-demo%252F&text=This%2bpost%2bdemonstrates%2ba%2bgradient%2boverlay%2bfor%2bsophisticated%2bvisual%2beffects.%250AThe%2bfeatured%2bimage%2buses%2ba%2bgradient%2bthat%2bfades%2bfrom%2bdark%2bto%2btransparent%253A%250Aoverlay_filter%253A%2b%2526%252334%253Blinear-gradient%2528to%2btop%252C%2brgba%25280%252C0%252C0%252C0.9%2529%252C%2brgba%25280%252C0%252C0%252C0%2529%2529%2526%252334%253BThis%2btechnique%253A%250ACreates%2ba%2bnatural%2bshadow%2barea%2bfor%2btext%2bMaintains%2bthe%2bupper%2bportion%2bof%2bthe%2bimage%2bvisible%2bProvides%2bexcellent%2breadability%2bfor%2boverlaid%2bmetadata%2bPerfect%2bfor%2blandscape%2band%2bnature%2bphotography%2521%250A" target="_blank" rel="noopener noreferrer" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/css/">CSS</a>,&nbsp;<a href="/tags/gradients/">Gradients</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/blog/2025-01-15-red-overlay-demo/" class="prev" rel="prev" title="Red Colored Overlay Demo"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Red Colored Overlay Demo</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.151.2">Hugo</a> | Theme - <a href="https://github.com/gallo-s-chingon/Tokyo-Nord" target="_blank" rel="noopener noreffer" title="Tokyo-Nord 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> Tokyo-Nord</a>
+                </div>
+                <div class="footer-line">
+                    Created by <a href="https://github.com/gallo-s-chingon" target="_blank" rel="noopener noreferrer">Gallo Chingon</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">My cool site</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="/lib/autocomplete/autocomplete.min.js"></script><script src="/lib/lunr/lunr.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script>window.config={"comment":{},"highContrast":true,"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/js/theme.min.js"></script></body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Addiction on My cool site</title>
+    <link>http://localhost:63621/tags/addiction/</link>
+    <description>Recent content in Addiction on My cool site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:63621/tags/addiction/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fight Club</title>
+      <link>http://localhost:63621/featured/2021-03-25-sixteen-shots-fight-club/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:63621/featured/2021-03-25-sixteen-shots-fight-club/</guid>
+      <description>In this episode we discuss beef between friends and business, Sex addiction, turning 40 and DW4</description>
+    </item>
+    <item>
+      <title>Warning Sex Drugs and Advice</title>
+      <link>http://localhost:63621/featured/2021-10-30-warning-sex-drugs-and-advice/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:63621/featured/2021-10-30-warning-sex-drugs-and-advice/</guid>
+      <description>Sooooo this week - we knock on somethings that straight up aren&amp;rsquo;t for everyone</description>
+    </item>
+  </channel>
+</rss>

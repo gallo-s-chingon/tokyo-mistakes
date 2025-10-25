@@ -1,0 +1,42 @@
+{{- define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end -}}
+
+{{- define "content" -}}
+    {{- $pages := .Pages -}}
+    {{- if .IsHome -}}
+        {{- $pages = where .Site.RegularPages "Type" "in" .Site.Params.mainSections -}}
+    {{- else if eq .Kind "taxonomy" -}}
+        {{- $pages = .Pages -}}
+    {{- end -}}
+
+    {{- $paginator := .Paginate $pages -}}
+
+    <div class="page archive episodes-list">
+        {{- /* Title */ -}}
+        <h1 class="single-title animate__animated animate__pulse animate__faster">
+            {{- .Site.Params.page.episodes.title | default .Title -}}
+        </h1>
+
+        {{- /* Subtitle/Description */ -}}
+        {{- with .Params.description -}}
+            <div class="archive-description">
+                {{ . }}
+            </div>
+        {{- end -}}
+
+        {{- /* Episode List with Hero Cards */ -}}
+        {{- if $paginator.Pages -}}
+            <div class="episodes-archive">
+                {{- range $paginator.Pages -}}
+                    {{- partial "podcast/hero-card.html" (dict "page" . "type" "episode") -}}
+                {{- end -}}
+            </div>
+
+            {{- /* Pagination */ -}}
+            {{- partial "paginator.html" . -}}
+        {{- else -}}
+            <div class="no-episodes">
+                <p>No episodes found.</p>
+            </div>
+        {{- end -}}
+    </div>
+{{- end -}}

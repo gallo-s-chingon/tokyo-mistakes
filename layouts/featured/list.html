@@ -1,64 +1,42 @@
-{{ define "main" }}
-<div class="container list-page">
+{{- define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end -}}
 
-  {{/* Intro-aware sizes from content lines */}}
-  {{ $raw := .RawContent | default "" }}
-  {{ $lines := split (replace $raw "\r\n" "\n") "\n" }}
-  {{ $contentLines := len $lines }}
+{{- define "content" -}}
+    {{- $pages := .Pages -}}
+    {{- if .IsHome -}}
+        {{- $pages = where .Site.RegularPages "Type" "in" .Site.Params.mainSections -}}
+    {{- else if eq .Kind "taxonomy" -}}
+        {{- $pages = .Pages -}}
+    {{- end -}}
 
-  {{ $firstPageSize := 3 }}
-  {{ $pageSize := 9 }}
-  {{ if le $contentLines 20 }}{{ $firstPageSize = $pageSize }}{{ end }}
+    {{- $paginator := .Paginate $pages -}}
 
-  {{/* Build pages slice to support custom first-page size */}}
-  {{ $all := .Pages.ByDate.Reverse }}
-  {{ $isFirst := eq .Paginator.PageNumber 1 }}
-  {{ $perPage := cond $isFirst $firstPageSize $pageSize }}
-  {{ $offset := mul (sub .Paginator.PageNumber 1) $pageSize }}
-  {{ if $isFirst }}{{ $offset = 0 }}{{ end }}
-  {{ $paged := (first $perPage (after $offset $all)) }}
+    <div class="page archive featured-list">
+        {{- /* Title */ -}}
+        <h1 class="single-title animate__animated animate__pulse animate__faster">
+            {{- .Site.Params.page.featured.title | default .Title -}}
+        </h1>
 
-  {{/* Range indicator */}}
-  {{ $total := len $all }}
-  {{ $start := add $offset 1 }}
-  {{ $endCandidate := add $offset $perPage }}
-  {{ $end := $endCandidate }}
-  {{ if gt $endCandidate $total }}{{ $end = $total }}{{ end }}
+        {{- /* Subtitle/Description */ -}}
+        {{- with .Params.description -}}
+            <div class="archive-description">
+                {{ . }}
+            </div>
+        {{- end -}}
 
-  {{ if .Content }}
-    <div class="list-intro">
-      {{ .Content | safeHTML }}
+        {{- /* Featured Appearances List with Hero Cards */ -}}
+        {{- if $paginator.Pages -}}
+            <div class="featured-archive">
+                {{- range $paginator.Pages -}}
+                    {{- partial "podcast/hero-card.html" (dict "page" . "type" "featured") -}}
+                {{- end -}}
+            </div>
+
+            {{- /* Pagination */ -}}
+            {{- partial "paginator.html" . -}}
+        {{- else -}}
+            <div class="no-featured">
+                <p>No featured appearances found.</p>
+            </div>
+        {{- end -}}
     </div>
-  {{ end }}
-
-  <div class="list-meta" style="text-align:right;margin:8px 0 16px;">
-    {{ printf "%d–%d of %d" $start $end $total }}
-  </div>
-
-  <div class="cards">
-    {{ range $paged }}
-      <article class="card">
-        <a class="card__media" href="{{ .Permalink }}">
-          {{ with .Params.youtube }}
-            {{ partial "embeds/youtube-card.html" (dict "ctx" $ "page" . "id" .) }}
-          {{ else }}
-            {{ with (or .Params.post_image .Params.image) }}
-              <img src="{{ . | absURL }}" alt="{{ $.Title }}" loading="lazy" />
-            {{ end }}
-          {{ end }}
-        </a>
-        <div class="card__body">
-          <h2 class="card__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-          <div class="card__meta">{{ partial "meta/post-meta.html" . }}</div>
-          <p class="card__excerpt">{{ .Summary }}</p>
-          {{ with .Params.spotify }}
-            {{ partial "embeds/spotify-inline.html" (dict "ctx" $ "page" . "id" .) }}
-          {{ end }}
-        </div>
-      </article>
-    {{ end }}
-  </div>
-
-  {{ template "_internal/pagination.html" . }}
-</div>
-{{ end }}
+{{- end -}}

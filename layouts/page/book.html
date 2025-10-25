@@ -1,0 +1,74 @@
+{{- define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end -}}
+
+{{- define "content" -}}
+    {{- $params := .Scratch.Get "params" -}}
+
+    <article class="page single book-page">
+        {{- /* Title */ -}}
+        <h1 class="single-title animate__animated animate__flipInX">{{ .Title | emojify }}</h1>
+
+        {{- /* Subtitle */ -}}
+        {{- with $params.subtitle -}}
+            <h2 class="single-subtitle">{{ . }}</h2>
+        {{- end -}}
+
+        {{- /* Featured image */ -}}
+        {{- $image := $params.featuredimage -}}
+        {{- with .Resources.GetMatch "featured-image" -}}
+            {{- $image = .RelPermalink -}}
+        {{- end -}}
+        {{- with $image -}}
+            <div class="featured-image book-featured-image">
+                {{- dict "Src" . "Title" $.Description "Resources" $.Resources | partial "plugin/img.html" -}}
+            </div>
+        {{- end -}}
+
+        {{- /* Content (intro text before form) */ -}}
+        <div class="content book-content" id="content">
+            {{- dict "Content" .Content "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
+        </div>
+
+        {{- /* Booking Form Embed Area */ -}}
+        {{- /* Users can add their booking form HTML in front matter or content */ -}}
+        {{- with $params.bookingformhtml -}}
+            <div class="booking-form-container">
+                {{ . | safeHTML }}
+            </div>
+        {{- end -}}
+
+        {{- /* Example booking services:
+             - Calendly: https://calendly.com
+             - Acuity Scheduling: https://acuityscheduling.com
+             - Cal.com: https://cal.com
+             - Google Calendar appointment scheduling
+             - Microsoft Bookings
+
+             To embed a booking form, add the HTML code to your page's front matter:
+
+             ---
+             title: "Book a Guest Spot"
+             layout: book
+             bookingFormHTML: |
+               <!-- Calendly inline widget begin -->
+               <div class="calendly-inline-widget" data-url="https://calendly.com/your-link" style="min-width:320px;height:630px;"></div>
+               <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+               <!-- Calendly inline widget end -->
+             ---
+
+             Or add it directly to your page content using HTML shortcodes.
+        */ -}}
+
+        {{- /* Contact Info (optional fallback) */ -}}
+        {{- with $params.contactemail -}}
+            <div class="booking-contact">
+                <p><strong>Or contact directly:</strong> <a href="mailto:{{ . }}">{{ . }}</a></p>
+            </div>
+        {{- end -}}
+
+        {{- /* Footer */ -}}
+        {{- partial "single/footer.html" . -}}
+
+        {{- /* Comment */ -}}
+        {{- partial "comment.html" . -}}
+    </article>
+{{- end -}}

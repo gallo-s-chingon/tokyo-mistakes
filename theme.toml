@@ -1,0 +1,42 @@
+name = "Tokyo-Nord"
+license = "MIT"
+licenselink = "https://github.com/gallo-s-chingon/Tokyo-Nord/blob/master/LICENSE"
+description = "A Clean, Elegant Podcast & Blog Theme with Tokyo Night color schemes, inspired by mademistakes.com"
+
+homepage = "https://tokyo-nord.schingon.com"
+demosite = "https://tokyo-nord.schingon.com"
+
+tags = [
+  "podcast",
+  "blog",
+  "clean",
+  "responsive",
+  "dark",
+  "tokyo-night",
+  "nordic",
+  "theme"
+]
+features = [
+  "podcast-episodes",
+  "embed-players",
+  "cover-image",
+  "favicon",
+  "multilingual",
+  "pagination",
+  "social-menu",
+  "syntax-highlighting",
+  "SEO Optimized",
+  "multiple-themes",
+  "tokyo-night-colors"
+]
+
+min_version = "0.128.0"
+
+[author]
+  name = "Gallo Chingo with assistance from Claude Sonnet 4.5"
+  homepage = "https://schingon.com/"
+
+[original]
+  name = "Fastbyte01"
+  homepage = "https://www.fsb01.com/"
+  repo = "https://github.com/Fastbyte01/KeepIt"

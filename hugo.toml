@@ -1,0 +1,675 @@
+baseURL = "https://example.com/"
+title = "My cool site"
+defaultContentLanguage = "en"
+languageCode = "en-us"
+
+# Build configuration
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+[module]
+  [module.hugoVersion]
+    min = "0.128.0"
+
+# Output formats for search
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# Main navigation menu
+# Desktop labels: Featured | Episodes | Blog | About | Book
+# Mobile labels: Feat | Epi | Blog | About | Book
+[[menu.main]]
+  identifier = "featured"
+  name = "Featured"
+  url = "/featured/"
+  weight = 1
+
+[[menu.main]]
+  identifier = "episodes"
+  name = "Episodes"
+  url = "/episodes/"
+  weight = 2
+
+# Blog is optional - controlled by params.navigation.blog.enable
+# Uncomment the lines below to enable blog navigation
+# [[menu.main]]
+#   identifier = "blog"
+#   name = "Blog"
+#   url = "/blog/"
+#   weight = 3
+
+[[menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about/"
+  weight = 4
+
+# Contact is optional - controlled by params.navigation.contact.enable
+# Uncomment the lines below to enable contact navigation
+# [[menu.main]]
+#   identifier = "contact"
+#   name = "Contact"
+#   url = "/contact/"
+#   weight = 5
+
+# Book is optional - controlled by params.navigation.book.enable
+# Uncomment the lines below to enable book/booking navigation
+# [[menu.main]]
+#   identifier = "book"
+#   name = "Book"
+#   url = "/book/"
+#   weight = 6
+
+[params]
+  # Site default theme ["auto", "light", "dark"]
+  defaultTheme = "auto"
+
+  # Show "Topics Discussed" section (can be overridden per post with topicsOn: true/false)
+  topicsDiscussed = true
+
+  # High contrast mode (true = tokyo-night/onenord-light, false = nordic/onenord-day)
+  highContrast = true
+
+  # Public git repo url only then enableGitInfo is true
+  gitRepo = ""
+
+  # Which hash function used for SRI, when empty, no SRI is used
+  # ["sha256", "sha384", "sha512", "md5"]
+  fingerprint = ""
+
+  # Date format
+  dateFormat = "2006-01-02"
+
+  # Website title for Open Graph and Twitter Cards
+  title = "My cool site"
+
+  # Website description for RSS, SEO, Open Graph and Twitter Cards
+  description = "This is my cool site"
+
+  # Image config
+  [params.images]
+    # Website images for Open Graph and Twitter Cards
+    # default = []
+
+  # Author config
+  [params.author]
+    name = "My cool site"
+    email = ""
+    link = ""
+
+  # Podcast config
+  [params.podcast]
+    # Enable podcast features (episode layouts, players, etc.)
+    enable = true
+    # Podcast name
+    name = "Your Podcast Name"
+    # Host name (can be overridden per episode)
+    hostName = "Your Name"
+    # Podcast description for RSS feed
+    description = "Your podcast description"
+    # Podcast artwork URL (1400x1400 to 3000x3000 pixels, JPG/PNG)
+    artwork = ""
+    # iTunes/Apple Podcasts categories
+    categories = ["Technology"]
+    # Explicit content flag [true, false, "clean"]
+    explicit = false
+    # Subscribe URLs
+    spotifyUrl = ""
+    appleUrl = ""
+    youtubeUrl = ""
+    rssUrl = ""
+    # Newsletter integration
+    newsletter = ""
+    # Player width as percentage (0.3 to 1.0, default 0.8 = 80%)
+    playerWidth = 0.8
+
+    # Metadata overlay on single page featured images
+    # When enabled, metadata will be overlaid on the featured image on single pages
+    # Individual episodes/featured can override with front matter: overlayMetadata: true/false
+    [params.podcast.overlay]
+      enable = false  # Set to true to enable metadata overlays on featured images
+      position = "lower-left"  # Options: "center", "lower-left", "lower-center", "lower-right"
+      opacity = 0.85  # Background opacity for metadata overlay (0.0 to 1.0)
+
+  # Blog config
+  [params.blog]
+    # Metadata overlay on blog post featured images
+    # When enabled, metadata will be overlaid on the featured image on blog single pages
+    # Individual blog posts can override with front matter: overlayMetadata: true/false
+    [params.blog.overlay]
+      enable = false  # Set to true to enable metadata overlays on blog featured images
+      position = "lower-left"  # Options: "center", "lower-left", "lower-center", "lower-right"
+      opacity = 0.85  # Background opacity for metadata overlay (0.0 to 1.0)
+
+  # Navigation config
+  [params.navigation]
+    # WARNING: Changing navigation labels requires changing folder names to match.
+    # Example: changing 'episodes' to 'shows' requires renaming content/episodes/ to content/shows/
+    # and updating the menu.main URLs below to match the new folder name.
+
+    # Blog section
+    [params.navigation.blog]
+      enable = false  # Set to true to show Blog in navigation
+    # Contact section
+    [params.navigation.contact]
+      enable = false  # Set to true to show Contact in navigation
+      # URL for contact page
+      url = "/contact/"
+      # Label for desktop navigation
+      desktopLabel = "Contact"
+      # Label for mobile navigation
+      mobileLabel = "Contact"
+    # Book section (guest booking, contact, etc.)
+    [params.navigation.book]
+      enable = false  # Set to true to show Book in navigation
+      # URL for booking page
+      url = "/book/"
+      # Label for desktop navigation
+      desktopLabel = "Book"
+      # Label for mobile navigation
+      mobileLabel = "Book"
+
+  # Header config
+  [params.header]
+    # Desktop header mode ["fixed", "normal", "auto"]
+    desktopMode = "fixed"
+    # Mobile header mode ["fixed", "normal", "auto"]
+    mobileMode = "auto"
+
+    # Header title config
+    [params.header.title]
+      # URL of the LOGO
+      logo = ""
+      # Title name
+      name = "My cool site"
+      # You can add extra information before the name (HTML format is supported), such as icons
+      pre = ""
+      # You can add extra information after the name (HTML format is supported), such as icons
+      post = ""
+
+  # Footer config
+  [params.footer]
+    enable = true
+    # Custom content (HTML format is supported)
+    custom = ""
+    # Whether to show Hugo and theme info
+    hugo = true
+    # Whether to show copyright info
+    copyright = true
+    # Whether to show the author
+    author = true
+    # Site creation time
+    since = 2022
+    # License info (HTML format is supported)
+    license= ""
+
+  # Section (all posts) page config
+  [params.section]
+    # Special amount of posts in each section page
+    paginate = 12
+    # Date format (month and day)
+    dateFormat = "01-02"
+    # Amount of RSS pages
+    rss = 10
+
+  # List (category or tag) page config
+  [params.list]
+    # Special amount of posts in each list page
+    paginate = 12
+    # Date format (month and day)
+    dateFormat = "01-02"
+    # Amount of RSS pages
+    rss = 10
+
+    # Hero card image overlay filter (applied to list page featured images)
+    # Disabled by default (empty string = no overlay, full brightness images)
+    #
+    # Format options:
+    # 1. Decimal (0.1 to 1.0): Black overlay with specified opacity
+    #    Examples: "0.3" = 30% black, "0.7" = 70% black
+    #
+    # 2. Named color: Basic color with 50% opacity
+    #    Supported: black, red, blue, green, yellow, purple, white, orange, gray
+    #    Examples: "blue", "red", "gray"
+    #
+    # 3. RGBA format: Full control over color and opacity
+    #    Examples: "rgba(255, 0, 0, 0.5)" = 50% red
+    #              "rgba(0, 0, 255, 0.3)" = 30% blue
+    #              "rgba(0, 0, 0, 0.7)" = 70% black
+    overlayFilter = ""
+
+  # App icon config
+  [params.app]
+    # Optional site title override for the app when added to an iOS home screen or Android launcher
+    title = "My cool site"
+    # Whether to omit favicon resource links
+    noFavicon = false
+    # Modern SVG favicon to use in place of older style .png and .ico files
+    svgFavicon = ""
+    # Android browser theme color
+    themeColor = "#ffffff"
+    # Safari mask icon color
+    iconColor = "#5bbad5"
+    # Windows v8-11 tile color
+    tileColor = "#da532c"
+
+  # Search config
+  [params.search]
+    enable = true
+    # Type of search engine (only "lunr" is supported)
+    type = "lunr"
+    # Max index length of the chunked content
+    contentLength = 4000
+    # Placeholder of the search bar
+    placeholder = ""
+    # Max number of results length
+    maxResultLength = 10
+    # Snippet length of the result
+    snippetLength = 30
+    # HTML tag name of the highlight part in results
+    highlightTag = "em"
+    # Whether to use the absolute URL based on the baseURL in search index
+    absoluteURL = false
+
+  # Home page config
+  [params.home]
+    # Amount of RSS pages
+    rss = 10
+
+    # Home page profile
+    [params.home.profile]
+      enable = true
+      # Gravatar Email for preferred avatar in home page
+      gravatarEmail = ""
+      # URL of avatar shown in home page
+      avatarURL = ""
+      # Title shown in home page (HTML format is supported)
+      title = ""
+      # Subtitle shown in home page (HTML format is supported)
+      subtitle = "This is my cool site"
+      # Whether to show social links
+      social = true
+      # Disclaimer (HTML format is supported)
+      disclaimer = ""
+
+    # Home page posts
+    [params.home.posts]
+      enable = true
+      # Special amount of posts in each home posts page
+      paginate = 6
+
+  # Social config in home page
+  [params.social]
+    Angellist = ""
+    Bandcamp = ""
+    Behance = ""
+    Bilibili = ""
+    Bitbucket = ""
+    Codeberg = ""
+    Codepen = ""
+    Deviantart = ""
+    Devto = ""
+    Discord = ""
+    DiscordInvite = ""
+    Douban = ""
+    Dribbble = ""
+    Email = ""
+    Facebook = ""
+    Fivehundredpx = ""
+    Flickr = ""
+    Foursquare = ""
+    FreeCodeCamp = ""
+    GitHub = "gallo-s-chingon"
+    Gitea = ""
+    Gitlab = ""
+    Goodreads = ""
+    Googlescholar = ""
+    HackTheBox = ""
+    Hackernews = ""
+    HuggingFace = ""
+    Instagram = "gallo.s.chingon"
+    Jsfiddle = ""
+    Kaggle = ""
+    Keybase = ""
+    Kickstarter = ""
+    Lastfm = ""
+    Lichess = ""
+    Linkedin = ""
+    Malt = ""
+    Mastodon = ""
+    Matrix = ""
+    MediaWiki = ""
+    Medium = ""
+    Mix = ""
+    ORCID = ""
+    Odnoklassniki = ""
+    Patreon = ""
+    Paypal = ""
+    Phone = ""
+    Pinterest = ""
+    Pleroma = ""
+    Plume = ""
+    Quora = ""
+    RSS = ""
+    Reddit = "gallo-s-chingon"
+    Researchgate = ""
+    RootMe = ""
+    Skype = ""
+    Slidershare = ""
+    Snapchat = ""
+    Soundcloud = ""
+    Spotify = ""
+    Stackoverflow = ""
+    Steam = ""
+    Strava = ""
+    Telegram = ""
+    Thingiverse = ""
+    Threads = ""
+    TikTok = ""
+    TryHackMe = ""
+    Tumblr = ""
+    Twitch = "gall0ching0n"
+    VK = ""
+    Vine = ""
+    Weibo = ""
+    Whatsapp = ""
+    Wordpress = ""
+    X = ""
+    XMPP = ""
+    Xing = ""
+    Youtubechannel = ""
+    Youtubecustom = ""
+    Youtubelegacy = ""
+    Zhihu = ""
+
+    # Linktree-style Social Links Configuration
+    # Configure your social links here. These can be used with the social-link shortcode
+    # to create a Linktree-style links page.
+    #
+    # Usage in your content files:
+    #   {{</* social-link "instagram" "Custom Text" */>}}
+    #   {{</* social-link "github" */>}}  (uses default text)
+    #
+    # Or use custom URLs with optional icons:
+    #   {{</* social-link url="https://example.com" text="My Link" icon="fas fa-globe" */>}}
+    #
+    # Icons are auto-detected from Font Awesome brands for common platforms.
+    # For custom icons, use Font Awesome classes (e.g., "fas fa-globe", "far fa-star").
+    # If no icon is specified, the shortcode will attempt to use the site's favicon.
+    #
+    # See https://fontawesome.com/search?o=r&m=free for available icons.
+    #
+    [params.social.links]
+      # Uncomment and configure the platforms you want to use
+      # behance = "https://behance.net/username"
+      # bitbucket = "https://bitbucket.org/username"
+      # blog = "https://yourblog.com"
+      # buymeacoffee = "https://buymeacoffee.com/username"
+      # calendly = "https://calendly.com/username"
+      # codepen = "https://codepen.io/username"
+      # dev = "https://dev.to/username"
+      # devto = "https://dev.to/username"
+      # discord = "https://discord.gg/invite"
+      # dribbble = "https://dribbble.com/username"
+      # email = "mailto:your@email.com"
+      # facebook = "https://facebook.com/username"
+      # github = "https://github.com/username"
+      # gitlab = "https://gitlab.com/username"
+      # instagram = "https://instagram.com/username"
+      # kofi = "https://ko-fi.com/username"
+      # linkedin = "https://linkedin.com/in/username"
+      # linktree = "https://linktr.ee/username"
+      # mastodon = "https://mastodon.social/@username"
+      # medium = "https://medium.com/@username"
+      # patreon = "https://patreon.com/username"
+      # paypal = "https://paypal.me/username"
+      # pinterest = "https://pinterest.com/username"
+      # podcast = "https://yourpodcast.com"
+      reddit = "https://reddit.com/user/gallo-s-chingon"
+      # snapchat = "https://snapchat.com/add/username"
+      # spotify = "https://open.spotify.com/user/username"
+      # stackoverflow = "https://stackoverflow.com/users/id/username"
+      # telegram = "https://t.me/username"
+      # tiktok = "https://tiktok.com/@username"
+      twitch = "https://twitch.tv/gall0ching0n"
+      # twitter = "https://twitter.com/username"
+      # website = "https://yourwebsite.com"
+      # whatsapp = "https://wa.me/1234567890"
+      # x = "https://x.com/username"
+      youtube = "https://www.youtube.com/@gallo.s.chingon"
+
+  # Page global config
+  [params.page]
+    # Whether to hide a page from home page
+    hiddenFromHomePage = false
+    # Whether to hide a page from search results
+    hiddenFromSearch = false
+    # Whether to enable twemoji
+    twemoji = false
+    # Whether to enable lightgallery
+    lightgallery = false
+    # Whether to enable the ruby extended syntax
+    ruby = true
+    # Whether to enable the fraction extended syntax
+    fraction = true
+    # Whether to enable the fontawesome extended syntax
+    fontawesome = true
+    # Whether to show link to Raw Markdown content of the content
+    linkToMarkdown = true
+    # Whether to show the full text content in RSS
+    rssFullText = false
+
+    # Page title configuration
+    # Configure the H1 heading shown on list pages
+    # These titles can be customized to match your content
+    # Default values are provided below - change as needed
+    [params.page.featured]
+      title = "Featured Appearances"  # Default, can change to "Host's Guest Appearances"
+
+    [params.page.episodes]
+      title = "Episodes"  # Default, can change to "Podcast Name Episode List"
+
+    [params.page.blog]
+      title = "Blog"  # Default
+
+    [params.page.about]
+      title = "About"  # Default, can change to "Host's Biography"
+
+    # Table of the contents config
+    [params.page.toc]
+      # Whether to enable the table of the contents
+      enable = true
+      # Whether to keep the static table of the contents in front of the post
+      keepStatic = false
+      # Whether to make the table of the contents in the sidebar automatically collapsed
+      auto = true
+
+    # Code config
+    [params.page.code]
+      # Whether to show the copy button of the code block
+      copy = true
+      # The maximum number of lines of displayed code by default
+      maxShownLines = 50
+
+    # Code render config (use Hugo's built-in rendering)
+    [params.page.code.render]
+      goat = true
+      mermaid = true
+
+    # Social share links in post page
+    [params.page.share]
+      enable = true
+      Baidu = false
+      Blogger = false
+      Buffer = false
+      Diaspora = false
+      Evernote = false
+      Facebook = true
+      Flipboard = false
+      HackerNews = true
+      Instapaper = false
+      Line = false
+      Linkedin = true
+      Mix = false
+      Odnoklassniki = false
+      Pinterest = false
+      Pocket = false
+      Reddit = true
+      Skype = false
+      Telegram = true
+      Threads = false
+      Trello = false
+      Tumblr = false
+      VK = false
+      Weibo = false
+      Whatsapp = false
+      X = true
+      Xing = false
+
+    # Comment config
+    [params.page.comment]
+      enable = false
+
+      # utterances comment config (https://utteranc.es/)
+      [params.page.comment.utterances]
+        enable = false
+        # owner/repo
+        repo = ""
+        issueTerm = "pathname"
+        label = ""
+        lightTheme = "github-light"
+        darkTheme = "github-dark"
+
+      # giscus comment config (https://giscus.app/)
+      [params.page.comment.giscus]
+        # You can refer to the official documentation of giscus to use the following configuration
+        enable = false
+        repo = ""
+        repoId = ""
+        category = "Announcements"
+        categoryId = ""
+        # Automatically adapt the current theme i18n configuration when empty
+        lang = ""
+        mapping = "pathname"
+        reactionsEnabled = "1"
+        emitMetadata = "0"
+        inputPosition = "bottom"
+        lazyLoading = false
+        lightTheme = "light"
+        darkTheme = "dark"
+
+      # Waline comment config (https://waline.js.org/)
+      [params.page.comment.waline]
+        enable = false
+        serverURL = ""
+
+    # Third-party library config
+    [params.page.library]
+      [params.page.library.css]
+        # someCSS = "some.css"
+        # located in "assets/"
+        # Or
+        # someCSS = "https://cdn.example.com/some.css"
+      [params.page.library.js]
+        # someJavascript = "some.js"
+        # located in "assets/"
+        # Or
+        # someJavascript = "https://cdn.example.com/some.js"
+
+    # Page SEO config
+    [params.page.seo]
+      # Image URL
+      images = []
+      # Publisher info
+      [params.page.seo.publisher]
+        name = ""
+        logoUrl = ""
+
+  # Site verification code for Google/Bing/Yandex/Pinterest/Baidu
+  [params.verification]
+    google = ""
+    bing = ""
+    yandex = ""
+    pinterest = ""
+    baidu = ""
+
+  # Site SEO config
+  [params.seo]
+    # Image URL
+    image = ""
+    # Thumbnail URL
+    thumbnailUrl = ""
+
+  # Analytics config
+  [params.analytics]
+    # Google Analytics
+    [params.analytics.google]
+      id = ""
+      # Whether to respect the browser's "do not track" setting
+      respectDoNotTrack = false
+
+    # Fathom Analytics
+    [params.analytics.fathom]
+      id = ""
+      # Server url for your tracker if you're self hosting
+      server = ""
+
+    # Plausible Analytics
+    [params.analytics.plausible]
+      dataDomain = ""
+
+    # Yandex Metrica
+    [params.analytics.yandexMetrica]
+      id = ""
+
+  # Cookie consent config
+  [params.cookieconsent]
+    enable = false
+    # Text strings used for Cookie consent banner
+    [params.cookieconsent.content]
+      message = ""
+      dismiss = ""
+      link = ""
+
+  # CDN config for third-party library files
+  [params.cdn]
+    # CDN data file name, disabled by default
+    # ["jsdelivr.yml"]
+    # Located in "themes/Tokyo-Nord/assets/data/cdn/" directory
+    # You can store your own data files in the same path under your project:
+    # "assets/data/cdn/"
+    data = "jsdelivr.yml"
+
+  # Compatibility config
+  [params.compatibility]
+    # Whether to use Polyfill.io to be compatible with older browsers
+    polyfill = false
+    # Whether to use object-fit-images to be compatible with older browsers
+    objectFit = false
+
+  # 404 Page config
+  [params.notFoundPage]
+    # Enable custom content on 404 page (heading, message, links)
+    showCustomContent = false
+    # Show podcast platform links (requires podcast.enable = true and URLs configured)
+    showPodcastLinks = false
+    # Show social media links (Instagram, Reddit, X, Facebook)
+    showSocialLinks = false
+    # Custom heading (optional, overrides i18n default ":(" )
+    heading = ""
+    # Custom message (optional, supports markdown, overrides i18n default)
+    message = ""
+
+  # Example custom links for 404 page (uncomment and customize as needed)
+  # [[params.notFoundPage.customLinks]]
+  #   text = "Google Podcasts"
+  #   url = "https://podcasts.google.com/feed/your-feed-url"
+  #   icon = "fab fa-google-play"
+  #   external = true
+  #
+  # [[params.notFoundPage.customLinks]]
+  #   text = "Back to Home"
+  #   url = "/"
+  #   icon = "fas fa-home"
+  #   external = false

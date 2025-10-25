@@ -1,0 +1,33 @@
+{{- /*
+  Apple Podcasts Player Shortcode
+
+  Check documentation for usage.
+
+  Example: {{< podcast-apple "1234567890" "1000123456789" >}}
+
+  To get IDs from Apple Podcasts:
+  1. Find your podcast on Apple Podcasts
+  2. Get podcast ID from URL: https://podcasts.apple.com/us/podcast/[podcast-id]
+  3. Get episode ID from episode URL
+*/ -}}
+
+{{- $podcastId := .Get 0 -}}
+{{- $episodeId := .Get 1 -}}
+{{- $height := .Get "height" | default "175" -}}
+{{- $playerWidth := .Site.Params.podcast.playerWidth | default 0.8 -}}
+{{- $widthPercent := mul $playerWidth 100 -}}
+
+{{- if and $podcastId $episodeId -}}
+<div class="podcast-player podcast-player-apple" style="width:{{ $widthPercent }}%;max-width:{{ $widthPercent }}%;margin:0 auto 50px auto;">
+  <iframe
+    allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+    frameborder="0"
+    height="{{ $height }}"
+    style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
+    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+    src="https://embed.podcasts.apple.com/us/podcast/id{{ $podcastId }}?i={{ $episodeId }}">
+  </iframe>
+</div>
+{{- else -}}
+  <p><strong>Error:</strong> Apple Podcasts requires podcast ID and episode ID. Check documentation for usage.
+{{- end -}}

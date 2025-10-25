@@ -1,0 +1,129 @@
+{{- define "title" }}
+    {{- T "pageNotFound" | printf "404 %v" }} - {{ .Site.Title -}}
+{{- end -}}
+
+{{- define "content" -}}
+    <div class="page" id="content-404">
+        <h1 id="error-emoji"></h1>
+        <p class="error-text">
+            {{- T "pageNotFoundText" -}}&nbsp;
+            <a href="javascript:void(0);" title="{{ T `back` }}" onclick="window.history.back();"><i class="far fa-hand-point-left fa-fw" aria-hidden="true"></i></a>
+        </p>
+
+        {{- /* Custom 404 content - controlled via i18n and site params */ -}}
+        {{- if .Site.Params.notFoundPage.showCustomContent -}}
+            <div class="not-found-custom-content">
+                {{- with .Site.Params.notFoundPage.heading -}}
+                    <h2>{{ . }}</h2>
+                {{- else -}}
+                    {{- with T "notFoundHeading" -}}
+                        <h2>{{ . }}</h2>
+                    {{- end -}}
+                {{- end -}}
+
+                {{- with .Site.Params.notFoundPage.message -}}
+                    <p>{{ . | markdownify }}</p>
+                {{- else -}}
+                    {{- with T "notFoundMessage" -}}
+                        <p>{{ . | markdownify }}</p>
+                    {{- end -}}
+                {{- end -}}
+
+                {{- /* Podcast links */ -}}
+                {{- if .Site.Params.notFoundPage.showPodcastLinks -}}
+                    {{- if .Site.Params.podcast.enable -}}
+                        <div class="not-found-links">
+                            {{- with T "notFoundListenOn" -}}
+                                <p><strong>{{ . }}</strong></p>
+                            {{- end -}}
+                            <ul class="not-found-list">
+                                {{- with .Site.Params.podcast.spotifyUrl -}}
+                                    <li>
+                                        <a href="{{ . }}" target="_blank" rel="noopener noreferrer">
+                                            <i class="fab fa-spotify fa-fw"></i> {{ T "notFoundSpotify" }}
+                                        </a>
+                                    </li>
+                                {{- end -}}
+                                {{- with .Site.Params.podcast.appleUrl -}}
+                                    <li>
+                                        <a href="{{ . }}" target="_blank" rel="noopener noreferrer">
+                                            <i class="fas fa-podcast fa-fw"></i> {{ T "notFoundApplePodcasts" }}
+                                        </a>
+                                    </li>
+                                {{- end -}}
+                                {{- with .Site.Params.podcast.youtubeUrl -}}
+                                    <li>
+                                        <a href="{{ . }}" target="_blank" rel="noopener noreferrer">
+                                            <i class="fab fa-youtube fa-fw"></i> {{ T "notFoundYouTube" }}
+                                        </a>
+                                    </li>
+                                {{- end -}}
+                            </ul>
+                        </div>
+                    {{- end -}}
+                {{- end -}}
+
+                {{- /* Social links */ -}}
+                {{- if .Site.Params.notFoundPage.showSocialLinks -}}
+                    <div class="not-found-links">
+                        {{- with T "notFoundActiveSocials" -}}
+                            <p><strong>{{ . }}</strong></p>
+                        {{- end -}}
+                        <ul class="not-found-list">
+                            {{- with .Site.Params.social.Instagram -}}
+                                <li>
+                                    <a href="https://instagram.com/{{ . }}" target="_blank" rel="noopener noreferrer">
+                                        <i class="fab fa-instagram fa-fw"></i> @{{ . }} {{ T "notFoundOnInstagram" }}
+                                    </a>
+                                </li>
+                            {{- end -}}
+                            {{- with .Site.Params.social.Reddit -}}
+                                <li>
+                                    <a href="https://reddit.com/u/{{ . }}" target="_blank" rel="noopener noreferrer">
+                                        <i class="fab fa-reddit fa-fw"></i> u/{{ . }} {{ T "notFoundOnReddit" }}
+                                    </a>
+                                </li>
+                            {{- end -}}
+                            {{- with .Site.Params.social.X -}}
+                                <li>
+                                    <a href="https://x.com/{{ . }}" target="_blank" rel="noopener noreferrer">
+                                        <i class="fab fa-x-twitter fa-fw"></i> @{{ . }} {{ T "notFoundOnX" }}
+                                    </a>
+                                </li>
+                            {{- end -}}
+                            {{- with .Site.Params.social.Facebook -}}
+                                <li>
+                                    <a href="https://facebook.com/{{ . }}" target="_blank" rel="noopener noreferrer">
+                                        <i class="fab fa-facebook fa-fw"></i> {{ T "notFoundOnFacebook" }}
+                                    </a>
+                                </li>
+                            {{- end -}}
+                        </ul>
+                    </div>
+                {{- end -}}
+
+                {{- /* Custom links from site params */ -}}
+                {{- with .Site.Params.notFoundPage.customLinks -}}
+                    <div class="not-found-links">
+                        <ul class="not-found-list">
+                            {{- range . -}}
+                                <li>
+                                    <a href="{{ .url }}" {{ if .external }}target="_blank" rel="noopener noreferrer"{{ end }}>
+                                        {{- with .icon -}}<i class="{{ . }} fa-fw"></i> {{ end -}}
+                                        {{- .text -}}
+                                    </a>
+                                </li>
+                            {{- end -}}
+                        </ul>
+                    </div>
+                {{- end -}}
+            </div>
+        {{- end -}}
+    </div>
+    <script>
+        (function() {
+            var emojiArray = ['\\(o_o)/', '(˚Δ˚)b', '(^-^*)', '(≥o≤)', '(^_^)b', '(·_·)','(=\'X\'=)', '(>_<)', '(;-;)'];
+            document.getElementById('error-emoji').appendChild(document.createTextNode(emojiArray[Math.floor(Math.random() * emojiArray.length)]));
+        })();
+    </script>
+{{- end -}}

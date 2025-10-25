@@ -1,0 +1,113 @@
+{{- $params := .Scratch.Get "params" -}}
+{{- $cdn := .Scratch.Get "cdn" | default dict -}}
+{{- $fingerprint := .Scratch.Get "fingerprint" -}}
+{{- $config := (.Scratch.Get "this").config -}}
+
+{{- /* Add highContrast setting to config */ -}}
+{{- $config = dict "highContrast" ($.Site.Params.highContrast | default true) | merge $config -}}
+
+{{- /* Search */ -}}
+{{- if .Site.Params.search | and .Site.Params.search.enable -}}
+    {{- $search := .Site.Params.search -}}
+    {{- $source := $cdn.autocompleteJS | default "lib/autocomplete/autocomplete.min.js" -}}
+    {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+    {{- $config = dict "maxResultLength" $search.maxResultLength "snippetLength" $search.snippetLength "highlightTag" $search.highlightTag "noResultsFound" (T "noResultsFound") | dict "search" | merge $config -}}
+    {{- if eq $search.type "lunr" -}}
+        {{- with .Site.Home.OutputFormats.Get "json" -}}
+            {{- $config = dict "type" "lunr" "lunrIndexURL" .RelPermalink | dict "search" | merge $config -}}
+        {{- end -}}
+        {{- $source := $cdn.lunrJS | default "lib/lunr/lunr.min.js" -}}
+        {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+        {{- if T "lunrLanguageLib" -}}
+            {{- $config = T "lunrLanguageCode" | dict "lunrLanguageCode" | dict "search" | merge $config -}}
+            {{- with T "lunrSegmentitLib" -}}
+                {{- $config = dict "lunrSegmentitURL" (resources.Get .).RelPermalink | dict "search" | merge $config -}}
+            {{- end -}}
+            {{- dict "Source" "lib/lunr/lunr.stemmer.support.js" "Minify" true "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+            {{- dict "Source" (T "lunrLanguageLib") "Minify" true "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
+
+{{- /* lazysizes */ -}}
+{{- $source := $cdn.lazysizesJS | default "lib/lazysizes/lazysizes.min.js" -}}
+{{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+
+{{- /* twemoji */ -}}
+{{- if $params.twemoji -}}
+    {{- $source := $cdn.twemojiJS | default "lib/twemoji/twemoji.min.js" -}}
+    {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+    {{- $config = dict "twemoji" true | merge $config -}}
+{{- end -}}
+
+{{- /* lightgallery */ -}}
+{{- if $params.lightgallery -}}
+    {{- $source := $cdn.lightgalleryCSS | default "lib/lightgallery/css/lightgallery-bundle.min.css" -}}
+    {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/style.html" -}}
+    {{- if not $cdn.lightgalleryCSS -}}
+        {{- (resources.Get "lib/lightgallery/images/loading.gif").Publish -}}
+        {{- range resources.Match "lib/lightgallery/fonts/*" -}}
+            {{- .Publish -}}
+        {{- end -}}
+    {{- end -}}
+    {{- $source := $cdn.lightgalleryJS | default "lib/lightgallery/lightgallery.min.js" -}}
+    {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+    {{- $source := $cdn.lightgalleryThumbnailJS | default "lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js" -}}
+    {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+    {{- $source := $cdn.lightgalleryZoomJS | default "lib/lightgallery/plugins/zoom/lg-zoom.min.js" -}}
+    {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+    {{- $config = dict "lightgallery" true | merge $config -}}
+{{- end -}}
+
+{{- /* clipboard.js */ -}}
+{{- if $params.code.copy | default true -}}
+    {{- $source := $cdn.clipboardJS | default "lib/clipboard/clipboard.min.js" -}}
+    {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+{{- end -}}
+
+{{- /* Cookie Consent */ -}}
+{{- if .Site.Params.cookieconsent | and .Site.Params.cookieconsent.enable -}}
+    {{- $source := $cdn.cookieconsentCSS | default "lib/cookieconsent/cookieconsent.min.css" -}}
+    {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/style.html" -}}
+    {{- $source := $cdn.cookieconsentJS | default "lib/cookieconsent/cookieconsent.min.js" -}}
+    {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+    {{- $cookieconsentConfig := dict "popup" (dict "background" "#1aa3ff") "button" (dict "background" "#f0f0f0") | dict "theme" "edgeless" "palette" -}}
+    {{- $cookieconsentConfig = .Site.Params.cookieconsent | merge $cookieconsentConfig -}}
+    {{- $cookieconsentConfig = dict "message" ($cookieconsentConfig.content.message | default (T "cookieconsentMessage")) "dismiss" ($cookieconsentConfig.content.dismiss | default (T "cookieconsentDismiss")) "link" ($cookieconsentConfig.content.link | default (T "cookieconsentLink")) | dict "content" | merge $cookieconsentConfig -}}
+    {{- $config = $cookieconsentConfig | dict "cookieconsent" | merge $config -}}
+{{- end -}}
+
+{{- range $params.library.css -}}
+    {{- dict "Source" . "Fingerprint" $fingerprint | dict "Scratch" $.Scratch "Data" | partial "scratch/style.html" -}}
+{{- end -}}
+
+{{- range $params.library.js -}}
+    {{- dict "Source" . "Fingerprint" $fingerprint | dict "Scratch" $.Scratch "Data" | partial "scratch/script.html" -}}
+{{- end -}}
+
+{{- with (.Scratch.Get "this").styleArr -}}
+    {{- $content := delimit . "" -}}
+    {{- $path := substr (md5 $content) 0 6 | printf "css/%v" -}}
+    {{- $options := printf "%v.min.css" $path | dict "targetPath" | merge (dict "outputStyle" "compressed") -}}
+    {{- dict "Content" $content "Path" (printf "%v.scss" $path) "ToCSS" $options | dict "Scratch" $.Scratch "Data" | partial "scratch/style.html" -}}
+{{- end -}}
+
+{{- /* Config script */ -}}
+{{- $config | jsonify | printf "window.config=%s;" | dict "Content" | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+
+{{- /* Theme script */ -}}
+{{- dict "Source" "js/theme.js" "Minify" true "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+
+{{- with (.Scratch.Get "this").scriptArr -}}
+    {{- delimit . "\n" | dict "Content" | dict "Scratch" $.Scratch "Data" | partial "scratch/script.html" -}}
+{{- end -}}
+
+{{- range (.Scratch.Get "this").style -}}
+    {{- partial "plugin/style.html" . -}}
+{{- end -}}
+
+{{- range (.Scratch.Get "this").script -}}
+    {{- partial "plugin/script.html" . -}}
+{{- end -}}
+
+{{- partial "plugin/analytics.html" . -}}
