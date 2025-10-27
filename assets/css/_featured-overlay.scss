@@ -75,15 +75,10 @@
     }
 
     span {
-      display: block;
+      display: inline-block;
       color: #ffffff;
       opacity: 0.95;
       text-align: left;
-      margin-bottom: 0.5rem;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
 
       i {
         opacity: 0.8;

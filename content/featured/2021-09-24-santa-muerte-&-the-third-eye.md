@@ -8,6 +8,7 @@ guests: ["Gallo Chingon"]  # You are the guest, so this is empty or can list oth
 hosts: ["Nicole F."]
 overlayMetadata: true # Display options
 overlayPosition: "lower-left"
+overlay_filter: "rgba(100, 0, 100, 0.5)"
 podcastName: ["Blood Rituals Podcast"]
 summary: "Gallo's experiences with his ancestors attempts to reach out to him, beckoning from Santa Muerte"
 title: "Santa Muerte & The Third Eye"

@@ -18,16 +18,16 @@
 {{- $result := "" -}}
 
 {{- if $filter -}}
-    {{- if findRE `gradient` $filter -}}
+    {{- if findRE `gradient` (string $filter) -}}
         {{- /* Gradient: pass through as-is */ -}}
-        {{- $result = $filter -}}
-    {{- else if findRE `^rgba?\(` $filter -}}
+        {{- $result = string $filter -}}
+    {{- else if findRE `^rgba?\(` (string $filter) -}}
         {{- /* RGBA format: rgba(255, 0, 0, 0.5) */ -}}
         {{- /* Wrap in linear-gradient for consistency with Jekyll MM */ -}}
-        {{- $result = printf "linear-gradient(%s, %s)" $filter $filter -}}
-    {{- else if findRE `^0?\.\d+$|^1(\.0+)?$` $filter -}}
+        {{- $result = printf "linear-gradient(%s, %s)" (string $filter) (string $filter) -}}
+    {{- else if findRE `^0?\.\d+$|^1(\.0+)?$` (string $filter) -}}
         {{- /* Decimal format: 0.1 to 1.0 for black overlay */ -}}
-        {{- $rgba := printf "rgba(0, 0, 0, %s)" $filter -}}
+        {{- $rgba := printf "rgba(0, 0, 0, %v)" $filter -}}
         {{- $result = printf "linear-gradient(%s, %s)" $rgba $rgba -}}
     {{- end -}}
 {{- end -}}

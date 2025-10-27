@@ -5,12 +5,10 @@
         <div class="post-info-line">
             <div class="post-info-mod">
                 <span>
-                    {{- with $params.updated -}}
-                        {{- if ne . "" -}}
-                            {{- $dateStr := substr . 0 10 -}}
-                            {{- $date := time.AsTime $dateStr -}}
+                    {{- with .Lastmod -}}
+                        {{- if ne . $.Date -}}
                             {{- $dateFormat := $.Site.Params.dateformat | default "2006-01-02" -}}
-                            {{- dict "Date" ($date.Format $dateFormat) | T "updatedOnDate" -}}
+                            {{- dict "Date" (.Format $dateFormat) | T "updatedOnDate" -}}
                             {{- if $.Site.Params.gitRepo -}}
                                 {{- with $.GitInfo -}}
                                     &nbsp;<a class="git-hash" href="{{ printf `%v/commit/%v` $.Site.Params.gitRepo .Hash }}" target="_blank" title="commit by {{ .AuthorName }}({{ .AuthorEmail }}) {{ .Hash }}: {{ .Subject }}">

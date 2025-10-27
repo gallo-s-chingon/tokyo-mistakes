@@ -12,15 +12,7 @@
             {{- $uri = .Permalink -}}
         {{- end -}}
         {{- $meta := dict "uri" $uri "title" .Title "tags" .Params.tags "categories" .Params.categories -}}
-        {{- $dateFormatted := "" -}}
-        {{- if .Params.created -}}
-            {{- $dateStr := substr .Params.created 0 10 -}}
-            {{- $date := time.AsTime $dateStr -}}
-            {{- $dateFormat := $.Site.Params.dateFormat | default "2006-01-02" -}}
-            {{- $dateFormatted = $date.Format $dateFormat -}}
-        {{- else -}}
-            {{- $dateFormatted = $.Site.Params.dateFormat | default "2006-01-02" | .PublishDate.Format -}}
-        {{- end -}}
+        {{- $dateFormatted := $.Site.Params.dateFormat | default "2006-01-02" | .Date.Format -}}
         {{- $meta = $dateFormatted | dict "date" | merge $meta -}}
         {{- with .Description -}}
             {{- $index = $index | append (dict "content" . "objectID" $uri | merge $meta) -}}

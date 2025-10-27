@@ -1,9 +1,6 @@
 ---
 title: Hypnotherapy again!?
-date: 2021-10-18
-summary: "I talk about myself. again, specifically some issues I've been dealing and struggling with"
-categories: 
-  - personal
+date: 2021-10-18T19:45:02
 draft: false
 type: episodes
 ---

@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Near Death Experince on My cool site</title>
-    <link>http://localhost:63621/tags/near-death-experince/</link>
+    <link>http://localhost:1313/tags/near-death-experince/</link>
     <description>Recent content in Near Death Experince on My cool site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:63621/tags/near-death-experince/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/near-death-experince/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Experiencias con la Muerte</title>
-      <link>http://localhost:63621/featured/2021-06-06-experiencias-con-la-muerte/</link>
+      <link>http://localhost:1313/featured/2021-06-06-experiencias-con-la-muerte/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:63621/featured/2021-06-06-experiencias-con-la-muerte/</guid>
+      <guid>http://localhost:1313/featured/2021-06-06-experiencias-con-la-muerte/</guid>
       <description>Este es el primer episodio donde los muchachos de El Buruleo disectan las experiencias de muerte de 4 individuos que han tenido la valentia de explicarnos como fue y como regresaron</description>
     </item>
   </channel>

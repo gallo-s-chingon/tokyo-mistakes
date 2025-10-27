@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Conversation on My cool site</title>
-    <link>http://localhost:63621/categories/conversation/</link>
+    <link>http://localhost:1313/categories/conversation/</link>
     <description>Recent content in Conversation on My cool site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 06 Nov 2021 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:63621/categories/conversation/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/conversation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>NaPodMo Parrot Gaming Productions</title>
-      <link>http://localhost:63621/episodes/2021-11-06-napodmo-parrot-gaming-productions/</link>
+      <link>http://localhost:1313/episodes/2021-11-06-napodmo-parrot-gaming-productions/</link>
       <pubDate>Sat, 06 Nov 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:63621/episodes/2021-11-06-napodmo-parrot-gaming-productions/</guid>
+      <guid>http://localhost:1313/episodes/2021-11-06-napodmo-parrot-gaming-productions/</guid>
       <description>Getting to know a fellow veteran gamer for NaPodMo</description>
     </item>
     <item>
       <title>NaPodMo - Post Modern Art Podcast</title>
-      <link>http://localhost:63621/episodes/2021-11-04-napodmo-post-modern-art-podcast/</link>
+      <link>http://localhost:1313/episodes/2021-11-04-napodmo-post-modern-art-podcast/</link>
       <pubDate>Thu, 04 Nov 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:63621/episodes/2021-11-04-napodmo-post-modern-art-podcast/</guid>
+      <guid>http://localhost:1313/episodes/2021-11-04-napodmo-post-modern-art-podcast/</guid>
       <description>A conversation with Nathan from Post Modern Art Podcast</description>
     </item>
     <item>
       <title>Sugar Lips</title>
-      <link>http://localhost:63621/episodes/2021-10-25-sugar-lips/</link>
+      <link>http://localhost:1313/episodes/2021-10-25-sugar-lips/</link>
       <pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:63621/episodes/2021-10-25-sugar-lips/</guid>
+      <guid>http://localhost:1313/episodes/2021-10-25-sugar-lips/</guid>
       <description>Sugar Lips, a one time plaything, and I talk about her situationships</description>
     </item>
   </channel>

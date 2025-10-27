@@ -1,7 +1,6 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
-created: "{{ .Date.Format "2006-01-02_15:04:05-0700" }}"
-updated: ""
+date: {{ .Date }}
 draft: false
 
 # Episode details
@@ -34,11 +33,56 @@ tags: []  # Topics - ["technology", "interviews", "startups"]
 summary: ""  # Short description for cards and previews
 description: ""  # Full description for SEO
 
-# Display options
-overlayMetadata: false  # Set to true to show metadata overlay on featured image
+# === Image Settings ===
+# Image transparency (when overlayMetadata is disabled)
+transparency: true  # Make image transparent
+transparencyAmount: 0.7  # Opacity: 0.2 (very transparent) to 1.0 (opaque)
+
+# Color overlay filter (works on both single & list pages)
+overlay_filter: 0.5  # Black overlay: 0.1-1.0
+# overlay_filter: "rgba(255, 0, 0, 0.5)"  # Custom RGBA color
+# overlay_filter: "linear-gradient(...)"  # CSS gradient
+
+# Metadata overlay (single page only)
+overlayMetadata: false  # Show metadata on featured image
 overlayPosition: "lower-left"  # top-left, top-center, top-right, mid-left, mid-center, mid-right, lower-left, lower-center, lower-right
-toc: true
-lightgallery: false
+
+# === Display Options ===
+topicsOn: true  # Show "Topics Discussed" section
+toc: true  # Table of contents
+lightgallery: false  # Enable lightbox gallery
+twemoji: false  # Enable Twitter emoji
+ruby: true  # Enable ruby annotations
+fraction: true  # Enable fraction syntax
+fontawesome: true  # Enable FontAwesome icons
+linkToMarkdown: true  # Show raw markdown link
+rssFullText: false  # Include full text in RSS
+
+# === Code Blocks ===
+code:
+  copy: true  # Show code copy button
+  maxShownLines: 50  # Max code lines before collapse
+
+# === Visibility ===
+hiddenFromHomePage: false  # Hide from home page
+hiddenFromSearch: false  # Hide from search results
+
+# === Social & Comments ===
+share:
+  enable: true  # Enable share buttons
+comment:
+  enable: true  # Enable comments
+
+# === SEO ===
+seo:
+  images: []  # SEO images array
+
+# === Custom Libraries ===
+library:
+  css:
+    # someCSS = "some.css"
+  js:
+    # someJS = "some.js"
 ---
 
 ## Show Notes

@@ -72,11 +72,13 @@
                     {{- end -}}
                 {{- else if eq $type "featured" -}}
                     {{- /* Featured appearance metadata */ -}}
-                    {{- with $params.appearancetype -}}
-                        <span class="hero-card-meta-item appearance-type">{{ . | title }}</span>
+                    {{- $appearanceType := $params.type | default $params.appearancetype -}}
+                    {{- with $appearanceType -}}
+                        <span class="hero-card-meta-item appearance-type">{{ if reflect.IsSlice . }}{{ index . 0 | title }}{{ else }}{{ . | title }}{{ end }}</span>
                     {{- end -}}
-                    {{- with $params.platform -}}
-                        <span class="hero-card-meta-item appearance-platform">{{ . }}</span>
+                    {{- $platformName := $params.podcastname | default $params.platform -}}
+                    {{- with $platformName -}}
+                        <span class="hero-card-meta-item appearance-platform">{{ if reflect.IsSlice . }}{{ index . 0 }}{{ else }}{{ . }}{{ end }}</span>
                     {{- end -}}
                     {{- if $params.created -}}
                         {{- $dateStr := substr $params.created 0 10 -}}

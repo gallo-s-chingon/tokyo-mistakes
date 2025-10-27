@@ -2,7 +2,7 @@
 title: Orgasm Statistics
 date: 2021-10-11
 summary: "This episode I have a conversation with Bonita re- [Orgasm Statistics](https://pleasurebetter.com/orgasm-statistics/)"
-categories: 
+categories:
   - sex
 draft: false
 type: episodes

@@ -38,10 +38,6 @@ markup: "goldmark"                    # local only - markup renderer override
 author: ""                            # local + global: params.author.name
 authorLink: ""                        # local + global: params.author.link
 
-# === Custom Timestamps (Theme-specific) ===
-created: "2024-09-24_14:30:00-0600"  # local only - custom ISO timestamp format
-updated: "2024-10-01_09:15:00-0600"  # local only - custom update timestamp
-
 # === SEO & Metadata ===
 description: ""                       # local only - meta description for SEO
 keywords: []                          # local only - meta keywords (array)
@@ -137,8 +133,7 @@ For appearances on other people's shows/content:
 ---
 # === Base Fields (see Base/Default Keys above) ===
 title: "Episode Title or Appearance Name"  # local only
-created: 2024-09-24_14:30:00-0600          # local only - custom ISO timestamp
-updated: 2024-10-01_09:15:00-0600          # local only - optional update timestamp
+date: 2024-09-24T14:30:00-06:00            # local only - Hugo publish date
 draft: false                                # local only
 
 # === Appearance Details ===
@@ -187,8 +182,7 @@ For your own podcast episodes:
 ---
 # === Base Fields (see Base/Default Keys above) ===
 title: "Episode Title"                # local only
-created: 2024-09-24_14:30:00-0600     # local only - custom ISO timestamp
-updated: 2024-10-01_09:15:00-0600     # local only - optional update timestamp
+date: 2024-09-24T14:30:00-06:00       # local only - Hugo publish date
 draft: false                           # local only
 
 # === Episode Details ===
@@ -253,8 +247,6 @@ For blog articles and written content:
 # === Base Fields (see Base/Default Keys above) ===
 title: "Post Title"                   # local only
 subtitle: "Optional Subtitle"         # local only - optional post subtitle
-created: 2024-09-24_14:30:00-0600     # local only - custom ISO timestamp
-updated: 2024-10-01_09:15:00-0600     # local only - optional update timestamp
 date: 2024-01-20T10:00:00-07:00       # local only - Hugo's publish date
 lastmod: 2024-01-20T10:00:00-07:00    # local only - last modified date
 draft: false                           # local only
@@ -358,8 +350,6 @@ This table lists ALL available front matter keys with their configuration scope 
 | **THEME-SPECIFIC FIELDS** |
 | `author` | local + global | `params.author.name` | Author name |
 | `authorLink` | local + global | `params.author.link` | Author website/profile link |
-| `created` | local only | - | Custom ISO timestamp (theme format) |
-| `updated` | local only | - | Custom update timestamp (theme format) |
 | `description` | local only | - | Meta description for SEO |
 | `keywords` | local only | - | Meta keywords (array) |
 | `summary` | local only | - | Short summary for cards/previews |
@@ -441,10 +431,10 @@ This table lists ALL available front matter keys with their configuration scope 
 - `hiddenFromSearch`: Overrides `params.page.hiddenFromSearch` from hugo.toml
 
 **Timestamps:**
-- Use ISO format: `YYYY-MM-DD_HH:MM:SS-TIMEZONE`
-- Example: `2024-09-24_14:30:00-0600`
-- `created` is custom field for consistent date display
-- `date` and `lastmod` are Hugo core fields
+- Use Hugo's RFC3339 format: `YYYY-MM-DDTHH:MM:SS-TIMEZONE`
+- Example: `2024-09-24T14:30:00-06:00`
+- `date` is Hugo's publish date field
+- `lastmod` is Hugo's last modified date field
 
 **Overlay Settings:**
 - `overlayMetadata`: Shows metadata ON the featured image (vs above it)
@@ -679,7 +669,7 @@ toc: false            # Override: Disable TOC for this post
 ```yaml
 ---
 title: "Episode Title"
-created: 2024-09-24_14:30:00-0600
+date: 2024-09-24T14:30:00-06:00
 draft: false
 
 # KEY FIELDS FOR FEATURED APPEARANCES

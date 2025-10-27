@@ -53,48 +53,49 @@
                 <div class="featured-image blog-featured-image">
                     {{- dict "Src" $image "Title" $.Description "Resources" $.Resources | partial "plugin/img.html" -}}
                     {{- if $overlayFilterCSS -}}
-                        <div class="featured-image-color-overlay" style="background: {{ $overlayFilterCSS }};"></div>
+                        <div class="featured-image-color-overlay" style="background: {{ $overlayFilterCSS | safeCSS }};"></div>
                     {{- end -}}
                 </div>
                 <div class="featured-metadata-overlay overlay-{{ $overlayPosition }}" style="--overlay-opacity: {{ $overlayOpacity }};">
                     <div class="overlay-content">
                         {{- /* Blog Post Metadata in Overlay */ -}}
                         <div class="post-meta blog-meta">
+                            {{- $author := $params.author | default .Site.Params.Author.name | default (T "author") -}}
+                            {{- $authorLink := $params.authorlink | default .Site.Params.Author.link | default .Site.Home.RelPermalink -}}
                             <div class="post-meta-line">
-                                {{- $author := $params.author | default .Site.Params.Author.name | default (T "author") -}}
-                                {{- $authorLink := $params.authorlink | default .Site.Params.Author.link | default .Site.Home.RelPermalink -}}
                                 <span class="post-author">
                                     <i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>&nbsp;{{ $author }}
-                                </span>&nbsp;
-                                {{- if $params.created -}}
-                                    {{- $dateStr := substr $params.created 0 10 -}}
-                                    {{- $date := time.AsTime $dateStr -}}
-                                    {{- $dateFormat := .Site.Params.dateformat | default "2006-01-02" -}}
-                                    <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="{{ $dateStr }}">{{ $date.Format $dateFormat }}</time>&nbsp;
-                                {{- else -}}
-                                    {{- with .Site.Params.dateformat | default "2006-01-02" | .PublishDate.Format -}}
-                                        <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="{{ . }}">{{ . }}</time>&nbsp;
-                                    {{- end -}}
-                                {{- end -}}
-                                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;{{ T "readingTime" .ReadingTime }}
+                                </span>
+                            </div>
+                            {{- with .Site.Params.dateformat | default "2006-01-02" | .Date.Format -}}
+                                <div class="post-meta-line">
+                                    <span class="post-date">
+                                        <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="{{ . }}">{{ . }}</time>
+                                    </span>
+                                </div>
+                            {{- end -}}
+                            <div class="post-meta-line">
+                                <span class="post-readtime">
+                                    <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;{{ T "readingTime" .ReadingTime }}
+                                </span>
                             </div>
                             {{- $categories := slice -}}
                             {{- range .Params.categories -}}
                                 {{- $category := partialCached "function/path.html" . . | printf "/categories/%v" | $.Site.GetPage -}}
                                 {{- $categories = $categories | append $category.Title -}}
                             {{- end -}}
-                            {{- if or $categories .Params.tags -}}
+                            {{- with $categories -}}
                                 <div class="post-meta-line">
-                                    {{- with $categories -}}
-                                        <span class="post-categories">
-                                            <i class="far fa-folder fa-fw" aria-hidden="true"></i>&nbsp;{{ delimit . ", " }}
-                                        </span>&nbsp;
-                                    {{- end -}}
-                                    {{- with $.Params.tags -}}
-                                        <span class="post-tags">
-                                            <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;{{ delimit . ", " }}
-                                        </span>
-                                    {{- end -}}
+                                    <span class="post-categories">
+                                        <i class="far fa-folder fa-fw" aria-hidden="true"></i>&nbsp;{{ delimit . ", " }}
+                                    </span>
+                                </div>
+                            {{- end -}}
+                            {{- with $.Params.tags -}}
+                                <div class="post-meta-line">
+                                    <span class="post-tags">
+                                        <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;{{ delimit . ", " }}
+                                    </span>
                                 </div>
                             {{- end -}}
                         </div>
@@ -105,39 +106,45 @@
             {{- /* Standard Layout - Metadata Above Image */ -}}
             {{- /* Meta */ -}}
             <div class="post-meta blog-meta">
+                {{- $author := $params.author | default .Site.Params.Author.name | default (T "author") -}}
+                {{- $authorLink := $params.authorlink | default .Site.Params.Author.link | default .Site.Home.RelPermalink -}}
                 <div class="post-meta-line">
-                    {{- $author := $params.author | default .Site.Params.Author.name | default (T "author") -}}
-                    {{- $authorLink := $params.authorlink | default .Site.Params.Author.link | default .Site.Home.RelPermalink -}}
                     <span class="post-author">
                         {{- $options := dict "Class" "author" "Destination" $authorLink "Title" "Author" "Rel" "author" "Icon" (dict "Class" "fas fa-user-circle fa-fw") "Content" $author -}}
                         {{- partial "plugin/a.html" $options -}}
                     </span>
-
-                    {{- $categories := slice -}}
-                    {{- range .Params.categories -}}
-                        {{- $category := partialCached "function/path.html" . . | printf "/categories/%v" | $.Site.GetPage -}}
-                        {{- $categories = $categories | append (printf `<a href="%v"><i class="far fa-folder fa-fw" aria-hidden="true"></i>%v</a>` $category.RelPermalink $category.Title) -}}
-                    {{- end -}}
-                    {{- with delimit $categories "&nbsp;" -}}
-                        &nbsp;<span class="post-category">
-                            {{- dict "Categories" . | T "includedInCategories" | safeHTML -}}
+                </div>
+                {{- with .Site.Params.dateformat | default "2006-01-02" | .Date.Format -}}
+                    <div class="post-meta-line">
+                        <span class="post-date">
+                            <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="{{ . }}">{{ . }}</time>
                         </span>
-                    {{- end -}}
-                </div>
+                    </div>
+                {{- end -}}
                 <div class="post-meta-line">
-                    {{- if $params.created -}}
-                        {{- $dateStr := substr $params.created 0 10 -}}
-                        {{- $date := time.AsTime $dateStr -}}
-                        {{- $dateFormat := .Site.Params.dateformat | default "2006-01-02" -}}
-                        <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="{{ $dateStr }}">{{ $date.Format $dateFormat }}</time>&nbsp;
-                    {{- else -}}
-                        {{- with .Site.Params.dateformat | default "2006-01-02" | .PublishDate.Format -}}
-                            <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="{{ . }}">{{ . }}</time>&nbsp;
-                        {{- end -}}
-                    {{- end -}}
-                    <i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;{{ T "wordCount" .WordCount }}&nbsp;
-                    <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;{{ T "readingTime" .ReadingTime }}
+                    <span class="post-readtime">
+                        <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;{{ T "readingTime" .ReadingTime }}
+                    </span>
                 </div>
+                {{- $categories := slice -}}
+                {{- range .Params.categories -}}
+                    {{- $category := partialCached "function/path.html" . . | printf "/categories/%v" | $.Site.GetPage -}}
+                    {{- $categories = $categories | append $category.Title -}}
+                {{- end -}}
+                {{- with $categories -}}
+                    <div class="post-meta-line">
+                        <span class="post-categories">
+                            <i class="far fa-folder fa-fw" aria-hidden="true"></i>&nbsp;{{ delimit . ", " }}
+                        </span>
+                    </div>
+                {{- end -}}
+                {{- with $.Params.tags -}}
+                    <div class="post-meta-line">
+                        <span class="post-tags">
+                            <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;{{ delimit . ", " }}
+                        </span>
+                    </div>
+                {{- end -}}
             </div>
 
             {{- with $image -}}
@@ -147,7 +154,7 @@
                 <div class="featured-image blog-featured-image" style="position: relative;">
                     {{- dict "Src" . "Title" $.Description "Resources" $.Resources | partial "plugin/img.html" -}}
                     {{- if $overlayFilterCSS -}}
-                        <div class="featured-image-color-overlay" style="background: {{ $overlayFilterCSS }};"></div>
+                        <div class="featured-image-color-overlay" style="background: {{ $overlayFilterCSS | safeCSS }};"></div>
                     {{- end -}}
                 </div>
             {{- end -}}

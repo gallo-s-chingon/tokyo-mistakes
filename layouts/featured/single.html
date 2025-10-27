@@ -40,43 +40,36 @@
                 <div class="featured-image appearance-artwork">
                     {{- dict "Src" $image "Title" $.Description "Resources" $.Resources | partial "plugin/img.html" -}}
                     {{- if $overlayFilterCSS -}}
-                        <div class="featured-image-color-overlay" style="background: {{ $overlayFilterCSS }};"></div>
+                        <div class="featured-image-color-overlay" style="background: {{ $overlayFilterCSS | safeCSS }};"></div>
                     {{- end -}}
                 </div>
                 <div class="featured-metadata-overlay overlay-{{ $overlayPosition }}" style="--overlay-opacity: {{ $overlayOpacity }};">
                     <div class="overlay-content">
                         {{- /* Appearance Metadata in Overlay */ -}}
                         <div class="post-meta appearance-meta">
-                            <div class="post-meta-line">
-                                {{- $type := $params.type | default $params.appearancetype -}}
-                                {{- with $type -}}
+                            {{- $type := $params.type | default $params.appearancetype -}}
+                            {{- with $type -}}
+                                <div class="post-meta-line">
                                     <span class="appearance-type">
-                                        <i class="fas fa-star fa-fw" aria-hidden="true"></i>&nbsp;{{ . | title }}
-                                    </span>&nbsp;
-                                {{- end -}}
-                                {{- $podcastName := $params.podcastname | default $params.platform -}}
-                                {{- with $podcastName -}}
+                                        <i class="fas fa-star fa-fw" aria-hidden="true"></i>&nbsp;{{ if reflect.IsSlice . }}{{ index . 0 | title }}{{ else }}{{ . | title }}{{ end }}
+                                    </span>
+                                </div>
+                            {{- end -}}
+                            {{- $podcastName := $params.podcastname | default $params.platform -}}
+                            {{- with $podcastName -}}
+                                <div class="post-meta-line">
                                     <span class="appearance-platform">
-                                        <i class="fas fa-broadcast-tower fa-fw" aria-hidden="true"></i>&nbsp;{{ . }}
+                                        <i class="fas fa-broadcast-tower fa-fw" aria-hidden="true"></i>&nbsp;{{ if reflect.IsSlice . }}{{ index . 0 }}{{ else }}{{ . }}{{ end }}
                                     </span>
-                                {{- end -}}
-                            </div>
-                            <div class="post-meta-line">
-                                {{- if $params.created -}}
-                                    {{- $dateStr := substr $params.created 0 10 -}}
-                                    {{- $date := time.AsTime $dateStr -}}
-                                    {{- $dateFormat := .Site.Params.dateformat | default "2006-01-02" -}}
+                                </div>
+                            {{- end -}}
+                            {{- with .Site.Params.dateformat | default "2006-01-02" | .Date.Format -}}
+                                <div class="post-meta-line">
                                     <span class="appearance-date">
-                                        <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="{{ $dateStr }}">{{ $date.Format $dateFormat }}</time>
+                                        <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="{{ . }}">{{ . }}</time>
                                     </span>
-                                {{- else -}}
-                                    {{- with .Site.Params.dateformat | default "2006-01-02" | .PublishDate.Format -}}
-                                        <span class="appearance-date">
-                                            <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="{{ . }}">{{ . }}</time>
-                                        </span>
-                                    {{- end -}}
-                                {{- end -}}
-                            </div>
+                                </div>
+                            {{- end -}}
                             {{- with $params.hosts -}}
                                 <div class="post-meta-line">
                                     <span class="appearance-hosts">
@@ -100,36 +93,29 @@
             {{- /* Standard Layout - Metadata Above Image */ -}}
             {{- /* Appearance Metadata */ -}}
             <div class="post-meta appearance-meta">
-                <div class="post-meta-line">
-                    {{- $type := $params.type | default $params.appearancetype -}}
-                    {{- with $type -}}
+                {{- $type := $params.type | default $params.appearancetype -}}
+                {{- with $type -}}
+                    <div class="post-meta-line">
                         <span class="appearance-type">
-                            <i class="fas fa-star fa-fw" aria-hidden="true"></i>&nbsp;{{ . | title }}
-                        </span>&nbsp;
-                    {{- end -}}
-                    {{- $podcastName := $params.podcastname | default $params.platform -}}
-                    {{- with $podcastName -}}
+                            <i class="fas fa-star fa-fw" aria-hidden="true"></i>&nbsp;{{ if reflect.IsSlice . }}{{ index . 0 | title }}{{ else }}{{ . | title }}{{ end }}
+                        </span>
+                    </div>
+                {{- end -}}
+                {{- $podcastName := $params.podcastname | default $params.platform -}}
+                {{- with $podcastName -}}
+                    <div class="post-meta-line">
                         <span class="appearance-platform">
-                            <i class="fas fa-broadcast-tower fa-fw" aria-hidden="true"></i>&nbsp;{{ . }}
+                            <i class="fas fa-broadcast-tower fa-fw" aria-hidden="true"></i>&nbsp;{{ if reflect.IsSlice . }}{{ index . 0 }}{{ else }}{{ . }}{{ end }}
                         </span>
-                    {{- end -}}
-                </div>
-                <div class="post-meta-line">
-                    {{- if $params.created -}}
-                        {{- $dateStr := substr $params.created 0 10 -}}
-                        {{- $date := time.AsTime $dateStr -}}
-                        {{- $dateFormat := .Site.Params.dateformat | default "2006-01-02" -}}
+                    </div>
+                {{- end -}}
+                {{- with .Site.Params.dateformat | default "2006-01-02" | .Date.Format -}}
+                    <div class="post-meta-line">
                         <span class="appearance-date">
-                            <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="{{ $dateStr }}">{{ $date.Format $dateFormat }}</time>
+                            <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="{{ . }}">{{ . }}</time>
                         </span>
-                    {{- else -}}
-                        {{- with .Site.Params.dateformat | default "2006-01-02" | .PublishDate.Format -}}
-                            <span class="appearance-date">
-                                <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="{{ . }}">{{ . }}</time>
-                            </span>
-                        {{- end -}}
-                    {{- end -}}
-                </div>
+                    </div>
+                {{- end -}}
                 {{- with $params.hosts -}}
                     <div class="post-meta-line">
                         <span class="appearance-hosts">
@@ -154,10 +140,31 @@
                 <div class="featured-image appearance-artwork" style="position: relative;">
                     {{- dict "Src" . "Title" $.Description "Resources" $.Resources | partial "plugin/img.html" -}}
                     {{- if $overlayFilterCSS -}}
-                        <div class="featured-image-color-overlay" style="background: {{ $overlayFilterCSS }};"></div>
+                        <div class="featured-image-color-overlay" style="background: {{ $overlayFilterCSS | safeCSS }};"></div>
                     {{- end -}}
                 </div>
             {{- end -}}
+        {{- end -}}
+
+        {{- /* Auto TOC */ -}}
+        {{- if ne $toc.enable false -}}
+            <div class="toc" id="toc-auto">
+                <h2 class="toc-title">{{ T "contents" }}</h2>
+                <div class="toc-content{{ if eq $toc.auto false }} always-active{{ end }}" id="toc-content-auto"></div>
+            </div>
+        {{- end -}}
+
+        {{- /* Static TOC */ -}}
+        {{- if ne $toc.enable false -}}
+            <div class="details toc" id="toc-static"  data-kept="{{ if $toc.keepStatic }}true{{ end }}">
+                <div class="details-summary toc-title">
+                    <span>{{ T "contents" }}</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static">
+                    {{- dict "Content" .TableOfContents "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
+                </div>
+            </div>
         {{- end -}}
 
         {{- /* External Link CTA */ -}}

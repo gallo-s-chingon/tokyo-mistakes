@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Interviews on My cool site</title>
-    <link>http://localhost:63621/tags/interviews/</link>
+    <link>http://localhost:1313/tags/interviews/</link>
     <description>Recent content in Interviews on My cool site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:63621/tags/interviews/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/interviews/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SmartLess Example Episode</title>
-      <link>http://localhost:63621/episodes/smartless-example/</link>
+      <link>http://localhost:1313/episodes/smartless-example/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:63621/episodes/smartless-example/</guid>
+      <guid>http://localhost:1313/episodes/smartless-example/</guid>
       <description>SmartLess is a podcast where three friends—Jason Bateman, Sean Hayes, and Will Arnett—bring a mystery guest for a casual conversation filled with laughs.</description>
     </item>
   </channel>

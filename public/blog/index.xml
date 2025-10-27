@@ -2,59 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on My cool site</title>
-    <link>http://localhost:63621/blog/</link>
+    <link>http://localhost:1313/blog/</link>
     <description>Recent content in Blogs on My cool site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 15 Jan 2025 11:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:63621/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Gradient Overlay Demo</title>
-      <link>http://localhost:63621/blog/2025-01-15-gradient-overlay-demo/</link>
+      <link>http://localhost:1313/blog/2025-01-15-gradient-overlay-demo/</link>
       <pubDate>Wed, 15 Jan 2025 11:00:00 +0000</pubDate>
-      <guid>http://localhost:63621/blog/2025-01-15-gradient-overlay-demo/</guid>
+      <guid>http://localhost:1313/blog/2025-01-15-gradient-overlay-demo/</guid>
       <description>&lt;p&gt;This post demonstrates a &lt;strong&gt;gradient overlay&lt;/strong&gt; for sophisticated visual effects.&lt;/p&gt;&#xA;&lt;p&gt;The featured image uses a gradient that fades from dark to transparent:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;overlay_filter&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0))&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This technique:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Creates a natural shadow area for text&lt;/li&gt;&#xA;&lt;li&gt;Maintains the upper portion of the image visible&lt;/li&gt;&#xA;&lt;li&gt;Provides excellent readability for overlaid metadata&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Perfect for landscape and nature photography!&lt;/p&gt;</description>
     </item>
     <item>
       <title>Red Colored Overlay Demo</title>
-      <link>http://localhost:63621/blog/2025-01-15-red-overlay-demo/</link>
+      <link>http://localhost:1313/blog/2025-01-15-red-overlay-demo/</link>
       <pubDate>Wed, 15 Jan 2025 10:00:00 +0000</pubDate>
-      <guid>http://localhost:63621/blog/2025-01-15-red-overlay-demo/</guid>
+      <guid>http://localhost:1313/blog/2025-01-15-red-overlay-demo/</guid>
       <description>&lt;p&gt;This post demonstrates a &lt;strong&gt;red color overlay&lt;/strong&gt; using RGBA format.&lt;/p&gt;&#xA;&lt;p&gt;The featured image has a semi-transparent red layer applied with:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;overlay_filter&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;rgba(255, 0, 0, 0.3)&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This creates a warm, vibrant effect perfect for:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Brand-themed content&lt;/li&gt;&#xA;&lt;li&gt;Artistic photography&lt;/li&gt;&#xA;&lt;li&gt;Drawing attention to specific posts&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;You can use any RGB color combination with any alpha transparency value!&lt;/p&gt;</description>
     </item>
     <item>
       <title>Overlay Filter Feature Demo</title>
-      <link>http://localhost:63621/blog/2025-01-15-overlay-filter-demo/</link>
+      <link>http://localhost:1313/blog/2025-01-15-overlay-filter-demo/</link>
       <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:63621/blog/2025-01-15-overlay-filter-demo/</guid>
+      <guid>http://localhost:1313/blog/2025-01-15-overlay-filter-demo/</guid>
       <description>&lt;p&gt;This post demonstrates the new &lt;code&gt;overlay_filter&lt;/code&gt; feature, which adds colored overlays to featured images.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-is-overlay_filter&#34;&gt;What is overlay_filter?&lt;/h2&gt;&#xA;&lt;p&gt;The &lt;code&gt;overlay_filter&lt;/code&gt; parameter, inspired by Jekyll Minimal Mistakes, allows you to add a semi-transparent colored layer over featured images. This improves text readability and creates visual effects.&lt;/p&gt;&#xA;&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Black overlays&lt;/strong&gt;: Use numeric values (0.1-1.0) for black overlays&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Colored overlays&lt;/strong&gt;: Use &lt;code&gt;rgba()&lt;/code&gt; for custom colors&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Gradients&lt;/strong&gt;: Use CSS gradients for advanced effects&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Works with metadata overlays&lt;/strong&gt;: Combines with the existing overlay metadata feature&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Per-page or site-wide&lt;/strong&gt;: Configure globally or per-page&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;how-it-works&#34;&gt;How It Works&lt;/h2&gt;&#xA;&lt;p&gt;Unlike the &lt;code&gt;transparency&lt;/code&gt; feature which makes the image itself semi-transparent, &lt;code&gt;overlay_filter&lt;/code&gt; adds a colored layer &lt;strong&gt;on top&lt;/strong&gt; of the image. You can use both together for creative effects!&lt;/p&gt;</description>
     </item>
     <item>
       <title>Fucking the Dog at Work</title>
-      <link>http://localhost:63621/blog/2022-06-12-fucking-the-dog/</link>
+      <link>http://localhost:1313/blog/2022-06-12-fucking-the-dog/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:63621/blog/2022-06-12-fucking-the-dog/</guid>
+      <guid>http://localhost:1313/blog/2022-06-12-fucking-the-dog/</guid>
       <description>Testing out a script to boilerplate this</description>
     </item>
     <item>
       <title>It&#39;s Alive!</title>
-      <link>http://localhost:63621/blog/2022-05-05-its-alive/</link>
+      <link>http://localhost:1313/blog/2022-05-05-its-alive/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:63621/blog/2022-05-05-its-alive/</guid>
+      <guid>http://localhost:1313/blog/2022-05-05-its-alive/</guid>
       <description>hard work pays off, usually</description>
     </item>
     <item>
       <title>My Long Journey to building my own website</title>
-      <link>http://localhost:63621/blog/2021-09-17-my-journey-to-making-my-own-website/</link>
+      <link>http://localhost:1313/blog/2021-09-17-my-journey-to-making-my-own-website/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:63621/blog/2021-09-17-my-journey-to-making-my-own-website/</guid>
+      <guid>http://localhost:1313/blog/2021-09-17-my-journey-to-making-my-own-website/</guid>
       <description>hard work pays off, usually</description>
     </item>
     <item>
       <title>Why I like the Terminal</title>
-      <link>http://localhost:63621/blog/2021-01-26-why-i-like-the-terminal/</link>
+      <link>http://localhost:1313/blog/2021-01-26-why-i-like-the-terminal/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:63621/blog/2021-01-26-why-i-like-the-terminal/</guid>
+      <guid>http://localhost:1313/blog/2021-01-26-why-i-like-the-terminal/</guid>
       <description>it&amp;rsquo;s the small things that make life better</description>
     </item>
   </channel>

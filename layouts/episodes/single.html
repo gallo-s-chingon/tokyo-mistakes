@@ -48,65 +48,64 @@
                 <div class="featured-image episode-artwork">
                     {{- dict "Src" $image "Title" $.Description "Resources" $.Resources | partial "plugin/img.html" -}}
                     {{- if $overlayFilterCSS -}}
-                        <div class="featured-image-color-overlay" style="background: {{ $overlayFilterCSS }};"></div>
+                        <div class="featured-image-color-overlay" style="background: {{ $overlayFilterCSS | safeCSS }};"></div>
                     {{- end -}}
                 </div>
                 <div class="featured-metadata-overlay overlay-{{ $overlayPosition }}" style="--overlay-opacity: {{ $overlayOpacity }};">
                     <div class="overlay-content">
                         {{- /* Episode Metadata in Overlay */ -}}
                         <div class="post-meta episode-meta">
-                            <div class="post-meta-line">
-                                {{- with $params.episodenumber -}}
+                            {{- with $params.episodenumber -}}
+                                <div class="post-meta-line">
                                     <span class="episode-number">
                                         <i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>&nbsp;Episode {{ . }}
-                                    </span>&nbsp;
-                                {{- end -}}
-                                {{- with $params.season -}}
+                                    </span>
+                                </div>
+                            {{- end -}}
+                            {{- with $params.season -}}
+                                <div class="post-meta-line">
                                     <span class="episode-season">
                                         <i class="fas fa-layer-group fa-fw" aria-hidden="true"></i>&nbsp;Season {{ . }}
-                                    </span>&nbsp;
-                                {{- end -}}
-                                {{- with $params.duration -}}
+                                    </span>
+                                </div>
+                            {{- end -}}
+                            {{- with $params.duration -}}
+                                <div class="post-meta-line">
                                     <span class="episode-duration">
                                         <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;{{ . }}
                                     </span>
-                                {{- end -}}
-                            </div>
-                            <div class="post-meta-line">
-                                {{- if $params.created -}}
-                                    {{- $dateStr := substr $params.created 0 10 -}}
-                                    {{- $date := time.AsTime $dateStr -}}
-                                    {{- $dateFormat := .Site.Params.dateformat | default "2006-01-02" -}}
+                                </div>
+                            {{- end -}}
+                            {{- with .Site.Params.dateformat | default "2006-01-02" | .Date.Format -}}
+                                <div class="post-meta-line">
                                     <span class="episode-date">
-                                        <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="{{ $dateStr }}">{{ $date.Format $dateFormat }}</time>
+                                        <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="{{ . }}">{{ . }}</time>
                                     </span>
-                                {{- else -}}
-                                    {{- with .Site.Params.dateformat | default "2006-01-02" | .PublishDate.Format -}}
-                                        <span class="episode-date">
-                                            <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="{{ . }}">{{ . }}</time>
-                                        </span>
-                                    {{- end -}}
-                                {{- end -}}
-                            </div>
-                            <div class="post-meta-line">
-                                {{- $podcast := $params.podcast | default .Site.Params.podcast.name -}}
-                                {{- with $podcast -}}
+                                </div>
+                            {{- end -}}
+                            {{- $podcast := $params.podcast | default .Site.Params.podcast.name -}}
+                            {{- with $podcast -}}
+                                <div class="post-meta-line">
                                     <span class="podcast-name">
                                         <i class="fas fa-podcast fa-fw" aria-hidden="true"></i>&nbsp;{{ . }}
-                                    </span>&nbsp;
-                                {{- end -}}
-                                {{- $host := $params.host | default .Site.Params.podcast.hostName -}}
-                                {{- with $host -}}
+                                    </span>
+                                </div>
+                            {{- end -}}
+                            {{- $host := $params.host | default .Site.Params.podcast.hostName -}}
+                            {{- with $host -}}
+                                <div class="post-meta-line">
                                     <span class="episode-host">
                                         <i class="fas fa-microphone fa-fw" aria-hidden="true"></i>&nbsp;{{ . }}
-                                    </span>&nbsp;
-                                {{- end -}}
-                                {{- with $params.guests -}}
+                                    </span>
+                                </div>
+                            {{- end -}}
+                            {{- with $params.guests -}}
+                                <div class="post-meta-line">
                                     <span class="episode-guests">
                                         <i class="fas fa-users fa-fw" aria-hidden="true"></i>&nbsp;{{ delimit . ", " }}
                                     </span>
-                                {{- end -}}
-                            </div>
+                                </div>
+                            {{- end -}}
                         </div>
                     </div>
                 </div>
@@ -115,58 +114,57 @@
             {{- /* Standard Layout - Metadata Above Image */ -}}
             {{- /* Episode Metadata */ -}}
             <div class="post-meta episode-meta">
-                <div class="post-meta-line">
-                    {{- with $params.episodenumber -}}
+                {{- with $params.episodenumber -}}
+                    <div class="post-meta-line">
                         <span class="episode-number">
                             <i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>&nbsp;Episode {{ . }}
-                        </span>&nbsp;
-                    {{- end -}}
-                    {{- with $params.season -}}
+                        </span>
+                    </div>
+                {{- end -}}
+                {{- with $params.season -}}
+                    <div class="post-meta-line">
                         <span class="episode-season">
                             <i class="fas fa-layer-group fa-fw" aria-hidden="true"></i>&nbsp;Season {{ . }}
-                        </span>&nbsp;
-                    {{- end -}}
-                    {{- with $params.duration -}}
+                        </span>
+                    </div>
+                {{- end -}}
+                {{- with $params.duration -}}
+                    <div class="post-meta-line">
                         <span class="episode-duration">
                             <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;{{ . }}
                         </span>
-                    {{- end -}}
-                </div>
-                <div class="post-meta-line">
-                    {{- if $params.created -}}
-                        {{- $dateStr := substr $params.created 0 10 -}}
-                        {{- $date := time.AsTime $dateStr -}}
-                        {{- $dateFormat := .Site.Params.dateformat | default "2006-01-02" -}}
+                    </div>
+                {{- end -}}
+                {{- with .Site.Params.dateformat | default "2006-01-02" | .Date.Format -}}
+                    <div class="post-meta-line">
                         <span class="episode-date">
-                            <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="{{ $dateStr }}">{{ $date.Format $dateFormat }}</time>
+                            <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="{{ . }}">{{ . }}</time>
                         </span>
-                    {{- else -}}
-                        {{- with .Site.Params.dateformat | default "2006-01-02" | .PublishDate.Format -}}
-                            <span class="episode-date">
-                                <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="{{ . }}">{{ . }}</time>
-                            </span>
-                        {{- end -}}
-                    {{- end -}}
-                </div>
-                <div class="post-meta-line">
-                    {{- $podcast := $params.podcast | default .Site.Params.podcast.name -}}
-                    {{- with $podcast -}}
+                    </div>
+                {{- end -}}
+                {{- $podcast := $params.podcast | default .Site.Params.podcast.name -}}
+                {{- with $podcast -}}
+                    <div class="post-meta-line">
                         <span class="podcast-name">
                             <i class="fas fa-podcast fa-fw" aria-hidden="true"></i>&nbsp;{{ . }}
-                        </span>&nbsp;
-                    {{- end -}}
-                    {{- $host := $params.host | default .Site.Params.podcast.hostName -}}
-                    {{- with $host -}}
+                        </span>
+                    </div>
+                {{- end -}}
+                {{- $host := $params.host | default .Site.Params.podcast.hostName -}}
+                {{- with $host -}}
+                    <div class="post-meta-line">
                         <span class="episode-host">
                             <i class="fas fa-microphone fa-fw" aria-hidden="true"></i>&nbsp;{{ . }}
-                        </span>&nbsp;
-                    {{- end -}}
-                    {{- with $params.guests -}}
+                        </span>
+                    </div>
+                {{- end -}}
+                {{- with $params.guests -}}
+                    <div class="post-meta-line">
                         <span class="episode-guests">
                             <i class="fas fa-users fa-fw" aria-hidden="true"></i>&nbsp;{{ delimit . ", " }}
                         </span>
-                    {{- end -}}
-                </div>
+                    </div>
+                {{- end -}}
             </div>
 
             {{- with $image -}}
@@ -176,7 +174,7 @@
                 <div class="featured-image episode-artwork" style="position: relative;">
                     {{- dict "Src" . "Title" $.Description "Resources" $.Resources | partial "plugin/img.html" -}}
                     {{- if $overlayFilterCSS -}}
-                        <div class="featured-image-color-overlay" style="background: {{ $overlayFilterCSS }};"></div>
+                        <div class="featured-image-color-overlay" style="background: {{ $overlayFilterCSS | safeCSS }};"></div>
                     {{- end -}}
                 </div>
             {{- end -}}
