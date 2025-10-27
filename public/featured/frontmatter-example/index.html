@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Featured Appearance Frontmatter Reference Guide - My cool site</title><meta name="Description" content="Learn all available frontmatter fields for featured appearances in Tokyo-Nord theme"><meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/featured/frontmatter-example/" /><link rel="prev" href="http://localhost:1313/featured/2025-01-15-gradient-overlay-demo/" /><link rel="next" href="http://localhost:1313/featured/featured-frontmatter-example/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Featured Appearance Frontmatter Reference Guide",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/featured\/frontmatter-example\/"
+        },"genre": "podcast","keywords": "reference, documentation","wordcount":  1688 ,
+        "url": "http:\/\/localhost:1313\/featured\/frontmatter-example\/","datePublished": "2025-01-15T10:00:00-07:00","dateModified": "2025-01-15T10:00:00-07:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "My cool site"
+            },"description": "Learn all available frontmatter fields for featured appearances in Tokyo-Nord theme"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          function applyTheme() {
+            const highContrast =  true ;
+            const defaultTheme = 'auto';
+
+            
+            const themeMap = {
+              dark: highContrast ? 'tokyo-night' : 'nordic',
+              light: highContrast ? 'onenord-light' : 'onenord-day'
+            };
+
+            
+            let theme = window.localStorage?.getItem('theme');
+
+            if (!theme) {
+              
+              if (defaultTheme === 'auto') {
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                theme = prefersDark ? themeMap.dark : themeMap.light;
+              } else if (defaultTheme === 'dark') {
+                theme = themeMap.dark;
+              } else {
+                theme = themeMap.light;
+              }
+            }
+
+            
+            const validThemes = ['tokyo-night', 'nordic', 'onenord-light', 'onenord-day'];
+            if (!validThemes.includes(theme)) {
+              theme = themeMap.dark;
+            }
+
+            let isDark = theme === 'tokyo-night' || theme === 'nordic';
+            document.body.setAttribute('data-theme', theme);
+            document.body.setAttribute('theme', isDark ? 'dark' : 'light');
+          }
+
+          applyTheme();
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="My cool site">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/featured/"> Featured </a><a class="menu-item" href="/episodes/"> Episodes </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="My cool site">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/featured/" title="">Feat</a><a class="menu-item" href="/episodes/" title="">Epi</a><a class="menu-item" href="/about/" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="page single special"><h1 class="single-title animate__animated animate__pulse animate__faster">Featured Appearance Frontmatter Reference Guide</h1><div class="content" id="content"><h2 id="featured-appearance-frontmatter-complete-reference">Featured Appearance Frontmatter Complete Reference</h2>
+<p>This post contains examples and documentation for all available frontmatter fields when creating featured appearances (guest appearances on other shows) in the Tokyo-Nord Hugo theme.</p>
+<p>For the complete reference documentation, see: <a href="/QUICK-REFERENCE.md" rel="">QUICK-REFERENCE.md</a></p>
+<hr>
+<h2 id="complete-featured-appearance-frontmatter-template">Complete Featured Appearance Frontmatter Template</h2>
+<p>Below is a complete example showing ALL available frontmatter fields for featured appearances with inline comments explaining each field:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># REQUIRED FIELDS</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Episode Title or Appearance Name&#34;</span>  <span style="color:#75715e"># REQUIRED - Title of the episode/appearance</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2024-09-24T14:30:00</span><span style="color:#ae81ff">-06</span>:<span style="color:#ae81ff">00</span>           <span style="color:#75715e"># REQUIRED - Hugo publish date (RFC3339 format)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># APPEARANCE DETAILS</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;podcast&#34;</span>                           <span style="color:#75715e"># REQUIRED - Appearance type (see types below)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcastName</span>: <span style="color:#e6db74">&#34;Their Podcast Name&#34;</span>         <span style="color:#75715e"># Name of the show/platform you appeared on</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">hosts</span>: [<span style="color:#e6db74">&#34;Host Name&#34;</span>, <span style="color:#e6db74">&#34;Co-Host Name&#34;</span>]      <span style="color:#75715e"># Array of show host names</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">guests</span>: [<span style="color:#e6db74">&#34;Other Guest&#34;</span>]                   <span style="color:#75715e"># Other guests besides you (optional, array)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">externalUrl</span>: <span style="color:#e6db74">&#34;https://spotify.com/...&#34;</span>    <span style="color:#75715e"># Link to listen/watch/read the appearance</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># MEDIA</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">featuredImage</span>: <span style="color:#ae81ff">/images/cover.jpg         </span> <span style="color:#75715e"># Path to episode artwork or show logo</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># CONTENT &amp; SEO</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">summary</span>: <span style="color:#e6db74">&#34;Brief one-liner description&#34;</span>    <span style="color:#75715e"># Short description for cards/previews (1-2 sentences)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;Longer full description&#34;</span>    <span style="color:#75715e"># Full description for SEO and meta tags</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;topic1&#34;</span>, <span style="color:#e6db74">&#34;topic2&#34;</span>, <span style="color:#e6db74">&#34;topic3&#34;</span>]      <span style="color:#75715e"># Array of topics discussed in the appearance</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">keywords</span>: [<span style="color:#e6db74">&#34;keyword1&#34;</span>, <span style="color:#e6db74">&#34;keyword2&#34;</span>]        <span style="color:#75715e"># Optional SEO keywords array</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">categories</span>: [<span style="color:#e6db74">&#34;category&#34;</span>]                  <span style="color:#75715e"># Optional content categories</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># IMAGE DISPLAY OPTIONS</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Metadata Overlay (Shows metadata ON the image)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlayMetadata: false                    # local + global</span>: <span style="color:#ae81ff">params.podcast.overlay.enable</span>
+</span></span><span style="display:flex;"><span>                                          <span style="color:#75715e"># true = metadata appears on image</span>
+</span></span><span style="display:flex;"><span>                                          <span style="color:#75715e"># false = metadata appears above image</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlayPosition</span>: <span style="color:#e6db74">&#34;lower-left&#34;</span>             <span style="color:#75715e"># local + global: params.podcast.overlay.position</span>
+</span></span><span style="display:flex;"><span>                                          <span style="color:#75715e"># Options: top-left, top-center, top-right,</span>
+</span></span><span style="display:flex;"><span>                                          <span style="color:#75715e">#          mid-left, mid-center, mid-right,</span>
+</span></span><span style="display:flex;"><span>                                          <span style="color:#75715e">#          lower-left, lower-center, lower-right</span>
+</span></span><span style="display:flex;"><span>                                          <span style="color:#75715e"># Only visible on single pages when overlayMetadata: true</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Note: overlayOpacity is global only in hugo.toml (no local override)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#       Set in params.podcast.overlay.opacity (default: 0.85)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Image Transparency (Makes image itself transparent)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">transparency: true                        # local + global</span>: <span style="color:#ae81ff">params.images.transparency</span>
+</span></span><span style="display:flex;"><span>                                          <span style="color:#75715e"># Makes the IMAGE transparent (not the overlay)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">transparencyAmount: 0.7                   # local + global</span>: <span style="color:#ae81ff">params.images.opacity</span>
+</span></span><span style="display:flex;"><span>                                          <span style="color:#75715e"># Range: 0.0 (fully transparent) to 1.0 (opaque)</span>
+</span></span><span style="display:flex;"><span>                                          <span style="color:#75715e"># Works when overlayMetadata is disabled</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Color Overlay Filter (Colored layer on top of image)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlay_filter</span>: <span style="color:#ae81ff">0.5</span>                       <span style="color:#75715e"># local only - works on BOTH single &amp; list pages</span>
+</span></span><span style="display:flex;"><span>                                          <span style="color:#75715e"># Formats:</span>
+</span></span><span style="display:flex;"><span>                                          <span style="color:#75715e"># - Numeric: 0.5 = 50% black overlay</span>
+</span></span><span style="display:flex;"><span>                                          <span style="color:#75715e"># - RGBA: &#34;rgba(255, 0, 0, 0.5)&#34; = red overlay</span>
+</span></span><span style="display:flex;"><span>                                          <span style="color:#75715e"># - Gradient: &#34;linear-gradient(...)&#34; = gradient effect</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Examples:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># overlay_filter: 0.3                     # 30% black overlay</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># overlay_filter: &#34;rgba(100, 0, 100, 0.5)&#34;  # Purple overlay at 50%</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># overlay_filter: &#34;linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0))&#34;  # Gradient</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># PAGE DISPLAY FEATURES</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">topicsOn: true                            # local + global</span>: <span style="color:#ae81ff">params.topicsDiscussed</span>
+</span></span><span style="display:flex;"><span>                                          <span style="color:#75715e"># Shows &#34;Topics Discussed&#34; section with tags</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">toc: false                                # local + global</span>: <span style="color:#ae81ff">params.page.toc.enable</span>
+</span></span><span style="display:flex;"><span>                                          <span style="color:#75715e"># Table of contents (usually false for appearances)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">lightgallery: true                        # local + global</span>: <span style="color:#ae81ff">params.page.lightgallery</span>
+</span></span><span style="display:flex;"><span>                                          <span style="color:#75715e"># Enable lightbox gallery for images</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">linkToMarkdown: true                      # local + global</span>: <span style="color:#ae81ff">params.page.linkToMarkdown</span>
+</span></span><span style="display:flex;"><span>                                          <span style="color:#75715e"># Show link to raw markdown file</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># CODE BLOCKS (if post contains code examples)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">code</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">copy: true                              # local + global</span>: <span style="color:#ae81ff">params.page.code.copy</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">maxShownLines: 50                       # local + global</span>: <span style="color:#ae81ff">params.page.code.maxShownLines</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># SOCIAL &amp; INTERACTION</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">share</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">enable: true                            # local + global</span>: <span style="color:#ae81ff">params.page.share.enable</span>
+</span></span><span style="display:flex;"><span>                                          <span style="color:#75715e"># Enable social share buttons</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">comment</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">enable: true                            # local + global</span>: <span style="color:#ae81ff">params.page.comment.enable</span>
+</span></span><span style="display:flex;"><span>                                          <span style="color:#75715e"># Enable comments (system configured in hugo.toml)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># VISIBILITY &amp; SEO</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">draft</span>: <span style="color:#66d9ef">false</span>                              <span style="color:#75715e"># local only - Draft status (true = not published)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">hiddenFromHomePage: false                 # local + global</span>: <span style="color:#ae81ff">params.page.hiddenFromHomePage</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">hiddenFromSearch: false                   # local + global</span>: <span style="color:#ae81ff">params.page.hiddenFromSearch</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">rssFullText: false                        # local + global</span>: <span style="color:#ae81ff">params.page.rssFullText</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">seo</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">images: []                              # local + global</span>: <span style="color:#ae81ff">params.page.seo.images</span>
+</span></span><span style="display:flex;"><span>                                          <span style="color:#75715e"># Array of images for SEO/social sharing</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ADVANCED HUGO FIELDS (Optional)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">lastmod</span>: <span style="color:#e6db74">2024-01-20T10:00:00</span><span style="color:#ae81ff">-07</span>:<span style="color:#ae81ff">00</span>        <span style="color:#75715e"># Last modified date (RFC3339)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">publishDate</span>: <span style="color:#e6db74">2024-01-20T10:00:00</span><span style="color:#ae81ff">-07</span>:<span style="color:#ae81ff">00</span>    <span style="color:#75715e"># Scheduled publish date</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">expiryDate</span>: <span style="color:#e6db74">2099-12-31T00:00:00</span><span style="color:#ae81ff">-07</span>:<span style="color:#ae81ff">00</span>     <span style="color:#75715e"># Content expiry date</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">weight</span>: <span style="color:#ae81ff">0</span>                                 <span style="color:#75715e"># Content ordering weight (lower = first)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">slug</span>: <span style="color:#e6db74">&#34;custom-url-slug&#34;</span>                   <span style="color:#75715e"># URL slug override</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">aliases</span>: [<span style="color:#e6db74">&#34;/old-url/&#34;</span>, <span style="color:#e6db74">&#34;/another-old-url/&#34;</span>]  <span style="color:#75715e"># URL redirects (array)</span>
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><hr>
+<h2 id="field-categories">Field Categories</h2>
+<h3 id="required-vs-optional-fields">Required vs Optional Fields</h3>
+<p><strong>REQUIRED FIELDS:</strong></p>
+<ul>
+<li><code>title</code> - Episode/appearance title (must be present)</li>
+<li><code>date</code> - Publish date in RFC3339 format (e.g., <code>2024-09-24T14:30:00-06:00</code>)</li>
+<li><code>type</code> - Appearance type (see types below)</li>
+</ul>
+<p><strong>COMMONLY USED:</strong></p>
+<ul>
+<li><code>podcastName</code> - Name of the show/platform</li>
+<li><code>hosts</code> - Host name(s)</li>
+<li><code>externalUrl</code> - Link to the episode</li>
+<li><code>featuredImage</code> - Episode artwork or show logo</li>
+<li><code>summary</code> - Brief description for cards</li>
+<li><code>tags</code> - Topics discussed</li>
+</ul>
+<p><strong>OPTIONAL:</strong></p>
+<ul>
+<li><code>guests</code> - Other guests besides you</li>
+<li>All display and styling options</li>
+</ul>
+<hr>
+<h2 id="appearance-types">Appearance Types</h2>
+<p>The <code>type</code> field categorizes your appearance. Available types:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Example Use</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>podcast</code></td>
+          <td>Podcast guest appearance</td>
+          <td>Interview on another podcast</td>
+      </tr>
+      <tr>
+          <td><code>interview</code></td>
+          <td>Written or video interview</td>
+          <td>Magazine interview, blog Q&amp;A</td>
+      </tr>
+      <tr>
+          <td><code>video</code></td>
+          <td>Video content</td>
+          <td>YouTube collaboration, documentary</td>
+      </tr>
+      <tr>
+          <td><code>conference</code></td>
+          <td>Conference talk or panel</td>
+          <td>Tech conference, keynote speech</td>
+      </tr>
+      <tr>
+          <td><code>talk</code></td>
+          <td>Speaking engagement</td>
+          <td>Meetup talk, workshop</td>
+      </tr>
+      <tr>
+          <td><code>panel</code></td>
+          <td>Panel discussion</td>
+          <td>Conference panel, roundtable</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Most common:</strong> <code>podcast</code> and <code>interview</code></p>
+<hr>
+<h2 id="configuration-scopes">Configuration Scopes</h2>
+<p>Understanding when fields use local vs global configuration:</p>
+<h3 id="local-only">Local Only</h3>
+<p>These fields can ONLY be set in frontmatter:</p>
+<ul>
+<li><code>title</code>, <code>date</code>, <code>draft</code></li>
+<li><code>type</code>, <code>podcastName</code>, <code>hosts</code>, <code>guests</code></li>
+<li><code>externalUrl</code></li>
+<li><code>summary</code>, <code>description</code>, <code>tags</code>, <code>categories</code></li>
+<li><code>overlay_filter</code></li>
+</ul>
+<h3 id="local--global">Local + Global</h3>
+<p>These fields can be set in frontmatter OR hugo.toml (local overrides global):</p>
+<ul>
+<li><code>overlayMetadata</code> → global: <code>params.podcast.overlay.enable</code></li>
+<li><code>overlayPosition</code> → global: <code>params.podcast.overlay.position</code></li>
+<li><code>transparency</code> → global: <code>params.images.transparency</code></li>
+<li><code>transparencyAmount</code> → global: <code>params.images.opacity</code></li>
+<li><code>toc</code> → global: <code>params.page.toc.enable</code></li>
+<li><code>lightgallery</code> → global: <code>params.page.lightgallery</code></li>
+<li><code>share.enable</code> → global: <code>params.page.share.enable</code></li>
+<li><code>comment.enable</code> → global: <code>params.page.comment.enable</code></li>
+</ul>
+<h3 id="global-only">Global Only</h3>
+<p>These fields can ONLY be set in hugo.toml (no frontmatter override):</p>
+<ul>
+<li>Overlay opacity → <code>params.podcast.overlay.opacity</code></li>
+<li>SEO publisher → <code>params.page.seo.publisher.name</code>, <code>params.page.seo.publisher.logoUrl</code></li>
+</ul>
+<hr>
+<h2 id="common-configurations">Common Configurations</h2>
+<h3 id="minimal-appearance-required-fields-only">Minimal Appearance (Required Fields Only)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Interview on Example Podcast&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2024-09-24T14:30:00</span><span style="color:#ae81ff">-06</span>:<span style="color:#ae81ff">00</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">type</span>: <span style="color:#ae81ff">podcast</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcastName</span>: <span style="color:#e6db74">&#34;Example Podcast&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">hosts</span>: [<span style="color:#e6db74">&#34;Host Name&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">externalUrl</span>: <span style="color:#e6db74">&#34;https://spotify.com/episode/123&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">featuredImage</span>: <span style="color:#ae81ff">/images/appearance.jpg</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">summary</span>: <span style="color:#e6db74">&#34;Discussing topic on Example Podcast&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;topic1&#34;</span>, <span style="color:#e6db74">&#34;topic2&#34;</span>]
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><h3 id="podcast-appearance-with-player">Podcast Appearance with Player</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Guest on Tech Talk Show&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2024-09-24T14:30:00</span><span style="color:#ae81ff">-06</span>:<span style="color:#ae81ff">00</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">type</span>: <span style="color:#ae81ff">podcast</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcastName</span>: <span style="color:#e6db74">&#34;Tech Talk&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">hosts</span>: [<span style="color:#e6db74">&#34;Host Name&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">externalUrl</span>: <span style="color:#e6db74">&#34;https://open.spotify.com/episode/abc123&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">featuredImage</span>: <span style="color:#ae81ff">/images/tech-talk-cover.jpg</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">summary</span>: <span style="color:#e6db74">&#34;Discussing AI and machine learning on Tech Talk podcast&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;AI&#34;</span>, <span style="color:#e6db74">&#34;technology&#34;</span>, <span style="color:#e6db74">&#34;interview&#34;</span>]
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff"><div class="podcast-player podcast-player-spotify" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    style="border-radius:12px"
+    src="https://open.spotify.com/embed/episode/abc123?utm_source=generator"
+    width="100%"
+    height="232"
+    frameBorder="0"
+    allowfullscreen=""
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy">
+  </iframe>
+</div></span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">Episode description and show notes go here...</span></span></span></code></pre></div><h3 id="conference-talk">Conference Talk</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Keynote at DevCon 2024&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2024-09-24T14:30:00</span><span style="color:#ae81ff">-06</span>:<span style="color:#ae81ff">00</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">type</span>: <span style="color:#ae81ff">conference</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcastName</span>: <span style="color:#e6db74">&#34;DevCon 2024&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">hosts</span>: []
+</span></span><span style="display:flex;"><span><span style="color:#f92672">externalUrl</span>: <span style="color:#e6db74">&#34;https://devcon.com/talks/keynote&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">featuredImage</span>: <span style="color:#ae81ff">/images/devcon-2024.jpg</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">summary</span>: <span style="color:#e6db74">&#34;Keynote presentation on modern web development&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;conference&#34;</span>, <span style="color:#e6db74">&#34;web development&#34;</span>, <span style="color:#e6db74">&#34;speaking&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">categories</span>: [<span style="color:#e6db74">&#34;Technology&#34;</span>]
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><h3 id="video-collaboration">Video Collaboration</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;YouTube Collab with Creator Name&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2024-09-24T14:30:00</span><span style="color:#ae81ff">-06</span>:<span style="color:#ae81ff">00</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">type</span>: <span style="color:#ae81ff">video</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcastName</span>: <span style="color:#e6db74">&#34;Creator Name&#39;s Channel&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">hosts</span>: [<span style="color:#e6db74">&#34;Creator Name&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">externalUrl</span>: <span style="color:#e6db74">&#34;https://youtube.com/watch?v=abc123&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">featuredImage</span>: <span style="color:#ae81ff">/images/youtube-collab.jpg</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">summary</span>: <span style="color:#e6db74">&#34;Collaborative video discussing creative process&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;YouTube&#34;</span>, <span style="color:#e6db74">&#34;collaboration&#34;</span>, <span style="color:#e6db74">&#34;content creation&#34;</span>]
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff"><div class="podcast-player podcast-player-youtube" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    width="100%"
+    height="315"
+    src="https://www.youtube.com/embed/abc123"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+    loading="lazy">
+  </iframe>
+</div></span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">Video description...</span></span></span></code></pre></div><h3 id="panel-discussion">Panel Discussion</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Panel: Future of Technology&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2024-09-24T14:30:00</span><span style="color:#ae81ff">-06</span>:<span style="color:#ae81ff">00</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">type</span>: <span style="color:#ae81ff">panel</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcastName</span>: <span style="color:#e6db74">&#34;Tech Summit 2024&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">hosts</span>: [<span style="color:#e6db74">&#34;Moderator Name&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">guests</span>: [<span style="color:#e6db74">&#34;Panelist 1&#34;</span>, <span style="color:#e6db74">&#34;Panelist 2&#34;</span>, <span style="color:#e6db74">&#34;Panelist 3&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">externalUrl</span>: <span style="color:#e6db74">&#34;https://techsummit.com/panel&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">featuredImage</span>: <span style="color:#ae81ff">/images/tech-summit-panel.jpg</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">summary</span>: <span style="color:#e6db74">&#34;Panel discussion on the future of AI and emerging technologies&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;panel&#34;</span>, <span style="color:#e6db74">&#34;AI&#34;</span>, <span style="color:#e6db74">&#34;future tech&#34;</span>]
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><h3 id="appearance-with-styled-overlay">Appearance with Styled Overlay</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Interview with Custom Styling&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2024-09-24T14:30:00</span><span style="color:#ae81ff">-06</span>:<span style="color:#ae81ff">00</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">type</span>: <span style="color:#ae81ff">interview</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcastName</span>: <span style="color:#e6db74">&#34;Style Magazine&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">hosts</span>: [<span style="color:#e6db74">&#34;Editor Name&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">externalUrl</span>: <span style="color:#e6db74">&#34;https://magazine.com/interview&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">featuredImage</span>: <span style="color:#ae81ff">/images/styled-interview.jpg</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlayMetadata</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlayPosition</span>: <span style="color:#e6db74">&#34;lower-right&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlay_filter</span>: <span style="color:#e6db74">&#34;rgba(0, 100, 200, 0.4)&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">summary</span>: <span style="color:#e6db74">&#34;Styled interview feature with custom overlay effects&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;interview&#34;</span>, <span style="color:#e6db74">&#34;design&#34;</span>]
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><hr>
+<h2 id="understanding-image-display-options">Understanding Image Display Options</h2>
+<p>Tokyo-Nord offers three independent ways to style your featured images:</p>
+<h3 id="1-metadata-overlay-overlaymetadata">1. Metadata Overlay (<code>overlayMetadata</code>)</h3>
+<p>Shows appearance metadata (title, type, hosts) directly ON the featured image instead of above it.</p>
+<ul>
+<li><strong>Scope:</strong> Single pages only (<code>/featured/post-name/</code>)</li>
+<li><strong>Control:</strong> <code>overlayMetadata: true/false</code> + <code>overlayPosition</code></li>
+<li><strong>Opacity:</strong> Global setting only (<code>params.podcast.overlay.opacity</code>)</li>
+</ul>
+<h3 id="2-image-transparency-transparency">2. Image Transparency (<code>transparency</code>)</h3>
+<p>Makes the IMAGE itself semi-transparent.</p>
+<ul>
+<li><strong>Scope:</strong> Single pages</li>
+<li><strong>Control:</strong> <code>transparency: true/false</code> + <code>transparencyAmount: 0.0-1.0</code></li>
+<li><strong>Use case:</strong> Soften images, blend with background</li>
+</ul>
+<h3 id="3-color-overlay-filter-overlay_filter">3. Color Overlay Filter (<code>overlay_filter</code>)</h3>
+<p>Adds a colored layer ON TOP of the image.</p>
+<ul>
+<li><strong>Scope:</strong> Both single pages AND list pages (hero cards)</li>
+<li><strong>Formats:</strong>
+<ul>
+<li>Numeric: <code>0.5</code> = 50% black overlay</li>
+<li>RGBA: <code>&quot;rgba(255, 0, 0, 0.5)&quot;</code> = red overlay</li>
+<li>Gradient: <code>&quot;linear-gradient(...)&quot;</code></li>
+</ul>
+</li>
+<li><strong>Use case:</strong> Improve text readability, creative effects</li>
+</ul>
+<p><strong>These can be combined!</strong> For example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">transparency</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">transparencyAmount</span>: <span style="color:#ae81ff">0.8</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlay_filter</span>: <span style="color:#e6db74">&#34;rgba(100, 0, 100, 0.3)&#34;</span></span></span></code></pre></div><hr>
+<h2 id="adding-embedded-players">Adding Embedded Players</h2>
+<p>To embed a player from the platform where your appearance was published, use shortcodes in the post content:</p>
+<h3 id="spotify">Spotify</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="podcast-player podcast-player-spotify" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    style="border-radius:12px"
+    src="https://open.spotify.com/embed/episode/episode-id?utm_source=generator"
+    width="100%"
+    height="232"
+    frameBorder="0"
+    allowfullscreen=""
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy">
+  </iframe>
+</div></span></span></code></pre></div><p><strong>Finding the Episode ID:</strong>
+From URL: <code>https://open.spotify.com/episode/667dex4sU7Z54upPO4Up4n</code>
+The ID is: <code>667dex4sU7Z54upPO4Up4n</code></p>
+<h3 id="youtube">YouTube</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="podcast-player podcast-player-youtube" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    width="100%"
+    height="315"
+    src="https://www.youtube.com/embed/video-id"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+    loading="lazy">
+  </iframe>
+</div></span></span></code></pre></div><h3 id="apple-podcasts">Apple Podcasts</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="podcast-player podcast-player-apple" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+    frameborder="0"
+    height="175"
+    style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
+    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+    src="https://embed.podcasts.apple.com/us/podcast/idpodcast-id?i=episode-id">
+  </iframe>
+</div></span></span></code></pre></div><h3 id="other-platforms">Other Platforms</h3>
+<p>See QUICK-REFERENCE.md for complete list of supported players:</p>
+<ul>
+<li>Blubrry, Libsyn, Podbean, Simplecast, Spreaker, Transistor, Buzzsprout</li>
+</ul>
+<hr>
+<h2 id="episode-vs-featured-key-differences">Episode vs Featured: Key Differences</h2>
+<h3 id="for-your-episodes-contentepisodes">For YOUR Episodes (<code>content/episodes/</code>)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">42</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcast</span>: <span style="color:#e6db74">&#34;Your Podcast Name&#34;</span>    <span style="color:#75715e"># Your show</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;Your Name&#34;</span>               <span style="color:#75715e"># You</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">guests</span>: [<span style="color:#e6db74">&#34;Guest Name&#34;</span>]          <span style="color:#75715e"># Your guests</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">embedPlayers</span>:                   <span style="color:#75715e"># Your players</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;spotify&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;episode-id&#34;</span></span></span></code></pre></div><h3 id="for-appearances-on-other-shows-contentfeatured">For Appearances on OTHER Shows (<code>content/featured/</code>)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">type</span>: <span style="color:#ae81ff">podcast</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcastName</span>: <span style="color:#e6db74">&#34;Their Podcast Name&#34;</span>  <span style="color:#75715e"># Their show</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">hosts</span>: [<span style="color:#e6db74">&#34;Their Host&#34;</span>]              <span style="color:#75715e"># Their host(s)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">guests</span>: [<span style="color:#e6db74">&#34;Other Guest&#34;</span>]            <span style="color:#75715e"># Other guests (you&#39;re implied)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">externalUrl</span>: <span style="color:#e6db74">&#34;https://...&#34;</span>         <span style="color:#75715e"># Link to their episode</span></span></span></code></pre></div><p>Then add player in content:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="podcast-player podcast-player-spotify" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    style="border-radius:12px"
+    src="https://open.spotify.com/embed/episode/episode-id?utm_source=generator"
+    width="100%"
+    height="232"
+    frameBorder="0"
+    allowfullscreen=""
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy">
+  </iframe>
+</div></span></span></code></pre></div><hr>
+<h2 id="date-format">Date Format</h2>
+<p>Hugo uses RFC3339 timestamp format:</p>
+<pre tabindex="0"><code>YYYY-MM-DDTHH:MM:SS±TIMEZONE</code></pre><p>Examples:</p>
+<ul>
+<li><code>2024-09-24T14:30:00-06:00</code> (Mountain Time, 2:30 PM)</li>
+<li><code>2024-01-15T10:00:00-07:00</code> (Pacific Time, 10:00 AM)</li>
+<li><code>2024-12-25T00:00:00Z</code> (UTC, midnight)</li>
+</ul>
+<hr>
+<h2 id="cross-references">Cross-References</h2>
+<p><strong>Complete Field Documentation:</strong></p>
+<ul>
+<li><a href="/QUICK-REFERENCE.md" rel="">QUICK-REFERENCE.md</a> - Full frontmatter reference</li>
+</ul>
+<p><strong>Related Guides:</strong></p>
+<ul>
+<li><code>/episodes/frontmatter-example/</code> - Episode frontmatter reference</li>
+<li><code>/blog/frontmatter-example/</code> - Blog post frontmatter reference</li>
+</ul>
+<p><strong>Theme Documentation:</strong></p>
+<ul>
+<li><code>/docs/content-guide/</code> - Content creation guide</li>
+<li><code>/docs/appearance-types/</code> - Detailed appearance types guide</li>
+<li><code>/docs/podcast-features/</code> - Podcast-specific features</li>
+</ul>
+<hr>
+<h2 id="tips--best-practices">Tips &amp; Best Practices</h2>
+<ol>
+<li><strong>Always include:</strong> <code>title</code>, <code>date</code>, <code>type</code>, <code>podcastName</code>, <code>hosts</code>, <code>externalUrl</code>, <code>featuredImage</code>, <code>summary</code>, <code>tags</code></li>
+<li><strong>Type selection:</strong> Choose the most specific type (e.g., <code>podcast</code> over generic <code>interview</code> for podcast appearances)</li>
+<li><strong>External URLs:</strong> Link to the most authoritative source (Spotify, Apple, YouTube, etc.)</li>
+<li><strong>Images:</strong> Use the show&rsquo;s official artwork when available</li>
+<li><strong>Tags:</strong> Use consistent tags across episodes for better organization</li>
+<li><strong>Summary:</strong> Keep under 160 characters for SEO</li>
+<li><strong>Hosts:</strong> Include all hosts, even if there are multiple</li>
+<li><strong>Guests:</strong> Only list OTHER guests (you&rsquo;re implied as a guest)</li>
+</ol>
+<hr>
+<h2 id="appearance-type-examples">Appearance Type Examples</h2>
+<h3 id="podcast-guest-appearance">Podcast Guest Appearance</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">type</span>: <span style="color:#ae81ff">podcast</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcastName</span>: <span style="color:#e6db74">&#34;The Tech Show&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">hosts</span>: [<span style="color:#e6db74">&#34;Host Name&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">externalUrl</span>: <span style="color:#e6db74">&#34;https://spotify.com/...&#34;</span></span></span></code></pre></div><h3 id="written-interview">Written Interview</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">type</span>: <span style="color:#ae81ff">interview</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcastName</span>: <span style="color:#e6db74">&#34;Tech Magazine&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">hosts</span>: [<span style="color:#e6db74">&#34;Interviewer Name&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">externalUrl</span>: <span style="color:#e6db74">&#34;https://magazine.com/interview&#34;</span></span></span></code></pre></div><h3 id="conference-keynote">Conference Keynote</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">type</span>: <span style="color:#ae81ff">conference</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcastName</span>: <span style="color:#e6db74">&#34;TechCon 2024&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">externalUrl</span>: <span style="color:#e6db74">&#34;https://techcon.com/keynote&#34;</span></span></span></code></pre></div><h3 id="youtube-video">YouTube Video</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">type</span>: <span style="color:#ae81ff">video</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcastName</span>: <span style="color:#e6db74">&#34;YouTuber&#39;s Channel&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">hosts</span>: [<span style="color:#e6db74">&#34;YouTuber Name&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">externalUrl</span>: <span style="color:#e6db74">&#34;https://youtube.com/watch?v=...&#34;</span></span></span></code></pre></div><h3 id="speaking-engagement">Speaking Engagement</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">type</span>: <span style="color:#ae81ff">talk</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcastName</span>: <span style="color:#e6db74">&#34;Monthly Meetup&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">externalUrl</span>: <span style="color:#e6db74">&#34;https://meetup.com/event&#34;</span></span></span></code></pre></div><h3 id="panel-discussion-1">Panel Discussion</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">type</span>: <span style="color:#ae81ff">panel</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcastName</span>: <span style="color:#e6db74">&#34;Industry Summit&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">hosts</span>: [<span style="color:#e6db74">&#34;Moderator&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">guests</span>: [<span style="color:#e6db74">&#34;Panelist 1&#34;</span>, <span style="color:#e6db74">&#34;Panelist 2&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">externalUrl</span>: <span style="color:#e6db74">&#34;https://summit.com/panel&#34;</span></span></span></code></pre></div><hr>
+<h2 id="testing-your-frontmatter">Testing Your Frontmatter</h2>
+<p>After creating a featured appearance:</p>
+<ol>
+<li>
+<p>Run Hugo development server:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo server -D</span></span></code></pre></div></li>
+<li>
+<p>Check these pages:</p>
+<ul>
+<li>List page: <code>http://localhost:1313/featured/</code></li>
+<li>Single page: <code>http://localhost:1313/featured/your-appearance-name/</code></li>
+</ul>
+</li>
+<li>
+<p>Verify:</p>
+<ul>
+<li>Metadata displays correctly (type, podcast name, hosts)</li>
+<li>Images load and overlays work</li>
+<li>External link works</li>
+<li>Players embed properly (if added)</li>
+<li>Tags and topics appear</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p><strong>Last Updated:</strong> 2025-01-15
+<strong>Theme Version:</strong> Tokyo-Nord v1.0
+<strong>Hugo Version:</strong> 0.122+</p>
+</div></div></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.151.2">Hugo</a> | Theme - <a href="https://github.com/gallo-s-chingon/Tokyo-Nord" target="_blank" rel="noopener noreffer" title="Tokyo-Nord 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> Tokyo-Nord</a>
+                </div>
+                <div class="footer-line">
+                    Created by <a href="https://github.com/gallo-s-chingon" target="_blank" rel="noopener noreferrer">Gallo Chingon</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">My cool site</a></span>&nbsp;|&nbsp;<span class="license"><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="/lib/autocomplete/autocomplete.min.js"></script><script src="/lib/lunr/lunr.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script>window.config={"comment":{},"highContrast":true,"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/js/theme.min.js"></script></body>
+</html>

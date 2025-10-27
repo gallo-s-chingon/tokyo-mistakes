@@ -10,7 +10,7 @@
     <description>Your podcast description</description>
     <language>en-us</language>
     <copyright>Copyright 2025 My cool site</copyright>
-    <lastBuildDate>Sun, 26 Oct 2025 21:27:43 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 27 Oct 2025 03:20:47 -0700</lastBuildDate>
     <atom:link href="http://localhost:1313/episodes/index.xml" rel="self" type="application/rss+xml" /><itunes:author>My cool site</itunes:author>
     <itunes:summary>Your podcast description</itunes:summary>
     <itunes:type>episodic</itunes:type>
@@ -23,82 +23,20 @@
     <googleplay:description>Your podcast description</googleplay:description>
     <googleplay:image href="" />
     <googleplay:explicit>no</googleplay:explicit><spotify:countryOfOrigin>EN-US</spotify:countryOfOrigin><item>
-        <title>NaPodMo Homeless</title>
-        <link>http://localhost:1313/episodes/2021-11-07-napodmo-homeless/</link><pubDate>Sun, 07 Nov 2021 00:00:00 &#43;0000</pubDate><guid isPermaLink="true">http://localhost:1313/episodes/2021-11-07-napodmo-homeless/</guid><description>Today I talk about the time I was homeless, what led up to it. My thoughts beforehand and my attitude about homelessness now.</description>
-        <content:encoded>&lt;![CDATA[<p>Today I talk about the time I was homeless, what led up to it. My thoughts beforehand and my attitude about homelessness now. </p>
-<p>Don&rsquo;t worry I won&rsquo;t challenge you to make friends with homeless people, but I do hope you change your perspective to neutral if it&rsquo;s negative.</p>
-]]></content:encoded><itunes:title>NaPodMo Homeless</itunes:title>
-        <itunes:summary>Today I talk about the time I was homeless, what led up to it. My thoughts beforehand and my attitude about homelessness now.</itunes:summary><itunes:explicit>false</itunes:explicit><googleplay:description>Today I talk about the time I was homeless, what led up to it. My thoughts beforehand and my attitude about homelessness now.</googleplay:description><googleplay:explicit>no</googleplay:explicit>
-      </item><item>
-        <title>NaPodMo Parrot Gaming Productions</title>
-        <link>http://localhost:1313/episodes/2021-11-06-napodmo-parrot-gaming-productions/</link><pubDate>Sat, 06 Nov 2021 00:00:00 &#43;0000</pubDate><guid isPermaLink="true">http://localhost:1313/episodes/2021-11-06-napodmo-parrot-gaming-productions/</guid><description>Getting to know a fellow veteran gamer for NaPodMo</description>
-        <content:encoded>&lt;![CDATA[<p>Getting to know a fellow veteran gamer for NaPodMo, to learn more about Jared and my preferred game genre and other useless information about me. Check out episode 94 at &ldquo;<a href="https://anchor.fm/jared-holzhaeuser/episodes/Who-and-What-is-Parrot-Gaming-Productions-eb3p49" target="_blank" rel="noopener noreffer ">Parrot Gaming Productions</a>&rdquo;</p>
-]]></content:encoded><itunes:title>NaPodMo Parrot Gaming Productions</itunes:title>
-        <itunes:summary>Getting to know a fellow veteran gamer for NaPodMo</itunes:summary><itunes:explicit>false</itunes:explicit><googleplay:description>Getting to know a fellow veteran gamer for NaPodMo</googleplay:description><googleplay:explicit>no</googleplay:explicit>
-      </item><item>
-        <title>Talking White</title>
-        <link>http://localhost:1313/episodes/2021-11-05-talking-white/</link><pubDate>Fri, 05 Nov 2021 00:00:00 &#43;0000</pubDate><guid isPermaLink="true">http://localhost:1313/episodes/2021-11-05-talking-white/</guid><description>Todays conversation is short, but something that has been an annoying fact of life for myself and others.</description>
-        <content:encoded>&lt;![CDATA[<p>Todays conversation is short, but something that has been an annoying fact of life for myself and others. Listen in as I talk with Fancy Baby about <em>Talking White</em> and a few related pet peeves and how we had to act growing up</p>
-]]></content:encoded><itunes:title>Talking White</itunes:title>
-        <itunes:summary>Todays conversation is short, but something that has been an annoying fact of life for myself and others.</itunes:summary><itunes:explicit>false</itunes:explicit><googleplay:description>Todays conversation is short, but something that has been an annoying fact of life for myself and others.</googleplay:description><googleplay:explicit>no</googleplay:explicit>
-      </item><item>
-        <title>NaPodMo - Post Modern Art Podcast</title>
-        <link>http://localhost:1313/episodes/2021-11-04-napodmo-post-modern-art-podcast/</link><pubDate>Thu, 04 Nov 2021 00:00:00 &#43;0000</pubDate><guid isPermaLink="true">http://localhost:1313/episodes/2021-11-04-napodmo-post-modern-art-podcast/</guid><description>A conversation with Nathan from Post Modern Art Podcast</description>
-        <content:encoded>&lt;![CDATA[<p>Todays National Podcast Month episode is a conversation with Nathan from Post Modern Art Podcast. We start with his journey into podcasting and the chat evolves, or devolves from there.</p>
-]]></content:encoded><itunes:title>NaPodMo - Post Modern Art Podcast</itunes:title>
-        <itunes:summary>A conversation with Nathan from Post Modern Art Podcast</itunes:summary><itunes:explicit>false</itunes:explicit><googleplay:description>A conversation with Nathan from Post Modern Art Podcast</googleplay:description><googleplay:explicit>no</googleplay:explicit>
-      </item><item>
-        <title>For Lu</title>
-        <link>http://localhost:1313/episodes/2021-11-03-for-lu/</link><pubDate>Wed, 03 Nov 2021 00:00:00 &#43;0000</pubDate><guid isPermaLink="true">http://localhost:1313/episodes/2021-11-03-for-lu/</guid><description>this episode is dedicated to my friend Leuvis Manuel Olivero</description>
-        <content:encoded>&lt;![CDATA[<p>this episode is dedicated to my friend Leuvis Manuel Olivero</p>
-]]></content:encoded><itunes:title>For Lu</itunes:title>
-        <itunes:summary>this episode is dedicated to my friend Leuvis Manuel Olivero</itunes:summary><itunes:explicit>false</itunes:explicit><googleplay:description>this episode is dedicated to my friend Leuvis Manuel Olivero</googleplay:description><googleplay:explicit>no</googleplay:explicit>
-      </item><item>
-        <title>NaPodMo What Cheating</title>
-        <link>http://localhost:1313/episodes/2021-11-02-napodmo-what-cheating/</link><pubDate>Tue, 02 Nov 2021 00:00:00 &#43;0000</pubDate><guid isPermaLink="true">http://localhost:1313/episodes/2021-11-02-napodmo-what-cheating/</guid><description>This is sort of a compilation episode where I have the responses of a few of my guests answer what they think cheating is</description>
-        <content:encoded>&lt;![CDATA[<p>This is sort of a compilation episode where I have the responses of a few of my guests answer what they think cheating is.</p>
-<p>If you agree or disagree, feel free to let me know your thoughts by reaching out at <a href="https://sucias.xyz/toca" target="_blank" rel="noopener noreffer ">sucias.xyz/contact</a></p>
-]]></content:encoded><itunes:title>NaPodMo What Cheating</itunes:title>
-        <itunes:summary>This is sort of a compilation episode where I have the responses of a few of my guests answer what they think cheating is</itunes:summary><itunes:explicit>false</itunes:explicit><googleplay:description>This is sort of a compilation episode where I have the responses of a few of my guests answer what they think cheating is</googleplay:description><googleplay:explicit>no</googleplay:explicit>
-      </item><item>
-        <title>NaPodMo Challenge Day 1</title>
-        <link>http://localhost:1313/episodes/2021-11-01-napodmo-challenge-day-1/</link><pubDate>Mon, 01 Nov 2021 00:00:00 &#43;0000</pubDate><guid isPermaLink="true">http://localhost:1313/episodes/2021-11-01-napodmo-challenge-day-1/</guid><description>This episode I let y&amp;rsquo;all know what I&amp;rsquo;m up to this month, and what my podcasting journey has been like</description>
-        <content:encoded>&lt;![CDATA[<p>This episode I let y&rsquo;all know what I&rsquo;m up to this month, and what my podcasting journey has been like.</p>
-<p>Feel free to send me a text and let me know what you think, or if you have any ideas comment suggestions and yes even complaints, I&rsquo;d like to hear them. (281) 766-7970</p>
-]]></content:encoded><itunes:title>NaPodMo Challenge Day 1</itunes:title>
-        <itunes:summary>This episode I let y&rsquo;all know what I&rsquo;m up to this month, and what my podcasting journey has been like</itunes:summary><itunes:explicit>false</itunes:explicit><googleplay:description>This episode I let y&rsquo;all know what I&rsquo;m up to this month, and what my podcasting journey has been like</googleplay:description><googleplay:explicit>no</googleplay:explicit>
-      </item><item>
-        <title>Sugar Lips</title>
-        <link>http://localhost:1313/episodes/2021-10-25-sugar-lips/</link><pubDate>Mon, 25 Oct 2021 00:00:00 &#43;0000</pubDate><guid isPermaLink="true">http://localhost:1313/episodes/2021-10-25-sugar-lips/</guid><description>Sugar Lips, a one time plaything, and I talk about her situationships</description>
-        <content:encoded>&lt;![CDATA[<p>Today I chat with Sugar Lips a one time plaything and talk about her situationships. Once again she shares what women look for most in a male that they&rsquo;re interested in.</p>
-]]></content:encoded><itunes:title>Sugar Lips</itunes:title>
-        <itunes:summary>Sugar Lips, a one time plaything, and I talk about her situationships</itunes:summary><itunes:explicit>false</itunes:explicit><googleplay:description>Sugar Lips, a one time plaything, and I talk about her situationships</googleplay:description><googleplay:explicit>no</googleplay:explicit>
-      </item><item>
-        <title>Hypnotherapy again!?</title>
-        <link>http://localhost:1313/episodes/2021-10-18-hypnotherapy-again/</link><pubDate>Mon, 18 Oct 2021 19:45:02 &#43;0000</pubDate><guid isPermaLink="true">http://localhost:1313/episodes/2021-10-18-hypnotherapy-again/</guid><description>&lt;p&gt;What can hypnotherapy do for you? find out what it&amp;rsquo;s done for me and learn the possibilites!&lt;/p&gt;
-&lt;p&gt;This episode I talk about myself again, specifically some issues I&amp;rsquo;ve been dealing and struggling with. Some of these things are recent, in the past few years, others I&amp;rsquo;d done obliviously for decades. Now how does it relate to hypnotherapy? or rather my need for it, follow along today and find out.&lt;/p&gt;
-&lt;p&gt;To find out more about hypnotherapy check out interviews that J Robert Parker has done, as he explains and demystifies some common misconceptions about hypnosis and hypnotherapy. &lt;/p&gt;</description>
-        <content:encoded>&lt;![CDATA[<p>What can hypnotherapy do for you? find out what it&rsquo;s done for me and learn the possibilites!</p>
-<p>This episode I talk about myself again, specifically some issues I&rsquo;ve been dealing and struggling with. Some of these things are recent, in the past few years, others I&rsquo;d done obliviously for decades. Now how does it relate to hypnotherapy? or rather my need for it, follow along today and find out.</p>
-<p>To find out more about hypnotherapy check out interviews that J Robert Parker has done, as he explains and demystifies some common misconceptions about hypnosis and hypnotherapy. </p>
-]]></content:encoded><itunes:title>Hypnotherapy again!?</itunes:title>
-        <itunes:summary>What can hypnotherapy do for you? find out what it&rsquo;s done for me and learn the possibilites!
-This episode I talk about myself again, specifically some issues I&rsquo;ve been dealing and struggling with. Some of these things are recent, in the past few years, others I&rsquo;d done obliviously for decades. Now how does it relate to hypnotherapy? or rather my need for it, follow along today and find out.
-To find out more about hypnotherapy check out interviews that J Robert Parker has done, as he explains and demystifies some common misconceptions about hypnosis and hypnotherapy. </itunes:summary><itunes:explicit>false</itunes:explicit><googleplay:description>What can hypnotherapy do for you? find out what it&rsquo;s done for me and learn the possibilites!
-This episode I talk about myself again, specifically some issues I&rsquo;ve been dealing and struggling with. Some of these things are recent, in the past few years, others I&rsquo;d done obliviously for decades. Now how does it relate to hypnotherapy? or rather my need for it, follow along today and find out.
-To find out more about hypnotherapy check out interviews that J Robert Parker has done, as he explains and demystifies some common misconceptions about hypnosis and hypnotherapy. </googleplay:description><googleplay:explicit>no</googleplay:explicit>
-      </item><item>
-        <title>Orgasm Statistics</title>
-        <link>http://localhost:1313/episodes/2021-10-11-orgasm-statistics/</link><pubDate>Mon, 11 Oct 2021 00:00:00 &#43;0000</pubDate><guid isPermaLink="true">http://localhost:1313/episodes/2021-10-11-orgasm-statistics/</guid><description>This episode I have a conversation with Bonita re- &lt;a href=&#34;https://pleasurebetter.com/orgasm-statistics/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;Orgasm Statistics&lt;/a&gt;</description>
-        <content:encoded>&lt;![CDATA[<p>Ever wonder how you might stack up in terms of orgasms?</p>
-<p>This episode I have a conversation with Bonita re<a href="https://pleasurebetter.com/orgasm-statistics/" target="_blank" rel="noopener noreffer ">Orgasm Statistics</a></p>
-<p>If you&rsquo;re new to the show you might want to brush up and check out an early episode <a href="https://anchor.fm/sucias/episodes/Theory-of-100--Or-how-to-tell-if-a-male-might-be-any-good-in-the-sack-and-other-useless-things-epp04s" target="_blank" rel="noopener noreffer ">Theory of 100</a> where I lay the groundwork and essentially give an unscientific version of today&rsquo;s episode. Although the website surprised me with a few facts towards the end.</p>
-]]></content:encoded><itunes:title>Orgasm Statistics</itunes:title>
-        <itunes:summary>This episode I have a conversation with Bonita re- Orgasm Statistics</itunes:summary><itunes:explicit>false</itunes:explicit><googleplay:description>This episode I have a conversation with Bonita re- Orgasm Statistics</googleplay:description><googleplay:explicit>no</googleplay:explicit>
-      </item><item>
-        <title>Dr. Andrew Huberman: Optimize Your Health</title>
-        <link>http://localhost:1313/episodes/huberman-labs-example/</link><pubDate>Sat, 10 Feb 2024 00:00:00 &#43;0000</pubDate><guid isPermaLink="true">http://localhost:1313/episodes/huberman-labs-example/</guid><description>Dr. Andrew Huberman discusses science-based tools and protocols for optimizing your health, performance, and wellbeing.</description>
-        <content:encoded>&lt;![CDATA[<h2 id="about-this-episode">About This Episode</h2>
+        <title>Dr. Andrew Huberman: Example episode</title>
+        <link>http://localhost:1313/episodes/huberman-labs-example/</link><pubDate>Sat, 10 Feb 2024 10:00:00 -0700</pubDate><guid isPermaLink="true">http://localhost:1313/episodes/huberman-labs-example/</guid><description>Dr. Andrew Huberman discusses science-based tools and protocols for optimizing your health, performance, and wellbeing.</description>
+        <content:encoded>&lt;![CDATA[<h2 id="documentation-note">Documentation Note</h2>
+<p><strong>This is a demonstration example</strong> showing how to embed YouTube content in the Tokyo-Nord theme. This example uses:</p>
+<ul>
+<li>YouTube embed player (configured via <code>embedPlayers</code> with <code>type: &quot;youtube&quot;</code>)</li>
+<li>Custom podcast name override (<code>podcast: &quot;Huberman Lab&quot;</code>)</li>
+<li>Episode metadata and guest information</li>
+<li>Science-focused tags and organization</li>
+</ul>
+<p><strong>Official Huberman Lab Channel:</strong> <a href="https://www.youtube.com/@hubermanlab" target="_blank" rel="noopener noreffer ">https://www.youtube.com/@hubermanlab</a></p>
+<p>Replace this content with your own podcast episodes when you&rsquo;re ready to publish.</p>
+<hr>
+<h2 id="about-this-episode">About This Episode</h2>
 <p>The Huberman Lab podcast is hosted by Dr. Andrew Huberman, a neuroscientist and tenured professor in the Department of Neurobiology at Stanford School of Medicine. The podcast discusses science and science-based tools for everyday life.</p>
 <h2 id="show-notes">Show Notes</h2>
 <p>In this episode, Dr. Huberman covers:</p>
@@ -137,12 +75,23 @@ To find out more about hypnotherapy check out interviews that J Robert Parker ha
 <li>Neuroscience research on sleep</li>
 <li>Performance optimization literature</li>
 </ul>
-]]></content:encoded><itunes:title>Dr. Andrew Huberman: Optimize Your Health</itunes:title>
+]]></content:encoded><itunes:title>Dr. Andrew Huberman: Example episode</itunes:title>
         <itunes:summary>Dr. Andrew Huberman discusses science-based tools and protocols for optimizing your health, performance, and wellbeing.</itunes:summary><itunes:episode>2</itunes:episode><itunes:season>1</itunes:season><itunes:episodeType>full</itunes:episodeType><itunes:duration>2:15:00</itunes:duration><itunes:image href="/images/huberman-cover.jpg" /><itunes:explicit>false</itunes:explicit><googleplay:description>Dr. Andrew Huberman discusses science-based tools and protocols for optimizing your health, performance, and wellbeing.</googleplay:description><googleplay:image href="/images/huberman-cover.jpg" /><googleplay:explicit>no</googleplay:explicit>
       </item><item>
         <title>SmartLess Example Episode</title>
-        <link>http://localhost:1313/episodes/smartless-example/</link><pubDate>Mon, 15 Jan 2024 00:00:00 &#43;0000</pubDate><guid isPermaLink="true">http://localhost:1313/episodes/smartless-example/</guid><description>SmartLess is a podcast where three friends—Jason Bateman, Sean Hayes, and Will Arnett—bring a mystery guest for a casual conversation filled with laughs.</description>
-        <content:encoded>&lt;![CDATA[<h2 id="about-this-episode">About This Episode</h2>
+        <link>http://localhost:1313/episodes/smartless-example/</link><pubDate>Mon, 15 Jan 2024 10:00:00 -0700</pubDate><guid isPermaLink="true">http://localhost:1313/episodes/smartless-example/</guid><description>SmartLess is a podcast where three friends—Jason Bateman, Sean Hayes, and Will Arnett—bring a mystery guest for a casual conversation filled with laughs.</description>
+        <content:encoded>&lt;![CDATA[<h2 id="documentation-note">Documentation Note</h2>
+<p><strong>This is a demonstration example</strong> showing how to embed Spotify podcast content in the Tokyo-Nord theme. This example uses:</p>
+<ul>
+<li>Spotify embed player (configured via <code>embedPlayers</code> with <code>type: &quot;spotify&quot;</code>)</li>
+<li>Multiple hosts (comma-separated in the <code>host</code> field)</li>
+<li>Guest information array</li>
+<li>Comedy/interview-focused tags</li>
+</ul>
+<p><strong>Official SmartLess Podcast:</strong> Available on Spotify and other podcast platforms</p>
+<p>Replace this content with your own podcast episodes when you&rsquo;re ready to publish.</p>
+<hr>
+<h2 id="about-this-episode">About This Episode</h2>
 <p>SmartLess is a podcast where three friends—Jason Bateman, Sean Hayes, and Will Arnett—bring a mystery guest for a casual conversation filled with laughs and unique insights.</p>
 <h2 id="show-notes">Show Notes</h2>
 <p>In this episode, the hosts discuss:</p>
@@ -171,5 +120,1971 @@ To find out more about hypnotherapy check out interviews that J Robert Parker ha
 </ul>
 ]]></content:encoded><itunes:title>SmartLess Example Episode</itunes:title>
         <itunes:summary>SmartLess is a podcast where three friends—Jason Bateman, Sean Hayes, and Will Arnett—bring a mystery guest for a casual conversation filled with laughs.</itunes:summary><itunes:episode>1</itunes:episode><itunes:season>1</itunes:season><itunes:episodeType>full</itunes:episodeType><itunes:duration>1:15:00</itunes:duration><itunes:image href="/images/smartless-cover.jpg" /><itunes:explicit>false</itunes:explicit><itunes:guest>Example Guest</itunes:guest><googleplay:description>SmartLess is a podcast where three friends—Jason Bateman, Sean Hayes, and Will Arnett—bring a mystery guest for a casual conversation filled with laughs.</googleplay:description><googleplay:image href="/images/smartless-cover.jpg" /><googleplay:explicit>no</googleplay:explicit>
+      </item><item>
+        <title>Complete Frontmatter Options Reference</title>
+        <link>http://localhost:1313/episodes/frontmatter-options-demo/</link><pubDate>Mon, 27 Oct 2025 00:00:00 &#43;0000</pubDate><guid isPermaLink="true">http://localhost:1313/episodes/frontmatter-options-demo/</guid><description>Complete reference guide to all available frontmatter options for podcast episodes, with examples, descriptions, and best practices.</description>
+        <content:encoded>&lt;![CDATA[<h2 id="about-this-documentation">About This Documentation</h2>
+<p>This episode serves as a complete reference guide for all frontmatter options available in the Tokyo-Nord theme. Each field is documented with:</p>
+<ul>
+<li><strong>Purpose</strong> - What the field does</li>
+<li><strong>Type</strong> - Data type (string, boolean, array, etc.)</li>
+<li><strong>Required</strong> - Whether it&rsquo;s mandatory</li>
+<li><strong>Default</strong> - Default value if not specified</li>
+<li><strong>Examples</strong> - Real-world usage examples</li>
+</ul>
+<h2 id="frontmatter-structure">Frontmatter Structure</h2>
+<p>Frontmatter is YAML configuration at the top of your markdown file:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Episode Title&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">created</span>: <span style="color:#e6db74">2025-10-27</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ... more fields ...</span>
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><p><strong>Rules:</strong></p>
+<ul>
+<li>Must start and end with <code>---</code></li>
+<li>Uses YAML syntax</li>
+<li>Indent with 2 spaces (not tabs)</li>
+<li>Strings with special characters need quotes</li>
+<li>Arrays use bracket <code>[]</code> or dash <code>-</code> syntax</li>
+</ul>
+<h2 id="essential-fields">Essential Fields</h2>
+<h3 id="title">title</h3>
+<ul>
+<li><strong>Type:</strong> String</li>
+<li><strong>Required:</strong> Yes</li>
+<li><strong>Purpose:</strong> Episode title displayed everywhere</li>
+<li><strong>Best practice:</strong> Keep under 60 characters for SEO</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;How to Build a Successful Podcast&#34;</span></span></span></code></pre></div><h3 id="created">created</h3>
+<ul>
+<li><strong>Type:</strong> Date</li>
+<li><strong>Required:</strong> Yes</li>
+<li><strong>Purpose:</strong> Publication date for sorting and display</li>
+<li><strong>Formats:</strong>
+<ul>
+<li>Simple: <code>2025-10-27</code></li>
+<li>With time: <code>2025-10-27T14:30:00-07:00</code></li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">created</span>: <span style="color:#e6db74">2025-10-27</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># OR with timestamp</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">created</span>: <span style="color:#e6db74">2025-10-27T14:30:00</span><span style="color:#ae81ff">-07</span>:<span style="color:#ae81ff">00</span></span></span></code></pre></div><h3 id="episodenumber">episodeNumber</h3>
+<ul>
+<li><strong>Type:</strong> Integer</li>
+<li><strong>Required:</strong> Yes</li>
+<li><strong>Purpose:</strong> Episode identifier and ordering</li>
+<li><strong>Note:</strong> Can use decimals for bonus content (42.5)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">105</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># OR for bonus content</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">42.5</span></span></span></code></pre></div><h3 id="draft">draft</h3>
+<ul>
+<li><strong>Type:</strong> Boolean</li>
+<li><strong>Required:</strong> No</li>
+<li><strong>Default:</strong> <code>false</code></li>
+<li><strong>Purpose:</strong> Hide unpublished content</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">draft</span>: <span style="color:#66d9ef">false</span>  <span style="color:#75715e"># Published</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">draft</span>: <span style="color:#66d9ef">true</span>   <span style="color:#75715e"># Hidden</span></span></span></code></pre></div><h2 id="related-documentation">Related Documentation</h2>
+<p>For additional frontmatter options including podcast information, episode organization, media configuration, and more advanced features, see:</p>
+<ul>
+<li><code>/episodes/frontmatter-podcast-info/</code> - Podcast info, episode organization, and media options</li>
+<li><code>/episodes/metadata-customization-demo/</code> - Metadata deep dive</li>
+<li><code>/episodes/overlay-features-demo/</code> - Overlay features</li>
+<li><code>/episodes/player-embeds-demo/</code> - Player embedding</li>
+<li><code>/episodes/episode-types-demo/</code> - Episode types</li>
+<li><code>/docs/content-guide/</code> - Content creation guide</li>
+</ul>
+<h2 id="image-attribution">Image Attribution</h2>
+<p>Featured image: Photo by Donald Tong from Pexels (CC0 License)</p>
+<ul>
+<li>Source: <a href="https://www.pexels.com/photo/man-in-white-dress-shirt-sitting-on-black-rolling-chair-while-facing-black-computer-set-and-smiling-325229/" target="_blank" rel="noopener noreffer ">https://www.pexels.com/photo/man-in-white-dress-shirt-sitting-on-black-rolling-chair-while-facing-black-computer-set-and-smiling-325229/</a></li>
+<li>License: Creative Commons Zero (CC0)</li>
+<li>Free to use with no attribution required</li>
+</ul>
+<hr>
+<p><strong>Documentation Version:</strong> 1.0
+<strong>Last Updated:</strong> 2025-10-27
+<strong>Theme:</strong> Tokyo-Nord
+<strong>Hugo Version:</strong> 0.122+</p>
+]]></content:encoded><itunes:title>Complete Frontmatter Options Reference</itunes:title>
+        <itunes:summary>Complete reference guide to all available frontmatter options for podcast episodes, with examples, descriptions, and best practices.</itunes:summary><itunes:episode>105</itunes:episode><itunes:season>1</itunes:season><itunes:episodeType>full</itunes:episodeType><itunes:duration>42:00</itunes:duration><itunes:image href="/images/samples/sample-video-production.jpg" /><itunes:explicit>false</itunes:explicit><googleplay:description>Complete reference guide to all available frontmatter options for podcast episodes, with examples, descriptions, and best practices.</googleplay:description><googleplay:image href="/images/samples/sample-video-production.jpg" /><googleplay:explicit>no</googleplay:explicit>
+      </item><item>
+        <title>Complete Guide to Episode Overlay Features</title>
+        <link>http://localhost:1313/episodes/overlay-features-demo/</link><pubDate>Mon, 27 Oct 2025 00:00:00 &#43;0000</pubDate><guid isPermaLink="true">http://localhost:1313/episodes/overlay-features-demo/</guid><description>Learn how to use overlay features including metadata overlays, color filters, and transparency controls in your podcast episodes.</description>
+        <content:encoded>&lt;![CDATA[<h2 id="about-this-episode">About This Episode</h2>
+<p>This documentation episode demonstrates all the overlay features available in the Tokyo-Nord Hugo theme. Use this as a reference when creating your own podcast episodes with custom styling.</p>
+<h2 id="overlay-features-overview">Overlay Features Overview</h2>
+<p>The Tokyo-Nord theme offers three independent overlay systems that can be used individually or combined:</p>
+<h3 id="1-metadata-overlay-overlaymetadata">1. Metadata Overlay (<code>overlayMetadata</code>)</h3>
+<p>This feature displays episode metadata (title, episode number, hosts) directly ON the featured image instead of above it.</p>
+<p><strong>Configuration:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">overlayMetadata</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlayPosition</span>: <span style="color:#e6db74">&#34;lower-left&#34;</span></span></span></code></pre></div><p><strong>Available Positions:</strong></p>
+<ul>
+<li><code>top-left</code>, <code>top-center</code>, <code>top-right</code></li>
+<li><code>mid-left</code>, <code>mid-center</code>, <code>mid-right</code></li>
+<li><code>lower-left</code>, <code>lower-center</code>, <code>lower-right</code></li>
+</ul>
+<p><strong>Scope:</strong> Single episode pages only</p>
+<h3 id="2-color-overlay-filter-overlay_filter">2. Color Overlay Filter (<code>overlay_filter</code>)</h3>
+<p>Adds a colored layer on top of the featured image to improve text readability or create visual effects.</p>
+<p><strong>This page uses:</strong> <code>overlay_filter: 0.4</code> (40% black overlay)</p>
+<p><strong>Options:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Black overlay (numeric value)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlay_filter</span>: <span style="color:#ae81ff">0.5</span>  <span style="color:#75715e"># 50% black</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Colored overlay (RGBA)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlay_filter</span>: <span style="color:#e6db74">&#34;rgba(255, 0, 0, 0.3)&#34;</span>  <span style="color:#75715e"># 30% red</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Gradient overlay</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlay_filter</span>: <span style="color:#e6db74">&#34;linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0))&#34;</span></span></span></code></pre></div><p><strong>Scope:</strong> Both single pages AND list pages (episode cards)</p>
+<h3 id="3-image-transparency-transparency">3. Image Transparency (<code>transparency</code>)</h3>
+<p>Makes the image itself semi-transparent, allowing the background to show through.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">transparency</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">transparencyAmount: 0.7  # Range</span>: <span style="color:#ae81ff">0.0-1.0</span></span></span></code></pre></div><p><strong>Scope:</strong> Single pages only</p>
+<h2 id="combining-overlay-effects">Combining Overlay Effects</h2>
+<p>You can combine these features for advanced styling:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Example: Subtle transparent image with gradient overlay</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlayMetadata</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlayPosition</span>: <span style="color:#e6db74">&#34;lower-center&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">transparency</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">transparencyAmount</span>: <span style="color:#ae81ff">0.85</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlay_filter</span>: <span style="color:#e6db74">&#34;linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.2))&#34;</span></span></span></code></pre></div><h2 id="implementation-examples">Implementation Examples</h2>
+<h3 id="example-1-minimal-overlay">Example 1: Minimal Overlay</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">overlayMetadata</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlayPosition</span>: <span style="color:#e6db74">&#34;lower-left&#34;</span></span></span></code></pre></div><p>Clean and simple - metadata on image with default styling.</p>
+<h3 id="example-2-high-contrast">Example 2: High Contrast</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">overlayMetadata</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlayPosition</span>: <span style="color:#e6db74">&#34;mid-center&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlay_filter</span>: <span style="color:#ae81ff">0.6</span></span></span></code></pre></div><p>Strong black overlay ensures text is always readable.</p>
+<h3 id="example-3-colored-brand">Example 3: Colored Brand</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">overlayMetadata</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlayPosition</span>: <span style="color:#e6db74">&#34;top-right&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlay_filter</span>: <span style="color:#e6db74">&#34;rgba(100, 0, 200, 0.4)&#34;</span></span></span></code></pre></div><p>Purple brand overlay for themed episodes.</p>
+<h3 id="example-4-gradient-effect">Example 4: Gradient Effect</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">overlayMetadata</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlayPosition</span>: <span style="color:#e6db74">&#34;lower-center&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlay_filter</span>: <span style="color:#e6db74">&#34;linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0))&#34;</span></span></span></code></pre></div><p>Gradient from dark to transparent - perfect for bottom-aligned text.</p>
+<h3 id="example-5-soft--subtle">Example 5: Soft &amp; Subtle</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">overlayMetadata</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlayPosition</span>: <span style="color:#e6db74">&#34;lower-left&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">transparency</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">transparencyAmount</span>: <span style="color:#ae81ff">0.8</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlay_filter</span>: <span style="color:#ae81ff">0.2</span></span></span></code></pre></div><p>Combination of transparency and subtle overlay for artistic effect.</p>
+<h2 id="best-practices">Best Practices</h2>
+<ol>
+<li><strong>Text Readability:</strong> Always ensure sufficient contrast between text and background</li>
+<li><strong>Consistency:</strong> Use similar overlay styles across your podcast series</li>
+<li><strong>Image Choice:</strong> Select images that work well with overlays (not too busy)</li>
+<li><strong>Testing:</strong> Preview on both light and dark themes</li>
+<li><strong>Accessibility:</strong> Maintain WCAG contrast ratios for readability</li>
+</ol>
+<h2 id="configuration-scopes">Configuration Scopes</h2>
+<p>Understanding where each setting applies:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Feature</th>
+          <th>Single Pages</th>
+          <th>List Pages</th>
+          <th>Config Location</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>overlayMetadata</code></td>
+          <td>Yes</td>
+          <td>No</td>
+          <td>Frontmatter + hugo.toml</td>
+      </tr>
+      <tr>
+          <td><code>overlayPosition</code></td>
+          <td>Yes</td>
+          <td>No</td>
+          <td>Frontmatter + hugo.toml</td>
+      </tr>
+      <tr>
+          <td><code>overlay_filter</code></td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Frontmatter only</td>
+      </tr>
+      <tr>
+          <td><code>transparency</code></td>
+          <td>Yes</td>
+          <td>No</td>
+          <td>Frontmatter + hugo.toml</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="global-defaults">Global Defaults</h2>
+<p>Set site-wide defaults in <code>hugo.toml</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">podcast</span>.<span style="color:#a6e22e">overlay</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">enable</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">position</span> = <span style="color:#e6db74">&#34;lower-left&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">opacity</span> = <span style="color:#ae81ff">0.85</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">images</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">transparency</span> = <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">opacity</span> = <span style="color:#ae81ff">1.0</span></span></span></code></pre></div><p>Frontmatter values override global settings on a per-episode basis.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong>Overlay not showing?</strong></p>
+<ul>
+<li>Check that <code>overlayMetadata: true</code> is set</li>
+<li>Verify <code>featuredImage</code> path is correct</li>
+<li>Ensure you&rsquo;re viewing single page (not list page)</li>
+</ul>
+<p><strong>Text hard to read?</strong></p>
+<ul>
+<li>Increase <code>overlay_filter</code> value (try 0.5 or higher)</li>
+<li>Use gradient overlays with darker bottom</li>
+<li>Choose less busy background images</li>
+</ul>
+<p><strong>Overlay appears on list pages when not wanted?</strong></p>
+<ul>
+<li><code>overlayMetadata</code> only affects single pages</li>
+<li><code>overlay_filter</code> affects both - set to false or remove from frontmatter</li>
+</ul>
+<h2 id="related-documentation">Related Documentation</h2>
+<ul>
+<li><code>/episodes/player-embeds-demo/</code> - Player embedding guide</li>
+<li><code>/episodes/metadata-customization-demo/</code> - Metadata customization</li>
+<li><code>/docs/podcast-features/</code> - Complete podcast features guide</li>
+</ul>
+<h2 id="image-attribution">Image Attribution</h2>
+<p>Featured image: Photo by Magda Ehlers from Pexels (CC0 License)</p>
+<ul>
+<li>Source: <a href="https://www.pexels.com/photo/audio-mixer-1936481/" target="_blank" rel="noopener noreffer ">https://www.pexels.com/photo/audio-mixer-1936481/</a></li>
+<li>License: Creative Commons Zero (CC0)</li>
+<li>Free to use with no attribution required</li>
+</ul>
+<hr>
+<p><strong>Documentation Version:</strong> 1.0
+<strong>Last Updated:</strong> 2025-10-27
+<strong>Theme:</strong> Tokyo-Nord</p>
+]]></content:encoded><itunes:title>Complete Guide to Episode Overlay Features</itunes:title>
+        <itunes:summary>Learn how to use overlay features including metadata overlays, color filters, and transparency controls in your podcast episodes.</itunes:summary><itunes:episode>101</itunes:episode><itunes:season>1</itunes:season><itunes:episodeType>full</itunes:episodeType><itunes:duration>45:00</itunes:duration><itunes:image href="/images/samples/sample-podcast-microphone.jpg" /><itunes:explicit>false</itunes:explicit><googleplay:description>Learn how to use overlay features including metadata overlays, color filters, and transparency controls in your podcast episodes.</googleplay:description><googleplay:image href="/images/samples/sample-podcast-microphone.jpg" /><googleplay:explicit>no</googleplay:explicit>
+      </item><item>
+        <title>Customizing Episode Metadata: Complete Reference</title>
+        <link>http://localhost:1313/episodes/metadata-customization-demo/</link><pubDate>Mon, 27 Oct 2025 00:00:00 &#43;0000</pubDate><guid isPermaLink="true">http://localhost:1313/episodes/metadata-customization-demo/</guid><description>Learn how to customize all episode metadata fields including episode numbers, seasons, hosts, guests, duration, and more.</description>
+        <content:encoded>&lt;![CDATA[<h2 id="about-this-episode">About This Episode</h2>
+<p>This documentation episode provides a complete reference for all customizable metadata fields available in episode frontmatter. Use this guide to understand what each field does and how to configure it.</p>
+<h2 id="required-fields">Required Fields</h2>
+<p>Every episode must include these fields:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Episode Title&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">created</span>: <span style="color:#e6db74">2025-10-27</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">1</span></span></span></code></pre></div><h3 id="field-details">Field Details</h3>
+<p><strong><code>title</code></strong> - Episode title (string)</p>
+<ul>
+<li>Displayed in episode cards and single pages</li>
+<li>Used in SEO and social sharing</li>
+<li>Keep under 60 characters for best SEO</li>
+</ul>
+<p><strong><code>created</code></strong> - Episode publication date</p>
+<ul>
+<li>Format: <code>YYYY-MM-DD</code> or RFC3339 timestamp</li>
+<li>Used for sorting and display</li>
+<li>Can include time: <code>2025-10-27T14:30:00-07:00</code></li>
+</ul>
+<p><strong><code>episodeNumber</code></strong> - Episode number (integer)</p>
+<ul>
+<li>Displayed as &ldquo;Episode #103&rdquo;</li>
+<li>Used for ordering and identification</li>
+<li>Can be any positive integer</li>
+</ul>
+<h2 id="episode-details">Episode Details</h2>
+<h3 id="season-information">Season Information</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">season</span>: <span style="color:#ae81ff">2</span></span></span></code></pre></div><p>Optional field to organize episodes into seasons.</p>
+<h3 id="episode-type">Episode Type</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">episodeType</span>: <span style="color:#e6db74">&#34;full&#34;</span></span></span></code></pre></div><p><strong>Available types:</strong></p>
+<ul>
+<li><code>full</code> - Full-length episode (default)</li>
+<li><code>bonus</code> - Bonus content</li>
+<li><code>trailer</code> - Show trailer</li>
+<li><code>interview</code> - Interview episode</li>
+<li><code>solo</code> - Solo episode</li>
+</ul>
+<h3 id="duration">Duration</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">duration</span>: <span style="color:#e6db74">&#34;1:15:45&#34;</span></span></span></code></pre></div><p>Format: <code>H:MM:SS</code> or <code>MM:SS</code></p>
+<p>Examples:</p>
+<ul>
+<li><code>&quot;45:30&quot;</code> - 45 minutes, 30 seconds</li>
+<li><code>&quot;1:15:45&quot;</code> - 1 hour, 15 minutes, 45 seconds</li>
+<li><code>&quot;5:00&quot;</code> - 5 minutes</li>
+</ul>
+<h2 id="podcast-information">Podcast Information</h2>
+<p>Override site-wide podcast settings per episode:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">podcast</span>: <span style="color:#e6db74">&#34;Special Series Name&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;Guest Host Name&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">guests</span>: [<span style="color:#e6db74">&#34;Guest 1&#34;</span>, <span style="color:#e6db74">&#34;Guest 2&#34;</span>, <span style="color:#e6db74">&#34;Guest 3&#34;</span>]</span></span></code></pre></div><h3 id="multiple-hosts">Multiple Hosts</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">host</span>: [<span style="color:#e6db74">&#34;Primary Host&#34;</span>, <span style="color:#e6db74">&#34;Co-Host&#34;</span>]</span></span></code></pre></div><p>Or as a comma-separated string:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;Host One, Host Two&#34;</span></span></span></code></pre></div><h3 id="guest-configuration">Guest Configuration</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">guests</span>: []  <span style="color:#75715e"># No guests</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">guests</span>: [<span style="color:#e6db74">&#34;Single Guest&#34;</span>]  <span style="color:#75715e"># One guest</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">guests</span>: [<span style="color:#e6db74">&#34;Guest 1&#34;</span>, <span style="color:#e6db74">&#34;Guest 2&#34;</span>]  <span style="color:#75715e"># Multiple guests</span></span></span></code></pre></div><h2 id="content-metadata">Content Metadata</h2>
+<h3 id="tags">Tags</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;technology&#34;</span>, <span style="color:#e6db74">&#34;web development&#34;</span>, <span style="color:#e6db74">&#34;hugo&#34;</span>, <span style="color:#e6db74">&#34;documentation&#34;</span>]</span></span></code></pre></div><p><strong>Best practices:</strong></p>
+<ul>
+<li>Use 3-7 tags per episode</li>
+<li>Keep tags consistent across episodes</li>
+<li>Use lowercase for consistency</li>
+<li>Enable <code>topicsOn: true</code> to display tags as &ldquo;Topics Discussed&rdquo;</li>
+</ul>
+<h3 id="categories">Categories</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">categories</span>: [<span style="color:#e6db74">&#34;Technology&#34;</span>, <span style="color:#e6db74">&#34;Documentation&#34;</span>]</span></span></code></pre></div><p>Broader grouping than tags. Use 1-2 categories per episode.</p>
+<h3 id="summary">Summary</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">summary</span>: <span style="color:#e6db74">&#34;Brief one-sentence description of the episode for cards and previews.&#34;</span></span></span></code></pre></div><p><strong>Guidelines:</strong></p>
+<ul>
+<li>Keep under 160 characters</li>
+<li>One to two sentences maximum</li>
+<li>Used in episode cards and RSS feeds</li>
+<li>Clear and compelling</li>
+</ul>
+<h3 id="description">Description</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;Longer, more detailed description for SEO and social sharing. This can be several sentences explaining what listeners will learn and why they should tune in.&#34;</span></span></span></code></pre></div><p><strong>Guidelines:</strong></p>
+<ul>
+<li>2-3 sentences</li>
+<li>Include relevant keywords naturally</li>
+<li>Used for SEO meta description</li>
+<li>Can be longer than summary</li>
+</ul>
+<h3 id="keywords">Keywords</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">keywords</span>: [<span style="color:#e6db74">&#34;podcast&#34;</span>, <span style="color:#e6db74">&#34;hugo&#34;</span>, <span style="color:#e6db74">&#34;web development&#34;</span>, <span style="color:#e6db74">&#34;static site&#34;</span>]</span></span></code></pre></div><p>Optional SEO keywords array.</p>
+<h2 id="media-configuration">Media Configuration</h2>
+<h3 id="featured-image">Featured Image</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">featuredImage</span>: <span style="color:#e6db74">&#34;/images/episode-cover.jpg&#34;</span></span></span></code></pre></div><p><strong>Paths:</strong></p>
+<ul>
+<li>Absolute: <code>/images/file.jpg</code> (from static folder)</li>
+<li>Relative: <code>images/file.jpg</code> (in episode bundle)</li>
+<li>URL: <code>https://example.com/image.jpg</code></li>
+</ul>
+<p><strong>Recommendations:</strong></p>
+<ul>
+<li>Use 1200x1200px or larger</li>
+<li>Keep file size under 500KB</li>
+<li>Use JPG for photos, PNG for graphics</li>
+<li>Maintain consistent aspect ratio</li>
+</ul>
+<h3 id="image-attribution">Image Attribution</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">imageCredit</span>: <span style="color:#e6db74">&#34;Photo by Photographer Name from Pexels (CC0)&#34;</span></span></span></code></pre></div><p>Give credit to image creators, even when using CC0/free images.</p>
+<h2 id="display-options">Display Options</h2>
+<h3 id="overlay-metadata">Overlay Metadata</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">overlayMetadata</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlayPosition</span>: <span style="color:#e6db74">&#34;lower-left&#34;</span></span></span></code></pre></div><p>Display metadata on the image instead of above it.</p>
+<p><strong>Positions:</strong> <code>top-left</code>, <code>top-center</code>, <code>top-right</code>, <code>mid-left</code>, <code>mid-center</code>, <code>mid-right</code>, <code>lower-left</code>, <code>lower-center</code>, <code>lower-right</code></p>
+<h3 id="overlay-filter">Overlay Filter</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">overlay_filter</span>: <span style="color:#ae81ff">0.4</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># OR</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlay_filter</span>: <span style="color:#e6db74">&#34;rgba(255, 0, 0, 0.3)&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># OR</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlay_filter</span>: <span style="color:#e6db74">&#34;linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0))&#34;</span></span></span></code></pre></div><p>Add colored overlay to images.</p>
+<h3 id="transparency">Transparency</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">transparency</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">transparencyAmount</span>: <span style="color:#ae81ff">0.85</span></span></span></code></pre></div><p>Make the image semi-transparent. Range: 0.0 (invisible) to 1.0 (opaque).</p>
+<h2 id="page-features">Page Features</h2>
+<h3 id="table-of-contents">Table of Contents</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">toc</span>: <span style="color:#66d9ef">true</span></span></span></code></pre></div><p>Enable/disable table of contents for the episode.</p>
+<h3 id="light-gallery">Light Gallery</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">lightgallery</span>: <span style="color:#66d9ef">true</span></span></span></code></pre></div><p>Enable lightbox for images in the episode content.</p>
+<h3 id="topics-display">Topics Display</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">topicsOn</span>: <span style="color:#66d9ef">true</span></span></span></code></pre></div><p>Show &ldquo;Topics Discussed&rdquo; section with tags.</p>
+<h3 id="link-to-markdown">Link to Markdown</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">linkToMarkdown</span>: <span style="color:#66d9ef">true</span></span></span></code></pre></div><p>Show link to view raw markdown source.</p>
+<h2 id="code-block-settings">Code Block Settings</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">code</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">copy</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">maxShownLines</span>: <span style="color:#ae81ff">50</span></span></span></code></pre></div><p>Configure code block behavior:</p>
+<ul>
+<li><code>copy</code> - Enable copy button</li>
+<li><code>maxShownLines</code> - Collapse code blocks longer than this</li>
+</ul>
+<h2 id="social-features">Social Features</h2>
+<h3 id="share-buttons">Share Buttons</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">share</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">enable</span>: <span style="color:#66d9ef">true</span></span></span></code></pre></div><p>Enable social sharing buttons.</p>
+<h3 id="comments">Comments</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">comment</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">enable</span>: <span style="color:#66d9ef">true</span></span></span></code></pre></div><p>Enable comments (requires comment system configuration in hugo.toml).</p>
+<h2 id="visibility--seo">Visibility &amp; SEO</h2>
+<h3 id="draft-status">Draft Status</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">draft</span>: <span style="color:#66d9ef">false</span></span></span></code></pre></div><p><code>true</code> = Not published, <code>false</code> = Published</p>
+<h3 id="hidden-from-home-page">Hidden from Home Page</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">hiddenFromHomePage</span>: <span style="color:#66d9ef">false</span></span></span></code></pre></div><p>Exclude from home page listings.</p>
+<h3 id="hidden-from-search">Hidden from Search</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">hiddenFromSearch</span>: <span style="color:#66d9ef">false</span></span></span></code></pre></div><p>Exclude from site search results.</p>
+<h3 id="rss-full-text">RSS Full Text</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">rssFullText</span>: <span style="color:#66d9ef">false</span></span></span></code></pre></div><p>Include full content in RSS feed instead of summary.</p>
+<h3 id="seo-images">SEO Images</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">seo</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">images</span>: [<span style="color:#e6db74">&#34;/images/seo-image.jpg&#34;</span>]</span></span></code></pre></div><p>Specific images for social sharing (Open Graph, Twitter Cards).</p>
+<h2 id="advanced-hugo-fields">Advanced Hugo Fields</h2>
+<h3 id="last-modified-date">Last Modified Date</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">lastmod</span>: <span style="color:#e6db74">2025-10-28T10:00:00</span><span style="color:#ae81ff">-07</span>:<span style="color:#ae81ff">00</span></span></span></code></pre></div><p>Track when content was last updated.</p>
+<h3 id="publish-date">Publish Date</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">publishDate</span>: <span style="color:#e6db74">2025-11-01T00:00:00</span><span style="color:#ae81ff">-07</span>:<span style="color:#ae81ff">00</span></span></span></code></pre></div><p>Schedule future publication.</p>
+<h3 id="expiry-date">Expiry Date</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">expiryDate</span>: <span style="color:#e6db74">2026-12-31T23:59:59</span><span style="color:#ae81ff">-07</span>:<span style="color:#ae81ff">00</span></span></span></code></pre></div><p>Auto-hide content after this date.</p>
+<h3 id="weight">Weight</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">weight</span>: <span style="color:#ae81ff">10</span></span></span></code></pre></div><p>Custom ordering (lower numbers appear first).</p>
+<h3 id="slug">Slug</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">slug</span>: <span style="color:#e6db74">&#34;custom-url-slug&#34;</span></span></span></code></pre></div><p>Override auto-generated URL slug.</p>
+<h3 id="aliases">Aliases</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">aliases</span>: [<span style="color:#e6db74">&#34;/old-url/&#34;</span>, <span style="color:#e6db74">&#34;/another-old-url/&#34;</span>]</span></span></code></pre></div><p>URL redirects for renamed content.</p>
+<h2 id="complete-example">Complete Example</h2>
+<p>Here&rsquo;s a fully configured episode frontmatter:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Complete Episode Configuration Example&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">created</span>: <span style="color:#e6db74">2025-10-27T14:30:00</span><span style="color:#ae81ff">-07</span>:<span style="color:#ae81ff">00</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">draft</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Episode details</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">103</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">season</span>: <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeType</span>: <span style="color:#e6db74">&#34;full&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Podcast info</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcast</span>: <span style="color:#e6db74">&#34;Tokyo Dev Podcast&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;Documentation Team&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">guests</span>: [<span style="color:#e6db74">&#34;Jane Developer&#34;</span>, <span style="color:#e6db74">&#34;Alex Designer&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Media</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">featuredImage</span>: <span style="color:#e6db74">&#34;/images/samples/sample-tech-workspace.jpg&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">duration</span>: <span style="color:#e6db74">&#34;1:15:45&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Content</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;documentation&#34;</span>, <span style="color:#e6db74">&#34;metadata&#34;</span>, <span style="color:#e6db74">&#34;customization&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">categories</span>: [<span style="color:#e6db74">&#34;Technology&#34;</span>, <span style="color:#e6db74">&#34;Documentation&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">summary</span>: <span style="color:#e6db74">&#34;Complete reference for episode metadata customization.&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;Learn all metadata fields and configuration options.&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">keywords</span>: [<span style="color:#e6db74">&#34;hugo&#34;</span>, <span style="color:#e6db74">&#34;podcast&#34;</span>, <span style="color:#e6db74">&#34;metadata&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Display</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlayMetadata</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlayPosition</span>: <span style="color:#e6db74">&#34;mid-left&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlay_filter</span>: <span style="color:#e6db74">&#34;rgba(0, 50, 100, 0.4)&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">transparency</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">toc</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">lightgallery</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">topicsOn</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Advanced</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">hiddenFromHomePage</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">hiddenFromSearch</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">linkToMarkdown</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">code</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">copy</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">maxShownLines</span>: <span style="color:#ae81ff">50</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">share</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">enable</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">comment</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">enable</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Attribution</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">imageCredit</span>: <span style="color:#e6db74">&#34;Photo by Photographer (CC0)&#34;</span>
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><h2 id="field-reference-table">Field Reference Table</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Field</th>
+          <th>Type</th>
+          <th>Required</th>
+          <th>Default</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>title</code></td>
+          <td>string</td>
+          <td>Yes</td>
+          <td>-</td>
+          <td>Episode title</td>
+      </tr>
+      <tr>
+          <td><code>created</code></td>
+          <td>date</td>
+          <td>Yes</td>
+          <td>-</td>
+          <td>Publication date</td>
+      </tr>
+      <tr>
+          <td><code>episodeNumber</code></td>
+          <td>int</td>
+          <td>Yes</td>
+          <td>-</td>
+          <td>Episode number</td>
+      </tr>
+      <tr>
+          <td><code>season</code></td>
+          <td>int</td>
+          <td>No</td>
+          <td>-</td>
+          <td>Season number</td>
+      </tr>
+      <tr>
+          <td><code>episodeType</code></td>
+          <td>string</td>
+          <td>No</td>
+          <td>&ldquo;full&rdquo;</td>
+          <td>Episode type</td>
+      </tr>
+      <tr>
+          <td><code>podcast</code></td>
+          <td>string</td>
+          <td>No</td>
+          <td>Site default</td>
+          <td>Podcast name</td>
+      </tr>
+      <tr>
+          <td><code>host</code></td>
+          <td>string/array</td>
+          <td>No</td>
+          <td>Site default</td>
+          <td>Host name(s)</td>
+      </tr>
+      <tr>
+          <td><code>guests</code></td>
+          <td>array</td>
+          <td>No</td>
+          <td>[]</td>
+          <td>Guest names</td>
+      </tr>
+      <tr>
+          <td><code>duration</code></td>
+          <td>string</td>
+          <td>No</td>
+          <td>-</td>
+          <td>Episode duration</td>
+      </tr>
+      <tr>
+          <td><code>featuredImage</code></td>
+          <td>string</td>
+          <td>No</td>
+          <td>-</td>
+          <td>Image path/URL</td>
+      </tr>
+      <tr>
+          <td><code>tags</code></td>
+          <td>array</td>
+          <td>No</td>
+          <td>[]</td>
+          <td>Topic tags</td>
+      </tr>
+      <tr>
+          <td><code>categories</code></td>
+          <td>array</td>
+          <td>No</td>
+          <td>[]</td>
+          <td>Content categories</td>
+      </tr>
+      <tr>
+          <td><code>summary</code></td>
+          <td>string</td>
+          <td>No</td>
+          <td>-</td>
+          <td>Brief description</td>
+      </tr>
+      <tr>
+          <td><code>description</code></td>
+          <td>string</td>
+          <td>No</td>
+          <td>-</td>
+          <td>Full description</td>
+      </tr>
+      <tr>
+          <td><code>overlayMetadata</code></td>
+          <td>bool</td>
+          <td>No</td>
+          <td>false</td>
+          <td>Metadata on image</td>
+      </tr>
+      <tr>
+          <td><code>overlayPosition</code></td>
+          <td>string</td>
+          <td>No</td>
+          <td>&ldquo;lower-left&rdquo;</td>
+          <td>Overlay position</td>
+      </tr>
+      <tr>
+          <td><code>overlay_filter</code></td>
+          <td>mixed</td>
+          <td>No</td>
+          <td>-</td>
+          <td>Color overlay</td>
+      </tr>
+      <tr>
+          <td><code>transparency</code></td>
+          <td>bool</td>
+          <td>No</td>
+          <td>false</td>
+          <td>Image transparency</td>
+      </tr>
+      <tr>
+          <td><code>toc</code></td>
+          <td>bool</td>
+          <td>No</td>
+          <td>Site default</td>
+          <td>Table of contents</td>
+      </tr>
+      <tr>
+          <td><code>draft</code></td>
+          <td>bool</td>
+          <td>No</td>
+          <td>false</td>
+          <td>Draft status</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="related-documentation">Related Documentation</h2>
+<ul>
+<li><code>/episodes/overlay-features-demo/</code> - Overlay features</li>
+<li><code>/episodes/player-embeds-demo/</code> - Player embedding</li>
+<li><code>/episodes/episode-types-demo/</code> - Episode type examples</li>
+<li><code>/docs/content-guide/</code> - Complete content guide</li>
+</ul>
+<h2 id="image-attribution-1">Image Attribution</h2>
+<p>Featured image: Photo by Lex Photography from Pexels (CC0 License)</p>
+<ul>
+<li>Source: <a href="https://www.pexels.com/photo/macbook-pro-near-white-open-book-1229861/" target="_blank" rel="noopener noreffer ">https://www.pexels.com/photo/macbook-pro-near-white-open-book-1229861/</a></li>
+<li>License: Creative Commons Zero (CC0)</li>
+<li>Free to use with no attribution required</li>
+</ul>
+<hr>
+<p><strong>Documentation Version:</strong> 1.0
+<strong>Last Updated:</strong> 2025-10-27
+<strong>Theme:</strong> Tokyo-Nord</p>
+]]></content:encoded><itunes:title>Customizing Episode Metadata: Complete Reference</itunes:title>
+        <itunes:summary>Learn how to customize all episode metadata fields including episode numbers, seasons, hosts, guests, duration, and more.</itunes:summary><itunes:episode>103</itunes:episode><itunes:season>2</itunes:season><itunes:episodeType>full</itunes:episodeType><itunes:duration>1:15:45</itunes:duration><itunes:image href="/images/samples/sample-tech-workspace.jpg" /><itunes:explicit>false</itunes:explicit><itunes:guest>Jane Developer</itunes:guest><itunes:guest>Alex Designer</itunes:guest><googleplay:description>Learn how to customize all episode metadata fields including episode numbers, seasons, hosts, guests, duration, and more.</googleplay:description><googleplay:image href="/images/samples/sample-tech-workspace.jpg" /><googleplay:explicit>no</googleplay:explicit>
+      </item><item>
+        <title>Embedding Podcast Players: Complete Guide</title>
+        <link>http://localhost:1313/episodes/player-embeds-demo/</link><pubDate>Mon, 27 Oct 2025 00:00:00 &#43;0000</pubDate><guid isPermaLink="true">http://localhost:1313/episodes/player-embeds-demo/</guid><description>Complete guide to embedding podcast players from Spotify, YouTube, Apple Podcasts, and other major platforms in your episode pages.</description>
+        <content:encoded>&lt;![CDATA[<h2 id="about-this-episode">About This Episode</h2>
+<p>This documentation episode demonstrates how to embed podcast players from various platforms using the Tokyo-Nord theme&rsquo;s built-in shortcodes. The embedded players below are live examples you can interact with.</p>
+<h2 id="supported-platforms">Supported Platforms</h2>
+<p>The Tokyo-Nord theme includes shortcodes for these major podcast platforms:</p>
+<ul>
+<li>Spotify</li>
+<li>Apple Podcasts</li>
+<li>YouTube</li>
+<li>Blubrry</li>
+<li>Libsyn</li>
+<li>Podbean</li>
+<li>Simplecast</li>
+<li>Spreaker</li>
+<li>Transistor</li>
+<li>Buzzsprout</li>
+</ul>
+<h2 id="method-1-frontmatter-configuration">Method 1: Frontmatter Configuration</h2>
+<p>The recommended approach is to define players in your frontmatter:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">embedPlayers</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;spotify&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;episode-id-here&#34;</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;youtube&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;video-id-here&#34;</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;apple&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;podcast-id/episode-id&#34;</span></span></span></code></pre></div><p><strong>Benefits:</strong></p>
+<ul>
+<li>Centralized configuration</li>
+<li>Consistent ordering across episodes</li>
+<li>Easy to manage multiple players</li>
+<li>Theme handles rendering automatically</li>
+</ul>
+<p><strong>This page uses frontmatter configuration</strong> with Spotify and YouTube players (see examples below).</p>
+<h2 id="method-2-inline-shortcodes">Method 2: Inline Shortcodes</h2>
+<p>You can also embed players directly in your content using shortcodes:</p>
+<h3 id="spotify">Spotify</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="podcast-player podcast-player-spotify" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    style="border-radius:12px"
+    src="https://open.spotify.com/embed/episode/667dex4sU7Z54upPO4Up4n?utm_source=generator"
+    width="100%"
+    height="232"
+    frameBorder="0"
+    allowfullscreen=""
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy">
+  </iframe>
+</div></span></span></code></pre></div><p><strong>Finding the Episode ID:</strong>
+From URL: <code>https://open.spotify.com/episode/667dex4sU7Z54upPO4Up4n</code>
+The ID is: <code>667dex4sU7Z54upPO4Up4n</code></p>
+<p><strong>Example embed (from frontmatter):</strong></p>
+<div class="podcast-player podcast-player-spotify" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    style="border-radius:12px"
+    src="https://open.spotify.com/embed/episode/667dex4sU7Z54upPO4Up4n?utm_source=generator"
+    width="100%"
+    height="232"
+    frameBorder="0"
+    allowfullscreen=""
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy">
+  </iframe>
+</div>
+<hr>
+<h3 id="youtube">YouTube</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="podcast-player podcast-player-youtube" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    width="100%"
+    height="315"
+    src="https://www.youtube.com/embed/cIla9axQRyM"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+    loading="lazy">
+  </iframe>
+</div></span></span></code></pre></div><p><strong>Finding the Video ID:</strong>
+From URL: <code>https://www.youtube.com/watch?v=cIla9axQRyM</code>
+The ID is: <code>cIla9axQRyM</code></p>
+<p><strong>Example embed (from frontmatter):</strong></p>
+<div class="podcast-player podcast-player-youtube" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    width="100%"
+    height="315"
+    src="https://www.youtube.com/embed/cIla9axQRyM"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+    loading="lazy">
+  </iframe>
+</div>
+<hr>
+<h3 id="apple-podcasts">Apple Podcasts</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="podcast-player podcast-player-apple" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+    frameborder="0"
+    height="175"
+    style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
+    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+    src="https://embed.podcasts.apple.com/us/podcast/idpodcast-id?i=episode-id">
+  </iframe>
+</div></span></span></code></pre></div><p><strong>Finding the IDs:</strong>
+From URL: <code>https://podcasts.apple.com/us/podcast/podcast-name/id1234567890?i=1000123456789</code></p>
+<ul>
+<li>Podcast ID: <code>1234567890</code></li>
+<li>Episode ID: <code>1000123456789</code></li>
+</ul>
+<p><strong>Syntax:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="podcast-player podcast-player-apple" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+    frameborder="0"
+    height="175"
+    style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
+    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+    src="https://embed.podcasts.apple.com/us/podcast/id1234567890?i=1000123456789">
+  </iframe>
+</div></span></span></code></pre></div><hr>
+<h3 id="blubrry">Blubrry</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="podcast-player podcast-player-blubrry" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    src="https://blubrry.com/podcast-id/episode-id/player/"
+    scrolling="no"
+    width="100%"
+    height="138px"
+    frameborder="0">
+  </iframe>
+</div></span></span></code></pre></div><p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="podcast-player podcast-player-blubrry" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    src="https://blubrry.com/example-podcast/12345/player/"
+    scrolling="no"
+    width="100%"
+    height="138px"
+    frameborder="0">
+  </iframe>
+</div></span></span></code></pre></div><hr>
+<h3 id="libsyn">Libsyn</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="podcast-player podcast-player-libsyn" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    style="border: none"
+    src="//html5-player.libsyn.com/embed/episode/id/podcast-slug/height/90/theme/standard/thumbnail/yes/direction/backward/"
+    height="90"
+    width="100%"
+    scrolling="no"
+    allowfullscreen
+    webkitallowfullscreen
+    mozallowfullscreen
+    oallowfullscreen
+    msallowfullscreen>
+  </iframe>
+</div></span></span></code></pre></div><p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="podcast-player podcast-player-libsyn" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    style="border: none"
+    src="//html5-player.libsyn.com/embed/episode/id/my-podcast/height/90/theme/standard/thumbnail/yes/direction/backward/"
+    height="90"
+    width="100%"
+    scrolling="no"
+    allowfullscreen
+    webkitallowfullscreen
+    mozallowfullscreen
+    oallowfullscreen
+    msallowfullscreen>
+  </iframe>
+</div></span></span></code></pre></div><hr>
+<h3 id="podbean">Podbean</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="podcast-player podcast-player-podbean" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    title="Podbean Player"
+    src="embed-key"
+    width="100%"
+    height="150"
+    style="border: none;"
+    scrolling="no"
+    data-name="pb-iframe-player">
+  </iframe>
+</div></span></span></code></pre></div><p><strong>Finding the Embed Key:</strong>
+From Podbean embed code: Look for the player ID in the URL.</p>
+<hr>
+<h3 id="simplecast">Simplecast</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="podcast-player podcast-player-simplecast" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    frameborder="no"
+    scrolling="no"
+    seamless
+    src="https://player.simplecast.com/episode-id?dark=false"
+    width="100%"
+    height="200">
+  </iframe>
+</div></span></span></code></pre></div><p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="podcast-player podcast-player-simplecast" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    frameborder="no"
+    scrolling="no"
+    seamless
+    src="https://player.simplecast.com/abc123def456?dark=false"
+    width="100%"
+    height="200">
+  </iframe>
+</div></span></span></code></pre></div><hr>
+<h3 id="spreaker">Spreaker</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="podcast-player podcast-player-spreaker" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    src="https://widget.spreaker.com/player?episode_id=episode-id&theme=light&playlist=false&playlist-continuous=false&autoplay=false&live-autoplay=false&chapters-image=true&episode_image_position=right&hide-logo=false&hide-likes=false&hide-comments=false&hide-sharing=false&hide-download=true"
+    width="100%"
+    height="200px"
+    frameborder="0">
+  </iframe>
+</div></span></span></code></pre></div><p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="podcast-player podcast-player-spreaker" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    src="https://widget.spreaker.com/player?episode_id=12345678&theme=light&playlist=false&playlist-continuous=false&autoplay=false&live-autoplay=false&chapters-image=true&episode_image_position=right&hide-logo=false&hide-likes=false&hide-comments=false&hide-sharing=false&hide-download=true"
+    width="100%"
+    height="200px"
+    frameborder="0">
+  </iframe>
+</div></span></span></code></pre></div><hr>
+<h3 id="transistor">Transistor</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="podcast-player podcast-player-transistor" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    src="share-key/embed"
+    width="100%"
+    height="180"
+    frameborder="0"
+    scrolling="no"
+    seamless="true"
+    style="width:100%; height:180px;">
+  </iframe>
+</div></span></span></code></pre></div><p><strong>Finding the Share Key:</strong>
+From Transistor share URL or embed code.</p>
+<hr>
+<h3 id="buzzsprout">Buzzsprout</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="podcast-player podcast-player-buzzsprout" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    src="https://www.buzzsprout.com/podcast-id/episode-id-?client_source=small_player&amp;iframe=true"
+    loading="lazy"
+    width="100%"
+    height="200"
+    frameborder="0"
+    scrolling="no"
+    title="Buzzsprout Player">
+  </iframe>
+</div></span></span></code></pre></div><p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="podcast-player podcast-player-buzzsprout" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    src="https://www.buzzsprout.com/123456/7890123-?client_source=small_player&amp;iframe=true"
+    loading="lazy"
+    width="100%"
+    height="200"
+    frameborder="0"
+    scrolling="no"
+    title="Buzzsprout Player">
+  </iframe>
+</div></span></span></code></pre></div><hr>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="1-choose-primary-platform">1. Choose Primary Platform</h3>
+<p>Select your main distribution platform (usually Spotify or Apple Podcasts) as the first player.</p>
+<h3 id="2-limit-number-of-players">2. Limit Number of Players</h3>
+<p>Include 1-3 players maximum to avoid overwhelming listeners and slowing page load.</p>
+<h3 id="3-consistent-ordering">3. Consistent Ordering</h3>
+<p>Use the same player order across all episodes:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">embedPlayers</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;spotify&#34;</span>      <span style="color:#75715e"># Always first</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;apple&#34;</span>        <span style="color:#75715e"># Always second</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;youtube&#34;</span>      <span style="color:#75715e"># Always third (if applicable)</span></span></span></code></pre></div><h3 id="4-test-embeds">4. Test Embeds</h3>
+<p>Always preview your page to ensure players embed correctly.</p>
+<h3 id="5-consider-mobile">5. Consider Mobile</h3>
+<p>Embedded players are responsive but test on mobile devices to ensure good UX.</p>
+<h2 id="frontmatter-vs-inline">Frontmatter vs Inline</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Aspect</th>
+          <th>Frontmatter</th>
+          <th>Inline Shortcodes</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Organization</strong></td>
+          <td>Centralized</td>
+          <td>Distributed</td>
+      </tr>
+      <tr>
+          <td><strong>Consistency</strong></td>
+          <td>High</td>
+          <td>Variable</td>
+      </tr>
+      <tr>
+          <td><strong>Flexibility</strong></td>
+          <td>Medium</td>
+          <td>High</td>
+      </tr>
+      <tr>
+          <td><strong>Maintenance</strong></td>
+          <td>Easy</td>
+          <td>Moderate</td>
+      </tr>
+      <tr>
+          <td><strong>Use Case</strong></td>
+          <td>Standard episodes</td>
+          <td>Custom placement</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Recommendation:</strong> Use frontmatter for most episodes, inline shortcodes for special cases.</p>
+<h2 id="advanced-configuration">Advanced Configuration</h2>
+<h3 id="multiple-players-example">Multiple Players Example</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">embedPlayers</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;spotify&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;spotify-id&#34;</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;apple&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;podcast-id/episode-id&#34;</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;youtube&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;video-id&#34;</span></span></span></code></pre></div><h3 id="video-podcast-example">Video Podcast Example</h3>
+<p>For video podcasts, prioritize YouTube:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">embedPlayers</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;youtube&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;video-id&#34;</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;spotify&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;audio-id&#34;</span></span></span></code></pre></div><h3 id="audio-only-example">Audio-Only Example</h3>
+<p>For traditional podcasts:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">embedPlayers</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;spotify&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;episode-id&#34;</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;apple&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;podcast-id/episode-id&#34;</span></span></span></code></pre></div><h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong>Player not appearing?</strong></p>
+<ul>
+<li>Verify the episode ID is correct</li>
+<li>Check shortcode syntax (spacing, quotes)</li>
+<li>Ensure the platform URL is accessible</li>
+<li>Check browser console for errors</li>
+</ul>
+<p><strong>Player too wide/narrow?</strong></p>
+<ul>
+<li>Players are responsive by default</li>
+<li>Check parent container width</li>
+<li>Verify CSS isn&rsquo;t overriding player styles</li>
+</ul>
+<p><strong>Player shows error message?</strong></p>
+<ul>
+<li>Confirm episode is publicly available</li>
+<li>Check if episode ID has changed</li>
+<li>Verify platform hasn&rsquo;t changed embed format</li>
+</ul>
+<h2 id="platform-specific-notes">Platform-Specific Notes</h2>
+<h3 id="spotify-1">Spotify</h3>
+<ul>
+<li>Most widely used</li>
+<li>Excellent embed reliability</li>
+<li>Auto-updates episode art</li>
+<li>Shows related episodes</li>
+</ul>
+<h3 id="apple-podcasts-1">Apple Podcasts</h3>
+<ul>
+<li>iOS-friendly</li>
+<li>Requires two IDs (podcast + episode)</li>
+<li>May not work in some browsers</li>
+</ul>
+<h3 id="youtube-1">YouTube</h3>
+<ul>
+<li>Best for video podcasts</li>
+<li>High engagement</li>
+<li>Autoplay options available</li>
+<li>Shows recommended videos</li>
+</ul>
+<h2 id="creating-custom-shortcodes">Creating Custom Shortcodes</h2>
+<p>To add a new platform, create a shortcode in <code>layouts/shortcodes/</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- layouts/shortcodes/podcast-newplatform.html --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;podcast-player&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">iframe</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://platform.com/embed/{{ .Get 0 }}&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;100%&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;232&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">frameborder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">allowtransparency</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">allow</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;encrypted-media&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">iframe</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;</span></span></code></pre></div><h2 id="related-documentation">Related Documentation</h2>
+<ul>
+<li><code>/episodes/overlay-features-demo/</code> - Overlay features guide</li>
+<li><code>/episodes/metadata-customization-demo/</code> - Metadata customization</li>
+<li><code>/docs/podcast-features/</code> - Complete podcast features</li>
+</ul>
+<h2 id="example-frontmatter">Example Frontmatter</h2>
+<p>Complete episode with multiple players:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Episode Title&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">created</span>: <span style="color:#e6db74">2025-10-27</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">42</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcast</span>: <span style="color:#e6db74">&#34;Podcast Name&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;Host Name&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">featuredImage</span>: <span style="color:#e6db74">&#34;/images/episode.jpg&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">embedPlayers</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;spotify&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;spotify-episode-id&#34;</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;apple&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;podcast-id/episode-id&#34;</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;youtube&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;video-id&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;topic1&#34;</span>, <span style="color:#e6db74">&#34;topic2&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">summary</span>: <span style="color:#e6db74">&#34;Episode description&#34;</span>
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><h2 id="image-attribution">Image Attribution</h2>
+<p>Featured image: Photo by Matthias Groeneveld from Pexels (CC0 License)</p>
+<ul>
+<li>Source: <a href="https://www.pexels.com/photo/black-and-gray-audio-mixer-6069/" target="_blank" rel="noopener noreffer ">https://www.pexels.com/photo/black-and-gray-audio-mixer-6069/</a></li>
+<li>License: Creative Commons Zero (CC0)</li>
+<li>Free to use with no attribution required</li>
+</ul>
+<hr>
+<p><strong>Documentation Version:</strong> 1.0
+<strong>Last Updated:</strong> 2025-10-27
+<strong>Theme:</strong> Tokyo-Nord</p>
+]]></content:encoded><itunes:title>Embedding Podcast Players: Complete Guide</itunes:title>
+        <itunes:summary>Complete guide to embedding podcast players from Spotify, YouTube, Apple Podcasts, and other major platforms in your episode pages.</itunes:summary><itunes:episode>102</itunes:episode><itunes:season>1</itunes:season><itunes:episodeType>full</itunes:episodeType><itunes:duration>52:30</itunes:duration><itunes:image href="/images/samples/sample-podcast-studio.jpg" /><itunes:explicit>false</itunes:explicit><googleplay:description>Complete guide to embedding podcast players from Spotify, YouTube, Apple Podcasts, and other major platforms in your episode pages.</googleplay:description><googleplay:image href="/images/samples/sample-podcast-studio.jpg" /><googleplay:explicit>no</googleplay:explicit>
+      </item><item>
+        <title>Episode Types: Full, Bonus, Trailer, Interview &amp; Solo</title>
+        <link>http://localhost:1313/episodes/episode-types-demo/</link><pubDate>Mon, 27 Oct 2025 00:00:00 &#43;0000</pubDate><guid isPermaLink="true">http://localhost:1313/episodes/episode-types-demo/</guid><description>Learn about all available episode types: full, bonus, trailer, interview, and solo episodes with examples and use cases for each.</description>
+        <content:encoded>&lt;![CDATA[<h2 id="about-this-episode">About This Episode</h2>
+<p>This is a bonus episode (notice the badge!) demonstrating the different episode types available in the Tokyo-Nord theme. Each episode type can be styled differently and serves different content purposes.</p>
+<h2 id="available-episode-types">Available Episode Types</h2>
+<p>The Tokyo-Nord theme supports five distinct episode types:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">episodeType</span>: <span style="color:#e6db74">&#34;full&#34;</span>      <span style="color:#75715e"># Regular full-length episode (default)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeType</span>: <span style="color:#e6db74">&#34;bonus&#34;</span>     <span style="color:#75715e"># Bonus content</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeType</span>: <span style="color:#e6db74">&#34;trailer&#34;</span>   <span style="color:#75715e"># Show or season trailer</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeType</span>: <span style="color:#e6db74">&#34;interview&#34;</span> <span style="color:#75715e"># Interview episode</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeType</span>: <span style="color:#e6db74">&#34;solo&#34;</span>      <span style="color:#75715e"># Solo host episode</span></span></span></code></pre></div><h2 id="episode-type-details">Episode Type Details</h2>
+<h3 id="full-episodes-episodetype-full">Full Episodes (<code>episodeType: &quot;full&quot;</code>)</h3>
+<p><strong>Purpose:</strong> Regular, full-length episodes in your main series</p>
+<p><strong>Typical duration:</strong> 30-90 minutes</p>
+<p><strong>Use for:</strong></p>
+<ul>
+<li>Main content episodes</li>
+<li>Regular scheduled releases</li>
+<li>Series continuations</li>
+</ul>
+<p><strong>Example frontmatter:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Episode Title&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">42</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">season</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeType</span>: <span style="color:#e6db74">&#34;full&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">duration</span>: <span style="color:#e6db74">&#34;45:30&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcast</span>: <span style="color:#e6db74">&#34;Your Podcast&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;Host Name&#34;</span>
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><p><strong>Display:</strong> Standard episode badge, full metadata</p>
+<hr>
+<h3 id="bonus-episodes-episodetype-bonus">Bonus Episodes (<code>episodeType: &quot;bonus&quot;</code>)</h3>
+<p><strong>Purpose:</strong> Supplemental content outside the main series</p>
+<p><strong>Typical duration:</strong> 15-45 minutes</p>
+<p><strong>Use for:</strong></p>
+<ul>
+<li>Behind-the-scenes content</li>
+<li>Q&amp;A sessions</li>
+<li>Extended interviews</li>
+<li>Patron-exclusive content</li>
+<li>Holiday specials</li>
+<li>Off-topic discussions</li>
+</ul>
+<p><strong>Example frontmatter:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Behind the Scenes: How We Make the Show&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">42.5</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">season</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeType</span>: <span style="color:#e6db74">&#34;bonus&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">duration</span>: <span style="color:#e6db74">&#34;28:15&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcast</span>: <span style="color:#e6db74">&#34;Your Podcast&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;Host Name&#34;</span>
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><p><strong>Display:</strong> &ldquo;Bonus&rdquo; badge, special styling</p>
+<p><strong>This episode is a bonus episode!</strong></p>
+<hr>
+<h3 id="trailer-episodes-episodetype-trailer">Trailer Episodes (<code>episodeType: &quot;trailer&quot;</code>)</h3>
+<p><strong>Purpose:</strong> Promotional content to introduce your show or season</p>
+<p><strong>Typical duration:</strong> 2-5 minutes</p>
+<p><strong>Use for:</strong></p>
+<ul>
+<li>Show launch announcements</li>
+<li>Season previews</li>
+<li>Relaunch trailers</li>
+<li>Format changes</li>
+</ul>
+<p><strong>Example frontmatter:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Season 2 Trailer&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">season</span>: <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeType</span>: <span style="color:#e6db74">&#34;trailer&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">duration</span>: <span style="color:#e6db74">&#34;3:45&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcast</span>: <span style="color:#e6db74">&#34;Your Podcast&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;Host Name&#34;</span>
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><p><strong>Display:</strong> &ldquo;Trailer&rdquo; badge, emphasized styling</p>
+<p><strong>Best practices:</strong></p>
+<ul>
+<li>Keep under 5 minutes</li>
+<li>Use episodeNumber: 0 for season trailers</li>
+<li>Highlight what makes your show unique</li>
+<li>Include call-to-action to subscribe</li>
+</ul>
+<hr>
+<h3 id="interview-episodes-episodetype-interview">Interview Episodes (<code>episodeType: &quot;interview&quot;</code>)</h3>
+<p><strong>Purpose:</strong> Episodes centered around guest interviews</p>
+<p><strong>Typical duration:</strong> 45-90 minutes</p>
+<p><strong>Use for:</strong></p>
+<ul>
+<li>Expert interviews</li>
+<li>Industry leader conversations</li>
+<li>Storytelling interviews</li>
+<li>Multi-guest panels</li>
+</ul>
+<p><strong>Example frontmatter:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Interview with Jane Developer&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">43</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">season</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeType</span>: <span style="color:#e6db74">&#34;interview&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">duration</span>: <span style="color:#e6db74">&#34;1:05:20&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcast</span>: <span style="color:#e6db74">&#34;Your Podcast&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;Host Name&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">guests</span>: [<span style="color:#e6db74">&#34;Jane Developer&#34;</span>]
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><p><strong>Display:</strong> &ldquo;Interview&rdquo; badge, guest names prominent</p>
+<p><strong>Guest highlighting:</strong></p>
+<ul>
+<li>Guest names shown prominently</li>
+<li>Can include multiple guests</li>
+<li>Guest bio sections supported</li>
+</ul>
+<hr>
+<h3 id="solo-episodes-episodetype-solo">Solo Episodes (<code>episodeType: &quot;solo&quot;</code>)</h3>
+<p><strong>Purpose:</strong> Single-host episodes without guests</p>
+<p><strong>Typical duration:</strong> 20-60 minutes</p>
+<p><strong>Use for:</strong></p>
+<ul>
+<li>Deep dives on specific topics</li>
+<li>Personal commentary</li>
+<li>Tutorials and how-tos</li>
+<li>Updates and announcements</li>
+<li>Storytelling</li>
+</ul>
+<p><strong>Example frontmatter:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;My Journey Learning Web Development&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">44</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">season</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeType</span>: <span style="color:#e6db74">&#34;solo&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">duration</span>: <span style="color:#e6db74">&#34;35:45&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcast</span>: <span style="color:#e6db74">&#34;Your Podcast&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;Host Name&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">guests</span>: []
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><p><strong>Display:</strong> &ldquo;Solo&rdquo; badge, host-focused metadata</p>
+<hr>
+<h2 id="comparison-table">Comparison Table</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Type</th>
+          <th>Badge</th>
+          <th>Typical Duration</th>
+          <th>Guest Support</th>
+          <th>Use Case</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>full</code></td>
+          <td>Episode</td>
+          <td>30-90 min</td>
+          <td>Optional</td>
+          <td>Main series content</td>
+      </tr>
+      <tr>
+          <td><code>bonus</code></td>
+          <td>Bonus</td>
+          <td>15-45 min</td>
+          <td>Optional</td>
+          <td>Extra content</td>
+      </tr>
+      <tr>
+          <td><code>trailer</code></td>
+          <td>Trailer</td>
+          <td>2-5 min</td>
+          <td>No</td>
+          <td>Show promotion</td>
+      </tr>
+      <tr>
+          <td><code>interview</code></td>
+          <td>Interview</td>
+          <td>45-90 min</td>
+          <td>Required</td>
+          <td>Guest-focused</td>
+      </tr>
+      <tr>
+          <td><code>solo</code></td>
+          <td>Solo</td>
+          <td>20-60 min</td>
+          <td>No</td>
+          <td>Host-only content</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="styling-differences">Styling Differences</h2>
+<p>Each episode type can have unique styling:</p>
+<h3 id="badges">Badges</h3>
+<p>Episode type badges appear on:</p>
+<ul>
+<li>Episode cards (list pages)</li>
+<li>Single episode pages</li>
+<li>RSS feeds (optional)</li>
+</ul>
+<h3 id="colors">Colors</h3>
+<p>Customize badge colors in <code>hugo.toml</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">podcast</span>.<span style="color:#a6e22e">episodeTypes</span>]
+</span></span><span style="display:flex;"><span>  [<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">podcast</span>.<span style="color:#a6e22e">episodeTypes</span>.<span style="color:#a6e22e">full</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">color</span> = <span style="color:#e6db74">&#34;#4a90e2&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">label</span> = <span style="color:#e6db74">&#34;Episode&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  [<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">podcast</span>.<span style="color:#a6e22e">episodeTypes</span>.<span style="color:#a6e22e">bonus</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">color</span> = <span style="color:#e6db74">&#34;#f39c12&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">label</span> = <span style="color:#e6db74">&#34;Bonus&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  [<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">podcast</span>.<span style="color:#a6e22e">episodeTypes</span>.<span style="color:#a6e22e">trailer</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">color</span> = <span style="color:#e6db74">&#34;#e74c3c&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">label</span> = <span style="color:#e6db74">&#34;Trailer&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  [<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">podcast</span>.<span style="color:#a6e22e">episodeTypes</span>.<span style="color:#a6e22e">interview</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">color</span> = <span style="color:#e6db74">&#34;#9b59b6&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">label</span> = <span style="color:#e6db74">&#34;Interview&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  [<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">podcast</span>.<span style="color:#a6e22e">episodeTypes</span>.<span style="color:#a6e22e">solo</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">color</span> = <span style="color:#e6db74">&#34;#1abc9c&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">label</span> = <span style="color:#e6db74">&#34;Solo&#34;</span></span></span></code></pre></div><h3 id="icons">Icons</h3>
+<p>Each type can have a custom icon (Font Awesome):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">podcast</span>.<span style="color:#a6e22e">episodeTypes</span>.<span style="color:#a6e22e">bonus</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">icon</span> = <span style="color:#e6db74">&#34;fa-star&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">podcast</span>.<span style="color:#a6e22e">episodeTypes</span>.<span style="color:#a6e22e">interview</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">icon</span> = <span style="color:#e6db74">&#34;fa-microphone&#34;</span></span></span></code></pre></div><h2 id="episode-numbering-strategies">Episode Numbering Strategies</h2>
+<h3 id="strategy-1-continuous-numbering">Strategy 1: Continuous Numbering</h3>
+<pre tabindex="0"><code>Episode 1 (full)
+Episode 2 (full)
+Episode 3 (bonus)
+Episode 4 (full)</code></pre><h3 id="strategy-2-decimal-for-bonus-content">Strategy 2: Decimal for Bonus Content</h3>
+<pre tabindex="0"><code>Episode 1 (full)
+Episode 2 (full)
+Episode 2.5 (bonus)
+Episode 3 (full)</code></pre><h3 id="strategy-3-separate-numbering">Strategy 3: Separate Numbering</h3>
+<pre tabindex="0"><code>Episode 1 (full)
+Episode 2 (full)
+Bonus 1 (bonus)
+Episode 3 (full)</code></pre><h3 id="strategy-4-season-trailers-at-zero">Strategy 4: Season Trailers at Zero</h3>
+<pre tabindex="0"><code>Episode 0 (trailer) - Season 2 Trailer
+Episode 1 (full) - First episode of season
+Episode 2 (full)</code></pre><p><strong>Recommendation:</strong> Use decimal numbering (Strategy 2) for clarity and sorting.</p>
+<h2 id="filtering-by-episode-type">Filtering by Episode Type</h2>
+<p>Users can filter episodes by type in list views:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>/episodes/?type=bonus
+</span></span><span style="display:flex;"><span>/episodes/?type=interview
+</span></span><span style="display:flex;"><span>/episodes/?type=full</span></span></code></pre></div><p>Enable filter UI in <code>hugo.toml</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">podcast</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">enableTypeFilter</span> = <span style="color:#66d9ef">true</span></span></span></code></pre></div><h2 id="rss-feed-considerations">RSS Feed Considerations</h2>
+<p>Different episode types in RSS:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">rss</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">includeTrailers</span> = <span style="color:#66d9ef">true</span>    <span style="color:#75715e"># Include trailers in RSS</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">includeBonusEpisodes</span> = <span style="color:#66d9ef">true</span>  <span style="color:#75715e"># Include bonus episodes</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">episodeLimit</span> = <span style="color:#ae81ff">50</span>         <span style="color:#75715e"># Total episodes in feed</span></span></span></code></pre></div><h2 id="content-strategy-by-type">Content Strategy by Type</h2>
+<h3 id="full-episodes">Full Episodes</h3>
+<ul>
+<li>Main story arc</li>
+<li>Consistent format</li>
+<li>Regular schedule</li>
+<li>Core value proposition</li>
+</ul>
+<h3 id="bonus-episodes">Bonus Episodes</h3>
+<ul>
+<li>Experimentation</li>
+<li>Behind-the-scenes</li>
+<li>Community engagement</li>
+<li>Patreon rewards</li>
+</ul>
+<h3 id="trailers">Trailers</h3>
+<ul>
+<li>Marketing</li>
+<li>Season announcements</li>
+<li>Show relaunches</li>
+<li>Format changes</li>
+</ul>
+<h3 id="interview-episodes">Interview Episodes</h3>
+<ul>
+<li>Expert insights</li>
+<li>Networking</li>
+<li>Audience growth</li>
+<li>Cross-promotion</li>
+</ul>
+<h3 id="solo-episodes">Solo Episodes</h3>
+<ul>
+<li>Personal brand building</li>
+<li>Deep expertise</li>
+<li>Intimate connection</li>
+<li>Lower production costs</li>
+</ul>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="1-be-consistent">1. Be Consistent</h3>
+<p>Maintain consistent episode types across seasons.</p>
+<h3 id="2-set-expectations">2. Set Expectations</h3>
+<p>Let listeners know what to expect from each type.</p>
+<h3 id="3-use-strategic-numbering">3. Use Strategic Numbering</h3>
+<p>Choose a numbering strategy and stick with it.</p>
+<h3 id="4-balance-content-mix">4. Balance Content Mix</h3>
+<p>Example mix:</p>
+<ul>
+<li>70% full episodes</li>
+<li>20% interview episodes</li>
+<li>10% bonus/solo episodes</li>
+</ul>
+<h3 id="5-promote-trailers">5. Promote Trailers</h3>
+<p>Use trailers at season starts and show launches.</p>
+<h3 id="6-leverage-bonus-content">6. Leverage Bonus Content</h3>
+<p>Offer bonus episodes for:</p>
+<ul>
+<li>Email subscribers</li>
+<li>Patreon supporters</li>
+<li>Special occasions</li>
+</ul>
+<h2 id="migration-from-other-platforms">Migration from Other Platforms</h2>
+<h3 id="from-libsynblubrry">From Libsyn/Blubrry</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ae81ff">&lt;itunes:episodeType&gt;full&lt;/itunes:episodeType&gt;</span></span></span></code></pre></div><p>Maps to:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">episodeType</span>: <span style="color:#e6db74">&#34;full&#34;</span></span></span></code></pre></div><h3 id="from-anchorspotify">From Anchor/Spotify</h3>
+<p>Episode types directly supported.</p>
+<h3 id="from-apple-podcasts">From Apple Podcasts</h3>
+<p>Three types (full, trailer, bonus) map directly:</p>
+<ul>
+<li>full → full</li>
+<li>trailer → trailer</li>
+<li>bonus → bonus</li>
+</ul>
+<p>Custom types (interview, solo) are theme-specific.</p>
+<h2 id="advanced-configuration">Advanced Configuration</h2>
+<h3 id="custom-episode-types">Custom Episode Types</h3>
+<p>Add custom types in <code>hugo.toml</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">podcast</span>.<span style="color:#a6e22e">episodeTypes</span>.<span style="color:#a6e22e">special</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">color</span> = <span style="color:#e6db74">&#34;#ff6b6b&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">label</span> = <span style="color:#e6db74">&#34;Special&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">icon</span> = <span style="color:#e6db74">&#34;fa-gift&#34;</span></span></span></code></pre></div><p>Use in frontmatter:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">episodeType</span>: <span style="color:#e6db74">&#34;special&#34;</span></span></span></code></pre></div><h3 id="type-specific-layouts">Type-Specific Layouts</h3>
+<p>Create custom layouts:</p>
+<pre tabindex="0"><code>layouts/episodes/single-interview.html
+layouts/episodes/single-bonus.html</code></pre><h3 id="conditional-content">Conditional Content</h3>
+<p>Show content based on type:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ if eq .Params.episodeType &#34;interview&#34; }}
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">&lt;!-- Interview-specific content --&gt;</span>
+</span></span><span style="display:flex;"><span>{{ end }}</span></span></code></pre></div><h2 id="examples-from-real-podcasts">Examples from Real Podcasts</h2>
+<h3 id="smartless-comedy">Smartless (Comedy)</h3>
+<ul>
+<li>90% full episodes</li>
+<li>10% bonus episodes</li>
+<li>Trailers for tours</li>
+</ul>
+<h3 id="huberman-lab-science">Huberman Lab (Science)</h3>
+<ul>
+<li>80% solo episodes</li>
+<li>20% interview episodes</li>
+<li>Q&amp;A as bonus content</li>
+</ul>
+<h3 id="reply-all-storytelling">Reply All (Storytelling)</h3>
+<ul>
+<li>Full episodes (investigations)</li>
+<li>Bonus episodes (updates)</li>
+<li>Solo episodes (yes/yes/no)</li>
+</ul>
+<h2 id="related-documentation">Related Documentation</h2>
+<ul>
+<li><code>/episodes/metadata-customization-demo/</code> - Metadata guide</li>
+<li><code>/episodes/overlay-features-demo/</code> - Overlay features</li>
+<li><code>/episodes/player-embeds-demo/</code> - Player embedding</li>
+<li><code>/docs/podcast-features/</code> - Complete features guide</li>
+</ul>
+<h2 id="image-attribution">Image Attribution</h2>
+<p>Featured image: Photo by Pixabay from Pexels (CC0 License)</p>
+<ul>
+<li>Source: <a href="https://www.pexels.com/photo/music-musician-song-sound-33597/" target="_blank" rel="noopener noreffer ">https://www.pexels.com/photo/music-musician-song-sound-33597/</a></li>
+<li>License: Creative Commons Zero (CC0)</li>
+<li>Free to use with no attribution required</li>
+</ul>
+<hr>
+<p><strong>Documentation Version:</strong> 1.0
+<strong>Last Updated:</strong> 2025-10-27
+<strong>Theme:</strong> Tokyo-Nord</p>
+]]></content:encoded><itunes:title>Episode Types: Full, Bonus, Trailer, Interview &amp; Solo</itunes:title>
+        <itunes:summary>Learn about all available episode types: full, bonus, trailer, interview, and solo episodes with examples and use cases for each.</itunes:summary><itunes:episode>104</itunes:episode><itunes:season>1</itunes:season><itunes:episodeType>bonus</itunes:episodeType><itunes:duration>28:15</itunes:duration><itunes:image href="/images/samples/sample-music-podcast.jpg" /><itunes:explicit>false</itunes:explicit><googleplay:description>Learn about all available episode types: full, bonus, trailer, interview, and solo episodes with examples and use cases for each.</googleplay:description><googleplay:image href="/images/samples/sample-music-podcast.jpg" /><googleplay:explicit>no</googleplay:explicit>
+      </item><item>
+        <title>Essential Frontmatter Fields</title>
+        <link>http://localhost:1313/episodes/frontmatter-essential-fields/</link><pubDate>Mon, 27 Oct 2025 00:00:00 &#43;0000</pubDate><guid isPermaLink="true">http://localhost:1313/episodes/frontmatter-essential-fields/</guid><description>Complete guide to the essential required frontmatter fields for every podcast episode.</description>
+        <content:encoded>&lt;![CDATA[<h2 id="about-this-guide">About This Guide</h2>
+<p>This guide covers the four essential frontmatter fields that every episode must include. These fields are required for proper episode rendering and functionality in the Tokyo-Nord theme.</p>
+<h2 id="frontmatter-structure">Frontmatter Structure</h2>
+<p>Frontmatter is YAML configuration at the top of your markdown file:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Episode Title&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">created</span>: <span style="color:#e6db74">2025-10-27</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">draft</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><p><strong>Rules:</strong></p>
+<ul>
+<li>Must start and end with <code>---</code></li>
+<li>Uses YAML syntax</li>
+<li>Indent with 2 spaces (not tabs)</li>
+<li>Strings with special characters need quotes</li>
+<li>Arrays use bracket <code>[]</code> or dash <code>-</code> syntax</li>
+</ul>
+<h2 id="required-fields">Required Fields</h2>
+<h3 id="title">title</h3>
+<ul>
+<li><strong>Type:</strong> String</li>
+<li><strong>Required:</strong> Yes</li>
+<li><strong>Purpose:</strong> Episode title displayed everywhere</li>
+<li><strong>Best practice:</strong> Keep under 60 characters for SEO</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;How to Build a Successful Podcast&#34;</span></span></span></code></pre></div><p><strong>Guidelines:</strong></p>
+<ul>
+<li>Clear and descriptive</li>
+<li>Include keywords naturally</li>
+<li>Avoid clickbait</li>
+<li>Be specific about content</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Good</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Introduction to Hugo Static Site Generator&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Episode 42: Advanced CSS Techniques&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Too long</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;This is an extremely long episode title that goes on forever and probably won&#39;t display well in most contexts&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Too vague</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Episode 1&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Stuff&#34;</span></span></span></code></pre></div><h3 id="created">created</h3>
+<ul>
+<li><strong>Type:</strong> Date</li>
+<li><strong>Required:</strong> Yes</li>
+<li><strong>Purpose:</strong> Publication date for sorting and display</li>
+<li><strong>Formats:</strong>
+<ul>
+<li>Simple: <code>2025-10-27</code></li>
+<li>With time: <code>2025-10-27T14:30:00-07:00</code></li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">created</span>: <span style="color:#e6db74">2025-10-27</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># OR with timestamp</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">created</span>: <span style="color:#e6db74">2025-10-27T14:30:00</span><span style="color:#ae81ff">-07</span>:<span style="color:#ae81ff">00</span></span></span></code></pre></div><p><strong>Format details:</strong></p>
+<ul>
+<li>Simple format: <code>YYYY-MM-DD</code></li>
+<li>ISO 8601 format: <code>YYYY-MM-DDTHH:MM:SS±HH:MM</code></li>
+<li>Time zone aware: Include offset like <code>-07:00</code> for PST</li>
+</ul>
+<p><strong>Usage:</strong></p>
+<ul>
+<li>Determines episode order in lists</li>
+<li>Shows in &ldquo;Published on&rdquo; date</li>
+<li>Used in RSS feeds</li>
+<li>Affects sitemap priority</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Simple date (most common)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">created</span>: <span style="color:#e6db74">2025-10-27</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># With time (for precise scheduling)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">created</span>: <span style="color:#e6db74">2025-10-27T09:00:00</span><span style="color:#ae81ff">-08</span>:<span style="color:#ae81ff">00</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># UTC time</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">created</span>: <span style="color:#e6db74">2025-10-27T17:00:00Z</span></span></span></code></pre></div><h3 id="episodenumber">episodeNumber</h3>
+<ul>
+<li><strong>Type:</strong> Integer</li>
+<li><strong>Required:</strong> Yes</li>
+<li><strong>Purpose:</strong> Episode identifier and ordering</li>
+<li><strong>Note:</strong> Can use decimals for bonus content (42.5)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">105</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># OR for bonus content</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">42.5</span></span></span></code></pre></div><p><strong>Best practices:</strong></p>
+<ul>
+<li>Use sequential numbering starting from 1</li>
+<li>For bonus episodes, use decimal notation (2.5)</li>
+<li>For trailers, use 0 for season trailers</li>
+<li>Maintain consistent numbering scheme</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Standard episodes</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">42</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Bonus episodes</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">42.5</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">10.1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Season trailer</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">0</span></span></span></code></pre></div><p><strong>Display:</strong></p>
+<ul>
+<li>Shows as &ldquo;Episode #105&rdquo; on pages</li>
+<li>Used for sorting</li>
+<li>Appears in URLs (if configured)</li>
+</ul>
+<h3 id="draft">draft</h3>
+<ul>
+<li><strong>Type:</strong> Boolean</li>
+<li><strong>Required:</strong> No</li>
+<li><strong>Default:</strong> <code>false</code></li>
+<li><strong>Purpose:</strong> Hide unpublished content</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">draft</span>: <span style="color:#66d9ef">false</span>  <span style="color:#75715e"># Published</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">draft</span>: <span style="color:#66d9ef">true</span>   <span style="color:#75715e"># Hidden</span></span></span></code></pre></div><p><strong>Behavior:</strong></p>
+<ul>
+<li><code>draft: true</code> - Episode is hidden from site (unless in dev mode)</li>
+<li><code>draft: false</code> - Episode is published and visible</li>
+<li>Default is <code>false</code> if not specified</li>
+</ul>
+<p><strong>Use cases:</strong></p>
+<ul>
+<li>Work in progress episodes</li>
+<li>Scheduled content (use with <code>publishDate</code> instead)</li>
+<li>Testing episode layouts</li>
+<li>Collaboration before publication</li>
+</ul>
+<p><strong>Dev mode:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># See draft content in development</span>
+</span></span><span style="display:flex;"><span>hugo server -D
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Build including drafts</span>
+</span></span><span style="display:flex;"><span>hugo -D</span></span></code></pre></div><h2 id="minimal-episode-template">Minimal Episode Template</h2>
+<p>The absolute minimum required frontmatter:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Your Episode Title&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">created</span>: <span style="color:#e6db74">2025-10-27</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><p>This will work, but you&rsquo;ll want to add more fields for better functionality.</p>
+<h2 id="recommended-minimal-template">Recommended Minimal Template</h2>
+<p>A better starting point includes these essential fields:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Your Episode Title&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">created</span>: <span style="color:#e6db74">2025-10-27</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">draft</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Recommended additions</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">featuredImage</span>: <span style="color:#e6db74">&#34;/images/episode.jpg&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">duration</span>: <span style="color:#e6db74">&#34;45:00&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">summary</span>: <span style="color:#e6db74">&#34;Brief episode description&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;topic1&#34;</span>, <span style="color:#e6db74">&#34;topic2&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">categories</span>: [<span style="color:#e6db74">&#34;Category&#34;</span>]
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><h2 id="validation">Validation</h2>
+<p>The theme will display warnings if required fields are missing:</p>
+<p><strong>Missing title:</strong></p>
+<pre tabindex="0"><code>Warning: Episode missing title field</code></pre><p><strong>Missing created:</strong></p>
+<pre tabindex="0"><code>Warning: Episode missing publication date</code></pre><p><strong>Missing episodeNumber:</strong></p>
+<pre tabindex="0"><code>Warning: Episode missing episode number</code></pre><h2 id="common-mistakes">Common Mistakes</h2>
+<h3 id="1-incorrect-date-format">1. Incorrect Date Format</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Wrong</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">created</span>: <span style="color:#ae81ff">10</span><span style="color:#ae81ff">/27/2025</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">created</span>: <span style="color:#ae81ff">Oct 27, 2025</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Correct</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">created</span>: <span style="color:#e6db74">2025-10-27</span></span></span></code></pre></div><h3 id="2-episode-number-as-string">2. Episode Number as String</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Wrong</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#e6db74">&#34;42&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Correct</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">42</span></span></span></code></pre></div><h3 id="3-missing-quotes-on-special-titles">3. Missing Quotes on Special Titles</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Wrong (will cause YAML error)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title: Episode 1</span>: <span style="color:#ae81ff">Getting Started</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Correct</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Episode 1: Getting Started&#34;</span></span></span></code></pre></div><h3 id="4-incorrect-yaml-formatting">4. Incorrect YAML Formatting</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Wrong (missing space after colon)</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">title:&#34;Episode Title&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Correct</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Episode Title&#34;</span></span></span></code></pre></div><h2 id="quick-reference">Quick Reference</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Field</th>
+          <th>Type</th>
+          <th>Required</th>
+          <th>Default</th>
+          <th>Example</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>title</code></td>
+          <td>string</td>
+          <td>Yes</td>
+          <td>-</td>
+          <td><code>&quot;Episode Title&quot;</code></td>
+      </tr>
+      <tr>
+          <td><code>created</code></td>
+          <td>date</td>
+          <td>Yes</td>
+          <td>-</td>
+          <td><code>2025-10-27</code></td>
+      </tr>
+      <tr>
+          <td><code>episodeNumber</code></td>
+          <td>int</td>
+          <td>Yes</td>
+          <td>-</td>
+          <td><code>42</code></td>
+      </tr>
+      <tr>
+          <td><code>draft</code></td>
+          <td>bool</td>
+          <td>No</td>
+          <td><code>false</code></td>
+          <td><code>false</code></td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="related-documentation">Related Documentation</h2>
+<ul>
+<li><a href="/episodes/frontmatter-options-demo/" rel="">Complete Frontmatter Reference</a> - All available fields</li>
+<li><a href="/episodes/frontmatter-podcast-info/" rel="">Podcast Information Fields</a> - Podcast-specific metadata</li>
+<li><a href="/episodes/frontmatter-media-config/" rel="">Media Configuration</a> - Images and duration</li>
+<li><a href="/episodes/frontmatter-content-metadata/" rel="">Content Metadata</a> - Tags, categories, descriptions</li>
+</ul>
+<h2 id="image-attribution">Image Attribution</h2>
+<p>Featured image: Photo by Donald Tong from Pexels (CC0 License)</p>
+<ul>
+<li>Source: <a href="https://www.pexels.com/photo/man-in-white-dress-shirt-sitting-on-black-rolling-chair-while-facing-black-computer-set-and-smiling-325229/" target="_blank" rel="noopener noreffer ">https://www.pexels.com/photo/man-in-white-dress-shirt-sitting-on-black-rolling-chair-while-facing-black-computer-set-and-smiling-325229/</a></li>
+<li>License: Creative Commons Zero (CC0)</li>
+<li>Free to use with no attribution required</li>
+</ul>
+<hr>
+<p><strong>Documentation Version:</strong> 1.0
+<strong>Last Updated:</strong> 2025-10-27
+<strong>Theme:</strong> Tokyo-Nord
+<strong>Hugo Version:</strong> 0.122+</p>
+]]></content:encoded><itunes:title>Essential Frontmatter Fields</itunes:title>
+        <itunes:summary>Complete guide to the essential required frontmatter fields for every podcast episode.</itunes:summary><itunes:episode>105.1</itunes:episode><itunes:season>1</itunes:season><itunes:episodeType>full</itunes:episodeType><itunes:duration>15:00</itunes:duration><itunes:image href="/images/samples/sample-video-production.jpg" /><itunes:explicit>false</itunes:explicit><googleplay:description>Complete guide to the essential required frontmatter fields for every podcast episode.</googleplay:description><googleplay:image href="/images/samples/sample-video-production.jpg" /><googleplay:explicit>no</googleplay:explicit>
+      </item><item>
+        <title>Podcast Information Fields</title>
+        <link>http://localhost:1313/episodes/frontmatter-podcast-info/</link><pubDate>Mon, 27 Oct 2025 00:00:00 &#43;0000</pubDate><guid isPermaLink="true">http://localhost:1313/episodes/frontmatter-podcast-info/</guid><description>Learn how to configure podcast-specific fields including podcast name, hosts, and guests in episode frontmatter.</description>
+        <content:encoded>&lt;![CDATA[<h2 id="about-this-guide">About This Guide</h2>
+<p>This guide covers podcast-specific frontmatter fields that control the podcast name, host information, and guest details for individual episodes.</p>
+<h2 id="podcast-name">Podcast Name</h2>
+<h3 id="podcast">podcast</h3>
+<ul>
+<li><strong>Type:</strong> String</li>
+<li><strong>Required:</strong> No</li>
+<li><strong>Default:</strong> Site-wide setting</li>
+<li><strong>Purpose:</strong> Override podcast name for special series</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">podcast</span>: <span style="color:#e6db74">&#34;Tokyo Dev Podcast&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># OR for special series</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcast</span>: <span style="color:#e6db74">&#34;Tokyo Dev: Behind the Scenes&#34;</span></span></span></code></pre></div><p><strong>When to override:</strong></p>
+<ul>
+<li>Special miniseries within your main podcast</li>
+<li>Guest-hosted series</li>
+<li>Seasonal variations</li>
+<li>Spin-off content</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Main podcast</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcast</span>: <span style="color:#e6db74">&#34;The Tech Show&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Holiday special</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcast</span>: <span style="color:#e6db74">&#34;The Tech Show: Holiday Special&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Guest series</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcast</span>: <span style="color:#e6db74">&#34;The Tech Show: Guest Host Series&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Miniseries</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcast</span>: <span style="color:#e6db74">&#34;The Tech Show: Deep Dive into AI&#34;</span></span></span></code></pre></div><p><strong>Site default:</strong>
+Set in <code>hugo.toml</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">podcast</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Your Podcast Name&#34;</span></span></span></code></pre></div><p>Episodes without <code>podcast</code> field will use this default.</p>
+<h2 id="host-information">Host Information</h2>
+<h3 id="host-single-host">host (Single Host)</h3>
+<ul>
+<li><strong>Type:</strong> String</li>
+<li><strong>Required:</strong> No</li>
+<li><strong>Default:</strong> Site-wide setting</li>
+<li><strong>Purpose:</strong> Episode host name</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Single host</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;John Doe&#34;</span></span></span></code></pre></div><p><strong>Best practices:</strong></p>
+<ul>
+<li>Use consistent name formatting across episodes</li>
+<li>Include full name, not just first name</li>
+<li>Match name to other platforms (Apple Podcasts, Spotify)</li>
+</ul>
+<h3 id="host-multiple-hosts">host (Multiple Hosts)</h3>
+<ul>
+<li><strong>Type:</strong> String or Array</li>
+<li><strong>Purpose:</strong> Multiple episode hosts</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Array format (recommended)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: [<span style="color:#e6db74">&#34;John Doe&#34;</span>, <span style="color:#e6db74">&#34;Jane Smith&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># String format (alternative)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;John Doe, Jane Smith&#34;</span></span></span></code></pre></div><p><strong>Array format vs String format:</strong></p>
+<p><strong>Array format</strong> (recommended):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">host</span>: [<span style="color:#e6db74">&#34;John Doe&#34;</span>, <span style="color:#e6db74">&#34;Jane Smith&#34;</span>, <span style="color:#e6db74">&#34;Alex Johnson&#34;</span>]</span></span></code></pre></div><ul>
+<li>Cleaner</li>
+<li>Easier to parse programmatically</li>
+<li>Better for structured data</li>
+<li>Works with theme templates</li>
+</ul>
+<p><strong>String format:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;John Doe, Jane Smith, Alex Johnson&#34;</span></span></span></code></pre></div><ul>
+<li>Simpler for quick edits</li>
+<li>Works for display purposes</li>
+<li>Less structured</li>
+</ul>
+<p><strong>Site default:</strong>
+Set in <code>hugo.toml</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">podcast</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">host</span> = <span style="color:#e6db74">&#34;Default Host Name&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># OR</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">host</span> = [<span style="color:#e6db74">&#34;Host 1&#34;</span>, <span style="color:#e6db74">&#34;Host 2&#34;</span>]</span></span></code></pre></div><p><strong>Display:</strong></p>
+<ul>
+<li>Shows as &ldquo;Hosted by John Doe and Jane Smith&rdquo;</li>
+<li>Appears in episode metadata</li>
+<li>Used in structured data (Schema.org)</li>
+</ul>
+<h2 id="guest-information">Guest Information</h2>
+<h3 id="guests">guests</h3>
+<ul>
+<li><strong>Type:</strong> Array</li>
+<li><strong>Required:</strong> No</li>
+<li><strong>Default:</strong> <code>[]</code> (no guests)</li>
+<li><strong>Purpose:</strong> Guest names for the episode</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">guests</span>: []  <span style="color:#75715e"># No guests</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">guests</span>: [<span style="color:#e6db74">&#34;Guest Name&#34;</span>]  <span style="color:#75715e"># Single guest</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">guests</span>: [<span style="color:#e6db74">&#34;Guest 1&#34;</span>, <span style="color:#e6db74">&#34;Guest 2&#34;</span>, <span style="color:#e6db74">&#34;Guest 3&#34;</span>]  <span style="color:#75715e"># Multiple</span></span></span></code></pre></div><p><strong>Examples:</strong></p>
+<p><strong>No guests:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">guests</span>: []</span></span></code></pre></div><p><strong>Single guest:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">guests</span>: [<span style="color:#e6db74">&#34;Dr. Jane Smith&#34;</span>]</span></span></code></pre></div><p><strong>Multiple guests:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">guests</span>: [<span style="color:#e6db74">&#34;Dr. Jane Smith&#34;</span>, <span style="color:#e6db74">&#34;Prof. John Doe&#34;</span>, <span style="color:#e6db74">&#34;Alex Developer&#34;</span>]</span></span></code></pre></div><p><strong>Best practices:</strong></p>
+<ul>
+<li>Include titles/credentials when relevant (Dr., Prof.)</li>
+<li>Use full names</li>
+<li>Order guests by prominence in episode</li>
+<li>Maintain consistent name formatting</li>
+</ul>
+<p><strong>Display:</strong></p>
+<ul>
+<li>Shows as &ldquo;With guests: Jane Smith and John Doe&rdquo;</li>
+<li>Appears below host information</li>
+<li>Used for interview episode types</li>
+<li>Can be styled differently in templates</li>
+</ul>
+<h2 id="common-configurations">Common Configurations</h2>
+<h3 id="solo-episode-default-host">Solo Episode (Default Host)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Solo Episode&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">created</span>: <span style="color:#e6db74">2025-10-27</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">42</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Uses site default host</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">guests</span>: []
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><h3 id="solo-episode-override-host">Solo Episode (Override Host)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Guest Host Episode&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">created</span>: <span style="color:#e6db74">2025-10-27</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">43</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;Special Guest Host&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">guests</span>: []
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><h3 id="co-hosted-episode">Co-Hosted Episode</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Co-Hosted Discussion&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">created</span>: <span style="color:#e6db74">2025-10-27</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">44</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: [<span style="color:#e6db74">&#34;Primary Host&#34;</span>, <span style="color:#e6db74">&#34;Co-Host&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">guests</span>: []
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><h3 id="interview-episode-single-guest">Interview Episode (Single Guest)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Interview with Dr. Smith&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">created</span>: <span style="color:#e6db74">2025-10-27</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">45</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeType</span>: <span style="color:#e6db74">&#34;interview&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;Host Name&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">guests</span>: [<span style="color:#e6db74">&#34;Dr. Jane Smith&#34;</span>]
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><h3 id="interview-episode-multiple-guests">Interview Episode (Multiple Guests)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Panel Discussion&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">created</span>: <span style="color:#e6db74">2025-10-27</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">46</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeType</span>: <span style="color:#e6db74">&#34;interview&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;Host Name&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">guests</span>: [<span style="color:#e6db74">&#34;Guest 1&#34;</span>, <span style="color:#e6db74">&#34;Guest 2&#34;</span>, <span style="color:#e6db74">&#34;Guest 3&#34;</span>]
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><h3 id="multiple-hosts-with-guests">Multiple Hosts with Guests</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Special Episode&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">created</span>: <span style="color:#e6db74">2025-10-27</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">47</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: [<span style="color:#e6db74">&#34;Host 1&#34;</span>, <span style="color:#e6db74">&#34;Host 2&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">guests</span>: [<span style="color:#e6db74">&#34;Special Guest&#34;</span>]
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><h2 id="advanced-usage">Advanced Usage</h2>
+<h3 id="rotating-hosts">Rotating Hosts</h3>
+<p>For podcasts with rotating hosts, override per episode:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Episode 1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;Host A&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Episode 2</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;Host B&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Episode 3</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: [<span style="color:#e6db74">&#34;Host A&#34;</span>, <span style="color:#e6db74">&#34;Host C&#34;</span>]</span></span></code></pre></div><h3 id="guest-host-series">Guest Host Series</h3>
+<p>Special series with different hosts:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">podcast</span>: <span style="color:#e6db74">&#34;Main Podcast: Guest Host Series&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;Guest Host Name&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeType</span>: <span style="color:#e6db74">&#34;full&#34;</span></span></span></code></pre></div><h3 id="miniseries">Miniseries</h3>
+<p>Override both podcast name and hosts:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">podcast</span>: <span style="color:#e6db74">&#34;Main Podcast: Special Miniseries&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;Miniseries Host&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">season</span>: <span style="color:#ae81ff">1</span></span></span></code></pre></div><h2 id="validation--fallbacks">Validation &amp; Fallbacks</h2>
+<p><strong>If host field is missing:</strong></p>
+<ul>
+<li>Theme uses site-wide default from <code>hugo.toml</code></li>
+<li>Warning may appear in development mode</li>
+</ul>
+<p><strong>If guests field is missing:</strong></p>
+<ul>
+<li>Defaults to empty array <code>[]</code></li>
+<li>No guest information displayed</li>
+<li>No errors or warnings</li>
+</ul>
+<p><strong>If podcast field is missing:</strong></p>
+<ul>
+<li>Uses site-wide podcast name</li>
+<li>No errors or warnings</li>
+</ul>
+<h2 id="display-examples">Display Examples</h2>
+<p><strong>Single host, no guests:</strong></p>
+<pre tabindex="0"><code>Hosted by John Doe</code></pre><p><strong>Multiple hosts:</strong></p>
+<pre tabindex="0"><code>Hosted by John Doe and Jane Smith</code></pre><p><strong>With single guest:</strong></p>
+<pre tabindex="0"><code>Hosted by John Doe
+With guest: Dr. Jane Smith</code></pre><p><strong>With multiple guests:</strong></p>
+<pre tabindex="0"><code>Hosted by John Doe
+With guests: Dr. Jane Smith, Prof. John Doe, and Alex Developer</code></pre><h2 id="structured-data">Structured Data</h2>
+<p>These fields populate Schema.org structured data:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;@type&#34;</span>: <span style="color:#e6db74">&#34;PodcastEpisode&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Episode Title&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;author&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;@type&#34;</span>: <span style="color:#e6db74">&#34;Person&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Host Name&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;contributor&#34;</span>: [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;@type&#34;</span>: <span style="color:#e6db74">&#34;Person&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Guest Name&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div><p>This improves:</p>
+<ul>
+<li>Search engine understanding</li>
+<li>Rich snippets in search results</li>
+<li>Voice assistant integration</li>
+<li>Podcast app metadata</li>
+</ul>
+<h2 id="quick-reference">Quick Reference</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Field</th>
+          <th>Type</th>
+          <th>Required</th>
+          <th>Default</th>
+          <th>Example</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>podcast</code></td>
+          <td>string</td>
+          <td>No</td>
+          <td>Site default</td>
+          <td><code>&quot;Podcast Name&quot;</code></td>
+      </tr>
+      <tr>
+          <td><code>host</code></td>
+          <td>string/array</td>
+          <td>No</td>
+          <td>Site default</td>
+          <td><code>&quot;John Doe&quot;</code> or <code>[&quot;John&quot;, &quot;Jane&quot;]</code></td>
+      </tr>
+      <tr>
+          <td><code>guests</code></td>
+          <td>array</td>
+          <td>No</td>
+          <td><code>[]</code></td>
+          <td><code>[&quot;Guest 1&quot;, &quot;Guest 2&quot;]</code></td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="related-documentation">Related Documentation</h2>
+<ul>
+<li><a href="/episodes/frontmatter-essential-fields/" rel="">Essential Fields</a> - Required frontmatter</li>
+<li><a href="/episodes/episode-types-demo/" rel="">Episode Types</a> - Episode type configuration</li>
+<li><a href="/episodes/frontmatter-options-demo/" rel="">Complete Reference</a> - All frontmatter fields</li>
+<li><a href="/episodes/frontmatter-content-metadata/" rel="">Content Metadata</a> - Tags and descriptions</li>
+</ul>
+<h2 id="image-attribution">Image Attribution</h2>
+<p>Featured image: Photo by Donald Tong from Pexels (CC0 License)</p>
+<ul>
+<li>Source: <a href="https://www.pexels.com/photo/man-in-white-dress-shirt-sitting-on-black-rolling-chair-while-facing-black-computer-set-and-smiling-325229/" target="_blank" rel="noopener noreffer ">https://www.pexels.com/photo/man-in-white-dress-shirt-sitting-on-black-rolling-chair-while-facing-black-computer-set-and-smiling-325229/</a></li>
+<li>License: Creative Commons Zero (CC0)</li>
+<li>Free to use with no attribution required</li>
+</ul>
+<hr>
+<p><strong>Documentation Version:</strong> 1.0
+<strong>Last Updated:</strong> 2025-10-27
+<strong>Theme:</strong> Tokyo-Nord
+<strong>Hugo Version:</strong> 0.122+</p>
+]]></content:encoded><itunes:title>Podcast Information Fields</itunes:title>
+        <itunes:summary>Learn how to configure podcast-specific fields including podcast name, hosts, and guests in episode frontmatter.</itunes:summary><itunes:episode>105.2</itunes:episode><itunes:season>1</itunes:season><itunes:episodeType>full</itunes:episodeType><itunes:duration>18:00</itunes:duration><itunes:image href="/images/samples/sample-video-production.jpg" /><itunes:explicit>false</itunes:explicit><googleplay:description>Learn how to configure podcast-specific fields including podcast name, hosts, and guests in episode frontmatter.</googleplay:description><googleplay:image href="/images/samples/sample-video-production.jpg" /><googleplay:explicit>no</googleplay:explicit>
       </item></channel>
 </rss>

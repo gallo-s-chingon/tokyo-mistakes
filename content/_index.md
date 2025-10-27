@@ -7,6 +7,12 @@ description: "A podcast about life, dating and relationship advice with a kink t
 
 <!--<iframe src="https://open.spotify.com/embed/show/3XjoipCU3QzeIaQAAQpBdW" width="80%" height="232" frameBorder="0" allowtransparency='true' allow="encrypted-media"></iframe>-->
 
+## Explore the Theme
+
+Check out the [Episodes](/episodes/) section to see documentation and examples of what Tokyo-Nord can do for your podcast.
+
+---
+
 <!--
   Example: Using the social-link shortcode instead of image buttons
 

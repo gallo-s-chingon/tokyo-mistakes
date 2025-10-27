@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Customizing Episode Metadata: Complete Reference - My cool site</title><meta name="Description" content="Complete reference guide for customizing episode metadata in the Tokyo-Nord theme, covering all available frontmatter fields and configuration options."><meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/episodes/metadata-customization-demo/" /><link rel="prev" href="http://localhost:1313/episodes/player-embeds-demo/" /><link rel="next" href="http://localhost:1313/episodes/overlay-features-demo/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Customizing Episode Metadata: Complete Reference",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/episodes\/metadata-customization-demo\/"
+        },"genre": "episodes","keywords": "documentation, metadata, customization, configuration","wordcount":  985 ,
+        "url": "http:\/\/localhost:1313\/episodes\/metadata-customization-demo\/","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "My cool site"
+            },"description": "Complete reference guide for customizing episode metadata in the Tokyo-Nord theme, covering all available frontmatter fields and configuration options."
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          function applyTheme() {
+            const highContrast =  true ;
+            const defaultTheme = 'auto';
+
+            
+            const themeMap = {
+              dark: highContrast ? 'tokyo-night' : 'nordic',
+              light: highContrast ? 'onenord-light' : 'onenord-day'
+            };
+
+            
+            let theme = window.localStorage?.getItem('theme');
+
+            if (!theme) {
+              
+              if (defaultTheme === 'auto') {
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                theme = prefersDark ? themeMap.dark : themeMap.light;
+              } else if (defaultTheme === 'dark') {
+                theme = themeMap.dark;
+              } else {
+                theme = themeMap.light;
+              }
+            }
+
+            
+            const validThemes = ['tokyo-night', 'nordic', 'onenord-light', 'onenord-day'];
+            if (!validThemes.includes(theme)) {
+              theme = themeMap.dark;
+            }
+
+            let isDark = theme === 'tokyo-night' || theme === 'nordic';
+            document.body.setAttribute('data-theme', theme);
+            document.body.setAttribute('theme', isDark ? 'dark' : 'light');
+          }
+
+          applyTheme();
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="My cool site">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/featured/"> Featured </a><a class="menu-item" href="/episodes/"> Episodes </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="My cool site">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/featured/" title="">Feat</a><a class="menu-item" href="/episodes/" title="">Epi</a><a class="menu-item" href="/about/" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single episode"><h1 class="single-title animate__animated animate__flipInX">Customizing Episode Metadata: Complete Reference</h1><div class="featured-image-container episode-featured-overlay" data-position="mid-left">
+                <div class="featured-image episode-artwork"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/samples/sample-tech-workspace.jpg"
+        data-srcset="/images/samples/sample-tech-workspace.jpg, /images/samples/sample-tech-workspace.jpg 1.5x, /images/samples/sample-tech-workspace.jpg 2x"
+        data-sizes="auto"
+        alt="/images/samples/sample-tech-workspace.jpg"
+        title="Complete reference guide for customizing episode metadata in the Tokyo-Nord theme, covering all available frontmatter fields and configuration options." /><div class="featured-image-color-overlay" style="background: linear-gradient(rgba(0, 50, 100, 0.4), rgba(0, 50, 100, 0.4));"></div></div>
+                <div class="featured-metadata-overlay overlay-mid-left" style="--overlay-opacity: 0.85;">
+                    <div class="overlay-content"><div class="post-meta episode-meta"><div class="post-meta-line">
+                                    <span class="episode-number">
+                                        <i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>&nbsp;Episode 103
+                                    </span>
+                                </div><div class="post-meta-line">
+                                    <span class="episode-season">
+                                        <i class="fas fa-layer-group fa-fw" aria-hidden="true"></i>&nbsp;Season 2
+                                    </span>
+                                </div><div class="post-meta-line">
+                                    <span class="episode-duration">
+                                        <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;1:15:45
+                                    </span>
+                                </div><div class="post-meta-line">
+                                    <span class="episode-date">
+                                        <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="0001-01-01">0001-01-01</time>
+                                    </span>
+                                </div><div class="post-meta-line">
+                                    <span class="podcast-name">
+                                        <i class="fas fa-podcast fa-fw" aria-hidden="true"></i>&nbsp;Tokyo Dev Podcast
+                                    </span>
+                                </div><div class="post-meta-line">
+                                    <span class="episode-host">
+                                        <i class="fas fa-microphone fa-fw" aria-hidden="true"></i>&nbsp;Documentation Team
+                                    </span>
+                                </div><div class="post-meta-line">
+                                    <span class="episode-guests">
+                                        <i class="fas fa-users fa-fw" aria-hidden="true"></i>&nbsp;Jane Developer, Alex Designer
+                                    </span>
+                                </div></div>
+                    </div>
+                </div>
+            </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#about-this-episode">About This Episode</a></li>
+    <li><a href="#required-fields">Required Fields</a>
+      <ul>
+        <li><a href="#field-details">Field Details</a></li>
+      </ul>
+    </li>
+    <li><a href="#episode-details">Episode Details</a>
+      <ul>
+        <li><a href="#season-information">Season Information</a></li>
+        <li><a href="#episode-type">Episode Type</a></li>
+        <li><a href="#duration">Duration</a></li>
+      </ul>
+    </li>
+    <li><a href="#podcast-information">Podcast Information</a>
+      <ul>
+        <li><a href="#multiple-hosts">Multiple Hosts</a></li>
+        <li><a href="#guest-configuration">Guest Configuration</a></li>
+      </ul>
+    </li>
+    <li><a href="#content-metadata">Content Metadata</a>
+      <ul>
+        <li><a href="#tags">Tags</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#summary">Summary</a></li>
+        <li><a href="#description">Description</a></li>
+        <li><a href="#keywords">Keywords</a></li>
+      </ul>
+    </li>
+    <li><a href="#media-configuration">Media Configuration</a>
+      <ul>
+        <li><a href="#featured-image">Featured Image</a></li>
+        <li><a href="#image-attribution">Image Attribution</a></li>
+      </ul>
+    </li>
+    <li><a href="#display-options">Display Options</a>
+      <ul>
+        <li><a href="#overlay-metadata">Overlay Metadata</a></li>
+        <li><a href="#overlay-filter">Overlay Filter</a></li>
+        <li><a href="#transparency">Transparency</a></li>
+      </ul>
+    </li>
+    <li><a href="#page-features">Page Features</a>
+      <ul>
+        <li><a href="#table-of-contents">Table of Contents</a></li>
+        <li><a href="#light-gallery">Light Gallery</a></li>
+        <li><a href="#topics-display">Topics Display</a></li>
+        <li><a href="#link-to-markdown">Link to Markdown</a></li>
+      </ul>
+    </li>
+    <li><a href="#code-block-settings">Code Block Settings</a></li>
+    <li><a href="#social-features">Social Features</a>
+      <ul>
+        <li><a href="#share-buttons">Share Buttons</a></li>
+        <li><a href="#comments">Comments</a></li>
+      </ul>
+    </li>
+    <li><a href="#visibility--seo">Visibility &amp; SEO</a>
+      <ul>
+        <li><a href="#draft-status">Draft Status</a></li>
+        <li><a href="#hidden-from-home-page">Hidden from Home Page</a></li>
+        <li><a href="#hidden-from-search">Hidden from Search</a></li>
+        <li><a href="#rss-full-text">RSS Full Text</a></li>
+        <li><a href="#seo-images">SEO Images</a></li>
+      </ul>
+    </li>
+    <li><a href="#advanced-hugo-fields">Advanced Hugo Fields</a>
+      <ul>
+        <li><a href="#last-modified-date">Last Modified Date</a></li>
+        <li><a href="#publish-date">Publish Date</a></li>
+        <li><a href="#expiry-date">Expiry Date</a></li>
+        <li><a href="#weight">Weight</a></li>
+        <li><a href="#slug">Slug</a></li>
+        <li><a href="#aliases">Aliases</a></li>
+      </ul>
+    </li>
+    <li><a href="#complete-example">Complete Example</a></li>
+    <li><a href="#field-reference-table">Field Reference Table</a></li>
+    <li><a href="#related-documentation">Related Documentation</a></li>
+    <li><a href="#image-attribution-1">Image Attribution</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content episode-content" id="content"><h2 id="about-this-episode">About This Episode</h2>
+<p>This documentation episode provides a complete reference for all customizable metadata fields available in episode frontmatter. Use this guide to understand what each field does and how to configure it.</p>
+<h2 id="required-fields">Required Fields</h2>
+<p>Every episode must include these fields:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Episode Title&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">created</span>: <span style="color:#e6db74">2025-10-27</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">1</span></span></span></code></pre></div><h3 id="field-details">Field Details</h3>
+<p><strong><code>title</code></strong> - Episode title (string)</p>
+<ul>
+<li>Displayed in episode cards and single pages</li>
+<li>Used in SEO and social sharing</li>
+<li>Keep under 60 characters for best SEO</li>
+</ul>
+<p><strong><code>created</code></strong> - Episode publication date</p>
+<ul>
+<li>Format: <code>YYYY-MM-DD</code> or RFC3339 timestamp</li>
+<li>Used for sorting and display</li>
+<li>Can include time: <code>2025-10-27T14:30:00-07:00</code></li>
+</ul>
+<p><strong><code>episodeNumber</code></strong> - Episode number (integer)</p>
+<ul>
+<li>Displayed as &ldquo;Episode #103&rdquo;</li>
+<li>Used for ordering and identification</li>
+<li>Can be any positive integer</li>
+</ul>
+<h2 id="episode-details">Episode Details</h2>
+<h3 id="season-information">Season Information</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">season</span>: <span style="color:#ae81ff">2</span></span></span></code></pre></div><p>Optional field to organize episodes into seasons.</p>
+<h3 id="episode-type">Episode Type</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">episodeType</span>: <span style="color:#e6db74">&#34;full&#34;</span></span></span></code></pre></div><p><strong>Available types:</strong></p>
+<ul>
+<li><code>full</code> - Full-length episode (default)</li>
+<li><code>bonus</code> - Bonus content</li>
+<li><code>trailer</code> - Show trailer</li>
+<li><code>interview</code> - Interview episode</li>
+<li><code>solo</code> - Solo episode</li>
+</ul>
+<h3 id="duration">Duration</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">duration</span>: <span style="color:#e6db74">&#34;1:15:45&#34;</span></span></span></code></pre></div><p>Format: <code>H:MM:SS</code> or <code>MM:SS</code></p>
+<p>Examples:</p>
+<ul>
+<li><code>&quot;45:30&quot;</code> - 45 minutes, 30 seconds</li>
+<li><code>&quot;1:15:45&quot;</code> - 1 hour, 15 minutes, 45 seconds</li>
+<li><code>&quot;5:00&quot;</code> - 5 minutes</li>
+</ul>
+<h2 id="podcast-information">Podcast Information</h2>
+<p>Override site-wide podcast settings per episode:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">podcast</span>: <span style="color:#e6db74">&#34;Special Series Name&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;Guest Host Name&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">guests</span>: [<span style="color:#e6db74">&#34;Guest 1&#34;</span>, <span style="color:#e6db74">&#34;Guest 2&#34;</span>, <span style="color:#e6db74">&#34;Guest 3&#34;</span>]</span></span></code></pre></div><h3 id="multiple-hosts">Multiple Hosts</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">host</span>: [<span style="color:#e6db74">&#34;Primary Host&#34;</span>, <span style="color:#e6db74">&#34;Co-Host&#34;</span>]</span></span></code></pre></div><p>Or as a comma-separated string:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;Host One, Host Two&#34;</span></span></span></code></pre></div><h3 id="guest-configuration">Guest Configuration</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">guests</span>: []  <span style="color:#75715e"># No guests</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">guests</span>: [<span style="color:#e6db74">&#34;Single Guest&#34;</span>]  <span style="color:#75715e"># One guest</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">guests</span>: [<span style="color:#e6db74">&#34;Guest 1&#34;</span>, <span style="color:#e6db74">&#34;Guest 2&#34;</span>]  <span style="color:#75715e"># Multiple guests</span></span></span></code></pre></div><h2 id="content-metadata">Content Metadata</h2>
+<h3 id="tags">Tags</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;technology&#34;</span>, <span style="color:#e6db74">&#34;web development&#34;</span>, <span style="color:#e6db74">&#34;hugo&#34;</span>, <span style="color:#e6db74">&#34;documentation&#34;</span>]</span></span></code></pre></div><p><strong>Best practices:</strong></p>
+<ul>
+<li>Use 3-7 tags per episode</li>
+<li>Keep tags consistent across episodes</li>
+<li>Use lowercase for consistency</li>
+<li>Enable <code>topicsOn: true</code> to display tags as &ldquo;Topics Discussed&rdquo;</li>
+</ul>
+<h3 id="categories">Categories</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">categories</span>: [<span style="color:#e6db74">&#34;Technology&#34;</span>, <span style="color:#e6db74">&#34;Documentation&#34;</span>]</span></span></code></pre></div><p>Broader grouping than tags. Use 1-2 categories per episode.</p>
+<h3 id="summary">Summary</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">summary</span>: <span style="color:#e6db74">&#34;Brief one-sentence description of the episode for cards and previews.&#34;</span></span></span></code></pre></div><p><strong>Guidelines:</strong></p>
+<ul>
+<li>Keep under 160 characters</li>
+<li>One to two sentences maximum</li>
+<li>Used in episode cards and RSS feeds</li>
+<li>Clear and compelling</li>
+</ul>
+<h3 id="description">Description</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;Longer, more detailed description for SEO and social sharing. This can be several sentences explaining what listeners will learn and why they should tune in.&#34;</span></span></span></code></pre></div><p><strong>Guidelines:</strong></p>
+<ul>
+<li>2-3 sentences</li>
+<li>Include relevant keywords naturally</li>
+<li>Used for SEO meta description</li>
+<li>Can be longer than summary</li>
+</ul>
+<h3 id="keywords">Keywords</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">keywords</span>: [<span style="color:#e6db74">&#34;podcast&#34;</span>, <span style="color:#e6db74">&#34;hugo&#34;</span>, <span style="color:#e6db74">&#34;web development&#34;</span>, <span style="color:#e6db74">&#34;static site&#34;</span>]</span></span></code></pre></div><p>Optional SEO keywords array.</p>
+<h2 id="media-configuration">Media Configuration</h2>
+<h3 id="featured-image">Featured Image</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">featuredImage</span>: <span style="color:#e6db74">&#34;/images/episode-cover.jpg&#34;</span></span></span></code></pre></div><p><strong>Paths:</strong></p>
+<ul>
+<li>Absolute: <code>/images/file.jpg</code> (from static folder)</li>
+<li>Relative: <code>images/file.jpg</code> (in episode bundle)</li>
+<li>URL: <code>https://example.com/image.jpg</code></li>
+</ul>
+<p><strong>Recommendations:</strong></p>
+<ul>
+<li>Use 1200x1200px or larger</li>
+<li>Keep file size under 500KB</li>
+<li>Use JPG for photos, PNG for graphics</li>
+<li>Maintain consistent aspect ratio</li>
+</ul>
+<h3 id="image-attribution">Image Attribution</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">imageCredit</span>: <span style="color:#e6db74">&#34;Photo by Photographer Name from Pexels (CC0)&#34;</span></span></span></code></pre></div><p>Give credit to image creators, even when using CC0/free images.</p>
+<h2 id="display-options">Display Options</h2>
+<h3 id="overlay-metadata">Overlay Metadata</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">overlayMetadata</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlayPosition</span>: <span style="color:#e6db74">&#34;lower-left&#34;</span></span></span></code></pre></div><p>Display metadata on the image instead of above it.</p>
+<p><strong>Positions:</strong> <code>top-left</code>, <code>top-center</code>, <code>top-right</code>, <code>mid-left</code>, <code>mid-center</code>, <code>mid-right</code>, <code>lower-left</code>, <code>lower-center</code>, <code>lower-right</code></p>
+<h3 id="overlay-filter">Overlay Filter</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">overlay_filter</span>: <span style="color:#ae81ff">0.4</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># OR</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlay_filter</span>: <span style="color:#e6db74">&#34;rgba(255, 0, 0, 0.3)&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># OR</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlay_filter</span>: <span style="color:#e6db74">&#34;linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0))&#34;</span></span></span></code></pre></div><p>Add colored overlay to images.</p>
+<h3 id="transparency">Transparency</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">transparency</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">transparencyAmount</span>: <span style="color:#ae81ff">0.85</span></span></span></code></pre></div><p>Make the image semi-transparent. Range: 0.0 (invisible) to 1.0 (opaque).</p>
+<h2 id="page-features">Page Features</h2>
+<h3 id="table-of-contents">Table of Contents</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">toc</span>: <span style="color:#66d9ef">true</span></span></span></code></pre></div><p>Enable/disable table of contents for the episode.</p>
+<h3 id="light-gallery">Light Gallery</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">lightgallery</span>: <span style="color:#66d9ef">true</span></span></span></code></pre></div><p>Enable lightbox for images in the episode content.</p>
+<h3 id="topics-display">Topics Display</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">topicsOn</span>: <span style="color:#66d9ef">true</span></span></span></code></pre></div><p>Show &ldquo;Topics Discussed&rdquo; section with tags.</p>
+<h3 id="link-to-markdown">Link to Markdown</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">linkToMarkdown</span>: <span style="color:#66d9ef">true</span></span></span></code></pre></div><p>Show link to view raw markdown source.</p>
+<h2 id="code-block-settings">Code Block Settings</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">code</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">copy</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">maxShownLines</span>: <span style="color:#ae81ff">50</span></span></span></code></pre></div><p>Configure code block behavior:</p>
+<ul>
+<li><code>copy</code> - Enable copy button</li>
+<li><code>maxShownLines</code> - Collapse code blocks longer than this</li>
+</ul>
+<h2 id="social-features">Social Features</h2>
+<h3 id="share-buttons">Share Buttons</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">share</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">enable</span>: <span style="color:#66d9ef">true</span></span></span></code></pre></div><p>Enable social sharing buttons.</p>
+<h3 id="comments">Comments</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">comment</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">enable</span>: <span style="color:#66d9ef">true</span></span></span></code></pre></div><p>Enable comments (requires comment system configuration in hugo.toml).</p>
+<h2 id="visibility--seo">Visibility &amp; SEO</h2>
+<h3 id="draft-status">Draft Status</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">draft</span>: <span style="color:#66d9ef">false</span></span></span></code></pre></div><p><code>true</code> = Not published, <code>false</code> = Published</p>
+<h3 id="hidden-from-home-page">Hidden from Home Page</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">hiddenFromHomePage</span>: <span style="color:#66d9ef">false</span></span></span></code></pre></div><p>Exclude from home page listings.</p>
+<h3 id="hidden-from-search">Hidden from Search</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">hiddenFromSearch</span>: <span style="color:#66d9ef">false</span></span></span></code></pre></div><p>Exclude from site search results.</p>
+<h3 id="rss-full-text">RSS Full Text</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">rssFullText</span>: <span style="color:#66d9ef">false</span></span></span></code></pre></div><p>Include full content in RSS feed instead of summary.</p>
+<h3 id="seo-images">SEO Images</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">seo</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">images</span>: [<span style="color:#e6db74">&#34;/images/seo-image.jpg&#34;</span>]</span></span></code></pre></div><p>Specific images for social sharing (Open Graph, Twitter Cards).</p>
+<h2 id="advanced-hugo-fields">Advanced Hugo Fields</h2>
+<h3 id="last-modified-date">Last Modified Date</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">lastmod</span>: <span style="color:#e6db74">2025-10-28T10:00:00</span><span style="color:#ae81ff">-07</span>:<span style="color:#ae81ff">00</span></span></span></code></pre></div><p>Track when content was last updated.</p>
+<h3 id="publish-date">Publish Date</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">publishDate</span>: <span style="color:#e6db74">2025-11-01T00:00:00</span><span style="color:#ae81ff">-07</span>:<span style="color:#ae81ff">00</span></span></span></code></pre></div><p>Schedule future publication.</p>
+<h3 id="expiry-date">Expiry Date</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">expiryDate</span>: <span style="color:#e6db74">2026-12-31T23:59:59</span><span style="color:#ae81ff">-07</span>:<span style="color:#ae81ff">00</span></span></span></code></pre></div><p>Auto-hide content after this date.</p>
+<h3 id="weight">Weight</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">weight</span>: <span style="color:#ae81ff">10</span></span></span></code></pre></div><p>Custom ordering (lower numbers appear first).</p>
+<h3 id="slug">Slug</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">slug</span>: <span style="color:#e6db74">&#34;custom-url-slug&#34;</span></span></span></code></pre></div><p>Override auto-generated URL slug.</p>
+<h3 id="aliases">Aliases</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">aliases</span>: [<span style="color:#e6db74">&#34;/old-url/&#34;</span>, <span style="color:#e6db74">&#34;/another-old-url/&#34;</span>]</span></span></code></pre></div><p>URL redirects for renamed content.</p>
+<h2 id="complete-example">Complete Example</h2>
+<p>Here&rsquo;s a fully configured episode frontmatter:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Complete Episode Configuration Example&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">created</span>: <span style="color:#e6db74">2025-10-27T14:30:00</span><span style="color:#ae81ff">-07</span>:<span style="color:#ae81ff">00</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">draft</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Episode details</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">103</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">season</span>: <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeType</span>: <span style="color:#e6db74">&#34;full&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Podcast info</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcast</span>: <span style="color:#e6db74">&#34;Tokyo Dev Podcast&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;Documentation Team&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">guests</span>: [<span style="color:#e6db74">&#34;Jane Developer&#34;</span>, <span style="color:#e6db74">&#34;Alex Designer&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Media</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">featuredImage</span>: <span style="color:#e6db74">&#34;/images/samples/sample-tech-workspace.jpg&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">duration</span>: <span style="color:#e6db74">&#34;1:15:45&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Content</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;documentation&#34;</span>, <span style="color:#e6db74">&#34;metadata&#34;</span>, <span style="color:#e6db74">&#34;customization&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">categories</span>: [<span style="color:#e6db74">&#34;Technology&#34;</span>, <span style="color:#e6db74">&#34;Documentation&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">summary</span>: <span style="color:#e6db74">&#34;Complete reference for episode metadata customization.&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;Learn all metadata fields and configuration options.&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">keywords</span>: [<span style="color:#e6db74">&#34;hugo&#34;</span>, <span style="color:#e6db74">&#34;podcast&#34;</span>, <span style="color:#e6db74">&#34;metadata&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Display</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlayMetadata</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlayPosition</span>: <span style="color:#e6db74">&#34;mid-left&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlay_filter</span>: <span style="color:#e6db74">&#34;rgba(0, 50, 100, 0.4)&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">transparency</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">toc</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">lightgallery</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">topicsOn</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Advanced</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">hiddenFromHomePage</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">hiddenFromSearch</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">linkToMarkdown</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">code</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">copy</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">maxShownLines</span>: <span style="color:#ae81ff">50</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">share</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">enable</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">comment</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">enable</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Attribution</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">imageCredit</span>: <span style="color:#e6db74">&#34;Photo by Photographer (CC0)&#34;</span>
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><h2 id="field-reference-table">Field Reference Table</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Field</th>
+          <th>Type</th>
+          <th>Required</th>
+          <th>Default</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>title</code></td>
+          <td>string</td>
+          <td>Yes</td>
+          <td>-</td>
+          <td>Episode title</td>
+      </tr>
+      <tr>
+          <td><code>created</code></td>
+          <td>date</td>
+          <td>Yes</td>
+          <td>-</td>
+          <td>Publication date</td>
+      </tr>
+      <tr>
+          <td><code>episodeNumber</code></td>
+          <td>int</td>
+          <td>Yes</td>
+          <td>-</td>
+          <td>Episode number</td>
+      </tr>
+      <tr>
+          <td><code>season</code></td>
+          <td>int</td>
+          <td>No</td>
+          <td>-</td>
+          <td>Season number</td>
+      </tr>
+      <tr>
+          <td><code>episodeType</code></td>
+          <td>string</td>
+          <td>No</td>
+          <td>&ldquo;full&rdquo;</td>
+          <td>Episode type</td>
+      </tr>
+      <tr>
+          <td><code>podcast</code></td>
+          <td>string</td>
+          <td>No</td>
+          <td>Site default</td>
+          <td>Podcast name</td>
+      </tr>
+      <tr>
+          <td><code>host</code></td>
+          <td>string/array</td>
+          <td>No</td>
+          <td>Site default</td>
+          <td>Host name(s)</td>
+      </tr>
+      <tr>
+          <td><code>guests</code></td>
+          <td>array</td>
+          <td>No</td>
+          <td>[]</td>
+          <td>Guest names</td>
+      </tr>
+      <tr>
+          <td><code>duration</code></td>
+          <td>string</td>
+          <td>No</td>
+          <td>-</td>
+          <td>Episode duration</td>
+      </tr>
+      <tr>
+          <td><code>featuredImage</code></td>
+          <td>string</td>
+          <td>No</td>
+          <td>-</td>
+          <td>Image path/URL</td>
+      </tr>
+      <tr>
+          <td><code>tags</code></td>
+          <td>array</td>
+          <td>No</td>
+          <td>[]</td>
+          <td>Topic tags</td>
+      </tr>
+      <tr>
+          <td><code>categories</code></td>
+          <td>array</td>
+          <td>No</td>
+          <td>[]</td>
+          <td>Content categories</td>
+      </tr>
+      <tr>
+          <td><code>summary</code></td>
+          <td>string</td>
+          <td>No</td>
+          <td>-</td>
+          <td>Brief description</td>
+      </tr>
+      <tr>
+          <td><code>description</code></td>
+          <td>string</td>
+          <td>No</td>
+          <td>-</td>
+          <td>Full description</td>
+      </tr>
+      <tr>
+          <td><code>overlayMetadata</code></td>
+          <td>bool</td>
+          <td>No</td>
+          <td>false</td>
+          <td>Metadata on image</td>
+      </tr>
+      <tr>
+          <td><code>overlayPosition</code></td>
+          <td>string</td>
+          <td>No</td>
+          <td>&ldquo;lower-left&rdquo;</td>
+          <td>Overlay position</td>
+      </tr>
+      <tr>
+          <td><code>overlay_filter</code></td>
+          <td>mixed</td>
+          <td>No</td>
+          <td>-</td>
+          <td>Color overlay</td>
+      </tr>
+      <tr>
+          <td><code>transparency</code></td>
+          <td>bool</td>
+          <td>No</td>
+          <td>false</td>
+          <td>Image transparency</td>
+      </tr>
+      <tr>
+          <td><code>toc</code></td>
+          <td>bool</td>
+          <td>No</td>
+          <td>Site default</td>
+          <td>Table of contents</td>
+      </tr>
+      <tr>
+          <td><code>draft</code></td>
+          <td>bool</td>
+          <td>No</td>
+          <td>false</td>
+          <td>Draft status</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="related-documentation">Related Documentation</h2>
+<ul>
+<li><code>/episodes/overlay-features-demo/</code> - Overlay features</li>
+<li><code>/episodes/player-embeds-demo/</code> - Player embedding</li>
+<li><code>/episodes/episode-types-demo/</code> - Episode type examples</li>
+<li><code>/docs/content-guide/</code> - Complete content guide</li>
+</ul>
+<h2 id="image-attribution-1">Image Attribution</h2>
+<p>Featured image: Photo by Lex Photography from Pexels (CC0 License)</p>
+<ul>
+<li>Source: <a href="https://www.pexels.com/photo/macbook-pro-near-white-open-book-1229861/" target="_blank" rel="noopener noreffer ">https://www.pexels.com/photo/macbook-pro-near-white-open-book-1229861/</a></li>
+<li>License: Creative Commons Zero (CC0)</li>
+<li>Free to use with no attribution required</li>
+</ul>
+<hr>
+<p><strong>Documentation Version:</strong> 1.0
+<strong>Last Updated:</strong> 2025-10-27
+<strong>Theme:</strong> Tokyo-Nord</p>
+</div><div class="podcast-subscribe-section">
+    <h3 class="subscribe-title">Subscribe to the podcast</h3><div class="subscribe-buttons-container"></div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span></span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A1313%2Fepisodes%2Fmetadata-customization-demo%2F&amp;text=Complete&#43;reference&#43;guide&#43;for&#43;customizing&#43;episode&#43;metadata&#43;in&#43;the&#43;Tokyo-Nord&#43;theme%2C&#43;covering&#43;all&#43;available&#43;frontmatter&#43;fields&#43;and&#43;configuration&#43;options.&amp;hashtags=documentation%2Cmetadata%2Ccustomization%2Cconfiguration" target="_blank" rel="noopener noreferrer" title="Share on X"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="https://www.facebook.com/sharer/sharer.php?u=http%253A%252F%252Flocalhost%253A1313%252Fepisodes%252Fmetadata-customization-demo%252F" target="_blank" rel="noopener noreferrer" title="Share on Facebook"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="https://www.linkedin.com/sharing/share-offsite/?url=http%253A%252F%252Flocalhost%253A1313%252Fepisodes%252Fmetadata-customization-demo%252F" target="_blank" rel="noopener noreferrer" title="Share on Linkedin"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="https://news.ycombinator.com/submitlink?u=http%253A%252F%252Flocalhost%253A1313%252Fepisodes%252Fmetadata-customization-demo%252F&t=Customizing%2bEpisode%2bMetadata%253A%2bComplete%2bReference" target="_blank" rel="noopener noreferrer" title="Share on Hacker News"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="https://www.reddit.com/submit?url=http%253A%252F%252Flocalhost%253A1313%252Fepisodes%252Fmetadata-customization-demo%252F&title=Customizing%2bEpisode%2bMetadata%253A%2bComplete%2bReference" target="_blank" rel="noopener noreferrer" title="Share on Reddit"><i class="fab fa-reddit fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%253A%252F%252Flocalhost%253A1313%252Fepisodes%252Fmetadata-customization-demo%252F&text=Complete%2breference%2bguide%2bfor%2bcustomizing%2bepisode%2bmetadata%2bin%2bthe%2bTokyo-Nord%2btheme%252C%2bcovering%2ball%2bavailable%2bfrontmatter%2bfields%2band%2bconfiguration%2boptions." target="_blank" rel="noopener noreferrer" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/documentation/">Documentation</a>,&nbsp;<a href="/tags/metadata/">Metadata</a>,&nbsp;<a href="/tags/customization/">Customization</a>,&nbsp;<a href="/tags/configuration/">Configuration</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/episodes/player-embeds-demo/" class="prev" rel="prev" title="Embedding Podcast Players: Complete Guide"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Embedding Podcast Players: Complete Guide</a>
+            <a href="/episodes/overlay-features-demo/" class="next" rel="next" title="Complete Guide to Episode Overlay Features">Complete Guide to Episode Overlay Features<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.151.2">Hugo</a> | Theme - <a href="https://github.com/gallo-s-chingon/Tokyo-Nord" target="_blank" rel="noopener noreffer" title="Tokyo-Nord 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> Tokyo-Nord</a>
+                </div>
+                <div class="footer-line">
+                    Created by <a href="https://github.com/gallo-s-chingon" target="_blank" rel="noopener noreferrer">Gallo Chingon</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">My cool site</a></span>&nbsp;|&nbsp;<span class="license"><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><script src="/lib/autocomplete/autocomplete.min.js"></script><script src="/lib/lunr/lunr.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script>window.config={"comment":{},"highContrast":true,"lightgallery":true,"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/js/theme.min.js"></script></body>
+</html>

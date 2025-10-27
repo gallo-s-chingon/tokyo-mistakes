@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Blog Post Front Matter Reference - My cool site</title><meta name="Description" content="Learn all available frontmatter fields for blog posts in Tokyo-Nord theme"><meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://example.com/blog/blog-frontmatter-example/" /><link rel="prev" href="https://example.com/blog/frontmatter-example/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Blog Post Front Matter Reference",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/example.com\/blog\/blog-frontmatter-example\/"
+        },"genre": "blog","keywords": "reference, hugo, blog, documentation, frontmatter","wordcount":  3155 ,
+        "url": "https:\/\/example.com\/blog\/blog-frontmatter-example\/","datePublished": "2025-01-15T10:00:00-07:00","dateModified": "2025-01-15T10:00:00-07:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Your Name"
+            },"description": "Learn all available frontmatter fields for blog posts in Tokyo-Nord theme"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          function applyTheme() {
+            const highContrast =  true ;
+            const defaultTheme = 'auto';
+
+            
+            const themeMap = {
+              dark: highContrast ? 'tokyo-night' : 'nordic',
+              light: highContrast ? 'onenord-light' : 'onenord-day'
+            };
+
+            
+            let theme = window.localStorage?.getItem('theme');
+
+            if (!theme) {
+              
+              if (defaultTheme === 'auto') {
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                theme = prefersDark ? themeMap.dark : themeMap.light;
+              } else if (defaultTheme === 'dark') {
+                theme = themeMap.dark;
+              } else {
+                theme = themeMap.light;
+              }
+            }
+
+            
+            const validThemes = ['tokyo-night', 'nordic', 'onenord-light', 'onenord-day'];
+            if (!validThemes.includes(theme)) {
+              theme = themeMap.dark;
+            }
+
+            let isDark = theme === 'tokyo-night' || theme === 'nordic';
+            document.body.setAttribute('data-theme', theme);
+            document.body.setAttribute('theme', isDark ? 'dark' : 'light');
+          }
+
+          applyTheme();
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="My cool site">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/featured/"> Featured </a><a class="menu-item" href="/episodes/"> Episodes </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="My cool site">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/featured/" title="">Feat</a><a class="menu-item" href="/episodes/" title="">Epi</a><a class="menu-item" href="/about/" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single blog-post"><h1 class="single-title animate__animated animate__flipInX">Blog Post Front Matter Reference</h1><h2 class="single-subtitle">Complete documentation for all blog frontmatter fields</h2><div class="post-meta blog-meta"><div class="post-meta-line">
+                    <span class="post-author"><a href="https://example.com" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Your Name</a></span>
+                </div><div class="post-meta-line">
+                        <span class="post-date">
+                            <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-01-15">2025-01-15</time>
+                        </span>
+                    </div><div class="post-meta-line">
+                    <span class="post-readtime">
+                        <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;15 minutes
+                    </span>
+                </div><div class="post-meta-line">
+                        <span class="post-categories">
+                            <i class="far fa-folder fa-fw" aria-hidden="true"></i>&nbsp;Documentation
+                        </span>
+                    </div><div class="post-meta-line">
+                        <span class="post-tags">
+                            <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;reference, hugo, blog, documentation, frontmatter
+                        </span>
+                    </div></div><div class="featured-image blog-featured-image" style="position: relative;"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/blog-cover.jpg"
+        data-srcset="/images/blog-cover.jpg, /images/blog-cover.jpg 1.5x, /images/blog-cover.jpg 2x"
+        data-sizes="auto"
+        alt="/images/blog-cover.jpg"
+        title="Learn all available frontmatter fields for blog posts in Tokyo-Nord theme" /><div class="featured-image-color-overlay" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));"></div></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#blog-post-front-matter-complete-reference">Blog Post Front Matter Complete Reference</a></li>
+    <li><a href="#complete-blog-post-frontmatter-template">Complete Blog Post Frontmatter Template</a></li>
+    <li><a href="#field-categories">Field Categories</a>
+      <ul>
+        <li><a href="#required-vs-optional-fields">Required vs Optional Fields</a></li>
+      </ul>
+    </li>
+    <li><a href="#common-blog-post-configurations">Common Blog Post Configurations</a>
+      <ul>
+        <li><a href="#minimal-blog-post-required-fields-only">Minimal Blog Post (Required Fields Only)</a></li>
+        <li><a href="#standard-blog-post">Standard Blog Post</a></li>
+        <li><a href="#technical-blog-post-with-code">Technical Blog Post with Code</a></li>
+        <li><a href="#photo-blog-post">Photo Blog Post</a></li>
+        <li><a href="#styled-post-with-image-effects">Styled Post with Image Effects</a></li>
+        <li><a href="#draft-post-not-published">Draft Post (Not Published)</a></li>
+        <li><a href="#scheduled-future-post">Scheduled Future Post</a></li>
+        <li><a href="#post-with-url-redirect">Post with URL Redirect</a></li>
+      </ul>
+    </li>
+    <li><a href="#understanding-image-display-options">Understanding Image Display Options</a>
+      <ul>
+        <li><a href="#1-metadata-overlay-overlaymetadata">1. Metadata Overlay (<code>overlayMetadata</code>)</a></li>
+        <li><a href="#2-image-transparency-transparency">2. Image Transparency (<code>transparency</code>)</a></li>
+        <li><a href="#3-color-overlay-filter-overlay_filter">3. Color Overlay Filter (<code>overlay_filter</code>)</a></li>
+      </ul>
+    </li>
+    <li><a href="#table-of-contents-options">Table of Contents Options</a>
+      <ul>
+        <li><a href="#simple-boolean">Simple Boolean</a></li>
+        <li><a href="#detailed-configuration">Detailed Configuration</a></li>
+      </ul>
+    </li>
+    <li><a href="#categories-vs-tags">Categories vs Tags</a>
+      <ul>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#tags">Tags</a></li>
+      </ul>
+    </li>
+    <li><a href="#seo-best-practices">SEO Best Practices</a>
+      <ul>
+        <li><a href="#meta-description">Meta Description</a></li>
+        <li><a href="#keywords">Keywords</a></li>
+        <li><a href="#featured-image">Featured Image</a></li>
+        <li><a href="#seo-images-for-social">SEO Images for Social</a></li>
+      </ul>
+    </li>
+    <li><a href="#date-format">Date Format</a>
+      <ul>
+        <li><a href="#common-examples">Common Examples</a></li>
+        <li><a href="#date-fields">Date Fields</a></li>
+      </ul>
+    </li>
+    <li><a href="#author-configuration">Author Configuration</a>
+      <ul>
+        <li><a href="#override-site-author">Override Site Author</a></li>
+        <li><a href="#use-site-default-author">Use Site Default Author</a></li>
+        <li><a href="#multiple-authors">Multiple Authors</a></li>
+      </ul>
+    </li>
+    <li><a href="#code-block-configuration">Code Block Configuration</a>
+      <ul>
+        <li><a href="#copy-button">Copy Button</a></li>
+        <li><a href="#max-lines-before-collapse">Max Lines Before Collapse</a></li>
+        <li><a href="#complete-example">Complete Example</a></li>
+      </ul>
+    </li>
+    <li><a href="#configuration-scopes">Configuration Scopes</a>
+      <ul>
+        <li><a href="#local-only">Local Only</a></li>
+        <li><a href="#local--global">Local + Global</a></li>
+        <li><a href="#global-only">Global Only</a></li>
+      </ul>
+    </li>
+    <li><a href="#cross-references">Cross-References</a></li>
+    <li><a href="#tips--best-practices">Tips &amp; Best Practices</a>
+      <ul>
+        <li><a href="#content">Content</a></li>
+        <li><a href="#images">Images</a></li>
+        <li><a href="#seo">SEO</a></li>
+        <li><a href="#features">Features</a></li>
+      </ul>
+    </li>
+    <li><a href="#testing-your-blog-post">Testing Your Blog Post</a></li>
+    <li><a href="#common-issues--solutions">Common Issues &amp; Solutions</a>
+      <ul>
+        <li><a href="#post-not-showing-up">Post Not Showing Up</a></li>
+        <li><a href="#image-not-loading">Image Not Loading</a></li>
+        <li><a href="#toc-not-appearing">TOC Not Appearing</a></li>
+        <li><a href="#categoriestags-not-working">Categories/Tags Not Working</a></li>
+        <li><a href="#overlay-not-visible">Overlay Not Visible</a></li>
+        <li><a href="#code-copy-button-not-working">Code Copy Button Not Working</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content blog-content" id="content"><h2 id="blog-post-front-matter-complete-reference">Blog Post Front Matter Complete Reference</h2>
+<p>This post demonstrates all available frontmatter fields when creating blog posts in the Tokyo-Nord Hugo theme.</p>
+<p>For complete documentation across all content types, see: <a href="/QUICK-REFERENCE.md" rel="">QUICK-REFERENCE.md</a></p>
+<hr>
+<h2 id="complete-blog-post-frontmatter-template">Complete Blog Post Frontmatter Template</h2>
+<p>Below is a complete example showing ALL available frontmatter fields for blog posts with inline comments:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># REQUIRED FIELDS</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Post Title&#34;</span>                          <span style="color:#75715e"># REQUIRED - Post title (H1 heading)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2024-01-20T10:00:00</span><span style="color:#ae81ff">-07</span>:<span style="color:#ae81ff">00</span>              <span style="color:#75715e"># REQUIRED - Hugo publish date (RFC3339 format)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># OPTIONAL TITLE FIELDS</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">subtitle</span>: <span style="color:#e6db74">&#34;Optional Subtitle&#34;</span>                <span style="color:#75715e"># local only - Post subtitle (appears under title)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># AUTHOR INFORMATION</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">author</span>: <span style="color:#e6db74">&#34;Author Name&#34;</span>                        <span style="color:#75715e"># local + global: params.author.name</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Author name (overrides site config)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">authorLink</span>: <span style="color:#e6db74">&#34;https://example.com&#34;</span>            <span style="color:#75715e"># local + global: params.author.link</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Author website/profile link</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># CONTENT &amp; SEO</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;Post description for SEO&#34;</span>      <span style="color:#75715e"># local only - Meta description for SEO</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># 150-160 characters recommended</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">keywords</span>: [<span style="color:#e6db74">&#34;keyword1&#34;</span>, <span style="color:#e6db74">&#34;keyword2&#34;</span>]           <span style="color:#75715e"># local only - Meta keywords for SEO (array)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">summary</span>: <span style="color:#e6db74">&#34;Brief post summary&#34;</span>                <span style="color:#75715e"># local only - Short summary for cards/previews</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Auto-generated from content if omitted</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">categories</span>: [<span style="color:#e6db74">&#34;category1&#34;</span>, <span style="color:#e6db74">&#34;category2&#34;</span>]       <span style="color:#75715e"># local only - Post categories (array)</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Broad content groupings (1-3 recommended)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;tag1&#34;</span>, <span style="color:#e6db74">&#34;tag2&#34;</span>, <span style="color:#e6db74">&#34;tag3&#34;</span>]               <span style="color:#75715e"># local only - Post tags/topics (array)</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Specific topics/keywords (3-7 recommended)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># FEATURED IMAGES</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">featuredImage</span>: <span style="color:#ae81ff">/images/post.jpg             </span> <span style="color:#75715e"># local only - Path to featured image (main image)</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Appears on list pages and single page header</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">featuredImagePreview</span>: <span style="color:#ae81ff">/images/thumb.jpg     </span> <span style="color:#75715e"># local only - Optional preview/thumbnail image</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># If not set, uses featuredImage</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Used in card previews and smaller contexts</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># IMAGE DISPLAY OPTIONS</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Image Transparency (Makes image itself transparent)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">transparency: false                          # local + global</span>: <span style="color:#ae81ff">params.images.transparency</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># true = make image transparent</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># false = image fully opaque (default)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">transparencyAmount: 0.8                      # local + global</span>: <span style="color:#ae81ff">params.images.opacity</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Range: 0.0 (fully transparent) to 1.0 (opaque)</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Only applies when transparency: true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Metadata Overlay (Shows metadata ON the image)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlayMetadata: false                       # local + global</span>: <span style="color:#ae81ff">params.blog.overlay.enable</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># true = metadata appears on image</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># false = metadata appears above image (default)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlayPosition</span>: <span style="color:#e6db74">&#34;lower-left&#34;</span>                <span style="color:#75715e"># local + global: params.blog.overlay.position</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Options: top-left, top-center, top-right,</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e">#          mid-left, mid-center, mid-right,</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e">#          lower-left, lower-center, lower-right</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Only visible on single pages when overlayMetadata: true</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Note: overlayOpacity is global only in hugo.toml (no local override)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#       Set in params.blog.overlay.opacity (default: 0.85)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Color Overlay Filter (Colored layer on top of image)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlay_filter</span>: <span style="color:#ae81ff">0.5</span>                          <span style="color:#75715e"># local only - works on BOTH single &amp; list pages</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Formats:</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># - Numeric: 0.5 = 50% black overlay</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># - RGBA: &#34;rgba(255, 0, 0, 0.5)&#34; = red overlay</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># - Gradient: &#34;linear-gradient(...)&#34; = gradient effect</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Examples:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># overlay_filter: 0.3                        # 30% black overlay</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># overlay_filter: &#34;rgba(100, 0, 100, 0.5)&#34;   # Purple overlay at 50%</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># overlay_filter: &#34;linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0))&#34;  # Gradient</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># TABLE OF CONTENTS</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">toc</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">enable: true                               # local + global</span>: <span style="color:#ae81ff">params.page.toc.enable</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Enable table of contents</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">auto: true                                 # local + global</span>: <span style="color:#ae81ff">params.page.toc.auto</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Auto-collapse TOC</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">keepStatic: false                          # local + global</span>: <span style="color:#ae81ff">params.page.toc.keepStatic</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Keep TOC static (no auto-collapse)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># OR simple boolean format:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># toc: true                                  # Uses global params.page.toc defaults</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># toc: false                                 # Disables TOC entirely</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># CODE BLOCKS</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">code</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">copy: true                                 # local + global</span>: <span style="color:#ae81ff">params.page.code.copy</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Show copy button on code blocks</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">maxShownLines: 50                          # local + global</span>: <span style="color:#ae81ff">params.page.code.maxShownLines</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Max lines before collapse (expands on click)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Note: Code rendering (GoAT, Mermaid) is global only in hugo.toml</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#       params.page.code.render.goat and params.page.code.render.mermaid</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># PAGE FEATURES</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">lightgallery: true                           # local + global</span>: <span style="color:#ae81ff">params.page.lightgallery</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Enable lightbox gallery for images</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">linkToMarkdown: true                         # local + global</span>: <span style="color:#ae81ff">params.page.linkToMarkdown</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Show link to raw markdown file</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">rssFullText: false                           # local + global</span>: <span style="color:#ae81ff">params.page.rssFullText</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Include full text in RSS feed (vs summary)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">topicsOn: true                               # local + global</span>: <span style="color:#ae81ff">params.topicsDiscussed</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Show &#34;Topics Discussed&#34; section with tags</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">twemoji: false                               # local + global</span>: <span style="color:#ae81ff">params.page.twemoji</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Enable Twitter emoji rendering</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">ruby: true                                   # local + global</span>: <span style="color:#ae81ff">params.page.ruby</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Enable ruby annotations (East Asian typography)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">fraction: true                               # local + global</span>: <span style="color:#ae81ff">params.page.fraction</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Enable fraction syntax rendering</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">fontawesome: true                            # local + global</span>: <span style="color:#ae81ff">params.page.fontawesome</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Enable FontAwesome icons</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># VISIBILITY OPTIONS</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">draft</span>: <span style="color:#66d9ef">false</span>                                 <span style="color:#75715e"># local only - Draft status (true = not published)</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Use hugo server -D to preview drafts</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">hiddenFromHomePage: false                    # local + global</span>: <span style="color:#ae81ff">params.page.hiddenFromHomePage</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Hide from home page listings</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">hiddenFromSearch: false                      # local + global</span>: <span style="color:#ae81ff">params.page.hiddenFromSearch</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Hide from search results</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># SOCIAL SHARE BUTTONS</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">share</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">enable: true                               # local + global</span>: <span style="color:#ae81ff">params.page.share.enable</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Enable social share buttons</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Individual platform toggles inherit from global params.page.share.*</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Available platforms: X, Threads, Facebook, LinkedIn, WhatsApp, Viber,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Pinterest, Tumblr, HackerNews, Reddit, VK, Buffer, Xing, Line,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Instapaper, Pocket, Flipboard, Weibo, Blogger, Baidu, Odnoklassniki,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Evernote, Skype, Trello, Diaspora, Mix, Telegram</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># COMMENTS</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">comment</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">enable: true                               # local + global</span>: <span style="color:#ae81ff">params.page.comment.enable</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Enable comments section</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Comment systems configured globally in hugo.toml:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># - utterances (GitHub-based)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># - giscus (GitHub Discussions)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># - waline (Self-hosted)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># SEO CONFIGURATION</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">seo</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">images: []                                 # local + global</span>: <span style="color:#ae81ff">params.page.seo.images</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Array of images for SEO/social sharing</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Example: [&#34;/images/post.jpg&#34;, &#34;/images/banner.jpg&#34;]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Publisher info is global only:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># - params.page.seo.publisher.name</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># - params.page.seo.publisher.logoUrl</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># CUSTOM LIBRARIES (Advanced)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">library</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">css</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># customCSS = &#34;custom.css&#34;               # local + global: params.page.library.css</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Load custom CSS libraries</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">js</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># customJS = &#34;custom.js&#34;                 # local + global: params.page.library.js</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Load custom JS libraries</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ADVANCED HUGO FIELDS (Optional)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">lastmod</span>: <span style="color:#e6db74">2024-01-20T10:00:00</span><span style="color:#ae81ff">-07</span>:<span style="color:#ae81ff">00</span>           <span style="color:#75715e"># local only - Last modified date (RFC3339)</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Used for SEO and sitemap</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">publishDate</span>: <span style="color:#e6db74">2024-01-20T10:00:00</span><span style="color:#ae81ff">-07</span>:<span style="color:#ae81ff">00</span>       <span style="color:#75715e"># local only - Scheduled publish date (future posts)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">expiryDate</span>: <span style="color:#e6db74">2099-12-31T00:00:00</span><span style="color:#ae81ff">-07</span>:<span style="color:#ae81ff">00</span>        <span style="color:#75715e"># local only - Content expiry date (auto-unpublish)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">weight</span>: <span style="color:#ae81ff">0</span>                                    <span style="color:#75715e"># local only - Content ordering weight (lower = first)</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Used for manual sorting in lists</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;&#34;</span>                                     <span style="color:#75715e"># local only - Content type override (advanced)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">layout</span>: <span style="color:#e6db74">&#34;&#34;</span>                                   <span style="color:#75715e"># local only - Layout template override (advanced)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">slug</span>: <span style="color:#e6db74">&#34;custom-url-slug&#34;</span>                      <span style="color:#75715e"># local only - URL slug override</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Default: auto-generated from title</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">url</span>: <span style="color:#e6db74">&#34;&#34;</span>                                      <span style="color:#75715e"># local only - Full URL path override (advanced)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">aliases</span>: [<span style="color:#e6db74">&#34;/old-url/&#34;</span>, <span style="color:#e6db74">&#34;/another-old/&#34;</span>]      <span style="color:#75715e"># local only - URL redirects (array)</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Creates redirects from old URLs</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">outputs</span>: [<span style="color:#e6db74">&#34;HTML&#34;</span>]                            <span style="color:#75715e"># local only - Output formats (array)</span>
+</span></span><span style="display:flex;"><span>                                             <span style="color:#75715e"># Default: HTML, can add JSON, RSS, etc.</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">cascade</span>: {}                                  <span style="color:#75715e"># local only - Inherit settings to descendants (advanced)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">menu</span>: {}                                     <span style="color:#75715e"># local only - Menu placement config (advanced)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">isCJKLanguage</span>: <span style="color:#66d9ef">false</span>                         <span style="color:#75715e"># local only - CJK language processing (Chinese/Japanese/Korean)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">markup</span>: <span style="color:#e6db74">&#34;goldmark&#34;</span>                           <span style="color:#75715e"># local only - Markup renderer override (advanced)</span>
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><hr>
+<h2 id="field-categories">Field Categories</h2>
+<h3 id="required-vs-optional-fields">Required vs Optional Fields</h3>
+<p><strong>REQUIRED FIELDS:</strong></p>
+<ul>
+<li><code>title</code> - Post title (must be present)</li>
+<li><code>date</code> - Publish date in RFC3339 format (e.g., <code>2024-01-20T10:00:00-07:00</code>)</li>
+</ul>
+<p><strong>HIGHLY RECOMMENDED:</strong></p>
+<ul>
+<li><code>description</code> - SEO meta description (150-160 characters)</li>
+<li><code>tags</code> - Content topics/tags (3-7 recommended)</li>
+<li><code>categories</code> - Content categories (1-3 recommended)</li>
+<li><code>featuredImage</code> - Featured image for cards and social sharing</li>
+</ul>
+<p><strong>COMMONLY USED:</strong></p>
+<ul>
+<li><code>subtitle</code> - Post subtitle</li>
+<li><code>author</code> - Author name (if different from site default)</li>
+<li><code>summary</code> - Brief summary for cards (optional, auto-generated if omitted)</li>
+<li><code>toc</code> - Table of contents</li>
+<li><code>lightgallery</code> - Lightbox for images</li>
+</ul>
+<p><strong>OPTIONAL:</strong>
+All other fields have sensible defaults and can be omitted.</p>
+<hr>
+<h2 id="common-blog-post-configurations">Common Blog Post Configurations</h2>
+<h3 id="minimal-blog-post-required-fields-only">Minimal Blog Post (Required Fields Only)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;My First Post&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2024-01-20T10:00:00</span><span style="color:#ae81ff">-07</span>:<span style="color:#ae81ff">00</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;A brief description of my first blog post&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;getting started&#34;</span>, <span style="color:#e6db74">&#34;blog&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">categories</span>: [<span style="color:#e6db74">&#34;Personal&#34;</span>]
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><h3 id="standard-blog-post">Standard Blog Post</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;How to Build a Hugo Site&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">subtitle</span>: <span style="color:#e6db74">&#34;A step-by-step guide&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2024-01-20T10:00:00</span><span style="color:#ae81ff">-07</span>:<span style="color:#ae81ff">00</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">author</span>: <span style="color:#e6db74">&#34;John Doe&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;Learn how to build a static website using Hugo, the fast and flexible static site generator&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">keywords</span>: [<span style="color:#e6db74">&#34;hugo&#34;</span>, <span style="color:#e6db74">&#34;static site&#34;</span>, <span style="color:#e6db74">&#34;web development&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">categories</span>: [<span style="color:#e6db74">&#34;Technology&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;hugo&#34;</span>, <span style="color:#e6db74">&#34;web development&#34;</span>, <span style="color:#e6db74">&#34;tutorial&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">featuredImage</span>: <span style="color:#ae81ff">/images/hugo-tutorial.jpg</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">toc</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">lightgallery</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><h3 id="technical-blog-post-with-code">Technical Blog Post with Code</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Advanced JavaScript Techniques&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">subtitle</span>: <span style="color:#e6db74">&#34;ES6+ Features and Best Practices&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2024-01-20T10:00:00</span><span style="color:#ae81ff">-07</span>:<span style="color:#ae81ff">00</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;Explore modern JavaScript features including destructuring, async/await, and more&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">categories</span>: [<span style="color:#e6db74">&#34;Technology&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;javascript&#34;</span>, <span style="color:#e6db74">&#34;es6&#34;</span>, <span style="color:#e6db74">&#34;programming&#34;</span>, <span style="color:#e6db74">&#34;tutorial&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">featuredImage</span>: <span style="color:#ae81ff">/images/javascript-cover.jpg</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">toc</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">enable</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">auto</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">code</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">copy</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">maxShownLines</span>: <span style="color:#ae81ff">30</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">lightgallery</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><h3 id="photo-blog-post">Photo Blog Post</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Travel Photography: Iceland 2024&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">subtitle</span>: <span style="color:#e6db74">&#34;Capturing the Northern Lights&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2024-01-20T10:00:00</span><span style="color:#ae81ff">-07</span>:<span style="color:#ae81ff">00</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;A visual journey through Iceland&#39;s stunning landscapes and the aurora borealis&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">categories</span>: [<span style="color:#e6db74">&#34;Photography&#34;</span>, <span style="color:#e6db74">&#34;Travel&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;photography&#34;</span>, <span style="color:#e6db74">&#34;iceland&#34;</span>, <span style="color:#e6db74">&#34;travel&#34;</span>, <span style="color:#e6db74">&#34;northern lights&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">featuredImage</span>: <span style="color:#ae81ff">/images/iceland-aurora.jpg</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">featuredImagePreview</span>: <span style="color:#ae81ff">/images/iceland-thumb.jpg</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">lightgallery</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">toc</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlay_filter</span>: <span style="color:#ae81ff">0.3</span>
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><h3 id="styled-post-with-image-effects">Styled Post with Image Effects</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Creative Design Showcase&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2024-01-20T10:00:00</span><span style="color:#ae81ff">-07</span>:<span style="color:#ae81ff">00</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;Exploring creative design with custom image overlays and effects&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">categories</span>: [<span style="color:#e6db74">&#34;Design&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;design&#34;</span>, <span style="color:#e6db74">&#34;visual effects&#34;</span>, <span style="color:#e6db74">&#34;css&#34;</span>, <span style="color:#e6db74">&#34;web design&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">featuredImage</span>: <span style="color:#ae81ff">/images/design-showcase.jpg</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlayMetadata</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlayPosition</span>: <span style="color:#e6db74">&#34;lower-center&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlay_filter</span>: <span style="color:#e6db74">&#34;rgba(100, 0, 200, 0.4)&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">transparency</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">toc</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">lightgallery</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><h3 id="draft-post-not-published">Draft Post (Not Published)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Work in Progress Post&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2024-01-20T10:00:00</span><span style="color:#ae81ff">-07</span>:<span style="color:#ae81ff">00</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">draft</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;This post is still being written and won&#39;t be published yet&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">categories</span>: [<span style="color:#e6db74">&#34;Personal&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;draft&#34;</span>, <span style="color:#e6db74">&#34;wip&#34;</span>]
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><h3 id="scheduled-future-post">Scheduled Future Post</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Upcoming Product Launch&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2024-01-15T10:00:00</span><span style="color:#ae81ff">-07</span>:<span style="color:#ae81ff">00</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">publishDate</span>: <span style="color:#e6db74">2024-02-01T09:00:00</span><span style="color:#ae81ff">-07</span>:<span style="color:#ae81ff">00</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;This post will automatically publish on February 1st&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">categories</span>: [<span style="color:#e6db74">&#34;Product&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;announcement&#34;</span>, <span style="color:#e6db74">&#34;launch&#34;</span>, <span style="color:#e6db74">&#34;product&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">featuredImage</span>: <span style="color:#ae81ff">/images/product-launch.jpg</span>
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><h3 id="post-with-url-redirect">Post with URL Redirect</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Updated Guide to Web Development&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2024-01-20T10:00:00</span><span style="color:#ae81ff">-07</span>:<span style="color:#ae81ff">00</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">slug</span>: <span style="color:#e6db74">&#34;web-dev-guide&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">aliases</span>: [<span style="color:#e6db74">&#34;/old-web-guide/&#34;</span>, <span style="color:#e6db74">&#34;/2023/web-development/&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;Updated and comprehensive guide to modern web development&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">categories</span>: [<span style="color:#e6db74">&#34;Technology&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;web development&#34;</span>, <span style="color:#e6db74">&#34;guide&#34;</span>, <span style="color:#e6db74">&#34;tutorial&#34;</span>]
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><hr>
+<h2 id="understanding-image-display-options">Understanding Image Display Options</h2>
+<p>Tokyo-Nord offers three independent ways to style your featured images:</p>
+<h3 id="1-metadata-overlay-overlaymetadata">1. Metadata Overlay (<code>overlayMetadata</code>)</h3>
+<p>Shows post metadata (title, date, author, categories) directly ON the featured image instead of above it.</p>
+<ul>
+<li><strong>Scope:</strong> Single pages only (<code>/blog/post-name/</code>)</li>
+<li><strong>Control:</strong> <code>overlayMetadata: true/false</code> + <code>overlayPosition</code></li>
+<li><strong>Opacity:</strong> Global setting only (<code>params.blog.overlay.opacity</code>)</li>
+<li><strong>Best for:</strong> Posts with high-quality featured images</li>
+<li><strong>Example:</strong>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">overlayMetadata</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlayPosition</span>: <span style="color:#e6db74">&#34;lower-left&#34;</span></span></span></code></pre></div></li>
+</ul>
+<h3 id="2-image-transparency-transparency">2. Image Transparency (<code>transparency</code>)</h3>
+<p>Makes the IMAGE itself semi-transparent.</p>
+<ul>
+<li><strong>Scope:</strong> Single pages</li>
+<li><strong>Control:</strong> <code>transparency: true/false</code> + <code>transparencyAmount: 0.0-1.0</code></li>
+<li><strong>Use case:</strong> Soften images, blend with background color</li>
+<li><strong>Best for:</strong> Subtle visual effects</li>
+<li><strong>Example:</strong>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">transparency</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">transparencyAmount</span>: <span style="color:#ae81ff">0.7</span>  <span style="color:#75715e"># 70% opaque, 30% transparent</span></span></span></code></pre></div></li>
+</ul>
+<h3 id="3-color-overlay-filter-overlay_filter">3. Color Overlay Filter (<code>overlay_filter</code>)</h3>
+<p>Adds a colored layer ON TOP of the image.</p>
+<ul>
+<li><strong>Scope:</strong> Both single pages AND list pages (hero cards)</li>
+<li><strong>Formats:</strong>
+<ul>
+<li>Numeric: <code>0.5</code> = 50% black overlay</li>
+<li>RGBA: <code>&quot;rgba(255, 0, 0, 0.5)&quot;</code> = red overlay</li>
+<li>Gradient: <code>&quot;linear-gradient(...)&quot;</code></li>
+</ul>
+</li>
+<li><strong>Use case:</strong> Improve text readability, creative effects, brand colors</li>
+<li><strong>Best for:</strong> Enhancing text contrast, visual branding</li>
+<li><strong>Examples:</strong>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">overlay_filter</span>: <span style="color:#ae81ff">0.5</span>                    <span style="color:#75715e"># 50% black</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlay_filter</span>: <span style="color:#e6db74">&#34;rgba(255, 0, 0, 0.3)&#34;</span> <span style="color:#75715e"># Red overlay</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlay_filter</span>: <span style="color:#e6db74">&#34;linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0))&#34;</span></span></span></code></pre></div></li>
+</ul>
+<p><strong>These can be combined!</strong> For example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">transparency</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">transparencyAmount</span>: <span style="color:#ae81ff">0.8</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlay_filter</span>: <span style="color:#e6db74">&#34;rgba(0, 50, 100, 0.3)&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlayMetadata</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlayPosition</span>: <span style="color:#e6db74">&#34;lower-left&#34;</span></span></span></code></pre></div><hr>
+<h2 id="table-of-contents-options">Table of Contents Options</h2>
+<h3 id="simple-boolean">Simple Boolean</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">toc</span>: <span style="color:#66d9ef">true</span>   <span style="color:#75715e"># Enable with default settings</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># or</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">toc</span>: <span style="color:#66d9ef">false</span>  <span style="color:#75715e"># Disable completely</span></span></span></code></pre></div><h3 id="detailed-configuration">Detailed Configuration</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">toc</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">enable</span>: <span style="color:#66d9ef">true</span>       <span style="color:#75715e"># Enable TOC</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">auto</span>: <span style="color:#66d9ef">true</span>         <span style="color:#75715e"># Auto-collapse on scroll</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">keepStatic</span>: <span style="color:#66d9ef">false</span>  <span style="color:#75715e"># Don&#39;t auto-collapse (stay expanded)</span></span></span></code></pre></div><p><strong>When to use TOC:</strong></p>
+<ul>
+<li>✅ Long articles with multiple sections (&gt; 500 words)</li>
+<li>✅ Tutorial posts with steps</li>
+<li>✅ Technical documentation</li>
+<li>✅ In-depth guides</li>
+<li>❌ Short posts (&lt; 500 words)</li>
+<li>❌ Photo blogs with minimal text</li>
+<li>❌ News announcements</li>
+</ul>
+<hr>
+<h2 id="categories-vs-tags">Categories vs Tags</h2>
+<h3 id="categories">Categories</h3>
+<ul>
+<li><strong>Purpose:</strong> Broad content groupings</li>
+<li><strong>Quantity:</strong> 1-3 per post recommended</li>
+<li><strong>Examples:</strong> &ldquo;Technology&rdquo;, &ldquo;Personal&rdquo;, &ldquo;Photography&rdquo;, &ldquo;Design&rdquo;, &ldquo;Business&rdquo;</li>
+<li><strong>Used for:</strong> Main navigation and high-level organization</li>
+<li><strong>Think:</strong> &ldquo;Which section does this belong in?&rdquo;</li>
+</ul>
+<h3 id="tags">Tags</h3>
+<ul>
+<li><strong>Purpose:</strong> Specific topics/keywords</li>
+<li><strong>Quantity:</strong> 3-7 per post recommended</li>
+<li><strong>Examples:</strong> &ldquo;javascript&rdquo;, &ldquo;tutorial&rdquo;, &ldquo;hugo&rdquo;, &ldquo;travel&rdquo;, &ldquo;iceland&rdquo;, &ldquo;productivity&rdquo;</li>
+<li><strong>Used for:</strong> Detailed content discovery and search</li>
+<li><strong>Think:</strong> &ldquo;What specific topics are covered?&rdquo;</li>
+</ul>
+<p><strong>Best Practice:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">categories</span>: [<span style="color:#e6db74">&#34;Technology&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;hugo&#34;</span>, <span style="color:#e6db74">&#34;static site&#34;</span>, <span style="color:#e6db74">&#34;web development&#34;</span>, <span style="color:#e6db74">&#34;tutorial&#34;</span>, <span style="color:#e6db74">&#34;markdown&#34;</span>]</span></span></code></pre></div><p><strong>Avoid:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Too many categories</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">categories</span>: [<span style="color:#e6db74">&#34;Technology&#34;</span>, <span style="color:#e6db74">&#34;Web&#34;</span>, <span style="color:#e6db74">&#34;Development&#34;</span>, <span style="color:#e6db74">&#34;Hugo&#34;</span>, <span style="color:#e6db74">&#34;Static Sites&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Too few tags</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;tech&#34;</span>]</span></span></code></pre></div><hr>
+<h2 id="seo-best-practices">SEO Best Practices</h2>
+<h3 id="meta-description">Meta Description</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;Clear, concise description of the post content in 150-160 characters&#34;</span></span></span></code></pre></div><p><strong>Guidelines:</strong></p>
+<ul>
+<li>Keep under 160 characters (Google&rsquo;s limit)</li>
+<li>Include target keywords naturally</li>
+<li>Make it compelling (used in search results)</li>
+<li>Don&rsquo;t duplicate the title</li>
+<li>Write for humans, not robots</li>
+<li>Include a call-to-action when appropriate</li>
+</ul>
+<p><strong>Good Examples:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;Learn how to build a static website with Hugo. Step-by-step tutorial covering installation, themes, and deployment.&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;Discover 10 productivity tips that will help you get more done. Practical advice backed by research and real-world examples.&#34;</span></span></span></code></pre></div><p><strong>Bad Examples:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;hugo static site generator tutorial guide&#34;</span>  <span style="color:#75715e"># Keyword stuffing</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;In this post I will talk about...&#34;</span>          <span style="color:#75715e"># Weak opening</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;This is a blog post about productivity tips and techniques and strategies for getting things done and managing your time effectively and efficiently in the modern workplace environment.&#34;</span>  <span style="color:#75715e"># Too long</span></span></span></code></pre></div><h3 id="keywords">Keywords</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">keywords</span>: [<span style="color:#e6db74">&#34;primary keyword&#34;</span>, <span style="color:#e6db74">&#34;secondary keyword&#34;</span>, <span style="color:#e6db74">&#34;long-tail keyword&#34;</span>]</span></span></code></pre></div><p><strong>Guidelines:</strong></p>
+<ul>
+<li>3-7 keywords recommended</li>
+<li>Include synonyms and variations</li>
+<li>Consider search intent</li>
+<li>Use tools like Google Keyword Planner</li>
+<li>Focus on relevance, not volume</li>
+</ul>
+<h3 id="featured-image">Featured Image</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">featuredImage</span>: <span style="color:#ae81ff">/images/post-cover.jpg</span></span></span></code></pre></div><p><strong>Guidelines:</strong></p>
+<ul>
+<li><strong>Recommended size:</strong> 1200x630px (optimal for social sharing - Facebook/Twitter)</li>
+<li><strong>Minimum size:</strong> 800x400px</li>
+<li><strong>Aspect ratio:</strong> 1.91:1 or 16:9 for social sharing</li>
+<li><strong>Format:</strong> JPG (photos), PNG (graphics/screenshots)</li>
+<li><strong>File size:</strong> Under 200KB (optimize with tools like TinyPNG)</li>
+<li><strong>Naming:</strong> Use descriptive filenames (<code>hugo-tutorial.jpg</code> not <code>image1.jpg</code>)</li>
+</ul>
+<h3 id="seo-images-for-social">SEO Images for Social</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">seo</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">images</span>: [<span style="color:#e6db74">&#34;/images/social-card.jpg&#34;</span>, <span style="color:#e6db74">&#34;/images/og-image.jpg&#34;</span>]</span></span></code></pre></div><ul>
+<li>Used for Open Graph (Facebook) and Twitter Cards</li>
+<li>Falls back to <code>featuredImage</code> if not specified</li>
+<li>First image in array is primary</li>
+</ul>
+<hr>
+<h2 id="date-format">Date Format</h2>
+<p>Hugo uses RFC3339 timestamp format:</p>
+<pre tabindex="0"><code>YYYY-MM-DDTHH:MM:SS±TIMEZONE</code></pre><h3 id="common-examples">Common Examples</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Pacific Time (PST/PDT)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2024-01-20T10:00:00</span><span style="color:#ae81ff">-08</span>:<span style="color:#ae81ff">00</span>   <span style="color:#75715e"># Winter (PST)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2024-06-20T10:00:00</span><span style="color:#ae81ff">-07</span>:<span style="color:#ae81ff">00</span>   <span style="color:#75715e"># Summer (PDT)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Mountain Time (MST/MDT)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2024-01-20T11:00:00</span><span style="color:#ae81ff">-07</span>:<span style="color:#ae81ff">00</span>   <span style="color:#75715e"># Winter (MST)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2024-06-20T11:00:00</span><span style="color:#ae81ff">-06</span>:<span style="color:#ae81ff">00</span>   <span style="color:#75715e"># Summer (MDT)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Eastern Time (EST/EDT)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2024-01-20T13:00:00</span><span style="color:#ae81ff">-05</span>:<span style="color:#ae81ff">00</span>   <span style="color:#75715e"># Winter (EST)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2024-06-20T13:00:00</span><span style="color:#ae81ff">-04</span>:<span style="color:#ae81ff">00</span>   <span style="color:#75715e"># Summer (EDT)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># UTC</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2024-01-20T17:00:00Z</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># With seconds</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2024-01-20T10:30:45</span><span style="color:#ae81ff">-07</span>:<span style="color:#ae81ff">00</span></span></span></code></pre></div><h3 id="date-fields">Date Fields</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2024-01-20T10:00:00</span><span style="color:#ae81ff">-07</span>:<span style="color:#ae81ff">00</span>        <span style="color:#75715e"># REQUIRED - Publish date</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">lastmod</span>: <span style="color:#e6db74">2024-01-25T15:30:00</span><span style="color:#ae81ff">-07</span>:<span style="color:#ae81ff">00</span>     <span style="color:#75715e"># Optional - Last modified (good for SEO)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">publishDate</span>: <span style="color:#e6db74">2024-02-01T09:00:00</span><span style="color:#ae81ff">-07</span>:<span style="color:#ae81ff">00</span> <span style="color:#75715e"># Optional - Scheduled future publish</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">expiryDate</span>: <span style="color:#e6db74">2025-12-31T00:00:00</span><span style="color:#ae81ff">-07</span>:<span style="color:#ae81ff">00</span>  <span style="color:#75715e"># Optional - Auto-unpublish date</span></span></span></code></pre></div><p><strong>Best Practices:</strong></p>
+<ul>
+<li>Always include timezone</li>
+<li>Use consistent timezone across your site</li>
+<li>Update <code>lastmod</code> when making significant changes</li>
+<li>Use <code>publishDate</code> for scheduled posts</li>
+<li>Use <code>expiryDate</code> for time-sensitive content (events, sales)</li>
+</ul>
+<hr>
+<h2 id="author-configuration">Author Configuration</h2>
+<h3 id="override-site-author">Override Site Author</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">author</span>: <span style="color:#e6db74">&#34;Guest Author Name&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">authorLink</span>: <span style="color:#e6db74">&#34;https://guestauthor.com&#34;</span></span></span></code></pre></div><p>Use when:</p>
+<ul>
+<li>Guest post</li>
+<li>Multiple authors on site</li>
+<li>Different attribution needed</li>
+</ul>
+<h3 id="use-site-default-author">Use Site Default Author</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Omit author fields to use site default from hugo.toml</span></span></span></code></pre></div><p>Most common for single-author blogs.</p>
+<h3 id="multiple-authors">Multiple Authors</h3>
+<p>For multiple authors, use a string with comma separation:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">author</span>: <span style="color:#e6db74">&#34;Author One, Author Two&#34;</span></span></span></code></pre></div><p>Or configure in content:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>**Authors:** Author One and Author Two</span></span></code></pre></div><hr>
+<h2 id="code-block-configuration">Code Block Configuration</h2>
+<h3 id="copy-button">Copy Button</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">code</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">copy</span>: <span style="color:#66d9ef">true</span>  <span style="color:#75715e"># Show copy button on all code blocks</span></span></span></code></pre></div><p>Essential for technical posts with code examples.</p>
+<h3 id="max-lines-before-collapse">Max Lines Before Collapse</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">code</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">maxShownLines</span>: <span style="color:#ae81ff">50</span>  <span style="color:#75715e"># Collapse code blocks longer than 50 lines</span></span></span></code></pre></div><p>Prevents extremely long code blocks from overwhelming the page.</p>
+<h3 id="complete-example">Complete Example</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">code</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">copy</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">maxShownLines</span>: <span style="color:#ae81ff">30</span></span></span></code></pre></div><p><strong>Best Practices:</strong></p>
+<ul>
+<li>Always enable <code>copy: true</code> for technical posts</li>
+<li>Set <code>maxShownLines</code> based on typical code length</li>
+<li>Lower values (20-30) for tutorial posts</li>
+<li>Higher values (50+) for reference documentation</li>
+</ul>
+<hr>
+<h2 id="configuration-scopes">Configuration Scopes</h2>
+<p>Understanding when fields use local vs global configuration:</p>
+<h3 id="local-only">Local Only</h3>
+<p>These fields can ONLY be set in frontmatter:</p>
+<ul>
+<li><code>title</code>, <code>subtitle</code>, <code>date</code>, <code>draft</code></li>
+<li><code>description</code>, <code>keywords</code>, <code>summary</code></li>
+<li><code>categories</code>, <code>tags</code></li>
+<li><code>featuredImage</code>, <code>featuredImagePreview</code></li>
+<li><code>overlay_filter</code></li>
+<li><code>lastmod</code>, <code>publishDate</code>, <code>expiryDate</code>, <code>weight</code></li>
+<li><code>slug</code>, <code>url</code>, <code>aliases</code></li>
+</ul>
+<h3 id="local--global">Local + Global</h3>
+<p>These fields can be set in frontmatter OR hugo.toml (local overrides global):</p>
+<ul>
+<li><code>author</code> → global: <code>params.author.name</code></li>
+<li><code>authorLink</code> → global: <code>params.author.link</code></li>
+<li><code>transparency</code> → global: <code>params.images.transparency</code></li>
+<li><code>transparencyAmount</code> → global: <code>params.images.opacity</code></li>
+<li><code>overlayMetadata</code> → global: <code>params.blog.overlay.enable</code></li>
+<li><code>overlayPosition</code> → global: <code>params.blog.overlay.position</code></li>
+<li><code>toc.*</code> → global: <code>params.page.toc.*</code></li>
+<li><code>code.*</code> → global: <code>params.page.code.*</code></li>
+<li><code>lightgallery</code> → global: <code>params.page.lightgallery</code></li>
+<li><code>linkToMarkdown</code> → global: <code>params.page.linkToMarkdown</code></li>
+<li><code>rssFullText</code> → global: <code>params.page.rssFullText</code></li>
+<li><code>topicsOn</code> → global: <code>params.topicsDiscussed</code></li>
+<li><code>share.enable</code> → global: <code>params.page.share.enable</code></li>
+<li><code>comment.enable</code> → global: <code>params.page.comment.enable</code></li>
+<li><code>seo.images</code> → global: <code>params.page.seo.images</code></li>
+<li><code>library.*</code> → global: <code>params.page.library.*</code></li>
+<li>All feature toggles (<code>twemoji</code>, <code>ruby</code>, <code>fraction</code>, <code>fontawesome</code>)</li>
+</ul>
+<h3 id="global-only">Global Only</h3>
+<p>These fields can ONLY be set in hugo.toml (no frontmatter override):</p>
+<ul>
+<li>Overlay opacity → <code>params.blog.overlay.opacity</code></li>
+<li>Code rendering → <code>params.page.code.render.goat</code>, <code>params.page.code.render.mermaid</code></li>
+<li>SEO publisher → <code>params.page.seo.publisher.name</code>, <code>params.page.seo.publisher.logoUrl</code></li>
+<li>Comment system configs → <code>params.page.comment.utterances.*</code>, <code>params.page.comment.giscus.*</code>, etc.</li>
+</ul>
+<hr>
+<h2 id="cross-references">Cross-References</h2>
+<p><strong>Complete Field Documentation:</strong></p>
+<ul>
+<li><a href="/QUICK-REFERENCE.md" rel="">QUICK-REFERENCE.md</a> - Full frontmatter reference</li>
+</ul>
+<p><strong>Related Guides:</strong></p>
+<ul>
+<li><code>/episodes/episode-frontmatter-example/</code> - Episode frontmatter reference</li>
+<li><code>/featured/featured-frontmatter-example/</code> - Featured appearance frontmatter reference</li>
+</ul>
+<p><strong>Theme Documentation:</strong></p>
+<ul>
+<li><code>/docs/content-guide/</code> - Content creation guide</li>
+<li><code>/docs/customization/</code> - Theme customization guide</li>
+<li><code>/docs/getting-started/</code> - Getting started with Tokyo-Nord</li>
+</ul>
+<hr>
+<h2 id="tips--best-practices">Tips &amp; Best Practices</h2>
+<h3 id="content">Content</h3>
+<ol>
+<li><strong>Write compelling titles:</strong> Clear, descriptive, SEO-friendly (under 60 chars)</li>
+<li><strong>Use descriptive slugs:</strong> Short, lowercase, hyphen-separated</li>
+<li><strong>Optimize descriptions:</strong> 150-160 characters, include keywords</li>
+<li><strong>Tag consistently:</strong> Use existing tags when possible (avoid tag sprawl)</li>
+<li><strong>Categorize appropriately:</strong> 1-3 broad categories per post</li>
+</ol>
+<h3 id="images">Images</h3>
+<ol>
+<li><strong>Always include featuredImage:</strong> Required for social sharing</li>
+<li><strong>Optimize image sizes:</strong> Balance quality and file size (&lt; 200KB)</li>
+<li><strong>Use descriptive filenames:</strong> <code>hugo-tutorial.jpg</code> not <code>image-1.jpg</code></li>
+<li><strong>Test overlay effects:</strong> Preview both list and single pages</li>
+<li><strong>Consider mobile:</strong> Ensure text is readable on small screens</li>
+</ol>
+<h3 id="seo">SEO</h3>
+<ol>
+<li><strong>Unique descriptions:</strong> Never duplicate across posts</li>
+<li><strong>Strategic keywords:</strong> Natural placement in description and tags</li>
+<li><strong>Update lastmod:</strong> When making significant changes</li>
+<li><strong>Use aliases:</strong> When changing URLs to preserve SEO</li>
+<li><strong>Enable social sharing:</strong> Make it easy for readers to share</li>
+</ol>
+<h3 id="features">Features</h3>
+<ol>
+<li><strong>Enable TOC for long posts:</strong> Improves navigation and UX (&gt; 500 words)</li>
+<li><strong>Use code copy buttons:</strong> Essential for technical posts</li>
+<li><strong>Enable lightgallery for photos:</strong> Better image viewing experience</li>
+<li><strong>Test draft posts locally:</strong> Use <code>hugo server -D</code> to preview</li>
+<li><strong>Configure comments per post:</strong> Enable for discussion-worthy posts</li>
+</ol>
+<hr>
+<h2 id="testing-your-blog-post">Testing Your Blog Post</h2>
+<p>After creating a blog post:</p>
+<ol>
+<li>
+<p><strong>Run Hugo development server:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo server -D</span></span></code></pre></div></li>
+<li>
+<p><strong>Check these pages:</strong></p>
+<ul>
+<li>List page: <code>http://localhost:1313/blog/</code></li>
+<li>Single page: <code>http://localhost:1313/blog/your-post-name/</code></li>
+<li>Categories: <code>http://localhost:1313/categories/your-category/</code></li>
+<li>Tags: <code>http://localhost:1313/tags/your-tag/</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Verify:</strong></p>
+<ul>
+<li>✅ Title and subtitle display correctly</li>
+<li>✅ Featured image loads and overlays work</li>
+<li>✅ TOC appears and navigates properly (if enabled)</li>
+<li>✅ Code blocks have copy buttons (if enabled)</li>
+<li>✅ Share buttons appear</li>
+<li>✅ Categories and tags link correctly</li>
+<li>✅ Author attribution shows correctly</li>
+<li>✅ Date displays in correct timezone</li>
+<li>✅ Image effects render as expected</li>
+</ul>
+</li>
+<li>
+<p><strong>Test social sharing:</strong></p>
+<ul>
+<li><a href="https://cards-dev.twitter.com/validator" target="_blank" rel="noopener noreffer ">Twitter Card Validator</a></li>
+<li><a href="https://developers.facebook.com/tools/debug/" target="_blank" rel="noopener noreffer ">Facebook Sharing Debugger</a></li>
+<li><a href="https://www.linkedin.com/post-inspector/" target="_blank" rel="noopener noreffer ">LinkedIn Post Inspector</a></li>
+<li>Verify Open Graph images and descriptions</li>
+</ul>
+</li>
+<li>
+<p><strong>Test responsive design:</strong></p>
+<ul>
+<li>Desktop view</li>
+<li>Tablet view</li>
+<li>Mobile view</li>
+<li>Dark/light theme toggle</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="common-issues--solutions">Common Issues &amp; Solutions</h2>
+<h3 id="post-not-showing-up">Post Not Showing Up</h3>
+<p><strong>Problem:</strong> Post doesn&rsquo;t appear on blog list</p>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li>Check <code>draft: false</code> (or use <code>hugo server -D</code> to show drafts)</li>
+<li>Verify <code>date</code> is not in the future (unless using <code>publishDate</code>)</li>
+<li>Ensure <code>date</code> format is valid RFC3339</li>
+<li>Check <code>hiddenFromHomePage: false</code></li>
+</ul>
+<h3 id="image-not-loading">Image Not Loading</h3>
+<p><strong>Problem:</strong> Featured image doesn&rsquo;t display</p>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li>Check path: <code>/images/file.jpg</code> (leading slash required)</li>
+<li>Verify file exists in <code>/static/images/</code></li>
+<li>Check filename case sensitivity (Unix systems are case-sensitive)</li>
+<li>Ensure file extension is correct (.jpg not .jpeg, etc.)</li>
+<li>Check file permissions</li>
+</ul>
+<h3 id="toc-not-appearing">TOC Not Appearing</h3>
+<p><strong>Problem:</strong> Table of contents doesn&rsquo;t show</p>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li>Verify post has heading structure (H2 <code>##</code>, H3 <code>###</code>, etc.)</li>
+<li>Check <code>toc: true</code> or <code>toc.enable: true</code></li>
+<li>Ensure headings use proper markdown (not HTML)</li>
+<li>Must have at least 2 headings for TOC to appear</li>
+</ul>
+<h3 id="categoriestags-not-working">Categories/Tags Not Working</h3>
+<p><strong>Problem:</strong> Categories or tags don&rsquo;t link properly</p>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li>Use arrays format: <code>tags: [&quot;tag1&quot;, &quot;tag2&quot;]</code> not <code>tags: tag1, tag2</code></li>
+<li>Check for typos in tag/category names (case-sensitive)</li>
+<li>Verify hugo.toml doesn&rsquo;t disable taxonomies</li>
+<li>Clear Hugo cache: <code>hugo --gc</code></li>
+</ul>
+<h3 id="overlay-not-visible">Overlay Not Visible</h3>
+<p><strong>Problem:</strong> Metadata overlay doesn&rsquo;t appear</p>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li>Verify <code>overlayMetadata: true</code></li>
+<li>Check you&rsquo;re viewing single page (not list page)</li>
+<li>Ensure <code>overlayPosition</code> is set</li>
+<li>Verify <code>featuredImage</code> is specified</li>
+<li>Check overlay opacity in global config</li>
+</ul>
+<h3 id="code-copy-button-not-working">Code Copy Button Not Working</h3>
+<p><strong>Problem:</strong> Copy button doesn&rsquo;t appear on code blocks</p>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li>Verify <code>code.copy: true</code> in frontmatter or global config</li>
+<li>Ensure code blocks use proper markdown (triple backticks)</li>
+<li>Check JavaScript is enabled</li>
+<li>Clear browser cache</li>
+</ul>
+<hr>
+<p><strong>Last Updated:</strong> 2025-01-15
+<strong>Theme Version:</strong> Tokyo-Nord v1.0
+<strong>Hugo Version:</strong> 0.122+</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span></span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fexample.com%2Fblog%2Fblog-frontmatter-example%2F&amp;text=Learn&#43;all&#43;available&#43;frontmatter&#43;fields&#43;for&#43;blog&#43;posts&#43;in&#43;Tokyo-Nord&#43;theme&amp;hashtags=reference%2Chugo%2Cblog%2Cdocumentation%2Cfrontmatter" target="_blank" rel="noopener noreferrer" title="Share on X"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="https://www.facebook.com/sharer/sharer.php?u=https%253A%252F%252Fexample.com%252Fblog%252Fblog-frontmatter-example%252F" target="_blank" rel="noopener noreferrer" title="Share on Facebook"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%253A%252F%252Fexample.com%252Fblog%252Fblog-frontmatter-example%252F" target="_blank" rel="noopener noreferrer" title="Share on Linkedin"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="https://news.ycombinator.com/submitlink?u=https%253A%252F%252Fexample.com%252Fblog%252Fblog-frontmatter-example%252F&t=Blog%2bPost%2bFront%2bMatter%2bReference" target="_blank" rel="noopener noreferrer" title="Share on Hacker News"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="https://www.reddit.com/submit?url=https%253A%252F%252Fexample.com%252Fblog%252Fblog-frontmatter-example%252F&title=Blog%2bPost%2bFront%2bMatter%2bReference" target="_blank" rel="noopener noreferrer" title="Share on Reddit"><i class="fab fa-reddit fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%253A%252F%252Fexample.com%252Fblog%252Fblog-frontmatter-example%252F&text=Learn%2ball%2bavailable%2bfrontmatter%2bfields%2bfor%2bblog%2bposts%2bin%2bTokyo-Nord%2btheme" target="_blank" rel="noopener noreferrer" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/reference/">Reference</a>,&nbsp;<a href="/tags/hugo/">Hugo</a>,&nbsp;<a href="/tags/blog/">Blog</a>,&nbsp;<a href="/tags/documentation/">Documentation</a>,&nbsp;<a href="/tags/frontmatter/">Frontmatter</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/blog/frontmatter-example/" class="prev" rel="prev" title="Blog Post Frontmatter Reference Guide"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Blog Post Frontmatter Reference Guide</a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.151.2">Hugo</a> | Theme - <a href="https://github.com/gallo-s-chingon/Tokyo-Nord" target="_blank" rel="noopener noreffer" title="Tokyo-Nord 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> Tokyo-Nord</a>
+                </div>
+                <div class="footer-line">
+                    Created by <a href="https://github.com/gallo-s-chingon" target="_blank" rel="noopener noreferrer">Gallo Chingon</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">My cool site</a></span>&nbsp;|&nbsp;<span class="license"><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script>window.config={"comment":{},"highContrast":true,"lightgallery":true,"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/js/theme.min.js"></script></body>
+</html>

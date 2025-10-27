@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>YouTube Collab: Building a Theme with Code Creator - My cool site</title><meta name="Description" content="90-minute video collaboration building Hugo theme features live on camera, including overlay systems, responsive design, and performance optimization techniques."><meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/featured/video-collab-demo/" /><link rel="prev" href="http://localhost:1313/featured/panel-discussion-demo/" /><link rel="next" href="http://localhost:1313/featured/interview-dev-magazine-demo/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "YouTube Collab: Building a Theme with Code Creator",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/featured\/video-collab-demo\/"
+        },"genre": "video","keywords": "youtube, tutorial, collaboration, hugo, theme development, live coding","wordcount":  1494 ,
+        "url": "http:\/\/localhost:1313\/featured\/video-collab-demo\/","datePublished": "2025-10-15T12:00:00-07:00","dateModified": "2025-10-15T12:00:00-07:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "My cool site"
+            },"description": "90-minute video collaboration building Hugo theme features live on camera, including overlay systems, responsive design, and performance optimization techniques."
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          function applyTheme() {
+            const highContrast =  true ;
+            const defaultTheme = 'auto';
+
+            
+            const themeMap = {
+              dark: highContrast ? 'tokyo-night' : 'nordic',
+              light: highContrast ? 'onenord-light' : 'onenord-day'
+            };
+
+            
+            let theme = window.localStorage?.getItem('theme');
+
+            if (!theme) {
+              
+              if (defaultTheme === 'auto') {
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                theme = prefersDark ? themeMap.dark : themeMap.light;
+              } else if (defaultTheme === 'dark') {
+                theme = themeMap.dark;
+              } else {
+                theme = themeMap.light;
+              }
+            }
+
+            
+            const validThemes = ['tokyo-night', 'nordic', 'onenord-light', 'onenord-day'];
+            if (!validThemes.includes(theme)) {
+              theme = themeMap.dark;
+            }
+
+            let isDark = theme === 'tokyo-night' || theme === 'nordic';
+            document.body.setAttribute('data-theme', theme);
+            document.body.setAttribute('theme', isDark ? 'dark' : 'light');
+          }
+
+          applyTheme();
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="My cool site">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/featured/"> Featured </a><a class="menu-item" href="/episodes/"> Episodes </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="My cool site">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/featured/" title="">Feat</a><a class="menu-item" href="/episodes/" title="">Epi</a><a class="menu-item" href="/about/" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="page single special"><h1 class="single-title animate__animated animate__pulse animate__faster">YouTube Collab: Building a Theme with Code Creator</h1><div class="content" id="content"><h2 id="about-this-collaboration">About This Collaboration</h2>
+<p>Jessica Martinez, creator of the popular <strong>Code Creator</strong> YouTube channel (250K+ subscribers), reached out to collaborate on a video about Hugo theme development. We spent 90 minutes live-coding features for the Tokyo-Nord theme, explaining concepts, debugging issues, and answering chat questions in real-time.</p>
+<p>The video was streamed live on October 15, 2025, with 2,800+ concurrent viewers at peak. The recording has since generated 45K+ views and sparked several follow-up tutorials.</p>
+<h2 id="watch-the-full-video">Watch the Full Video</h2>
+<div class="podcast-player podcast-player-youtube" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    width="100%"
+    height="315"
+    src="https://www.youtube.com/embed/cIla9axQRyM"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+    loading="lazy">
+  </iframe>
+</div>
+<p><em>Note: This is a demo embed. The actual collaboration video would be linked here.</em></p>
+<h2 id="video-overview">Video Overview</h2>
+<p><strong>Title:</strong> Building Advanced Hugo Theme Features | Live Coding with Guest Developer</p>
+<p><strong>Duration:</strong> 1:32:45</p>
+<p><strong>Format:</strong> Live coding session with screen share, camera overlay, and live chat interaction</p>
+<p><strong>Topics Covered:</strong></p>
+<ul>
+<li>Hugo theme architecture and best practices</li>
+<li>Go template programming patterns</li>
+<li>SCSS organization and CSS methodology</li>
+<li>JavaScript for progressive enhancement</li>
+<li>Performance optimization techniques</li>
+<li>Accessibility considerations</li>
+<li>Real-time debugging and problem-solving</li>
+</ul>
+<h2 id="chapter-timestamps">Chapter Timestamps</h2>
+<h3 id="introduction--setup-000---1000">Introduction &amp; Setup (0:00 - 10:00)</h3>
+<ul>
+<li>0:00 - Stream start, intro music</li>
+<li>2:15 - Jessica introduces the collaboration</li>
+<li>4:30 - My background and Tokyo-Nord theme overview</li>
+<li>7:45 - Today&rsquo;s goals and what we&rsquo;ll build</li>
+<li>9:20 - Development environment walkthrough</li>
+</ul>
+<h3 id="part-1-template-architecture-1000---2800">Part 1: Template Architecture (10:00 - 28:00)</h3>
+<ul>
+<li>10:00 - Hugo template lookup order explained</li>
+<li>13:30 - Partial templates and DRY principles</li>
+<li>17:15 - Content types and layouts</li>
+<li>21:40 - Frontmatter processing and defaults</li>
+<li>25:10 - Live coding: Creating episode template</li>
+</ul>
+<h3 id="part-2-the-overlay-system-2800---5200">Part 2: The Overlay System (28:00 - 52:00)</h3>
+<ul>
+<li>28:00 - Design goals for overlay feature</li>
+<li>31:20 - CSS positioning strategies</li>
+<li>35:45 - Building the metadata overlay partial</li>
+<li>42:00 - Implementing color filter support</li>
+<li>47:30 - Adding gradient overlay capability</li>
+<li>50:15 - Testing different overlay combinations</li>
+</ul>
+<h3 id="part-3-responsive-design-5200---10800">Part 3: Responsive Design (52:00 - 1:08:00)</h3>
+<ul>
+<li>52:00 - Mobile-first CSS approach</li>
+<li>55:30 - Breakpoint strategy</li>
+<li>58:45 - Responsive images with srcset</li>
+<li>1:02:20 - Flexbox and Grid layout patterns</li>
+<li>1:05:40 - Testing on various screen sizes</li>
+</ul>
+<h3 id="part-4-javascript-interactivity-10800---12200">Part 4: JavaScript Interactivity (1:08:00 - 1:22:00)</h3>
+<ul>
+<li>1:08:00 - Progressive enhancement philosophy</li>
+<li>1:11:15 - Theme toggle implementation</li>
+<li>1:14:45 - Smooth scroll and anchor links</li>
+<li>1:17:30 - Loading states and performance</li>
+<li>1:20:00 - Debugging JavaScript issues live</li>
+</ul>
+<h3 id="qa-and-wrap-up-12200---13245">Q&amp;A and Wrap-Up (1:22:00 - 1:32:45)</h3>
+<ul>
+<li>1:22:00 - Answering chat questions</li>
+<li>1:26:30 - Resources and next steps</li>
+<li>1:29:00 - Where to find code examples</li>
+<li>1:31:15 - Thank yous and closing remarks</li>
+</ul>
+<h2 id="code-examples">Code Examples</h2>
+<p>All code written during the stream is available in a dedicated repository:</p>
+<p><strong>GitHub:</strong> <a href="https://github.com/example/code-creator-collab" target="_blank" rel="noopener noreffer ">github.com/example/code-creator-collab</a></p>
+<h3 id="key-files-created">Key Files Created</h3>
+<p><strong>1. Episode Template</strong> (<code>layouts/episodes/single.html</code>)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ define &#34;main&#34; }}
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">article</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;episode&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  {{ partial &#34;episode-header.html&#34; . }}
+</span></span><span style="display:flex;"><span>  {{ partial &#34;episode-player.html&#34; . }}
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;episode-content&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    {{ .Content }}
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>  {{ partial &#34;episode-metadata.html&#34; . }}
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">article</span>&gt;
+</span></span><span style="display:flex;"><span>{{ end }}</span></span></code></pre></div><p><strong>2. Overlay Partial</strong> (<code>layouts/partials/overlay.html</code>)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ if .Params.overlayMetadata }}
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;overlay-metadata {{ .Params.overlayPosition }}&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">h1</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>  {{ with .Params.episodeNumber }}
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;episode-badge&#34;</span>&gt;Episode {{ . }}&lt;/<span style="color:#f92672">span</span>&gt;
+</span></span><span style="display:flex;"><span>  {{ end }}
+</span></span><span style="display:flex;"><span>  {{ partial &#34;metadata-details.html&#34; . }}
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>{{ end }}</span></span></code></pre></div><p><strong>3. Responsive CSS</strong> (<code>assets/scss/responsive.scss</code>)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-scss" data-lang="scss"><span style="display:flex;"><span><span style="color:#a6e22e">.episode-header</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Mobile first
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">padding</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span><span style="color:#66d9ef">rem</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Tablet
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">@media</span> (<span style="color:#a6e22e">min-width</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">768</span><span style="color:#66d9ef">px</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">padding</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span><span style="color:#66d9ef">rem</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Desktop
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">@media</span> (<span style="color:#a6e22e">min-width</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1024</span><span style="color:#66d9ef">px</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">padding</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">3</span><span style="color:#66d9ef">rem</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div><p><strong>4. Theme Toggle JS</strong> (<code>assets/js/theme.js</code>)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">toggleTheme</span> <span style="color:#f92672">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">current</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">documentElement</span>.<span style="color:#a6e22e">dataset</span>.<span style="color:#a6e22e">theme</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">current</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;dark&#39;</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#39;light&#39;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;dark&#39;</span>;
+</span></span><span style="display:flex;"><span>  document.<span style="color:#a6e22e">documentElement</span>.<span style="color:#a6e22e">dataset</span>.<span style="color:#a6e22e">theme</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">next</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">setItem</span>(<span style="color:#e6db74">&#39;theme&#39;</span>, <span style="color:#a6e22e">next</span>);
+</span></span><span style="display:flex;"><span>};</span></span></code></pre></div><h2 id="live-chat-highlights">Live Chat Highlights</h2>
+<p>The live chat was incredibly active with great questions and feedback:</p>
+<p><strong>@webdev_enthusiast:</strong> &ldquo;This is the best Hugo tutorial I&rsquo;ve seen. Actually explaining WHY, not just HOW.&rdquo;</p>
+<p><strong>@css_ninja:</strong> &ldquo;The overlay system is brilliant. I&rsquo;m stealing this for my portfolio site.&rdquo;</p>
+<p><strong>@newbie_developer:</strong> &ldquo;I&rsquo;ve been scared of Hugo templating. This makes it so much clearer!&rdquo;</p>
+<p><strong>@accessibility_advocate:</strong> &ldquo;Love that you&rsquo;re considering a11y from the start, not as an afterthought.&rdquo;</p>
+<p><strong>@performance_nerd:</strong> &ldquo;Those Lighthouse scores though! 🔥&rdquo;</p>
+<p><strong>@hugo_fan:</strong> &ldquo;Finally someone showing real-world Hugo patterns, not just toy examples.&rdquo;</p>
+<h2 id="technical-challenges--solutions">Technical Challenges &amp; Solutions</h2>
+<h3 id="challenge-1-overlay-position-calculation">Challenge 1: Overlay Position Calculation</h3>
+<p><strong>Problem:</strong> Metadata overlay wasn&rsquo;t responsive across different image aspect ratios.</p>
+<p><strong>Solution:</strong> Used CSS Grid with named areas and percentage-based positioning. Works consistently regardless of image dimensions.</p>
+<p><strong>Code:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-scss" data-lang="scss"><span style="display:flex;"><span><span style="color:#a6e22e">.featured-image-wrapper</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">display</span><span style="color:#f92672">:</span> grid;
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">grid-template-areas</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;top-left top-center top-right&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;mid-left mid-center mid-right&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;lower-left lower-center lower-right&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">.overlay-metadata</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">&amp;</span><span style="color:#a6e22e">.lower-left</span> { <span style="color:#a6e22e">grid-area</span><span style="color:#f92672">:</span> lower-left; }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">&amp;</span><span style="color:#a6e22e">.mid-center</span> { <span style="color:#a6e22e">grid-area</span><span style="color:#f92672">:</span> mid-center; }
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ... etc
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div><h3 id="challenge-2-build-performance-with-large-sites">Challenge 2: Build Performance with Large Sites</h3>
+<p><strong>Problem:</strong> Theme&rsquo;s Go templates were slow for sites with 1000+ episodes.</p>
+<p><strong>Solution:</strong> Optimized partial rendering with <code>.Scratch</code> for memoization and limited range operations.</p>
+<p><strong>Before:</strong> 45 seconds for 1000 pages
+<strong>After:</strong> 8 seconds for 1000 pages</p>
+<h3 id="challenge-3-dark-mode-flash">Challenge 3: Dark Mode Flash</h3>
+<p><strong>Problem:</strong> Brief flash of light theme before dark mode loads.</p>
+<p><strong>Solution:</strong> Inline critical CSS in <code>&lt;head&gt;</code> to apply theme before page render.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>  (<span style="color:#66d9ef">function</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">theme</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#39;theme&#39;</span>) <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39;light&#39;</span>;
+</span></span><span style="display:flex;"><span>    document.<span style="color:#a6e22e">documentElement</span>.<span style="color:#a6e22e">dataset</span>.<span style="color:#a6e22e">theme</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">theme</span>;
+</span></span><span style="display:flex;"><span>  })();
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;</span></span></code></pre></div><h2 id="viewer-projects">Viewer Projects</h2>
+<p>Several viewers built projects inspired by the stream:</p>
+<p><strong>1. Portfolio Site</strong> - @designer_dev</p>
+<ul>
+<li>Implemented overlay system for project cards</li>
+<li>Added smooth transitions</li>
+<li>Achieved 98 Lighthouse score</li>
+</ul>
+<p><strong>2. Recipe Blog</strong> - @cooking_coder</p>
+<ul>
+<li>Adapted episode template for recipe posts</li>
+<li>Custom metadata for ingredients/timing</li>
+<li>Beautiful photo overlays</li>
+</ul>
+<p><strong>3. Documentation Site</strong> - @docs_writer</p>
+<ul>
+<li>Used theme structure for docs</li>
+<li>Added search functionality</li>
+<li>Multi-language support</li>
+</ul>
+<h2 id="follow-up-content">Follow-Up Content</h2>
+<p>The collaboration sparked additional content:</p>
+<h3 id="by-jessica-code-creator">By Jessica (Code Creator):</h3>
+<ol>
+<li><strong>Part 2 Video:</strong> &ldquo;Advanced Hugo Techniques - Solo Deep Dive&rdquo;</li>
+<li><strong>Blog Post:</strong> &ldquo;What I Learned from a Real Hugo Expert&rdquo;</li>
+<li><strong>Community Project:</strong> Hugo theme starter based on our work</li>
+</ol>
+<h3 id="by-me">By Me:</h3>
+<ol>
+<li><strong>Blog Post:</strong> &ldquo;Behind the Scenes: Preparing for a Live Coding Session&rdquo;</li>
+<li><strong>Documentation:</strong> Expanded docs based on chat questions</li>
+<li><strong>GitHub Issues:</strong> Addressed feature requests from viewers</li>
+</ol>
+<h2 id="metrics--impact">Metrics &amp; Impact</h2>
+<p><strong>Stream Performance:</strong></p>
+<ul>
+<li>Peak concurrent viewers: 2,847</li>
+<li>Total unique viewers: 8,200+</li>
+<li>Average watch time: 38 minutes</li>
+<li>Chat messages: 1,850+</li>
+</ul>
+<p><strong>Recording Performance (30 days):</strong></p>
+<ul>
+<li>Views: 45,230</li>
+<li>Likes: 2,847 (98.2% positive)</li>
+<li>Comments: 284</li>
+<li>Shares: 156</li>
+</ul>
+<p><strong>Traffic Impact:</strong></p>
+<ul>
+<li>Tokyo-Nord GitHub stars: +420</li>
+<li>Demo site traffic: +15,000 visitors</li>
+<li>Documentation pageviews: +8,500</li>
+<li>Theme downloads: +890</li>
+</ul>
+<h2 id="community-response">Community Response</h2>
+<p><strong>Reddit Discussion:</strong></p>
+<ul>
+<li>/r/Hugo thread: 287 upvotes, 64 comments</li>
+<li>/r/webdev thread: 142 upvotes, 38 comments</li>
+</ul>
+<p><strong>Twitter/X:</strong></p>
+<ul>
+<li>15+ quote tweets from developers trying it</li>
+<li>Featured in @HugoThemes weekly roundup</li>
+<li>Mentioned in @JAMstacked newsletter</li>
+</ul>
+<p><strong>Dev.to:</strong></p>
+<ul>
+<li>Article about the stream: 3,200+ views</li>
+<li>Featured in top 7 posts of the week</li>
+</ul>
+<h2 id="what-i-learned">What I Learned</h2>
+<h3 id="about-live-coding">About Live Coding:</h3>
+<ol>
+<li><strong>Prepare but stay flexible</strong> - Have a plan but embrace tangents</li>
+<li><strong>Explain your thinking</strong> - Narrate decisions, not just actions</li>
+<li><strong>Embrace mistakes</strong> - Debugging live is educational</li>
+<li><strong>Engage with chat</strong> - Viewers appreciate interaction</li>
+<li><strong>Test everything</strong> - Murphy&rsquo;s law applies to live demos</li>
+</ol>
+<h3 id="about-teaching">About Teaching:</h3>
+<ol>
+<li><strong>Analogies matter</strong> - Compare complex concepts to familiar things</li>
+<li><strong>Show, don&rsquo;t tell</strong> - Live coding beats slides</li>
+<li><strong>Repeat key points</strong> - People tune in/out during long streams</li>
+<li><strong>Provide resources</strong> - Give people next steps</li>
+<li><strong>Stay enthusiastic</strong> - Energy is contagious</li>
+</ol>
+<h3 id="about-hugo-community">About Hugo Community:</h3>
+<ol>
+<li><strong>Hungry for advanced content</strong> - Lots of intermediate devs seeking deeper knowledge</li>
+<li><strong>Accessibility-minded</strong> - Community values inclusive design</li>
+<li><strong>Performance-focused</strong> - Speed and optimization are priorities</li>
+<li><strong>Collaborative spirit</strong> - People share improvements and forks</li>
+</ol>
+<h2 id="behind-the-scenes">Behind the Scenes</h2>
+<p><strong>Preparation:</strong></p>
+<ul>
+<li>10 hours planning and testing code examples</li>
+<li>3 hours with Jessica aligning on format and goals</li>
+<li>Created backup examples in case of technical issues</li>
+<li>Tested screen share, audio, and video quality</li>
+</ul>
+<p><strong>Setup:</strong></p>
+<ul>
+<li>Primary display: VSCode with large fonts</li>
+<li>Secondary display: Chat, notes, browser DevTools</li>
+<li>Audio: Blue Yeti microphone with pop filter</li>
+<li>Video: Logitech C920 webcam</li>
+<li>Lighting: Two ring lights for even illumination</li>
+</ul>
+<p><strong>Lessons Learned:</strong></p>
+<ul>
+<li>Close all notifications (email, Slack, etc.)</li>
+<li>Have water nearby (talk for 90 minutes!)</li>
+<li>Stand or use a standing desk (better energy)</li>
+<li>Take a short break if stream runs long</li>
+</ul>
+<h2 id="jessicas-perspective">Jessica&rsquo;s Perspective</h2>
+<blockquote>
+<p>&ldquo;This was one of my favorite collaborations. Having someone deeply knowledgeable about a specific technology create content with you results in something neither could do alone. My audience got expert-level Hugo content, and I learned a ton. Plus, the chat was amazing—super engaged and thoughtful questions throughout.&rdquo;</p>
+<p>&ldquo;The live coding format worked perfectly. No cuts, no hiding mistakes, just real development. That&rsquo;s what people want to see. I&rsquo;ve had several viewers tell me this was the stream that finally clicked Hugo for them.&rdquo;</p>
+<p>— Jessica Martinez, Code Creator</p>
+</blockquote>
+<h2 id="about-code-creator">About Code Creator</h2>
+<p>Jessica Martinez&rsquo;s <strong>Code Creator</strong> channel focuses on practical web development tutorials, live coding sessions, and career advice for developers.</p>
+<p><strong>Channel Stats:</strong></p>
+<ul>
+<li>Subscribers: 252,000+</li>
+<li>Total Views: 8.5M+</li>
+<li>Videos Published: 320+</li>
+<li>Average Video Length: 25 minutes</li>
+</ul>
+<p><strong>Popular Series:</strong></p>
+<ul>
+<li>Build a Full-Stack App (12 episodes)</li>
+<li>CSS Wizardry (ongoing)</li>
+<li>Career Tips for Developers (bi-weekly)</li>
+<li>Coder Collabs (quarterly)</li>
+</ul>
+<p><strong>Subscribe:</strong> <a href="https://youtube.com/@codecreator" target="_blank" rel="noopener noreffer ">youtube.com/@codecreator</a></p>
+<h2 id="resources-mentioned">Resources Mentioned</h2>
+<h3 id="hugo-resources">Hugo Resources:</h3>
+<ul>
+<li><a href="https://gohugo.io/documentation/" target="_blank" rel="noopener noreffer ">Hugo Documentation</a></li>
+<li><a href="https://discourse.gohugo.io/" target="_blank" rel="noopener noreffer ">Hugo Forum</a></li>
+<li><a href="https://themes.gohugo.io/" target="_blank" rel="noopener noreffer ">Hugo Themes Showcase</a></li>
+</ul>
+<h3 id="css-resources">CSS Resources:</h3>
+<ul>
+<li><a href="https://css-tricks.com/" target="_blank" rel="noopener noreffer ">CSS-Tricks</a></li>
+<li><a href="https://www.smashingmagazine.com/category/css" target="_blank" rel="noopener noreffer ">Smashing Magazine CSS Articles</a></li>
+<li><a href="https://moderncss.dev/" target="_blank" rel="noopener noreffer ">Modern CSS Solutions</a></li>
+</ul>
+<h3 id="performance-resources">Performance Resources:</h3>
+<ul>
+<li><a href="https://web.dev/" target="_blank" rel="noopener noreffer ">Web.dev</a></li>
+<li><a href="https://developers.google.com/web/tools/lighthouse" target="_blank" rel="noopener noreffer ">Lighthouse Docs</a></li>
+<li><a href="https://www.webpagetest.org/" target="_blank" rel="noopener noreffer ">WebPageTest</a></li>
+</ul>
+<h3 id="accessibility-resources">Accessibility Resources:</h3>
+<ul>
+<li><a href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank" rel="noopener noreffer ">WCAG Guidelines</a></li>
+<li><a href="https://www.a11yproject.com/" target="_blank" rel="noopener noreffer ">A11y Project</a></li>
+<li><a href="https://inclusive-components.design/" target="_blank" rel="noopener noreffer ">Inclusive Components</a></li>
+</ul>
+<h2 id="related-appearances">Related Appearances</h2>
+<ul>
+<li><a href="/featured/podcast-appearance-demo/" rel="">Podcast: Tech Talk Weekly</a> - Audio interview</li>
+<li><a href="/featured/interview-dev-magazine-demo/" rel="">Interview: Dev Magazine</a> - Written Q&amp;A</li>
+<li><a href="/featured/conference-devcon-demo/" rel="">Conference: DevCon 2025</a> - Conference talk</li>
+<li><a href="/featured/panel-discussion-demo/" rel="">Panel: Future of Web Dev</a> - Panel discussion</li>
+</ul>
+<h2 id="connect">Connect</h2>
+<p>Want to discuss Hugo themes or collaborate on a video?</p>
+<ul>
+<li><strong>Email:</strong> <a href="mailto:collab@example.com" rel="">collab@example.com</a></li>
+<li><strong>Twitter:</strong> <a href="https://twitter.com/example" target="_blank" rel="noopener noreffer ">@example</a></li>
+<li><strong>YouTube:</strong> <a href="https://youtube.com/@example" target="_blank" rel="noopener noreffer ">youtube.com/@example</a></li>
+<li><strong>GitHub:</strong> <a href="https://github.com/example" target="_blank" rel="noopener noreffer ">@example</a></li>
+</ul>
+<h2 id="image-attribution">Image Attribution</h2>
+<p>Featured image: Photo by Christina Morillo from Pexels (CC0 License)</p>
+<ul>
+<li>Source: <a href="https://www.pexels.com/photo/woman-standing-while-carrying-laptop-1181354/" target="_blank" rel="noopener noreffer ">https://www.pexels.com/photo/woman-standing-while-carrying-laptop-1181354/</a></li>
+<li>License: Creative Commons Zero (CC0)</li>
+<li>Free to use with no attribution required</li>
+</ul>
+<hr>
+<p><strong>Platform:</strong> YouTube
+<strong>Channel:</strong> Code Creator
+<strong>Published:</strong> October 15, 2025
+<strong>Duration:</strong> 1:32:45
+<strong>Format:</strong> Live coding collaboration
+<strong>Views:</strong> 45,230+ (as of Oct 27, 2025)
+<strong>Engagement:</strong> 98.2% positive</p>
+</div></div></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.151.2">Hugo</a> | Theme - <a href="https://github.com/gallo-s-chingon/Tokyo-Nord" target="_blank" rel="noopener noreffer" title="Tokyo-Nord 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> Tokyo-Nord</a>
+                </div>
+                <div class="footer-line">
+                    Created by <a href="https://github.com/gallo-s-chingon" target="_blank" rel="noopener noreferrer">Gallo Chingon</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">My cool site</a></span>&nbsp;|&nbsp;<span class="license"><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><script src="/lib/autocomplete/autocomplete.min.js"></script><script src="/lib/lunr/lunr.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script>window.config={"comment":{},"highContrast":true,"lightgallery":true,"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/js/theme.min.js"></script></body>
+</html>

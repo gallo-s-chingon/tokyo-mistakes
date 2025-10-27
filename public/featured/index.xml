@@ -6,76 +6,49 @@
     <description>Recent content in Featureds on My cool site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
+    <lastBuildDate>Mon, 20 Oct 2025 10:00:00 -0700</lastBuildDate>
     <atom:link href="http://localhost:1313/featured/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Buying Happiness</title>
-      <link>http://localhost:1313/featured/2021-04-18-sixteen-shots-buying-happiness/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/featured/2021-04-18-sixteen-shots-buying-happiness/</guid>
-      <description>Bonus episode featuring El Gallo</description>
+      <title>Interview: Dev Magazine Q&amp;A on Modern Web Development</title>
+      <link>http://localhost:1313/featured/interview-dev-magazine-demo/</link>
+      <pubDate>Mon, 20 Oct 2025 10:00:00 -0700</pubDate>
+      <guid>http://localhost:1313/featured/interview-dev-magazine-demo/</guid>
+      <description>Written interview with Dev Magazine discussing my journey in web development, open source contributions, and building tools for the developer community.</description>
     </item>
     <item>
-      <title>Cuffing Season</title>
-      <link>http://localhost:1313/featured/2021-08-04-cuffing-feat-gallo-@cochinochingon/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/featured/2021-08-04-cuffing-feat-gallo-@cochinochingon/</guid>
-      <description>dating during cuffing season</description>
+      <title>Featured Appearance Front Matter Reference</title>
+      <link>http://localhost:1313/featured/featured-frontmatter-example/</link>
+      <pubDate>Wed, 15 Jan 2025 10:00:00 -0700</pubDate>
+      <guid>http://localhost:1313/featured/featured-frontmatter-example/</guid>
+      <description>Complete frontmatter reference for featured appearances in Tokyo-Nord theme</description>
     </item>
     <item>
-      <title>Experiencias con la Muerte</title>
-      <link>http://localhost:1313/featured/2021-06-06-experiencias-con-la-muerte/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/featured/2021-06-06-experiencias-con-la-muerte/</guid>
-      <description>Este es el primer episodio donde los muchachos de El Buruleo disectan las experiencias de muerte de 4 individuos que han tenido la valentia de explicarnos como fue y como regresaron</description>
+      <title>Featured Appearance Frontmatter Reference Guide</title>
+      <link>http://localhost:1313/featured/frontmatter-example/</link>
+      <pubDate>Wed, 15 Jan 2025 10:00:00 -0700</pubDate>
+      <guid>http://localhost:1313/featured/frontmatter-example/</guid>
+      <description>Complete reference guide for featured appearance frontmatter fields with examples and explanations</description>
     </item>
     <item>
-      <title>Fight Club</title>
-      <link>http://localhost:1313/featured/2021-03-25-sixteen-shots-fight-club/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/featured/2021-03-25-sixteen-shots-fight-club/</guid>
-      <description>In this episode we discuss beef between friends and business, Sex addiction, turning 40 and DW4</description>
+      <title>Gradient Overlay Demo</title>
+      <link>http://localhost:1313/featured/2025-01-15-gradient-overlay-demo/</link>
+      <pubDate>Wed, 15 Jan 2025 11:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/featured/2025-01-15-gradient-overlay-demo/</guid>
+      <description>&lt;p&gt;This post demonstrates a &lt;strong&gt;gradient overlay&lt;/strong&gt; for sophisticated visual effects.&lt;/p&gt;&#xA;&lt;p&gt;The featured image uses a gradient that fades from dark to transparent:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;overlay_filter&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0))&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This technique:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Creates a natural shadow area for text&lt;/li&gt;&#xA;&lt;li&gt;Maintains the upper portion of the image visible&lt;/li&gt;&#xA;&lt;li&gt;Provides excellent readability for overlaid metadata&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Perfect for landscape and nature photography!&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Get Money with Kwame &amp; Gallo</title>
-      <link>http://localhost:1313/featured/2022-01-03-get-money-with-kwame--gallo/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/featured/2022-01-03-get-money-with-kwame--gallo/</guid>
-      <description>First Ep of 2022.. Free Casanova 2X.</description>
+      <title>Red Colored Overlay Demo</title>
+      <link>http://localhost:1313/featured/2025-01-15-red-overlay-demo/</link>
+      <pubDate>Wed, 15 Jan 2025 10:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/featured/2025-01-15-red-overlay-demo/</guid>
+      <description>&lt;p&gt;This post demonstrates a &lt;strong&gt;red color overlay&lt;/strong&gt; using RGBA format.&lt;/p&gt;&#xA;&lt;p&gt;The featured image has a semi-transparent red layer applied with:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;overlay_filter&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;rgba(255, 0, 0, 0.3)&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This creates a warm, vibrant effect perfect for:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Brand-themed content&lt;/li&gt;&#xA;&lt;li&gt;Artistic photography&lt;/li&gt;&#xA;&lt;li&gt;Drawing attention to specific posts&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;You can use any RGB color combination with any alpha transparency value!&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Leaving the Rat Race for Podcasting &amp; Other Pursuits</title>
-      <link>http://localhost:1313/featured/2021-06-17-gallo-leaving-the-rat-race/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/featured/2021-06-17-gallo-leaving-the-rat-race/</guid>
-      <description>Shaved head, painted fingernails, multiple earring that’s Gallo Chingon, the podcaster behind Sucias are my Favorite, a welcome addition to our local landscape</description>
-    </item>
-    <item>
-      <title>Random Kinks</title>
-      <link>http://localhost:1313/featured/2021-07-07-lets-talk-about-it-random-kinks/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/featured/2021-07-07-lets-talk-about-it-random-kinks/</guid>
-      <description>Join us as we talk Random Kinks with our first guest Gallo Chingon from &amp;lsquo;Sucias are my Favorite&amp;rsquo; podcast!</description>
-    </item>
-    <item>
-      <title>Reddit Randomness</title>
-      <link>http://localhost:1313/featured/2022-01-18-reddit-randomness/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/featured/2022-01-18-reddit-randomness/</guid>
-      <description>This week, we dive into the random Reddit space that is on the internet!</description>
-    </item>
-    <item>
-      <title>Santa Muerte &amp; The Third Eye</title>
-      <link>http://localhost:1313/featured/2021-09-24-santa-muerte--the-third-eye/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/featured/2021-09-24-santa-muerte--the-third-eye/</guid>
-      <description>Gallo&amp;rsquo;s experiences with his ancestors attempts to reach out to him, beckoning from Santa Muerte</description>
-    </item>
-    <item>
-      <title>Warning Sex Drugs and Advice</title>
-      <link>http://localhost:1313/featured/2021-10-30-warning-sex-drugs-and-advice/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/featured/2021-10-30-warning-sex-drugs-and-advice/</guid>
-      <description>Sooooo this week - we knock on somethings that straight up aren&amp;rsquo;t for everyone</description>
+      <title>Overlay Filter Feature Demo</title>
+      <link>http://localhost:1313/featured/2025-01-15-overlay-filter-demo/</link>
+      <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/featured/2025-01-15-overlay-filter-demo/</guid>
+      <description>&lt;p&gt;This post demonstrates the new &lt;code&gt;overlay_filter&lt;/code&gt; feature, which adds colored overlays to featured images.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-is-overlay_filter&#34;&gt;What is overlay_filter?&lt;/h2&gt;&#xA;&lt;p&gt;The &lt;code&gt;overlay_filter&lt;/code&gt; parameter, inspired by Jekyll Minimal Mistakes, allows you to add a semi-transparent colored layer over featured images. This improves text readability and creates visual effects.&lt;/p&gt;&#xA;&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Black overlays&lt;/strong&gt;: Use numeric values (0.1-1.0) for black overlays&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Colored overlays&lt;/strong&gt;: Use &lt;code&gt;rgba()&lt;/code&gt; for custom colors&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Gradients&lt;/strong&gt;: Use CSS gradients for advanced effects&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Works with metadata overlays&lt;/strong&gt;: Combines with the existing overlay metadata feature&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Per-page or site-wide&lt;/strong&gt;: Configure globally or per-page&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;how-it-works&#34;&gt;How It Works&lt;/h2&gt;&#xA;&lt;p&gt;Unlike the &lt;code&gt;transparency&lt;/code&gt; feature which makes the image itself semi-transparent, &lt;code&gt;overlay_filter&lt;/code&gt; adds a colored layer &lt;strong&gt;on top&lt;/strong&gt; of the image. You can use both together for creative effects!&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

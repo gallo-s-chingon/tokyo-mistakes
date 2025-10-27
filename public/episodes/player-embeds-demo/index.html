@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Embedding Podcast Players: Complete Guide - My cool site</title><meta name="Description" content="Learn how to embed players from all major podcast platforms including Spotify, Apple Podcasts, YouTube, and more using the Tokyo-Nord theme&#39;s built-in shortcodes."><meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/episodes/player-embeds-demo/" /><link rel="prev" href="http://localhost:1313/episodes/episode-types-demo/" /><link rel="next" href="http://localhost:1313/episodes/metadata-customization-demo/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Embedding Podcast Players: Complete Guide",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/episodes\/player-embeds-demo\/"
+        },"genre": "episodes","keywords": "documentation, players, embeds, spotify, youtube","wordcount":  631 ,
+        "url": "http:\/\/localhost:1313\/episodes\/player-embeds-demo\/","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "My cool site"
+            },"description": "Learn how to embed players from all major podcast platforms including Spotify, Apple Podcasts, YouTube, and more using the Tokyo-Nord theme's built-in shortcodes."
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          function applyTheme() {
+            const highContrast =  true ;
+            const defaultTheme = 'auto';
+
+            
+            const themeMap = {
+              dark: highContrast ? 'tokyo-night' : 'nordic',
+              light: highContrast ? 'onenord-light' : 'onenord-day'
+            };
+
+            
+            let theme = window.localStorage?.getItem('theme');
+
+            if (!theme) {
+              
+              if (defaultTheme === 'auto') {
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                theme = prefersDark ? themeMap.dark : themeMap.light;
+              } else if (defaultTheme === 'dark') {
+                theme = themeMap.dark;
+              } else {
+                theme = themeMap.light;
+              }
+            }
+
+            
+            const validThemes = ['tokyo-night', 'nordic', 'onenord-light', 'onenord-day'];
+            if (!validThemes.includes(theme)) {
+              theme = themeMap.dark;
+            }
+
+            let isDark = theme === 'tokyo-night' || theme === 'nordic';
+            document.body.setAttribute('data-theme', theme);
+            document.body.setAttribute('theme', isDark ? 'dark' : 'light');
+          }
+
+          applyTheme();
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="My cool site">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/featured/"> Featured </a><a class="menu-item" href="/episodes/"> Episodes </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="My cool site">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/featured/" title="">Feat</a><a class="menu-item" href="/episodes/" title="">Epi</a><a class="menu-item" href="/about/" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single episode"><h1 class="single-title animate__animated animate__flipInX">Embedding Podcast Players: Complete Guide</h1><div class="featured-image-container episode-featured-overlay" data-position="lower-center">
+                <div class="featured-image episode-artwork"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/samples/sample-podcast-studio.jpg"
+        data-srcset="/images/samples/sample-podcast-studio.jpg, /images/samples/sample-podcast-studio.jpg 1.5x, /images/samples/sample-podcast-studio.jpg 2x"
+        data-sizes="auto"
+        alt="/images/samples/sample-podcast-studio.jpg"
+        title="Learn how to embed players from all major podcast platforms including Spotify, Apple Podcasts, YouTube, and more using the Tokyo-Nord theme&#39;s built-in shortcodes." /><div class="featured-image-color-overlay" style="background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.2));"></div></div>
+                <div class="featured-metadata-overlay overlay-lower-center" style="--overlay-opacity: 0.85;">
+                    <div class="overlay-content"><div class="post-meta episode-meta"><div class="post-meta-line">
+                                    <span class="episode-number">
+                                        <i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>&nbsp;Episode 102
+                                    </span>
+                                </div><div class="post-meta-line">
+                                    <span class="episode-season">
+                                        <i class="fas fa-layer-group fa-fw" aria-hidden="true"></i>&nbsp;Season 1
+                                    </span>
+                                </div><div class="post-meta-line">
+                                    <span class="episode-duration">
+                                        <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;52:30
+                                    </span>
+                                </div><div class="post-meta-line">
+                                    <span class="episode-date">
+                                        <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="0001-01-01">0001-01-01</time>
+                                    </span>
+                                </div><div class="post-meta-line">
+                                    <span class="podcast-name">
+                                        <i class="fas fa-podcast fa-fw" aria-hidden="true"></i>&nbsp;Tokyo Dev Podcast
+                                    </span>
+                                </div><div class="post-meta-line">
+                                    <span class="episode-host">
+                                        <i class="fas fa-microphone fa-fw" aria-hidden="true"></i>&nbsp;Documentation Team
+                                    </span>
+                                </div></div>
+                    </div>
+                </div>
+            </div><div class="podcast-players-stack"><div class="podcast-player-wrapper" style="width:80%;max-width:80%;margin:0 auto;"><div class="podcast-player podcast-player-spotify">
+              <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/667dex4sU7Z54upPO4Up4n?utm_source=generator" width="100%" height="232" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div></div><div class="podcast-player-wrapper" style="width:80%;max-width:80%;margin:0 auto;"><div class="podcast-player podcast-player-youtube">
+              <iframe width="100%" height="232" src="https://www.youtube.com/embed/cIla9axQRyM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div></div></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#about-this-episode">About This Episode</a></li>
+    <li><a href="#supported-platforms">Supported Platforms</a></li>
+    <li><a href="#method-1-frontmatter-configuration">Method 1: Frontmatter Configuration</a></li>
+    <li><a href="#method-2-inline-shortcodes">Method 2: Inline Shortcodes</a>
+      <ul>
+        <li><a href="#spotify">Spotify</a></li>
+        <li><a href="#youtube">YouTube</a></li>
+        <li><a href="#apple-podcasts">Apple Podcasts</a></li>
+        <li><a href="#blubrry">Blubrry</a></li>
+        <li><a href="#libsyn">Libsyn</a></li>
+        <li><a href="#podbean">Podbean</a></li>
+        <li><a href="#simplecast">Simplecast</a></li>
+        <li><a href="#spreaker">Spreaker</a></li>
+        <li><a href="#transistor">Transistor</a></li>
+        <li><a href="#buzzsprout">Buzzsprout</a></li>
+      </ul>
+    </li>
+    <li><a href="#best-practices">Best Practices</a>
+      <ul>
+        <li><a href="#1-choose-primary-platform">1. Choose Primary Platform</a></li>
+        <li><a href="#2-limit-number-of-players">2. Limit Number of Players</a></li>
+        <li><a href="#3-consistent-ordering">3. Consistent Ordering</a></li>
+        <li><a href="#4-test-embeds">4. Test Embeds</a></li>
+        <li><a href="#5-consider-mobile">5. Consider Mobile</a></li>
+      </ul>
+    </li>
+    <li><a href="#frontmatter-vs-inline">Frontmatter vs Inline</a></li>
+    <li><a href="#advanced-configuration">Advanced Configuration</a>
+      <ul>
+        <li><a href="#multiple-players-example">Multiple Players Example</a></li>
+        <li><a href="#video-podcast-example">Video Podcast Example</a></li>
+        <li><a href="#audio-only-example">Audio-Only Example</a></li>
+      </ul>
+    </li>
+    <li><a href="#troubleshooting">Troubleshooting</a></li>
+    <li><a href="#platform-specific-notes">Platform-Specific Notes</a>
+      <ul>
+        <li><a href="#spotify-1">Spotify</a></li>
+        <li><a href="#apple-podcasts-1">Apple Podcasts</a></li>
+        <li><a href="#youtube-1">YouTube</a></li>
+      </ul>
+    </li>
+    <li><a href="#creating-custom-shortcodes">Creating Custom Shortcodes</a></li>
+    <li><a href="#related-documentation">Related Documentation</a></li>
+    <li><a href="#example-frontmatter">Example Frontmatter</a></li>
+    <li><a href="#image-attribution">Image Attribution</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content episode-content" id="content"><h2 id="about-this-episode">About This Episode</h2>
+<p>This documentation episode demonstrates how to embed podcast players from various platforms using the Tokyo-Nord theme&rsquo;s built-in shortcodes. The embedded players below are live examples you can interact with.</p>
+<h2 id="supported-platforms">Supported Platforms</h2>
+<p>The Tokyo-Nord theme includes shortcodes for these major podcast platforms:</p>
+<ul>
+<li>Spotify</li>
+<li>Apple Podcasts</li>
+<li>YouTube</li>
+<li>Blubrry</li>
+<li>Libsyn</li>
+<li>Podbean</li>
+<li>Simplecast</li>
+<li>Spreaker</li>
+<li>Transistor</li>
+<li>Buzzsprout</li>
+</ul>
+<h2 id="method-1-frontmatter-configuration">Method 1: Frontmatter Configuration</h2>
+<p>The recommended approach is to define players in your frontmatter:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">embedPlayers</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;spotify&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;episode-id-here&#34;</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;youtube&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;video-id-here&#34;</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;apple&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;podcast-id/episode-id&#34;</span></span></span></code></pre></div><p><strong>Benefits:</strong></p>
+<ul>
+<li>Centralized configuration</li>
+<li>Consistent ordering across episodes</li>
+<li>Easy to manage multiple players</li>
+<li>Theme handles rendering automatically</li>
+</ul>
+<p><strong>This page uses frontmatter configuration</strong> with Spotify and YouTube players (see examples below).</p>
+<h2 id="method-2-inline-shortcodes">Method 2: Inline Shortcodes</h2>
+<p>You can also embed players directly in your content using shortcodes:</p>
+<h3 id="spotify">Spotify</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="podcast-player podcast-player-spotify" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    style="border-radius:12px"
+    src="https://open.spotify.com/embed/episode/667dex4sU7Z54upPO4Up4n?utm_source=generator"
+    width="100%"
+    height="232"
+    frameBorder="0"
+    allowfullscreen=""
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy">
+  </iframe>
+</div></span></span></code></pre></div><p><strong>Finding the Episode ID:</strong>
+From URL: <code>https://open.spotify.com/episode/667dex4sU7Z54upPO4Up4n</code>
+The ID is: <code>667dex4sU7Z54upPO4Up4n</code></p>
+<p><strong>Example embed (from frontmatter):</strong></p>
+<div class="podcast-player podcast-player-spotify" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    style="border-radius:12px"
+    src="https://open.spotify.com/embed/episode/667dex4sU7Z54upPO4Up4n?utm_source=generator"
+    width="100%"
+    height="232"
+    frameBorder="0"
+    allowfullscreen=""
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy">
+  </iframe>
+</div>
+<hr>
+<h3 id="youtube">YouTube</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="podcast-player podcast-player-youtube" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    width="100%"
+    height="315"
+    src="https://www.youtube.com/embed/cIla9axQRyM"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+    loading="lazy">
+  </iframe>
+</div></span></span></code></pre></div><p><strong>Finding the Video ID:</strong>
+From URL: <code>https://www.youtube.com/watch?v=cIla9axQRyM</code>
+The ID is: <code>cIla9axQRyM</code></p>
+<p><strong>Example embed (from frontmatter):</strong></p>
+<div class="podcast-player podcast-player-youtube" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    width="100%"
+    height="315"
+    src="https://www.youtube.com/embed/cIla9axQRyM"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+    loading="lazy">
+  </iframe>
+</div>
+<hr>
+<h3 id="apple-podcasts">Apple Podcasts</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="podcast-player podcast-player-apple" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+    frameborder="0"
+    height="175"
+    style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
+    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+    src="https://embed.podcasts.apple.com/us/podcast/idpodcast-id?i=episode-id">
+  </iframe>
+</div></span></span></code></pre></div><p><strong>Finding the IDs:</strong>
+From URL: <code>https://podcasts.apple.com/us/podcast/podcast-name/id1234567890?i=1000123456789</code></p>
+<ul>
+<li>Podcast ID: <code>1234567890</code></li>
+<li>Episode ID: <code>1000123456789</code></li>
+</ul>
+<p><strong>Syntax:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="podcast-player podcast-player-apple" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+    frameborder="0"
+    height="175"
+    style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
+    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+    src="https://embed.podcasts.apple.com/us/podcast/id1234567890?i=1000123456789">
+  </iframe>
+</div></span></span></code></pre></div><hr>
+<h3 id="blubrry">Blubrry</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="podcast-player podcast-player-blubrry" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    src="https://blubrry.com/podcast-id/episode-id/player/"
+    scrolling="no"
+    width="100%"
+    height="138px"
+    frameborder="0">
+  </iframe>
+</div></span></span></code></pre></div><p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="podcast-player podcast-player-blubrry" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    src="https://blubrry.com/example-podcast/12345/player/"
+    scrolling="no"
+    width="100%"
+    height="138px"
+    frameborder="0">
+  </iframe>
+</div></span></span></code></pre></div><hr>
+<h3 id="libsyn">Libsyn</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="podcast-player podcast-player-libsyn" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    style="border: none"
+    src="//html5-player.libsyn.com/embed/episode/id/podcast-slug/height/90/theme/standard/thumbnail/yes/direction/backward/"
+    height="90"
+    width="100%"
+    scrolling="no"
+    allowfullscreen
+    webkitallowfullscreen
+    mozallowfullscreen
+    oallowfullscreen
+    msallowfullscreen>
+  </iframe>
+</div></span></span></code></pre></div><p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="podcast-player podcast-player-libsyn" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    style="border: none"
+    src="//html5-player.libsyn.com/embed/episode/id/my-podcast/height/90/theme/standard/thumbnail/yes/direction/backward/"
+    height="90"
+    width="100%"
+    scrolling="no"
+    allowfullscreen
+    webkitallowfullscreen
+    mozallowfullscreen
+    oallowfullscreen
+    msallowfullscreen>
+  </iframe>
+</div></span></span></code></pre></div><hr>
+<h3 id="podbean">Podbean</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="podcast-player podcast-player-podbean" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    title="Podbean Player"
+    src="embed-key"
+    width="100%"
+    height="150"
+    style="border: none;"
+    scrolling="no"
+    data-name="pb-iframe-player">
+  </iframe>
+</div></span></span></code></pre></div><p><strong>Finding the Embed Key:</strong>
+From Podbean embed code: Look for the player ID in the URL.</p>
+<hr>
+<h3 id="simplecast">Simplecast</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="podcast-player podcast-player-simplecast" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    frameborder="no"
+    scrolling="no"
+    seamless
+    src="https://player.simplecast.com/episode-id?dark=false"
+    width="100%"
+    height="200">
+  </iframe>
+</div></span></span></code></pre></div><p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="podcast-player podcast-player-simplecast" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    frameborder="no"
+    scrolling="no"
+    seamless
+    src="https://player.simplecast.com/abc123def456?dark=false"
+    width="100%"
+    height="200">
+  </iframe>
+</div></span></span></code></pre></div><hr>
+<h3 id="spreaker">Spreaker</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="podcast-player podcast-player-spreaker" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    src="https://widget.spreaker.com/player?episode_id=episode-id&theme=light&playlist=false&playlist-continuous=false&autoplay=false&live-autoplay=false&chapters-image=true&episode_image_position=right&hide-logo=false&hide-likes=false&hide-comments=false&hide-sharing=false&hide-download=true"
+    width="100%"
+    height="200px"
+    frameborder="0">
+  </iframe>
+</div></span></span></code></pre></div><p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="podcast-player podcast-player-spreaker" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    src="https://widget.spreaker.com/player?episode_id=12345678&theme=light&playlist=false&playlist-continuous=false&autoplay=false&live-autoplay=false&chapters-image=true&episode_image_position=right&hide-logo=false&hide-likes=false&hide-comments=false&hide-sharing=false&hide-download=true"
+    width="100%"
+    height="200px"
+    frameborder="0">
+  </iframe>
+</div></span></span></code></pre></div><hr>
+<h3 id="transistor">Transistor</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="podcast-player podcast-player-transistor" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    src="share-key/embed"
+    width="100%"
+    height="180"
+    frameborder="0"
+    scrolling="no"
+    seamless="true"
+    style="width:100%; height:180px;">
+  </iframe>
+</div></span></span></code></pre></div><p><strong>Finding the Share Key:</strong>
+From Transistor share URL or embed code.</p>
+<hr>
+<h3 id="buzzsprout">Buzzsprout</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="podcast-player podcast-player-buzzsprout" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    src="https://www.buzzsprout.com/podcast-id/episode-id-?client_source=small_player&amp;iframe=true"
+    loading="lazy"
+    width="100%"
+    height="200"
+    frameborder="0"
+    scrolling="no"
+    title="Buzzsprout Player">
+  </iframe>
+</div></span></span></code></pre></div><p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><div class="podcast-player podcast-player-buzzsprout" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    src="https://www.buzzsprout.com/123456/7890123-?client_source=small_player&amp;iframe=true"
+    loading="lazy"
+    width="100%"
+    height="200"
+    frameborder="0"
+    scrolling="no"
+    title="Buzzsprout Player">
+  </iframe>
+</div></span></span></code></pre></div><hr>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="1-choose-primary-platform">1. Choose Primary Platform</h3>
+<p>Select your main distribution platform (usually Spotify or Apple Podcasts) as the first player.</p>
+<h3 id="2-limit-number-of-players">2. Limit Number of Players</h3>
+<p>Include 1-3 players maximum to avoid overwhelming listeners and slowing page load.</p>
+<h3 id="3-consistent-ordering">3. Consistent Ordering</h3>
+<p>Use the same player order across all episodes:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">embedPlayers</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;spotify&#34;</span>      <span style="color:#75715e"># Always first</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;apple&#34;</span>        <span style="color:#75715e"># Always second</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;youtube&#34;</span>      <span style="color:#75715e"># Always third (if applicable)</span></span></span></code></pre></div><h3 id="4-test-embeds">4. Test Embeds</h3>
+<p>Always preview your page to ensure players embed correctly.</p>
+<h3 id="5-consider-mobile">5. Consider Mobile</h3>
+<p>Embedded players are responsive but test on mobile devices to ensure good UX.</p>
+<h2 id="frontmatter-vs-inline">Frontmatter vs Inline</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Aspect</th>
+          <th>Frontmatter</th>
+          <th>Inline Shortcodes</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Organization</strong></td>
+          <td>Centralized</td>
+          <td>Distributed</td>
+      </tr>
+      <tr>
+          <td><strong>Consistency</strong></td>
+          <td>High</td>
+          <td>Variable</td>
+      </tr>
+      <tr>
+          <td><strong>Flexibility</strong></td>
+          <td>Medium</td>
+          <td>High</td>
+      </tr>
+      <tr>
+          <td><strong>Maintenance</strong></td>
+          <td>Easy</td>
+          <td>Moderate</td>
+      </tr>
+      <tr>
+          <td><strong>Use Case</strong></td>
+          <td>Standard episodes</td>
+          <td>Custom placement</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Recommendation:</strong> Use frontmatter for most episodes, inline shortcodes for special cases.</p>
+<h2 id="advanced-configuration">Advanced Configuration</h2>
+<h3 id="multiple-players-example">Multiple Players Example</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">embedPlayers</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;spotify&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;spotify-id&#34;</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;apple&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;podcast-id/episode-id&#34;</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;youtube&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;video-id&#34;</span></span></span></code></pre></div><h3 id="video-podcast-example">Video Podcast Example</h3>
+<p>For video podcasts, prioritize YouTube:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">embedPlayers</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;youtube&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;video-id&#34;</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;spotify&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;audio-id&#34;</span></span></span></code></pre></div><h3 id="audio-only-example">Audio-Only Example</h3>
+<p>For traditional podcasts:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">embedPlayers</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;spotify&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;episode-id&#34;</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;apple&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;podcast-id/episode-id&#34;</span></span></span></code></pre></div><h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong>Player not appearing?</strong></p>
+<ul>
+<li>Verify the episode ID is correct</li>
+<li>Check shortcode syntax (spacing, quotes)</li>
+<li>Ensure the platform URL is accessible</li>
+<li>Check browser console for errors</li>
+</ul>
+<p><strong>Player too wide/narrow?</strong></p>
+<ul>
+<li>Players are responsive by default</li>
+<li>Check parent container width</li>
+<li>Verify CSS isn&rsquo;t overriding player styles</li>
+</ul>
+<p><strong>Player shows error message?</strong></p>
+<ul>
+<li>Confirm episode is publicly available</li>
+<li>Check if episode ID has changed</li>
+<li>Verify platform hasn&rsquo;t changed embed format</li>
+</ul>
+<h2 id="platform-specific-notes">Platform-Specific Notes</h2>
+<h3 id="spotify-1">Spotify</h3>
+<ul>
+<li>Most widely used</li>
+<li>Excellent embed reliability</li>
+<li>Auto-updates episode art</li>
+<li>Shows related episodes</li>
+</ul>
+<h3 id="apple-podcasts-1">Apple Podcasts</h3>
+<ul>
+<li>iOS-friendly</li>
+<li>Requires two IDs (podcast + episode)</li>
+<li>May not work in some browsers</li>
+</ul>
+<h3 id="youtube-1">YouTube</h3>
+<ul>
+<li>Best for video podcasts</li>
+<li>High engagement</li>
+<li>Autoplay options available</li>
+<li>Shows recommended videos</li>
+</ul>
+<h2 id="creating-custom-shortcodes">Creating Custom Shortcodes</h2>
+<p>To add a new platform, create a shortcode in <code>layouts/shortcodes/</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- layouts/shortcodes/podcast-newplatform.html --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;podcast-player&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">iframe</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://platform.com/embed/{{ .Get 0 }}&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;100%&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;232&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">frameborder</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">allowtransparency</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">allow</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;encrypted-media&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">iframe</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;</span></span></code></pre></div><h2 id="related-documentation">Related Documentation</h2>
+<ul>
+<li><code>/episodes/overlay-features-demo/</code> - Overlay features guide</li>
+<li><code>/episodes/metadata-customization-demo/</code> - Metadata customization</li>
+<li><code>/docs/podcast-features/</code> - Complete podcast features</li>
+</ul>
+<h2 id="example-frontmatter">Example Frontmatter</h2>
+<p>Complete episode with multiple players:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Episode Title&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">created</span>: <span style="color:#e6db74">2025-10-27</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">42</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcast</span>: <span style="color:#e6db74">&#34;Podcast Name&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;Host Name&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">featuredImage</span>: <span style="color:#e6db74">&#34;/images/episode.jpg&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">embedPlayers</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;spotify&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;spotify-episode-id&#34;</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;apple&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;podcast-id/episode-id&#34;</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;youtube&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;video-id&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;topic1&#34;</span>, <span style="color:#e6db74">&#34;topic2&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">summary</span>: <span style="color:#e6db74">&#34;Episode description&#34;</span>
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><h2 id="image-attribution">Image Attribution</h2>
+<p>Featured image: Photo by Matthias Groeneveld from Pexels (CC0 License)</p>
+<ul>
+<li>Source: <a href="https://www.pexels.com/photo/black-and-gray-audio-mixer-6069/" target="_blank" rel="noopener noreffer ">https://www.pexels.com/photo/black-and-gray-audio-mixer-6069/</a></li>
+<li>License: Creative Commons Zero (CC0)</li>
+<li>Free to use with no attribution required</li>
+</ul>
+<hr>
+<p><strong>Documentation Version:</strong> 1.0
+<strong>Last Updated:</strong> 2025-10-27
+<strong>Theme:</strong> Tokyo-Nord</p>
+</div><div class="podcast-subscribe-section">
+    <h3 class="subscribe-title">Subscribe to the podcast</h3><div class="subscribe-buttons-container"></div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span></span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A1313%2Fepisodes%2Fplayer-embeds-demo%2F&amp;text=Learn&#43;how&#43;to&#43;embed&#43;players&#43;from&#43;all&#43;major&#43;podcast&#43;platforms&#43;including&#43;Spotify%2C&#43;Apple&#43;Podcasts%2C&#43;YouTube%2C&#43;and&#43;more&#43;using&#43;the&#43;Tokyo-Nord&#43;theme%27s&#43;built-in&#43;shortcodes.&amp;hashtags=documentation%2Cplayers%2Cembeds%2Cspotify%2Cyoutube" target="_blank" rel="noopener noreferrer" title="Share on X"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="https://www.facebook.com/sharer/sharer.php?u=http%253A%252F%252Flocalhost%253A1313%252Fepisodes%252Fplayer-embeds-demo%252F" target="_blank" rel="noopener noreferrer" title="Share on Facebook"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="https://www.linkedin.com/sharing/share-offsite/?url=http%253A%252F%252Flocalhost%253A1313%252Fepisodes%252Fplayer-embeds-demo%252F" target="_blank" rel="noopener noreferrer" title="Share on Linkedin"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="https://www.reddit.com/submit?url=http%253A%252F%252Flocalhost%253A1313%252Fepisodes%252Fplayer-embeds-demo%252F&title=Embedding%2bPodcast%2bPlayers%253A%2bComplete%2bGuide" target="_blank" rel="noopener noreferrer" title="Share on Reddit"><i class="fab fa-reddit fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%253A%252F%252Flocalhost%253A1313%252Fepisodes%252Fplayer-embeds-demo%252F&text=Learn%2bhow%2bto%2bembed%2bplayers%2bfrom%2ball%2bmajor%2bpodcast%2bplatforms%2bincluding%2bSpotify%252C%2bApple%2bPodcasts%252C%2bYouTube%252C%2band%2bmore%2busing%2bthe%2bTokyo-Nord%2btheme%2527s%2bbuilt-in%2bshortcodes." target="_blank" rel="noopener noreferrer" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/documentation/">Documentation</a>,&nbsp;<a href="/tags/players/">Players</a>,&nbsp;<a href="/tags/embeds/">Embeds</a>,&nbsp;<a href="/tags/spotify/">Spotify</a>,&nbsp;<a href="/tags/youtube/">Youtube</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/episodes/episode-types-demo/" class="prev" rel="prev" title="Episode Types: Full, Bonus, Trailer, Interview &amp; Solo"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Episode Types: Full, Bonus, Trailer, Interview & Solo</a>
+            <a href="/episodes/metadata-customization-demo/" class="next" rel="next" title="Customizing Episode Metadata: Complete Reference">Customizing Episode Metadata: Complete Reference<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.151.2">Hugo</a> | Theme - <a href="https://github.com/gallo-s-chingon/Tokyo-Nord" target="_blank" rel="noopener noreffer" title="Tokyo-Nord 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> Tokyo-Nord</a>
+                </div>
+                <div class="footer-line">
+                    Created by <a href="https://github.com/gallo-s-chingon" target="_blank" rel="noopener noreferrer">Gallo Chingon</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">My cool site</a></span>&nbsp;|&nbsp;<span class="license"><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="/lib/autocomplete/autocomplete.min.js"></script><script src="/lib/lunr/lunr.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script>window.config={"comment":{},"highContrast":true,"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/js/theme.min.js"></script></body>
+</html>

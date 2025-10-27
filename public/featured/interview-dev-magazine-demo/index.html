@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Interview: Dev Magazine Q&amp;A on Modern Web Development - My cool site</title><meta name="Description" content="An in-depth Q&amp;A covering my career path, philosophy on web development, experiences building the Tokyo-Nord theme, and advice for aspiring developers."><meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/featured/interview-dev-magazine-demo/" /><link rel="prev" href="http://localhost:1313/featured/featured-frontmatter-example/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Interview: Dev Magazine Q\u0026A on Modern Web Development",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/featured\/interview-dev-magazine-demo\/"
+        },"genre": "interview","keywords": "interview, web development, career, technology, open source","wordcount":  1705 ,
+        "url": "http:\/\/localhost:1313\/featured\/interview-dev-magazine-demo\/","datePublished": "2025-10-20T10:00:00-07:00","dateModified": "2025-10-20T10:00:00-07:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "My cool site"
+            },"description": "An in-depth Q\u0026A covering my career path, philosophy on web development, experiences building the Tokyo-Nord theme, and advice for aspiring developers."
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          function applyTheme() {
+            const highContrast =  true ;
+            const defaultTheme = 'auto';
+
+            
+            const themeMap = {
+              dark: highContrast ? 'tokyo-night' : 'nordic',
+              light: highContrast ? 'onenord-light' : 'onenord-day'
+            };
+
+            
+            let theme = window.localStorage?.getItem('theme');
+
+            if (!theme) {
+              
+              if (defaultTheme === 'auto') {
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                theme = prefersDark ? themeMap.dark : themeMap.light;
+              } else if (defaultTheme === 'dark') {
+                theme = themeMap.dark;
+              } else {
+                theme = themeMap.light;
+              }
+            }
+
+            
+            const validThemes = ['tokyo-night', 'nordic', 'onenord-light', 'onenord-day'];
+            if (!validThemes.includes(theme)) {
+              theme = themeMap.dark;
+            }
+
+            let isDark = theme === 'tokyo-night' || theme === 'nordic';
+            document.body.setAttribute('data-theme', theme);
+            document.body.setAttribute('theme', isDark ? 'dark' : 'light');
+          }
+
+          applyTheme();
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="My cool site">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/featured/"> Featured </a><a class="menu-item" href="/episodes/"> Episodes </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="My cool site">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/featured/" title="">Feat</a><a class="menu-item" href="/episodes/" title="">Epi</a><a class="menu-item" href="/about/" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="page single special"><h1 class="single-title animate__animated animate__pulse animate__faster">Interview: Dev Magazine Q&amp;A on Modern Web Development</h1><div class="content" id="content"><h2 id="about-this-interview">About This Interview</h2>
+<p>Dev Magazine reached out to feature me in their monthly &ldquo;Developer Spotlight&rdquo; series, where they interview developers, designers, and open source contributors making an impact in the web development community. This written Q&amp;A covers my background, current projects, and perspectives on the evolving landscape of web development.</p>
+<h2 id="interview-introduction">Interview Introduction</h2>
+<p><em>Published in Dev Magazine, October 2025 Issue</em></p>
+<p>In this month&rsquo;s Developer Spotlight, we sit down with a developer who&rsquo;s been making waves in the Hugo community with the Tokyo-Nord theme—a powerful, podcast-focused Hugo theme that&rsquo;s helping content creators build beautiful, performant websites. We discuss the inspiration behind the project, lessons learned, and where web development is headed.</p>
+<hr>
+<h2 id="the-interview">The Interview</h2>
+<h3 id="how-did-you-get-started-in-web-development">How did you get started in web development?</h3>
+<p>My journey started in a pretty unconventional way. I wasn&rsquo;t one of those kids coding at age 10. I actually discovered programming in college through a friend who showed me how to customize our dorm website. I was fascinated by the immediate feedback—write some HTML, refresh the browser, see the changes. That instant gratification hooked me.</p>
+<p>I started with WordPress, like many do, but eventually felt limited by the platform. That&rsquo;s when I discovered static site generators. Jekyll first, then Hugo. The speed and flexibility of Hugo blew my mind. Being able to build 10,000-page sites in under a second? That felt like magic.</p>
+<h3 id="what-inspired-you-to-create-the-tokyo-nord-theme">What inspired you to create the Tokyo-Nord theme?</h3>
+<p>I&rsquo;ve been podcasting on and off for several years, and every podcast hosting platform or website builder felt&hellip; limiting. They were either too simple (just a player and episode list) or too complex (requiring database setup, server management, etc.).</p>
+<p>I wanted something in between: beautiful, customizable, fast, and maintainable. Hugo was the perfect foundation, but existing podcast themes were either outdated or missing features I needed. So I built my own.</p>
+<p>The &ldquo;Tokyo&rdquo; part comes from my love of Japanese design aesthetics—clean, functional, respectful of whitespace. The &ldquo;Nord&rdquo; part references the Nord color palette, which I&rsquo;ve always found elegant and easy on the eyes.</p>
+<h3 id="what-makes-tokyo-nord-different-from-other-podcast-themes">What makes Tokyo-Nord different from other podcast themes?</h3>
+<p>A few things:</p>
+<p><strong>1. Overlay System:</strong> Inspired by Jekyll&rsquo;s Minimal Mistakes theme, I implemented a sophisticated overlay system for featured images. You can display metadata directly on images, add color filters, create gradients—all through simple frontmatter configuration.</p>
+<p><strong>2. Flexibility:</strong> It&rsquo;s not just for podcasts. You can use it for blogs, portfolios, documentation sites. The &ldquo;podcast&rdquo; features are optional. If you just want a beautiful Hugo theme with great typography, it works for that too.</p>
+<p><strong>3. Performance:</strong> Every feature is optimized. Lazy loading, asset minification, responsive images, efficient CSS. The theme itself adds minimal overhead to Hugo&rsquo;s already blazing-fast build times.</p>
+<p><strong>4. Documentation:</strong> This might be my proudest achievement. Every feature is documented with examples. I created sample content, wrote guides, and made it as beginner-friendly as possible without sacrificing power-user features.</p>
+<p><strong>5. Accessibility:</strong> From the start, I designed with WCAG guidelines in mind. Semantic HTML, proper heading hierarchy, keyboard navigation, screen reader support. Everyone should be able to enjoy podcast content.</p>
+<h3 id="what-were-the-biggest-challenges-in-building-it">What were the biggest challenges in building it?</h3>
+<p><strong>Hugo&rsquo;s Learning Curve:</strong> Hugo&rsquo;s templating system is powerful but has a steep learning curve. Understanding the content hierarchy, template lookup order, and partial rendering took time. The documentation is comprehensive but dense.</p>
+<p><strong>Balancing Flexibility and Simplicity:</strong> Every feature adds complexity. I struggled with this constantly. Do I add this option? Will it confuse users? Can I make it optional? Finding the right balance was an ongoing challenge.</p>
+<p><strong>Cross-Platform Testing:</strong> Making sure everything works across browsers, devices, and Hugo versions requires constant testing. Safari has its quirks, Firefox handles CSS differently, mobile browsers have their own challenges.</p>
+<p><strong>Performance vs. Features:</strong> Every cool feature potentially impacts performance. Animations, overlays, embeds—they all add weight. I spent a lot of time optimizing, lazy loading, and making features opt-in rather than default.</p>
+<p><strong>Documentation:</strong> Writing documentation is hard. You know your project intimately, but users don&rsquo;t. Explaining concepts clearly, providing examples, anticipating questions—it&rsquo;s time-consuming but essential.</p>
+<h3 id="whats-your-development-workflow-like">What&rsquo;s your development workflow like?</h3>
+<p>Pretty straightforward:</p>
+<p><strong>Morning:</strong> I start by reviewing issues and pull requests on GitHub. Community feedback is invaluable. Someone always finds edge cases I missed.</p>
+<p><strong>Development:</strong> I work in focused 2-3 hour blocks. I&rsquo;ll pick a feature or bug, implement it, test it, document it. No multitasking. One thing at a time, done right.</p>
+<p><strong>Testing:</strong> I maintain a test site with every possible configuration. Different episode types, various overlay combinations, multiple player embeds. If I change something, I rebuild the entire test site and verify nothing broke.</p>
+<p><strong>Documentation:</strong> For every feature, I write documentation before committing the code. If I can&rsquo;t explain it clearly, maybe it&rsquo;s too complex and needs simplification.</p>
+<p><strong>Version Control:</strong> I use Git branches religiously. Main branch is always stable. Features get their own branches, thoroughly tested before merging.</p>
+<h3 id="what-technologies-do-you-use-besides-hugo">What technologies do you use besides Hugo?</h3>
+<p>The theme itself is pure Hugo—Go templates, SCSS for styling, vanilla JavaScript for interactivity. No build step beyond Hugo&rsquo;s built-in asset pipeline.</p>
+<p><strong>But my workflow includes:</strong></p>
+<ul>
+<li><strong>Git/GitHub:</strong> Version control and collaboration</li>
+<li><strong>VS Code:</strong> My editor of choice, with Hugo-specific extensions</li>
+<li><strong>Firefox DevTools:</strong> For debugging and performance profiling</li>
+<li><strong>Lighthouse:</strong> Performance and accessibility auditing</li>
+<li><strong>BrowserStack:</strong> Cross-browser testing</li>
+<li><strong>Netlify:</strong> Deployment and preview deployments</li>
+<li><strong>Plausible Analytics:</strong> Privacy-friendly analytics for the demo site</li>
+</ul>
+<p><strong>I intentionally avoid:</strong></p>
+<ul>
+<li><strong>Node.js/npm:</strong> No build system, no dependencies to manage</li>
+<li><strong>React/Vue/Svelte:</strong> The theme doesn&rsquo;t need a framework</li>
+<li><strong>jQuery:</strong> Modern browsers make jQuery unnecessary</li>
+<li><strong>CSS frameworks:</strong> I prefer custom, minimal CSS</li>
+</ul>
+<h3 id="what-advice-would-you-give-to-aspiring-web-developers">What advice would you give to aspiring web developers?</h3>
+<p><strong>1. Start Simple:</strong> Don&rsquo;t try to learn everything at once. Master HTML and CSS first. Really understand the fundamentals. JavaScript comes later.</p>
+<p><strong>2. Build Things:</strong> Tutorials are great, but building projects is how you really learn. Build a portfolio site, then rebuild it better. Build a blog. Build a tool you&rsquo;d actually use.</p>
+<p><strong>3. Read Documentation:</strong> Get comfortable with technical documentation. It&rsquo;s dense and boring, but it&rsquo;s authoritative. Don&rsquo;t rely only on tutorials.</p>
+<p><strong>4. Use Git from Day One:</strong> Version control is essential. Learn it early, use it always. Future you will be grateful.</p>
+<p><strong>5. Focus on Web Standards:</strong> Frameworks come and go. Web standards endure. Learn how the web actually works: HTTP, HTML, CSS, JavaScript APIs.</p>
+<p><strong>6. Accessibility Matters:</strong> Build for everyone from the start. It&rsquo;s easier than retrofitting accessibility later.</p>
+<p><strong>7. Performance is a Feature:</strong> Fast websites are better websites. Learn to optimize images, minimize requests, use caching effectively.</p>
+<p><strong>8. Join Communities:</strong> Find your people. Hugo Discourse, Dev.to, local meetups. Ask questions, help others, share your work.</p>
+<p><strong>9. Embrace Failure:</strong> Your first projects will be terrible. That&rsquo;s okay! Everyone&rsquo;s were. Keep building, keep learning, keep improving.</p>
+<p><strong>10. Enjoy the Journey:</strong> Web development is frustrating and rewarding in equal measure. Celebrate small wins. Take breaks. It&rsquo;s a marathon, not a sprint.</p>
+<h3 id="where-do-you-see-web-development-heading-in-the-next-few-years">Where do you see web development heading in the next few years?</h3>
+<p><strong>Continued JAMstack Growth:</strong> Static site generation and serverless functions aren&rsquo;t going away. They&rsquo;re becoming the default for content-driven sites.</p>
+<p><strong>Better Performance Defaults:</strong> Core Web Vitals matter now. Frameworks and tools are prioritizing performance. Expect more automation of optimization.</p>
+<p><strong>AI Assistance:</strong> GitHub Copilot and similar tools are changing how we write code. Not replacing developers, but accelerating repetitive tasks.</p>
+<p><strong>Accessibility Requirements:</strong> More countries are mandating web accessibility. This will push it from &ldquo;nice to have&rdquo; to &ldquo;must have.&rdquo;</p>
+<p><strong>Edge Computing:</strong> Running code closer to users, at the edge, will become more common. Faster response times, better UX.</p>
+<p><strong>Web Components:</strong> Native browser support for reusable components might reduce framework dependence. We&rsquo;ll see.</p>
+<p><strong>Privacy-First:</strong> With increased regulation (GDPR, CCPA), privacy-friendly analytics and reduced tracking will be standard.</p>
+<p><strong>Sustainability:</strong> Energy-efficient websites will matter more. Smaller assets, optimized delivery, green hosting.</p>
+<h3 id="whats-next-for-tokyo-nord">What&rsquo;s next for Tokyo-Nord?</h3>
+<p>Several features in the pipeline:</p>
+<ul>
+<li><strong>Multi-language Support:</strong> Full i18n for international podcasters</li>
+<li><strong>Dark Mode Enhancements:</strong> Better customization options</li>
+<li><strong>More Player Integrations:</strong> Additional podcast platforms</li>
+<li><strong>Enhanced Search:</strong> Full-text search with Fuse.js</li>
+<li><strong>Commenting Systems:</strong> Built-in support for Disqus, Giscus, Utterances</li>
+<li><strong>Membership Integration:</strong> Support for paid podcast memberships</li>
+<li><strong>Analytics Dashboard:</strong> Optional stats page for podcast analytics</li>
+</ul>
+<p>But honestly, the best features come from user feedback. I build what people actually need, not what I think they might want.</p>
+<h3 id="how-can-people-support-your-work">How can people support your work?</h3>
+<p><strong>The best ways:</strong></p>
+<ol>
+<li><strong>Use the theme:</strong> Build something cool with it</li>
+<li><strong>Give feedback:</strong> Report bugs, suggest features</li>
+<li><strong>Contribute:</strong> Submit PRs, improve documentation</li>
+<li><strong>Share:</strong> Tell others about it, write about it</li>
+<li><strong>Sponsor:</strong> GitHub Sponsors helps fund development</li>
+</ol>
+<p>But really, just using it and sharing your experience is enough. Knowing people find it useful motivates me to keep improving it.</p>
+<hr>
+<h2 id="article-conclusion">Article Conclusion</h2>
+<p><em>By Alex Thompson, Dev Magazine</em></p>
+<p>Building and maintaining an open source project like Tokyo-Nord requires dedication, technical skill, and genuine care for users. In our conversation, it was clear that this developer embodies all three. The theme&rsquo;s attention to detail, comprehensive documentation, and active development show what&rsquo;s possible when someone builds a tool they&rsquo;d actually want to use—and then shares it with the world.</p>
+<p>Whether you&rsquo;re a podcaster looking for a better website solution or a developer interested in Hugo theme development, Tokyo-Nord is worth exploring. It&rsquo;s a testament to what thoughtful design and development can achieve.</p>
+<hr>
+<h2 id="featured-images-from-the-interview">Featured Images from the Interview</h2>
+<p>The published article included several screenshots and examples:</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="sample-screenshot-1.jpg"
+        data-srcset="sample-screenshot-1.jpg, sample-screenshot-1.jpg 1.5x, sample-screenshot-1.jpg 2x"
+        data-sizes="auto"
+        alt="sample-screenshot-1.jpg"
+        title="Tokyo-Nord Homepage Example" />
+<em>Example podcast homepage built with Tokyo-Nord</em></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="sample-screenshot-2.jpg"
+        data-srcset="sample-screenshot-2.jpg, sample-screenshot-2.jpg 1.5x, sample-screenshot-2.jpg 2x"
+        data-sizes="auto"
+        alt="sample-screenshot-2.jpg"
+        title="Episode Page with Overlay" />
+<em>Single episode page showing overlay metadata feature</em></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="sample-screenshot-3.jpg"
+        data-srcset="sample-screenshot-3.jpg, sample-screenshot-3.jpg 1.5x, sample-screenshot-3.jpg 2x"
+        data-sizes="auto"
+        alt="sample-screenshot-3.jpg"
+        title="Mobile Responsive Design" />
+<em>Mobile-optimized episode listing</em></p>
+<h2 id="reader-comments">Reader Comments</h2>
+<p>The article generated significant discussion in Dev Magazine&rsquo;s comment section:</p>
+<p><strong>@webdev_sarah:</strong> &ldquo;Just migrated my podcast to Hugo with this theme. The documentation is incredible—everything just works!&rdquo;</p>
+<p><strong>@designerMike:</strong> &ldquo;The overlay system is genius. Exactly what I needed for my portfolio site.&rdquo;</p>
+<p><strong>@newbie_coder:</strong> &ldquo;As someone new to Hugo, this theme and its documentation helped me understand how Hugo actually works. 10/10.&rdquo;</p>
+<p><strong>@accessibilityFirst:</strong> &ldquo;Finally, a theme that takes WCAG seriously from the start. Thank you!&rdquo;</p>
+<h2 id="related-links">Related Links</h2>
+<ul>
+<li><a href="https://github.com/example/tokyo-nord" target="_blank" rel="noopener noreffer ">Tokyo-Nord Theme Repository</a></li>
+<li><a href="https://tokyo-nord-demo.netlify.app" target="_blank" rel="noopener noreffer ">Live Demo Site</a></li>
+<li><a href="https://tokyo-nord-demo.netlify.app/docs/" target="_blank" rel="noopener noreffer ">Complete Documentation</a></li>
+<li><a href="https://gohugo.io" target="_blank" rel="noopener noreffer ">Hugo Official Site</a></li>
+</ul>
+<h2 id="connect">Connect</h2>
+<ul>
+<li><strong>Website:</strong> <a href="https://example.com" target="_blank" rel="noopener noreffer ">example.com</a></li>
+<li><strong>GitHub:</strong> <a href="https://github.com/example" target="_blank" rel="noopener noreffer ">@example</a></li>
+<li><strong>Twitter:</strong> <a href="https://twitter.com/example" target="_blank" rel="noopener noreffer ">@example</a></li>
+<li><strong>Mastodon:</strong> <a href="https://fosstodon.org/@example" target="_blank" rel="noopener noreffer ">@example@fosstodon.org</a></li>
+</ul>
+<h2 id="related-appearances">Related Appearances</h2>
+<ul>
+<li><a href="/featured/podcast-appearance-demo/" rel="">Podcast: Tech Talk Weekly</a> - Audio interview</li>
+<li><a href="/featured/conference-devcon-demo/" rel="">Conference: DevCon 2025</a> - Live talk</li>
+<li><a href="/featured/video-collab-demo/" rel="">Video: YouTube Collab</a> - Video collaboration</li>
+</ul>
+<h2 id="image-attribution">Image Attribution</h2>
+<p>Featured image: Photo by RDNE Stock project from Pexels (CC0 License)</p>
+<ul>
+<li>Source: <a href="https://www.pexels.com/photo/man-in-black-suit-jacket-using-microphone-8370752/" target="_blank" rel="noopener noreffer ">https://www.pexels.com/photo/man-in-black-suit-jacket-using-microphone-8370752/</a></li>
+<li>License: Creative Commons Zero (CC0)</li>
+<li>Free to use with no attribution required</li>
+</ul>
+<hr>
+<p><strong>Publication:</strong> Dev Magazine
+<strong>Issue:</strong> October 2025
+<strong>Author:</strong> Alex Thompson
+<strong>Format:</strong> Written Q&amp;A Interview
+<strong>Word Count:</strong> ~2,500 words</p>
+</div></div></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.151.2">Hugo</a> | Theme - <a href="https://github.com/gallo-s-chingon/Tokyo-Nord" target="_blank" rel="noopener noreffer" title="Tokyo-Nord 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> Tokyo-Nord</a>
+                </div>
+                <div class="footer-line">
+                    Created by <a href="https://github.com/gallo-s-chingon" target="_blank" rel="noopener noreferrer">Gallo Chingon</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">My cool site</a></span>&nbsp;|&nbsp;<span class="license"><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><script src="/lib/autocomplete/autocomplete.min.js"></script><script src="/lib/lunr/lunr.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script>window.config={"comment":{},"highContrast":true,"lightgallery":true,"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/js/theme.min.js"></script></body>
+</html>

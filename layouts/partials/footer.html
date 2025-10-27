@@ -37,6 +37,7 @@
                 {{- if ne .Site.Params.footer.author false -}}
                     <span class="author" itemprop="copyrightHolder">&nbsp;<a href="{{ $.Site.Params.Author.link | default .Site.Home.RelPermalink }}" target="_blank">{{ .Site.Params.Author.name }}</a></span>
                 {{- end -}}
+                &nbsp;|&nbsp;<span class="license"><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC 4.0</a></span>
 
                 {{- /* License */ -}}
                 {{- with .Site.Params.footer.license -}}

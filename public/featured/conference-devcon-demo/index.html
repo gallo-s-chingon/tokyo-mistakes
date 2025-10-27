@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Conference Talk: Building Modern Podcast Sites at DevCon 2025 - My cool site</title><meta name="Description" content="45-minute technical presentation covering architecture, design patterns, and implementation strategies for building podcast websites using static site generators, with live demos and code examples."><meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/featured/conference-devcon-demo/" /><link rel="prev" href="http://localhost:1313/featured/featured-frontmatter-example/" /><link rel="next" href="http://localhost:1313/featured/panel-discussion-demo/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Conference Talk: Building Modern Podcast Sites at DevCon 2025",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/featured\/conference-devcon-demo\/"
+        },"genre": "conference","keywords": "conference, speaking, hugo, podcasting, web development, JAMstack","wordcount":  1421 ,
+        "url": "http:\/\/localhost:1313\/featured\/conference-devcon-demo\/","datePublished": "2025-09-15T16:00:00-07:00","dateModified": "2025-09-15T16:00:00-07:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "My cool site"
+            },"description": "45-minute technical presentation covering architecture, design patterns, and implementation strategies for building podcast websites using static site generators, with live demos and code examples."
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          function applyTheme() {
+            const highContrast =  true ;
+            const defaultTheme = 'auto';
+
+            
+            const themeMap = {
+              dark: highContrast ? 'tokyo-night' : 'nordic',
+              light: highContrast ? 'onenord-light' : 'onenord-day'
+            };
+
+            
+            let theme = window.localStorage?.getItem('theme');
+
+            if (!theme) {
+              
+              if (defaultTheme === 'auto') {
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                theme = prefersDark ? themeMap.dark : themeMap.light;
+              } else if (defaultTheme === 'dark') {
+                theme = themeMap.dark;
+              } else {
+                theme = themeMap.light;
+              }
+            }
+
+            
+            const validThemes = ['tokyo-night', 'nordic', 'onenord-light', 'onenord-day'];
+            if (!validThemes.includes(theme)) {
+              theme = themeMap.dark;
+            }
+
+            let isDark = theme === 'tokyo-night' || theme === 'nordic';
+            document.body.setAttribute('data-theme', theme);
+            document.body.setAttribute('theme', isDark ? 'dark' : 'light');
+          }
+
+          applyTheme();
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="My cool site">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/featured/"> Featured </a><a class="menu-item" href="/episodes/"> Episodes </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="My cool site">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/featured/" title="">Feat</a><a class="menu-item" href="/episodes/" title="">Epi</a><a class="menu-item" href="/about/" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="page single special"><h1 class="single-title animate__animated animate__pulse animate__faster">Conference Talk: Building Modern Podcast Sites at DevCon 2025</h1><div class="content" id="content"><h2 id="conference-overview">Conference Overview</h2>
+<p>DevCon 2025 was held in San Francisco from September 13-15, bringing together 2,000+ developers, designers, and tech leaders from around the world. The conference focused on modern web development, emerging technologies, and building better developer tools.</p>
+<p>I was honored to present in the <strong>Web Performance &amp; Architecture</strong> track on Day 3.</p>
+<h2 id="talk-information">Talk Information</h2>
+<ul>
+<li><strong>Title:</strong> Building Modern Podcast Sites: A Technical Deep Dive</li>
+<li><strong>Track:</strong> Web Performance &amp; Architecture</li>
+<li><strong>Duration:</strong> 45 minutes (30 min presentation + 15 min Q&amp;A)</li>
+<li><strong>Audience Size:</strong> ~350 attendees</li>
+<li><strong>Room:</strong> Golden Gate Ballroom B</li>
+<li><strong>Time Slot:</strong> 4:00 PM - 4:45 PM PDT</li>
+</ul>
+<h2 id="abstract">Abstract</h2>
+<p>Podcasting has exploded in popularity, but most podcasts lack dedicated, performant websites. Many creators rely on hosting platforms that offer limited customization or bloated website builders that sacrifice performance.</p>
+<p>This talk presents a modern approach to building podcast websites using Hugo, the world&rsquo;s fastest static site generator. We&rsquo;ll explore:</p>
+<ul>
+<li>Architecture patterns for podcast content</li>
+<li>Building reusable components for episodes and appearances</li>
+<li>Implementing advanced features (overlays, players, metadata)</li>
+<li>Optimizing for performance (Core Web Vitals, caching, CDN)</li>
+<li>RSS feed generation for podcast directories</li>
+<li>Deployment strategies and automation</li>
+</ul>
+<p>Attendees will leave with practical knowledge and code examples they can immediately apply to their own projects.</p>
+<h2 id="watch-the-recording">Watch the Recording</h2>
+<p>Full video recording from DevCon 2025:</p>
+<div class="podcast-player podcast-player-youtube" style="width:80%;max-width:80%;margin:0 auto 50px auto;">
+  <iframe
+    width="100%"
+    height="315"
+    src="https://www.youtube.com/embed/cIla9axQRyM"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+    loading="lazy">
+  </iframe>
+</div>
+<p><em>Note: This is a demo embed. Actual conference recording would be linked here.</em></p>
+<h2 id="presentation-outline">Presentation Outline</h2>
+<h3 id="part-1-the-problem-5-minutes">Part 1: The Problem (5 minutes)</h3>
+<p><strong>Current State of Podcast Websites:</strong></p>
+<ul>
+<li>60% of podcasts don&rsquo;t have dedicated websites</li>
+<li>Hosting platform pages are generic and unoptimized</li>
+<li>DIY WordPress sites are slow and complex to maintain</li>
+<li>Website builders (Wix, Squarespace) are expensive and limiting</li>
+</ul>
+<p><strong>What Podcasters Need:</strong></p>
+<ul>
+<li>Fast, mobile-optimized sites</li>
+<li>Easy episode publishing workflow</li>
+<li>Player embeds from multiple platforms</li>
+<li>SEO optimization for discovery</li>
+<li>RSS feed management</li>
+<li>Minimal maintenance overhead</li>
+</ul>
+<h3 id="part-2-why-static-site-generators-8-minutes">Part 2: Why Static Site Generators? (8 minutes)</h3>
+<p><strong>Benefits of SSGs for Podcast Sites:</strong></p>
+<ul>
+<li><strong>Performance:</strong> Pre-rendered HTML served from CDN</li>
+<li><strong>Security:</strong> No database, no server-side vulnerabilities</li>
+<li><strong>Cost:</strong> Free hosting on Netlify, Vercel, GitHub Pages</li>
+<li><strong>Scalability:</strong> Handles viral traffic without breaking</li>
+<li><strong>Version Control:</strong> Content in Git, trackable changes</li>
+<li><strong>Offline First:</strong> Works without internet connection</li>
+</ul>
+<p><strong>Why Hugo Specifically:</strong></p>
+<ul>
+<li>Fastest build times (1000+ pages in seconds)</li>
+<li>Single binary, no dependencies</li>
+<li>Powerful templating system</li>
+<li>Built-in asset pipeline</li>
+<li>Active community and ecosystem</li>
+</ul>
+<h3 id="part-3-content-architecture-10-minutes">Part 3: Content Architecture (10 minutes)</h3>
+<p><strong>Hugo Content Structure:</strong></p>
+<pre tabindex="0"><code>content/
+  episodes/          # Individual episodes
+    episode-1.md
+    episode-2.md
+  featured/          # Guest appearances
+    appearance-1.md
+  blog/              # Blog posts
+    post-1.md</code></pre><p><strong>Episode Frontmatter Design:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Episode Title&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">42</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">season</span>: <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeType</span>: <span style="color:#e6db74">&#34;full&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;Host Name&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">guests</span>: [<span style="color:#e6db74">&#34;Guest 1&#34;</span>, <span style="color:#e6db74">&#34;Guest 2&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">duration</span>: <span style="color:#e6db74">&#34;45:30&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">featuredImage</span>: <span style="color:#e6db74">&#34;/images/cover.jpg&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">embedPlayers</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;spotify&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;episode-id&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;topic1&#34;</span>, <span style="color:#e6db74">&#34;topic2&#34;</span>]</span></span></code></pre></div><p><strong>Content Types:</strong></p>
+<ul>
+<li>Regular episodes</li>
+<li>Bonus content</li>
+<li>Season trailers</li>
+<li>Guest appearances on other shows</li>
+</ul>
+<h3 id="part-4-building-the-overlay-system-8-minutes">Part 4: Building the Overlay System (8 minutes)</h3>
+<p><strong>Three-Layer Approach:</strong></p>
+<ol>
+<li>
+<p><strong>Metadata Overlay:</strong> Display episode info ON the image</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">overlayMetadata</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlayPosition</span>: <span style="color:#e6db74">&#34;lower-left&#34;</span></span></span></code></pre></div></li>
+<li>
+<p><strong>Color Filter:</strong> Tinted overlays for readability</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">overlay_filter</span>: <span style="color:#ae81ff">0.5</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlay_filter</span>: <span style="color:#e6db74">&#34;rgba(100, 0, 200, 0.4)&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlay_filter</span>: <span style="color:#e6db74">&#34;linear-gradient(...)&#34;</span></span></span></code></pre></div></li>
+<li>
+<p><strong>Image Transparency:</strong> Subtle transparency effects</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">transparency</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">transparencyAmount</span>: <span style="color:#ae81ff">0.85</span></span></span></code></pre></div></li>
+</ol>
+<p><strong>Live Demo:</strong> Showed 6 different overlay configurations in real-time</p>
+<h3 id="part-5-performance-optimization-7-minutes">Part 5: Performance Optimization (7 minutes)</h3>
+<p><strong>Core Web Vitals Targets:</strong></p>
+<ul>
+<li><strong>LCP:</strong> &lt; 2.5 seconds</li>
+<li><strong>FID:</strong> &lt; 100 milliseconds</li>
+<li><strong>CLS:</strong> &lt; 0.1</li>
+</ul>
+<p><strong>Optimization Strategies:</strong></p>
+<ul>
+<li>Responsive images with <code>srcset</code></li>
+<li>Lazy loading for below-fold content</li>
+<li>Asset minification and fingerprinting</li>
+<li>Critical CSS inlining</li>
+<li>Font subsetting and preloading</li>
+<li>Service worker for offline access</li>
+<li>CDN edge caching</li>
+</ul>
+<p><strong>Before/After Results:</strong></p>
+<ul>
+<li>Load time: 3.2s → 0.8s (75% improvement)</li>
+<li>First Contentful Paint: 1.8s → 0.4s</li>
+<li>Lighthouse score: 72 → 98</li>
+</ul>
+<h3 id="part-6-rss-feed-generation-5-minutes">Part 6: RSS Feed Generation (5 minutes)</h3>
+<p><strong>Apple Podcasts Requirements:</strong></p>
+<ul>
+<li>Valid RSS 2.0 format</li>
+<li>iTunes-specific tags</li>
+<li>Proper enclosure tags for audio files</li>
+<li>Episode artwork (1400x1400px minimum)</li>
+</ul>
+<p><strong>Hugo Template Example:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>{{ range first 50 .Pages }}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;item&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;title&gt;</span>{{ .Title }}<span style="color:#f92672">&lt;/title&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;itunes:episode&gt;</span>{{ .Params.episodeNumber }}<span style="color:#f92672">&lt;/itunes:episode&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;enclosure</span> <span style="color:#a6e22e">url=</span><span style="color:#e6db74">&#34;{{ .Params.audioUrl }}&#34;</span>
+</span></span><span style="display:flex;"><span>             <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;audio/mpeg&#34;</span>
+</span></span><span style="display:flex;"><span>             <span style="color:#a6e22e">length=</span><span style="color:#e6db74">&#34;{{ .Params.audioSize }}&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/item&gt;</span>
+</span></span><span style="display:flex;"><span>{{ end }}</span></span></code></pre></div><p><strong>Validation:</strong> Always validate with <a href="https://castfeedvalidator.com/" target="_blank" rel="noopener noreffer ">Cast Feed Validator</a></p>
+<h3 id="part-7-deployment--automation-2-minutes">Part 7: Deployment &amp; Automation (2 minutes)</h3>
+<p><strong>Git-Based Workflow:</strong></p>
+<ol>
+<li>Write episode in Markdown</li>
+<li>Commit to Git repository</li>
+<li>Push to GitHub/GitLab</li>
+<li>Automated build &amp; deploy</li>
+<li>Live in seconds</li>
+</ol>
+<p><strong>Platform Recommendations:</strong></p>
+<ul>
+<li><strong>Netlify:</strong> Best for beginners, generous free tier</li>
+<li><strong>Vercel:</strong> Great developer experience, edge functions</li>
+<li><strong>Cloudflare Pages:</strong> Fastest global distribution</li>
+<li><strong>GitHub Pages:</strong> Simple, free, limited features</li>
+</ul>
+<p><strong>Build Times:</strong></p>
+<ul>
+<li>100 episodes: ~2 seconds</li>
+<li>500 episodes: ~8 seconds</li>
+<li>1000 episodes: ~15 seconds</li>
+</ul>
+<h2 id="qa-highlights">Q&amp;A Highlights</h2>
+<p><strong>Q: How do you handle audio file hosting?</strong></p>
+<p>A: I separate concerns. Audio files go to specialized podcast hosting (Transistor, Libsyn, Buzzsprout) which handles CDN distribution and analytics. The website references those URLs in the RSS feed and player embeds. Never host large audio files in your Git repo!</p>
+<p><strong>Q: Can this work for video podcasts?</strong></p>
+<p>A: Absolutely! YouTube and Vimeo embedding works great. You can have both audio (Spotify) and video (YouTube) players on the same episode page. The RSS feed would point to the audio version for podcast apps, while the website offers video.</p>
+<p><strong>Q: What about comments and interaction?</strong></p>
+<p>A: Several options:</p>
+<ul>
+<li>Disqus (easy but ads/tracking)</li>
+<li>Giscus (GitHub Discussions, privacy-friendly)</li>
+<li>Utterances (GitHub Issues, minimal)</li>
+<li>Webmentions (decentralized)</li>
+</ul>
+<p>All can integrate with Hugo via JavaScript widgets.</p>
+<p><strong>Q: How do you handle search?</strong></p>
+<p>A: Three approaches:</p>
+<ol>
+<li>Client-side: Fuse.js, Lunr.js (fast, private, limited)</li>
+<li>Third-party: Algolia (powerful, costs money)</li>
+<li>Custom: Hugo generates search index, your code handles queries</li>
+</ol>
+<p>I typically use Fuse.js for &lt;1000 pages, Algolia for larger sites.</p>
+<p><strong>Q: What about analytics without Google Analytics?</strong></p>
+<p>A: Privacy-friendly options:</p>
+<ul>
+<li>Plausible (paid, lightweight, privacy-focused)</li>
+<li>Fathom (paid, simple, compliant)</li>
+<li>Umami (self-hosted, open source)</li>
+<li>GoatCounter (free, minimalist)</li>
+</ul>
+<p>All are GDPR-compliant and don&rsquo;t require cookie banners.</p>
+<p><strong>Q: Can you migrate from WordPress?</strong></p>
+<p>A: Yes! Process:</p>
+<ol>
+<li>Export WordPress content to Markdown (several plugins)</li>
+<li>Convert frontmatter to Hugo format</li>
+<li>Download images to static folder</li>
+<li>Update internal links</li>
+<li>Rebuild with Hugo</li>
+</ol>
+<p>Takes a weekend for most sites. Performance gains are worth it.</p>
+<h2 id="slide-deck">Slide Deck</h2>
+<p>My complete slide deck is available:</p>
+<ul>
+<li><a href="https://example.com/devcon-2025-slides.pdf" target="_blank" rel="noopener noreffer ">View Slides (PDF)</a></li>
+<li><a href="https://example.com/devcon-2025-notes.md" target="_blank" rel="noopener noreffer ">Speaker Notes (Markdown)</a></li>
+<li><a href="https://github.com/example/devcon-2025-code" target="_blank" rel="noopener noreffer ">Code Examples (GitHub)</a></li>
+</ul>
+<h2 id="live-demo">Live Demo</h2>
+<p>During the presentation, I live-coded several features:</p>
+<ol>
+<li><strong>Creating an Episode:</strong> Showed the full workflow from Markdown to published page</li>
+<li><strong>Overlay Customization:</strong> Real-time CSS changes to demonstrate flexibility</li>
+<li><strong>Player Embed:</strong> Added Spotify player in under 30 seconds</li>
+<li><strong>Build &amp; Deploy:</strong> Git push to live site in under a minute</li>
+</ol>
+<p>The live demo site is still available: <a href="https://devcon-demo.netlify.app" target="_blank" rel="noopener noreffer ">devcon-demo.netlify.app</a></p>
+<h2 id="audience-feedback">Audience Feedback</h2>
+<p>Post-talk survey results (127 responses):</p>
+<ul>
+<li><strong>Extremely Useful:</strong> 78%</li>
+<li><strong>Somewhat Useful:</strong> 19%</li>
+<li><strong>Not Useful:</strong> 3%</li>
+</ul>
+<p><strong>Would recommend to a colleague:</strong> 94%</p>
+<p><strong>Top requested follow-ups:</strong></p>
+<ol>
+<li>Workshop on Hugo theme development (68%)</li>
+<li>Deep dive on RSS feed generation (52%)</li>
+<li>Case studies of production sites (45%)</li>
+</ol>
+<h2 id="selected-attendee-quotes">Selected Attendee Quotes</h2>
+<blockquote>
+<p>&ldquo;Best technical talk of the conference. Clear, practical, and immediately applicable.&rdquo; - @dev_sarah</p>
+</blockquote>
+<blockquote>
+<p>&ldquo;I&rsquo;ve been struggling with my podcast website for months. This talk gave me a clear path forward.&rdquo; - @podcastcreator</p>
+</blockquote>
+<blockquote>
+<p>&ldquo;The live demo was impressive. Seeing the full workflow made it click.&rdquo; - @webdev_mike</p>
+</blockquote>
+<blockquote>
+<p>&ldquo;Finally, a talk that respects my time. Dense with information, zero fluff.&rdquo; - @designengineer</p>
+</blockquote>
+<h2 id="media-coverage">Media Coverage</h2>
+<p>The talk was mentioned in several conference recaps:</p>
+<ul>
+<li><strong>The New Stack:</strong> &ldquo;DevCon 2025 Highlights: Static Sites Make a Comeback&rdquo;</li>
+<li><strong>Dev.to:</strong> &ldquo;Best Talks from DevCon 2025&rdquo;</li>
+<li><strong>Smashing Magazine:</strong> &ldquo;Conference Round-Up: September 2025&rdquo;</li>
+<li><strong>CSS-Tricks:</strong> &ldquo;JAMstack Talks Worth Watching&rdquo;</li>
+</ul>
+<h2 id="code-repository">Code Repository</h2>
+<p>All code examples from the talk are available on GitHub:</p>
+<p><strong>Repository:</strong> <a href="https://github.com/example/devcon-2025-podcast-demo" target="_blank" rel="noopener noreffer ">github.com/example/devcon-2025-podcast-demo</a></p>
+<p><strong>Contents:</strong></p>
+<ul>
+<li>Complete Hugo theme (simplified version)</li>
+<li>Sample content (episodes, featured appearances)</li>
+<li>Configuration examples</li>
+<li>Deployment workflows (GitHub Actions, Netlify)</li>
+<li>RSS feed templates</li>
+<li>Documentation</li>
+</ul>
+<p><strong>License:</strong> MIT (use freely, attribution appreciated)</p>
+<h2 id="follow-up-resources">Follow-Up Resources</h2>
+<p>After the talk, I published:</p>
+<ol>
+<li><strong>Blog Post:</strong> &ldquo;Building Podcast Sites with Hugo: A Complete Guide&rdquo;</li>
+<li><strong>Video Tutorial:</strong> 2-hour workshop recording</li>
+<li><strong>Starter Template:</strong> One-click Hugo podcast site template</li>
+<li><strong>Documentation:</strong> Step-by-step implementation guide</li>
+</ol>
+<h2 id="speaking-at-devcon">Speaking at DevCon</h2>
+<p>DevCon 2025 was an incredible experience. The energy, the hallway conversations, the technical depth—everything you want in a developer conference.</p>
+<p><strong>What made it special:</strong></p>
+<ul>
+<li>Highly technical audience that appreciated deep dives</li>
+<li>Excellent A/V setup (no technical issues!)</li>
+<li>Thoughtful questions during Q&amp;A</li>
+<li>Networking opportunities with fellow speakers</li>
+<li>Well-organized schedule with reasonable breaks</li>
+</ul>
+<p><strong>Tips for future conference speakers:</strong></p>
+<ol>
+<li>Practice your live demos extensively</li>
+<li>Have backup slides in case demos fail</li>
+<li>Time your talk (leave buffer for Q&amp;A)</li>
+<li>Arrive early to test equipment</li>
+<li>Engage with attendees after the talk</li>
+</ol>
+<h2 id="related-appearances">Related Appearances</h2>
+<ul>
+<li><a href="/featured/podcast-appearance-demo/" rel="">Podcast: Tech Talk Weekly</a> - Audio interview</li>
+<li><a href="/featured/interview-dev-magazine-demo/" rel="">Interview: Dev Magazine</a> - Written Q&amp;A</li>
+<li><a href="/featured/video-collab-demo/" rel="">Video: YouTube Collab</a> - Video collaboration</li>
+<li><a href="/featured/panel-discussion-demo/" rel="">Panel: Future of Web Dev</a> - Panel discussion</li>
+</ul>
+<h2 id="connect">Connect</h2>
+<p>Want to discuss the talk or podcast websites?</p>
+<ul>
+<li><strong>Email:</strong> <a href="mailto:speaker@example.com" rel="">speaker@example.com</a></li>
+<li><strong>Twitter:</strong> <a href="https://twitter.com/example" target="_blank" rel="noopener noreffer ">@example</a></li>
+<li><strong>GitHub:</strong> <a href="https://github.com/example" target="_blank" rel="noopener noreffer ">@example</a></li>
+<li><strong>Discord:</strong> Join the <a href="https://discord.gg/hugo" target="_blank" rel="noopener noreffer ">Hugo Discord</a></li>
+</ul>
+<h2 id="image-attribution">Image Attribution</h2>
+<p>Featured image: Photo by Luis Quintero from Pexels (CC0 License)</p>
+<ul>
+<li>Source: <a href="https://www.pexels.com/photo/photo-of-man-using-laptop-2774556/" target="_blank" rel="noopener noreffer ">https://www.pexels.com/photo/photo-of-man-using-laptop-2774556/</a></li>
+<li>License: Creative Commons Zero (CC0)</li>
+<li>Free to use with no attribution required</li>
+</ul>
+<hr>
+<p><strong>Event:</strong> DevCon 2025
+<strong>Location:</strong> San Francisco, CA
+<strong>Date:</strong> September 15, 2025
+<strong>Track:</strong> Web Performance &amp; Architecture
+<strong>Duration:</strong> 45 minutes
+<strong>Attendees:</strong> ~350
+<strong>Format:</strong> Technical presentation with live demo</p>
+</div></div></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.151.2">Hugo</a> | Theme - <a href="https://github.com/gallo-s-chingon/Tokyo-Nord" target="_blank" rel="noopener noreffer" title="Tokyo-Nord 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> Tokyo-Nord</a>
+                </div>
+                <div class="footer-line">
+                    Created by <a href="https://github.com/gallo-s-chingon" target="_blank" rel="noopener noreferrer">Gallo Chingon</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">My cool site</a></span>&nbsp;|&nbsp;<span class="license"><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><script src="/lib/autocomplete/autocomplete.min.js"></script><script src="/lib/lunr/lunr.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script>window.config={"comment":{},"highContrast":true,"lightgallery":true,"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/js/theme.min.js"></script></body>
+</html>

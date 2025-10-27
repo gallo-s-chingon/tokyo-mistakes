@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Episode Front Matter Reference - My cool site</title><meta name="Description" content="Learn all available frontmatter fields for podcast episodes"><meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/episodes/episode-frontmatter-example/" /><link rel="prev" href="http://localhost:1313/episodes/frontmatter-example/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Episode Front Matter Reference",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/episodes\/episode-frontmatter-example\/"
+        },"genre": "episodes","keywords": "reference, documentation, frontmatter","wordcount":  2424 ,
+        "url": "http:\/\/localhost:1313\/episodes\/episode-frontmatter-example\/","datePublished": "2025-01-15T10:00:00-07:00","dateModified": "2025-01-15T10:00:00-07:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "My cool site"
+            },"description": "Learn all available frontmatter fields for podcast episodes"
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          function applyTheme() {
+            const highContrast =  true ;
+            const defaultTheme = 'auto';
+
+            
+            const themeMap = {
+              dark: highContrast ? 'tokyo-night' : 'nordic',
+              light: highContrast ? 'onenord-light' : 'onenord-day'
+            };
+
+            
+            let theme = window.localStorage?.getItem('theme');
+
+            if (!theme) {
+              
+              if (defaultTheme === 'auto') {
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                theme = prefersDark ? themeMap.dark : themeMap.light;
+              } else if (defaultTheme === 'dark') {
+                theme = themeMap.dark;
+              } else {
+                theme = themeMap.light;
+              }
+            }
+
+            
+            const validThemes = ['tokyo-night', 'nordic', 'onenord-light', 'onenord-day'];
+            if (!validThemes.includes(theme)) {
+              theme = themeMap.dark;
+            }
+
+            let isDark = theme === 'tokyo-night' || theme === 'nordic';
+            document.body.setAttribute('data-theme', theme);
+            document.body.setAttribute('theme', isDark ? 'dark' : 'light');
+          }
+
+          applyTheme();
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="My cool site">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/featured/"> Featured </a><a class="menu-item" href="/episodes/"> Episodes </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="My cool site">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/featured/" title="">Feat</a><a class="menu-item" href="/episodes/" title="">Epi</a><a class="menu-item" href="/about/" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single episode"><h1 class="single-title animate__animated animate__flipInX">Episode Front Matter Reference</h1><div class="featured-image-container episode-featured-overlay" data-position="lower-center">
+                <div class="featured-image episode-artwork"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/episode-cover.jpg"
+        data-srcset="/images/episode-cover.jpg, /images/episode-cover.jpg 1.5x, /images/episode-cover.jpg 2x"
+        data-sizes="auto"
+        alt="/images/episode-cover.jpg"
+        title="Learn all available frontmatter fields for podcast episodes" /></div>
+                <div class="featured-metadata-overlay overlay-lower-center" style="--overlay-opacity: 0.85;">
+                    <div class="overlay-content"><div class="post-meta episode-meta"><div class="post-meta-line">
+                                    <span class="episode-number">
+                                        <i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>&nbsp;Episode 999
+                                    </span>
+                                </div><div class="post-meta-line">
+                                    <span class="episode-season">
+                                        <i class="fas fa-layer-group fa-fw" aria-hidden="true"></i>&nbsp;Season 1
+                                    </span>
+                                </div><div class="post-meta-line">
+                                    <span class="episode-duration">
+                                        <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;1:30:00
+                                    </span>
+                                </div><div class="post-meta-line">
+                                    <span class="episode-date">
+                                        <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-01-15">2025-01-15</time>
+                                    </span>
+                                </div><div class="post-meta-line">
+                                    <span class="podcast-name">
+                                        <i class="fas fa-podcast fa-fw" aria-hidden="true"></i>&nbsp;Tokyo-Nord Podcast
+                                    </span>
+                                </div><div class="post-meta-line">
+                                    <span class="episode-host">
+                                        <i class="fas fa-microphone fa-fw" aria-hidden="true"></i>&nbsp;Your Name
+                                    </span>
+                                </div><div class="post-meta-line">
+                                    <span class="episode-guests">
+                                        <i class="fas fa-users fa-fw" aria-hidden="true"></i>&nbsp;Example Guest
+                                    </span>
+                                </div></div>
+                    </div>
+                </div>
+            </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#episode-front-matter-complete-reference">Episode Front Matter Complete Reference</a></li>
+    <li><a href="#complete-episode-frontmatter-template">Complete Episode Frontmatter Template</a></li>
+    <li><a href="#field-categories">Field Categories</a>
+      <ul>
+        <li><a href="#required-vs-optional-fields">Required vs Optional Fields</a></li>
+      </ul>
+    </li>
+    <li><a href="#common-episode-configurations">Common Episode Configurations</a>
+      <ul>
+        <li><a href="#minimal-episode-required-fields-only">Minimal Episode (Required Fields Only)</a></li>
+        <li><a href="#standard-episode-with-guest">Standard Episode with Guest</a></li>
+        <li><a href="#episode-with-multiple-platforms">Episode with Multiple Platforms</a></li>
+        <li><a href="#styled-episode-with-image-effects">Styled Episode with Image Effects</a></li>
+        <li><a href="#trailer-episode">Trailer Episode</a></li>
+        <li><a href="#bonus-episode">Bonus Episode</a></li>
+      </ul>
+    </li>
+    <li><a href="#understanding-embedded-players">Understanding Embedded Players</a>
+      <ul>
+        <li><a href="#spotify-player">Spotify Player</a></li>
+        <li><a href="#youtube-player">YouTube Player</a></li>
+        <li><a href="#apple-podcasts-player">Apple Podcasts Player</a></li>
+        <li><a href="#multiple-players">Multiple Players</a></li>
+      </ul>
+    </li>
+    <li><a href="#episode-artwork-best-practices">Episode Artwork Best Practices</a>
+      <ul>
+        <li><a href="#featured-image">Featured Image</a></li>
+        <li><a href="#image-guidelines">Image Guidelines</a></li>
+      </ul>
+    </li>
+    <li><a href="#duration-format">Duration Format</a>
+      <ul>
+        <li><a href="#supported-formats">Supported Formats</a></li>
+        <li><a href="#best-practices">Best Practices</a></li>
+      </ul>
+    </li>
+    <li><a href="#topics-discussed-feature">Topics Discussed Feature</a>
+      <ul>
+        <li><a href="#example">Example</a></li>
+      </ul>
+    </li>
+    <li><a href="#seo-best-practices-for-episodes">SEO Best Practices for Episodes</a>
+      <ul>
+        <li><a href="#meta-description">Meta Description</a></li>
+        <li><a href="#keywords">Keywords</a></li>
+        <li><a href="#summary">Summary</a></li>
+      </ul>
+    </li>
+    <li><a href="#configuration-scopes">Configuration Scopes</a>
+      <ul>
+        <li><a href="#local-only">Local Only</a></li>
+        <li><a href="#local--global">Local + Global</a></li>
+        <li><a href="#global-only">Global Only</a></li>
+      </ul>
+    </li>
+    <li><a href="#cross-references">Cross-References</a></li>
+    <li><a href="#testing-your-episode">Testing Your Episode</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content episode-content" id="content"><h2 id="episode-front-matter-complete-reference">Episode Front Matter Complete Reference</h2>
+<p>This episode demonstrates all available frontmatter fields when creating podcast episodes in the Tokyo-Nord Hugo theme.</p>
+<p>For complete documentation across all content types, see: <a href="/QUICK-REFERENCE.md" rel="">QUICK-REFERENCE.md</a></p>
+<hr>
+<h2 id="complete-episode-frontmatter-template">Complete Episode Frontmatter Template</h2>
+<p>Below is a complete example showing ALL available frontmatter fields for podcast episodes with inline comments:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># REQUIRED FIELDS</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Episode Title&#34;</span>                       <span style="color:#75715e"># REQUIRED - Episode title (H1 heading)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2024-09-24T14:30:00</span><span style="color:#ae81ff">-06</span>:<span style="color:#ae81ff">00</span>               <span style="color:#75715e"># REQUIRED - Hugo publish date (RFC3339 format)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># EPISODE DETAILS</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">42</span>                             <span style="color:#75715e"># local only - Episode number</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">season</span>: <span style="color:#ae81ff">2</span>                                     <span style="color:#75715e"># local only - Season number (optional)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeType</span>: <span style="color:#e6db74">&#34;full&#34;</span>                           <span style="color:#75715e"># local only - Options: full, trailer, bonus</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># PODCAST INFORMATION</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcast</span>: <span style="color:#e6db74">&#34;Your Podcast Name&#34;</span>                  <span style="color:#75715e"># local + global: params.podcast.name</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Podcast name (overrides site config)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;Host Name&#34;</span>                             <span style="color:#75715e"># local + global: params.podcast.hostName</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Host name (overrides site config)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">guests</span>: [<span style="color:#e6db74">&#34;Guest 1&#34;</span>, <span style="color:#e6db74">&#34;Guest 2&#34;</span>]                <span style="color:#75715e"># local only - Episode guests (array)</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Leave empty [] if no guests</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># MEDIA FILES</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">featuredImage</span>: <span style="color:#ae81ff">/images/episode-42.jpg       </span> <span style="color:#75715e"># local only - Path to episode artwork</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Appears as cover art in lists and single pages</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">audioUrl</span>: <span style="color:#e6db74">&#34;&#34;</span>                                  <span style="color:#75715e"># local only - Direct audio file URL (.mp3, .m4a, etc.)</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Optional: for direct audio playback</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">duration</span>: <span style="color:#e6db74">&#34;45:30&#34;</span>                             <span style="color:#75715e"># local only - Episode duration</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Formats: &#34;HH:MM:SS&#34; or &#34;MM:SS&#34;</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Example: &#34;1:30:00&#34; or &#34;45:30&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># EMBEDDED PLAYERS</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">embedPlayers</span>:                                 <span style="color:#75715e"># local only - Array of player configurations</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;spotify&#34;</span>                           <span style="color:#75715e"># Player type</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;episode-id-here&#34;</span>                     <span style="color:#75715e"># Episode ID from Spotify URL</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;youtube&#34;</span>                           <span style="color:#75715e"># YouTube video player</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;video-id-here&#34;</span>                       <span style="color:#75715e"># YouTube video ID</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># - type: &#34;apple&#34;                           # Apple Podcasts (requires both IDs)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">#   podcastId: &#34;podcast-id&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">#   episodeId: &#34;episode-id&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Supported player types:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># - spotify: Spotify player</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># - youtube: YouTube video embed</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># - apple: Apple Podcasts player</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># - Additional types may be added via theme customization</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># CONTENT &amp; SEO</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;topic1&#34;</span>, <span style="color:#e6db74">&#34;topic2&#34;</span>, <span style="color:#e6db74">&#34;topic3&#34;</span>]          <span style="color:#75715e"># local only - Episode topics/tags (array)</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Used for categorization and discovery</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">summary</span>: <span style="color:#e6db74">&#34;Brief episode description&#34;</span>          <span style="color:#75715e"># local only - Short description for cards/previews</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># One-liner shown in episode lists</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;Detailed episode notes&#34;</span>         <span style="color:#75715e"># local only - Full description for SEO</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Used in meta tags and episode page</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">keywords</span>: [<span style="color:#e6db74">&#34;keyword1&#34;</span>, <span style="color:#e6db74">&#34;keyword2&#34;</span>]            <span style="color:#75715e"># local only - SEO meta keywords (array)</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Optional: for search optimization</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># IMAGE DISPLAY OPTIONS</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Image Transparency (Makes image itself transparent)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">transparency: true                            # local + global</span>: <span style="color:#ae81ff">params.images.transparency</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># true = make featured image transparent</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># false = image fully opaque (default)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">transparencyAmount: 0.7                       # local + global</span>: <span style="color:#ae81ff">params.images.opacity</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Range: 0.0 (fully transparent) to 1.0 (opaque)</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Only applies when transparency: true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Metadata Overlay (Shows episode metadata ON the image)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlayMetadata: false                        # local + global</span>: <span style="color:#ae81ff">params.podcast.overlay.enable</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># true = metadata appears on featured image</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># false = metadata appears above image (default)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlayPosition</span>: <span style="color:#e6db74">&#34;lower-center&#34;</span>               <span style="color:#75715e"># local + global: params.podcast.overlay.position</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Options: top-left, top-center, top-right,</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e">#          mid-left, mid-center, mid-right,</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e">#          lower-left, lower-center, lower-right</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Only visible on single pages when overlayMetadata: true</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Note: overlayOpacity is global only in hugo.toml (no local override)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#       Set in params.podcast.overlay.opacity (default: 0.85)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Color Overlay Filter (Colored layer on top of image)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlay_filter</span>: <span style="color:#ae81ff">0.5</span>                           <span style="color:#75715e"># local only - works on BOTH single &amp; list pages</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Formats:</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># - Numeric: 0.5 = 50% black overlay</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># - RGBA: &#34;rgba(255, 0, 0, 0.5)&#34; = red overlay</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># - Gradient: &#34;linear-gradient(...)&#34; = gradient effect</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Examples:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># overlay_filter: 0.3                         # 30% black overlay</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># overlay_filter: &#34;rgba(100, 0, 100, 0.5)&#34;    # Purple overlay at 50%</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># overlay_filter: &#34;linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0))&#34;  # Gradient</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># TABLE OF CONTENTS</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">toc</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">enable: true                                # local + global</span>: <span style="color:#ae81ff">params.page.toc.enable</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Enable table of contents</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">auto: true                                  # local + global</span>: <span style="color:#ae81ff">params.page.toc.auto</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Auto-collapse TOC</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">keepStatic: false                           # local + global</span>: <span style="color:#ae81ff">params.page.toc.keepStatic</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Keep TOC static (no auto-collapse)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># OR simple boolean format:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># toc: true                                   # Uses global params.page.toc defaults</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># toc: false                                  # Disables TOC entirely</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># CODE BLOCKS</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">code</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">copy: true                                  # local + global</span>: <span style="color:#ae81ff">params.page.code.copy</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Show copy button on code blocks</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">maxShownLines: 50                           # local + global</span>: <span style="color:#ae81ff">params.page.code.maxShownLines</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Max lines before collapse (expands on click)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Note: Code rendering (GoAT, Mermaid) is global only in hugo.toml</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#       params.page.code.render.goat and params.page.code.render.mermaid</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># PAGE FEATURES</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">lightgallery: false                           # local + global</span>: <span style="color:#ae81ff">params.page.lightgallery</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Enable lightbox gallery for images</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Recommended: false for episodes (audio focus)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">linkToMarkdown: true                          # local + global</span>: <span style="color:#ae81ff">params.page.linkToMarkdown</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Show link to raw markdown file</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">rssFullText: false                            # local + global</span>: <span style="color:#ae81ff">params.page.rssFullText</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Include full text in RSS feed (vs summary)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">topicsOn: true                                # local + global</span>: <span style="color:#ae81ff">params.topicsDiscussed</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Show &#34;Topics Discussed&#34; section with tags</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">twemoji: false                                # local + global</span>: <span style="color:#ae81ff">params.page.twemoji</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Enable Twitter emoji rendering</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">ruby: true                                    # local + global</span>: <span style="color:#ae81ff">params.page.ruby</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Enable ruby annotations (East Asian)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">fraction: true                                # local + global</span>: <span style="color:#ae81ff">params.page.fraction</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Enable fraction syntax rendering</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">fontawesome: true                             # local + global</span>: <span style="color:#ae81ff">params.page.fontawesome</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Enable FontAwesome icons</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># VISIBILITY OPTIONS</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">draft</span>: <span style="color:#66d9ef">false</span>                                  <span style="color:#75715e"># local only - Draft status (true = not published)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">hiddenFromHomePage: false                     # local + global</span>: <span style="color:#ae81ff">params.page.hiddenFromHomePage</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Hide from home page listings</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">hiddenFromSearch: false                       # local + global</span>: <span style="color:#ae81ff">params.page.hiddenFromSearch</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Hide from search results</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># SOCIAL SHARE BUTTONS</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">share</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">enable: true                                # local + global</span>: <span style="color:#ae81ff">params.page.share.enable</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Enable social share buttons</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Individual platform toggles inherit from global params.page.share.*</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Available platforms: X, Threads, Facebook, LinkedIn, WhatsApp, Viber,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Pinterest, Tumblr, HackerNews, Reddit, VK, Buffer, Xing, Line,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Instapaper, Pocket, Flipboard, Weibo, Blogger, Baidu, Odnoklassniki,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Evernote, Skype, Trello, Diaspora, Mix, Telegram</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># COMMENTS</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">comment</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">enable: true                                # local + global</span>: <span style="color:#ae81ff">params.page.comment.enable</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Enable comments section</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Comment systems configured globally in hugo.toml:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># - utterances (GitHub-based)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># - giscus (GitHub Discussions)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># - waline (Self-hosted)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># SEO CONFIGURATION</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">seo</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">images: []                                  # local + global</span>: <span style="color:#ae81ff">params.page.seo.images</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Array of images for SEO/social sharing</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Example: [&#34;/images/episode.jpg&#34;, &#34;/images/banner.jpg&#34;]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Publisher info is global only:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># - params.page.seo.publisher.name</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># - params.page.seo.publisher.logoUrl</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># CUSTOM LIBRARIES (Advanced)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">library</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">css</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># customCSS = &#34;custom.css&#34;                # local + global: params.page.library.css</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Load custom CSS libraries</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">js</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># customJS = &#34;custom.js&#34;                  # local + global: params.page.library.js</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Load custom JS libraries</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ADVANCED HUGO FIELDS (Optional)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ============================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">subtitle</span>: <span style="color:#e6db74">&#34;&#34;</span>                                  <span style="color:#75715e"># local only - Optional subtitle</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">lastmod</span>: <span style="color:#e6db74">2024-09-24T14:30:00</span><span style="color:#ae81ff">-06</span>:<span style="color:#ae81ff">00</span>            <span style="color:#75715e"># local only - Last modified date (RFC3339)</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Used for SEO and sitemap</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">publishDate</span>: <span style="color:#e6db74">2024-09-24T14:30:00</span><span style="color:#ae81ff">-06</span>:<span style="color:#ae81ff">00</span>        <span style="color:#75715e"># local only - Scheduled publish date (future episodes)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">expiryDate</span>: <span style="color:#e6db74">2099-12-31T00:00:00</span><span style="color:#ae81ff">-07</span>:<span style="color:#ae81ff">00</span>         <span style="color:#75715e"># local only - Content expiry date (auto-unpublish)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">weight</span>: <span style="color:#ae81ff">0</span>                                     <span style="color:#75715e"># local only - Content ordering weight (lower = first)</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Used for manual sorting in lists</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;&#34;</span>                                      <span style="color:#75715e"># local only - Content type override (advanced)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">layout</span>: <span style="color:#e6db74">&#34;&#34;</span>                                    <span style="color:#75715e"># local only - Layout template override (advanced)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">slug</span>: <span style="color:#e6db74">&#34;custom-url-slug&#34;</span>                       <span style="color:#75715e"># local only - URL slug override</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Default: auto-generated from title</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">url</span>: <span style="color:#e6db74">&#34;&#34;</span>                                       <span style="color:#75715e"># local only - Full URL path override (advanced)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">aliases</span>: [<span style="color:#e6db74">&#34;/old-url/&#34;</span>, <span style="color:#e6db74">&#34;/another-old/&#34;</span>]       <span style="color:#75715e"># local only - URL redirects (array)</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Creates redirects from old URLs</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">outputs</span>: [<span style="color:#e6db74">&#34;HTML&#34;</span>]                             <span style="color:#75715e"># local only - Output formats (array)</span>
+</span></span><span style="display:flex;"><span>                                              <span style="color:#75715e"># Default: HTML, can add JSON, RSS, etc.</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">cascade</span>: {}                                   <span style="color:#75715e"># local only - Inherit settings to descendants (advanced)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">menu</span>: {}                                      <span style="color:#75715e"># local only - Menu placement config (advanced)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">isCJKLanguage</span>: <span style="color:#66d9ef">false</span>                          <span style="color:#75715e"># local only - CJK language processing (Chinese/Japanese/Korean)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">markup</span>: <span style="color:#e6db74">&#34;goldmark&#34;</span>                            <span style="color:#75715e"># local only - Markup renderer override (advanced)</span>
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><hr>
+<h2 id="field-categories">Field Categories</h2>
+<h3 id="required-vs-optional-fields">Required vs Optional Fields</h3>
+<p><strong>REQUIRED FIELDS:</strong></p>
+<ul>
+<li><code>title</code> - Episode title (must be present)</li>
+<li><code>date</code> - Publish date in RFC3339 format (e.g., <code>2024-09-24T14:30:00-06:00</code>)</li>
+</ul>
+<p><strong>HIGHLY RECOMMENDED FOR EPISODES:</strong></p>
+<ul>
+<li><code>episodeNumber</code> - Episode number for organization</li>
+<li><code>podcast</code> - Podcast name (if different from site default)</li>
+<li><code>host</code> - Host name (if different from site default)</li>
+<li><code>featuredImage</code> - Episode artwork/cover art</li>
+<li><code>duration</code> - Episode length</li>
+<li><code>embedPlayers</code> - At least one player for listening</li>
+<li><code>tags</code> - Topics discussed in the episode</li>
+<li><code>summary</code> - Brief description for episode lists</li>
+</ul>
+<p><strong>OPTIONAL:</strong></p>
+<ul>
+<li><code>season</code> - Season number (if your podcast has seasons)</li>
+<li><code>episodeType</code> - Usually &ldquo;full&rdquo;, can be &ldquo;trailer&rdquo; or &ldquo;bonus&rdquo;</li>
+<li><code>guests</code> - Guest names (if applicable)</li>
+<li><code>audioUrl</code> - Direct audio file (if not using embedded players)</li>
+<li>All other fields have sensible defaults</li>
+</ul>
+<hr>
+<h2 id="common-episode-configurations">Common Episode Configurations</h2>
+<h3 id="minimal-episode-required-fields-only">Minimal Episode (Required Fields Only)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Episode 1: Getting Started&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2024-09-24T14:30:00</span><span style="color:#ae81ff">-06</span>:<span style="color:#ae81ff">00</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcast</span>: <span style="color:#e6db74">&#34;My Podcast&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;Your Name&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">featuredImage</span>: <span style="color:#ae81ff">/images/episode-1.jpg</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">duration</span>: <span style="color:#e6db74">&#34;45:30&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">embedPlayers</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;spotify&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;spotify-episode-id&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;introduction&#34;</span>, <span style="color:#e6db74">&#34;getting started&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">summary</span>: <span style="color:#e6db74">&#34;Welcome to the first episode of the podcast&#34;</span>
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><h3 id="standard-episode-with-guest">Standard Episode with Guest</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Building Great Products with Jane Doe&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2024-09-24T14:30:00</span><span style="color:#ae81ff">-06</span>:<span style="color:#ae81ff">00</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">15</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">season</span>: <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeType</span>: <span style="color:#e6db74">&#34;full&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcast</span>: <span style="color:#e6db74">&#34;Product Podcast&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;Your Name&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">guests</span>: [<span style="color:#e6db74">&#34;Jane Doe&#34;</span>, <span style="color:#e6db74">&#34;Product Manager at TechCorp&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">featuredImage</span>: <span style="color:#ae81ff">/images/episode-15.jpg</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">duration</span>: <span style="color:#e6db74">&#34;1:15:00&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">embedPlayers</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;spotify&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;spotify-id&#34;</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;youtube&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;youtube-id&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;product management&#34;</span>, <span style="color:#e6db74">&#34;tech&#34;</span>, <span style="color:#e6db74">&#34;interviews&#34;</span>, <span style="color:#e6db74">&#34;startup&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">summary</span>: <span style="color:#e6db74">&#34;Jane Doe shares insights on building successful products&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;In this episode, we talk with Jane Doe about product strategy, user research, and scaling tech products&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlayMetadata</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlayPosition</span>: <span style="color:#e6db74">&#34;lower-center&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">toc</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">topicsOn</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><h3 id="episode-with-multiple-platforms">Episode with Multiple Platforms</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Deep Dive: AI and Machine Learning&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2024-09-24T14:30:00</span><span style="color:#ae81ff">-06</span>:<span style="color:#ae81ff">00</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">42</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">season</span>: <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcast</span>: <span style="color:#e6db74">&#34;Tech Deep Dive&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;Your Name&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">guests</span>: [<span style="color:#e6db74">&#34;Dr. AI Expert&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">featuredImage</span>: <span style="color:#ae81ff">/images/episode-42-ai.jpg</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">duration</span>: <span style="color:#e6db74">&#34;2:00:00&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">embedPlayers</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;spotify&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;spotify-episode-id&#34;</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;youtube&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;youtube-video-id&#34;</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;apple&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">podcastId</span>: <span style="color:#e6db74">&#34;apple-podcast-id&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">episodeId</span>: <span style="color:#e6db74">&#34;apple-episode-id&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;AI&#34;</span>, <span style="color:#e6db74">&#34;machine learning&#34;</span>, <span style="color:#e6db74">&#34;technology&#34;</span>, <span style="color:#e6db74">&#34;deep learning&#34;</span>, <span style="color:#e6db74">&#34;neural networks&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">summary</span>: <span style="color:#e6db74">&#34;Exploring the latest in AI and machine learning with Dr. AI Expert&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;A comprehensive discussion about artificial intelligence, machine learning algorithms, and the future of AI technology&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">toc</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">topicsOn</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlayMetadata</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlayPosition</span>: <span style="color:#e6db74">&#34;lower-left&#34;</span>
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><h3 id="styled-episode-with-image-effects">Styled Episode with Image Effects</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Creative Conversations: Design Edition&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2024-09-24T14:30:00</span><span style="color:#ae81ff">-06</span>:<span style="color:#ae81ff">00</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">8</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcast</span>: <span style="color:#e6db74">&#34;Creative Podcast&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;Your Name&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">guests</span>: [<span style="color:#e6db74">&#34;Designer Name&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">featuredImage</span>: <span style="color:#ae81ff">/images/design-episode.jpg</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">duration</span>: <span style="color:#e6db74">&#34;50:00&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">embedPlayers</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;spotify&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;spotify-id&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;design&#34;</span>, <span style="color:#e6db74">&#34;creativity&#34;</span>, <span style="color:#e6db74">&#34;visual arts&#34;</span>, <span style="color:#e6db74">&#34;branding&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">summary</span>: <span style="color:#e6db74">&#34;Discussing design principles and creative processes&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlayMetadata</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlayPosition</span>: <span style="color:#e6db74">&#34;lower-center&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">overlay_filter</span>: <span style="color:#e6db74">&#34;rgba(100, 50, 150, 0.4)&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">toc</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">lightgallery</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><h3 id="trailer-episode">Trailer Episode</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Introducing: The New Season&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2024-09-01T09:00:00</span><span style="color:#ae81ff">-06</span>:<span style="color:#ae81ff">00</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">season</span>: <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeType</span>: <span style="color:#e6db74">&#34;trailer&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcast</span>: <span style="color:#e6db74">&#34;Your Podcast&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;Your Name&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">featuredImage</span>: <span style="color:#ae81ff">/images/season-3-trailer.jpg</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">duration</span>: <span style="color:#e6db74">&#34;3:00&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">embedPlayers</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;spotify&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;trailer-id&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;announcement&#34;</span>, <span style="color:#e6db74">&#34;trailer&#34;</span>, <span style="color:#e6db74">&#34;season premiere&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">summary</span>: <span style="color:#e6db74">&#34;Get ready for Season 3 with this exciting trailer&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;Preview what&#39;s coming in Season 3 of Your Podcast&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">toc</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">topicsOn</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><h3 id="bonus-episode">Bonus Episode</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Bonus: Behind the Scenes&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2024-09-15T14:00:00</span><span style="color:#ae81ff">-06</span>:<span style="color:#ae81ff">00</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">15</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">season</span>: <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeType</span>: <span style="color:#e6db74">&#34;bonus&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcast</span>: <span style="color:#e6db74">&#34;Your Podcast&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;Your Name&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">featuredImage</span>: <span style="color:#ae81ff">/images/bonus-bts.jpg</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">duration</span>: <span style="color:#e6db74">&#34;25:00&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">embedPlayers</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;spotify&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;bonus-episode-id&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;bonus&#34;</span>, <span style="color:#e6db74">&#34;behind the scenes&#34;</span>, <span style="color:#e6db74">&#34;special&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">summary</span>: <span style="color:#e6db74">&#34;Bonus content: A look behind the scenes of the podcast&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;Join us for this special bonus episode where we share behind-the-scenes stories and bloopers&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">toc</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">lightgallery</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><hr>
+<h2 id="understanding-embedded-players">Understanding Embedded Players</h2>
+<h3 id="spotify-player">Spotify Player</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">embedPlayers</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;spotify&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;6F4kzTwzIqah5u75FMXc1u&#34;</span>  <span style="color:#75715e"># Episode ID from Spotify URL</span></span></span></code></pre></div><ul>
+<li>Get ID from Spotify episode URL: <code>https://open.spotify.com/episode/6F4kzTwzIqah5u75FMXc1u</code></li>
+<li>Shows full Spotify player with playback controls</li>
+</ul>
+<h3 id="youtube-player">YouTube Player</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">embedPlayers</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;youtube&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;cIla9axQRyM&#34;</span>  <span style="color:#75715e"># Video ID from YouTube URL</span></span></span></code></pre></div><ul>
+<li>Get ID from YouTube URL: <code>https://www.youtube.com/watch?v=cIla9axQRyM</code></li>
+<li>Embeds full YouTube video player</li>
+</ul>
+<h3 id="apple-podcasts-player">Apple Podcasts Player</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">embedPlayers</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;apple&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">podcastId</span>: <span style="color:#e6db74">&#34;1234567890&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">episodeId</span>: <span style="color:#e6db74">&#34;1000567890123&#34;</span></span></span></code></pre></div><ul>
+<li>Requires both podcast ID and episode ID</li>
+<li>Get from Apple Podcasts URL</li>
+</ul>
+<h3 id="multiple-players">Multiple Players</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">embedPlayers</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;spotify&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;spotify-episode-id&#34;</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;youtube&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">id</span>: <span style="color:#e6db74">&#34;youtube-video-id&#34;</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;apple&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">podcastId</span>: <span style="color:#e6db74">&#34;apple-podcast-id&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">episodeId</span>: <span style="color:#e6db74">&#34;apple-episode-id&#34;</span></span></span></code></pre></div><ul>
+<li>You can embed multiple players</li>
+<li>They will appear stacked on the episode page</li>
+<li>Listeners can choose their preferred platform</li>
+</ul>
+<hr>
+<h2 id="episode-artwork-best-practices">Episode Artwork Best Practices</h2>
+<h3 id="featured-image">Featured Image</h3>
+<ul>
+<li><strong>Recommended size:</strong> 3000x3000px (podcast standard)</li>
+<li><strong>Minimum size:</strong> 1400x1400px</li>
+<li><strong>Aspect ratio:</strong> 1:1 (square)</li>
+<li><strong>Format:</strong> JPG or PNG</li>
+<li><strong>File size:</strong> Under 500KB (optimized)</li>
+</ul>
+<h3 id="image-guidelines">Image Guidelines</h3>
+<ul>
+<li>Use high-quality, relevant imagery</li>
+<li>Ensure text is readable at small sizes</li>
+<li>Include branding elements consistently</li>
+<li>Test appearance on both light and dark backgrounds</li>
+<li>Consider how overlays affect readability</li>
+</ul>
+<hr>
+<h2 id="duration-format">Duration Format</h2>
+<h3 id="supported-formats">Supported Formats</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">duration</span>: <span style="color:#e6db74">&#34;1:30:00&#34;</span>    <span style="color:#75715e"># Hours:Minutes:Seconds</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">duration</span>: <span style="color:#e6db74">&#34;45:30&#34;</span>      <span style="color:#75715e"># Minutes:Seconds</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">duration</span>: <span style="color:#e6db74">&#34;5:00&#34;</span>       <span style="color:#75715e"># 5 minutes</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">duration</span>: <span style="color:#e6db74">&#34;2:15:30&#34;</span>    <span style="color:#75715e"># 2 hours, 15 minutes, 30 seconds</span></span></span></code></pre></div><h3 id="best-practices">Best Practices</h3>
+<ul>
+<li>Always include seconds (even if :00)</li>
+<li>Use leading zeros for consistency: &ldquo;05:30&rdquo; vs &ldquo;5:30&rdquo;</li>
+<li>Be accurate - helps with podcast apps and SEO</li>
+<li>Update if you edit the episode length</li>
+</ul>
+<hr>
+<h2 id="topics-discussed-feature">Topics Discussed Feature</h2>
+<p>When <code>topicsOn: true</code>, the episode page will display a &ldquo;Topics Discussed&rdquo; section showing all tags.</p>
+<h3 id="example">Example</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;productivity&#34;</span>, <span style="color:#e6db74">&#34;time management&#34;</span>, <span style="color:#e6db74">&#34;GTD&#34;</span>, <span style="color:#e6db74">&#34;apps&#34;</span>, <span style="color:#e6db74">&#34;workflow&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">topicsOn</span>: <span style="color:#66d9ef">true</span></span></span></code></pre></div><p>This creates a visual tag cloud at the bottom of the episode page, helping:</p>
+<ul>
+<li>Readers find related content</li>
+<li>Search engines understand episode topics</li>
+<li>Listeners browse by topic</li>
+<li>Improve content discovery</li>
+</ul>
+<hr>
+<h2 id="seo-best-practices-for-episodes">SEO Best Practices for Episodes</h2>
+<h3 id="meta-description">Meta Description</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">description</span>: <span style="color:#e6db74">&#34;Join us as we discuss productivity systems with David Allen, creator of Getting Things Done. Learn practical tips for managing your time and tasks effectively.&#34;</span></span></span></code></pre></div><ul>
+<li>Keep under 160 characters</li>
+<li>Include episode topic and guest (if applicable)</li>
+<li>Make it compelling</li>
+<li>Include target keywords naturally</li>
+</ul>
+<h3 id="keywords">Keywords</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">keywords</span>: [<span style="color:#e6db74">&#34;productivity podcast&#34;</span>, <span style="color:#e6db74">&#34;time management&#34;</span>, <span style="color:#e6db74">&#34;GTD&#34;</span>, <span style="color:#e6db74">&#34;David Allen&#34;</span>, <span style="color:#e6db74">&#34;workflow&#34;</span>]</span></span></code></pre></div><ul>
+<li>3-7 keywords recommended</li>
+<li>Mix broad and specific terms</li>
+<li>Include guest names (if notable)</li>
+<li>Use podcast-related keywords</li>
+</ul>
+<h3 id="summary">Summary</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">summary</span>: <span style="color:#e6db74">&#34;David Allen shares the fundamentals of Getting Things Done&#34;</span></span></span></code></pre></div><ul>
+<li>One clear sentence</li>
+<li>Used in episode cards/previews</li>
+<li>Focus on the main value proposition</li>
+</ul>
+<hr>
+<h2 id="configuration-scopes">Configuration Scopes</h2>
+<h3 id="local-only">Local Only</h3>
+<p>These fields can ONLY be set in episode frontmatter:</p>
+<ul>
+<li><code>title</code>, <code>subtitle</code>, <code>date</code>, <code>draft</code></li>
+<li><code>episodeNumber</code>, <code>season</code>, <code>episodeType</code></li>
+<li><code>guests</code>, <code>audioUrl</code>, <code>duration</code>, <code>embedPlayers</code></li>
+<li><code>description</code>, <code>keywords</code>, <code>summary</code>, <code>tags</code></li>
+<li><code>featuredImage</code></li>
+<li><code>overlay_filter</code></li>
+</ul>
+<h3 id="local--global">Local + Global</h3>
+<p>These fields can be set in frontmatter OR hugo.toml (local overrides global):</p>
+<ul>
+<li><code>podcast</code> → global: <code>params.podcast.name</code></li>
+<li><code>host</code> → global: <code>params.podcast.hostName</code></li>
+<li><code>transparency</code> → global: <code>params.images.transparency</code></li>
+<li><code>transparencyAmount</code> → global: <code>params.images.opacity</code></li>
+<li><code>overlayMetadata</code> → global: <code>params.podcast.overlay.enable</code></li>
+<li><code>overlayPosition</code> → global: <code>params.podcast.overlay.position</code></li>
+<li><code>toc.*</code> → global: <code>params.page.toc.*</code></li>
+<li><code>code.*</code> → global: <code>params.page.code.*</code></li>
+<li>All feature toggles</li>
+</ul>
+<h3 id="global-only">Global Only</h3>
+<p>These fields can ONLY be set in hugo.toml:</p>
+<ul>
+<li>Overlay opacity → <code>params.podcast.overlay.opacity</code></li>
+<li>Code rendering → <code>params.page.code.render.*</code></li>
+<li>Comment system configs → <code>params.page.comment.*</code></li>
+</ul>
+<hr>
+<h2 id="cross-references">Cross-References</h2>
+<p><strong>Complete Field Documentation:</strong></p>
+<ul>
+<li><a href="/QUICK-REFERENCE.md" rel="">QUICK-REFERENCE.md</a> - Full frontmatter reference</li>
+</ul>
+<p><strong>Related Guides:</strong></p>
+<ul>
+<li><code>/blog/blog-frontmatter-example/</code> - Blog frontmatter reference</li>
+<li><code>/featured/featured-frontmatter-example/</code> - Featured appearance frontmatter reference</li>
+</ul>
+<p><strong>Theme Documentation:</strong></p>
+<ul>
+<li><code>/docs/content-guide/</code> - Content creation guide</li>
+<li><code>/docs/podcast-features/</code> - Podcast-specific features guide</li>
+<li><code>/docs/getting-started/</code> - Getting started with Tokyo-Nord</li>
+</ul>
+<hr>
+<h2 id="testing-your-episode">Testing Your Episode</h2>
+<p>After creating an episode:</p>
+<ol>
+<li>
+<p>Run Hugo development server:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo server -D</span></span></code></pre></div></li>
+<li>
+<p>Check these pages:</p>
+<ul>
+<li>Episode list: <code>http://localhost:1313/episodes/</code></li>
+<li>Single episode: <code>http://localhost:1313/episodes/your-episode/</code></li>
+<li>Tags: <code>http://localhost:1313/tags/your-tag/</code></li>
+</ul>
+</li>
+<li>
+<p>Verify:</p>
+<ul>
+<li>Episode title and metadata display correctly</li>
+<li>Featured image loads and overlays work</li>
+<li>Embedded players appear and function</li>
+<li>Duration shows correctly</li>
+<li>TOC appears if enabled</li>
+<li>Topics section displays tags</li>
+<li>Share buttons work</li>
+</ul>
+</li>
+<li>
+<p>Test players:</p>
+<ul>
+<li>Spotify player loads and plays</li>
+<li>YouTube player embeds correctly</li>
+<li>All platforms are accessible</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p><strong>Last Updated:</strong> 2025-01-15
+<strong>Theme Version:</strong> Tokyo-Nord v1.0
+<strong>Hugo Version:</strong> 0.122+</p>
+</div><div class="podcast-subscribe-section">
+    <h3 class="subscribe-title">Subscribe to the podcast</h3><div class="subscribe-buttons-container"></div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span></span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A1313%2Fepisodes%2Fepisode-frontmatter-example%2F&amp;text=Learn&#43;all&#43;available&#43;frontmatter&#43;fields&#43;for&#43;podcast&#43;episodes&amp;hashtags=reference%2Cdocumentation%2Cfrontmatter" target="_blank" rel="noopener noreferrer" title="Share on X"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="https://www.facebook.com/sharer/sharer.php?u=http%253A%252F%252Flocalhost%253A1313%252Fepisodes%252Fepisode-frontmatter-example%252F" target="_blank" rel="noopener noreferrer" title="Share on Facebook"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="https://www.linkedin.com/sharing/share-offsite/?url=http%253A%252F%252Flocalhost%253A1313%252Fepisodes%252Fepisode-frontmatter-example%252F" target="_blank" rel="noopener noreferrer" title="Share on Linkedin"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="https://news.ycombinator.com/submitlink?u=http%253A%252F%252Flocalhost%253A1313%252Fepisodes%252Fepisode-frontmatter-example%252F&t=Episode%2bFront%2bMatter%2bReference" target="_blank" rel="noopener noreferrer" title="Share on Hacker News"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="https://www.reddit.com/submit?url=http%253A%252F%252Flocalhost%253A1313%252Fepisodes%252Fepisode-frontmatter-example%252F&title=Episode%2bFront%2bMatter%2bReference" target="_blank" rel="noopener noreferrer" title="Share on Reddit"><i class="fab fa-reddit fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%253A%252F%252Flocalhost%253A1313%252Fepisodes%252Fepisode-frontmatter-example%252F&text=Learn%2ball%2bavailable%2bfrontmatter%2bfields%2bfor%2bpodcast%2bepisodes" target="_blank" rel="noopener noreferrer" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/reference/">Reference</a>,&nbsp;<a href="/tags/documentation/">Documentation</a>,&nbsp;<a href="/tags/frontmatter/">Frontmatter</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/episodes/frontmatter-example/" class="prev" rel="prev" title="Episode Frontmatter Reference Guide"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Episode Frontmatter Reference Guide</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.151.2">Hugo</a> | Theme - <a href="https://github.com/gallo-s-chingon/Tokyo-Nord" target="_blank" rel="noopener noreffer" title="Tokyo-Nord 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> Tokyo-Nord</a>
+                </div>
+                <div class="footer-line">
+                    Created by <a href="https://github.com/gallo-s-chingon" target="_blank" rel="noopener noreferrer">Gallo Chingon</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">My cool site</a></span>&nbsp;|&nbsp;<span class="license"><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="/lib/autocomplete/autocomplete.min.js"></script><script src="/lib/lunr/lunr.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script>window.config={"comment":{},"highContrast":true,"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/js/theme.min.js"></script></body>
+</html>

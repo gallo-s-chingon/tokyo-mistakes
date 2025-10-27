@@ -1,6 +1,6 @@
 ---
-title: "Dr. Andrew Huberman: Optimize Your Health"
-created: 2024-02-10
+title: "Dr. Andrew Huberman: Example episode"
+date: 2024-02-10T10:00:00-07:00
 draft: false
 
 # Episode details
@@ -32,6 +32,21 @@ overlayMetadata: true
 overlayPosition: "lower-center"
 toc: true
 lightgallery: false
+---
+
+## Documentation Note
+
+**This is a demonstration example** showing how to embed YouTube content in the Tokyo-Nord theme. This example uses:
+
+- YouTube embed player (configured via `embedPlayers` with `type: "youtube"`)
+- Custom podcast name override (`podcast: "Huberman Lab"`)
+- Episode metadata and guest information
+- Science-focused tags and organization
+
+**Official Huberman Lab Channel:** https://www.youtube.com/@hubermanlab
+
+Replace this content with your own podcast episodes when you're ready to publish.
+
 ---
 
 ## About This Episode

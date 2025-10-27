@@ -1,6 +1,6 @@
 ---
 title: "SmartLess Example Episode"
-created: 2024-01-15
+date: 2024-01-15T10:00:00-07:00
 draft: false
 
 # Episode details
@@ -32,6 +32,21 @@ overlayMetadata: true
 overlayPosition: "lower-left"
 toc: true
 lightgallery: false
+---
+
+## Documentation Note
+
+**This is a demonstration example** showing how to embed Spotify podcast content in the Tokyo-Nord theme. This example uses:
+
+- Spotify embed player (configured via `embedPlayers` with `type: "spotify"`)
+- Multiple hosts (comma-separated in the `host` field)
+- Guest information array
+- Comedy/interview-focused tags
+
+**Official SmartLess Podcast:** Available on Spotify and other podcast platforms
+
+Replace this content with your own podcast episodes when you're ready to publish.
+
 ---
 
 ## About This Episode

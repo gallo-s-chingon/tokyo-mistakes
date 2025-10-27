@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web Development on My cool site</title>
+    <link>https://example.com/tags/web-development/</link>
+    <description>Recent content in Web Development on My cool site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 20 Oct 2025 10:00:00 -0700</lastBuildDate>
+    <atom:link href="https://example.com/tags/web-development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Interview: Dev Magazine Q&amp;A on Modern Web Development</title>
+      <link>https://example.com/featured/interview-dev-magazine-demo/</link>
+      <pubDate>Mon, 20 Oct 2025 10:00:00 -0700</pubDate>
+      <guid>https://example.com/featured/interview-dev-magazine-demo/</guid>
+      <description>Written interview with Dev Magazine discussing my journey in web development, open source contributions, and building tools for the developer community.</description>
+    </item>
+  </channel>
+</rss>

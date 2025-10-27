@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Podcast Information Fields - My cool site</title><meta name="Description" content="Complete guide to configuring podcast information in frontmatter: podcast name overrides, single and multiple hosts, and guest management."><meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/episodes/frontmatter-podcast-info/" /><link rel="next" href="http://localhost:1313/episodes/frontmatter-essential-fields/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Podcast Information Fields",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/episodes\/frontmatter-podcast-info\/"
+        },"genre": "episodes","keywords": "documentation, frontmatter, podcast, hosts, guests","wordcount":  806 ,
+        "url": "http:\/\/localhost:1313\/episodes\/frontmatter-podcast-info\/","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "My cool site"
+            },"description": "Complete guide to configuring podcast information in frontmatter: podcast name overrides, single and multiple hosts, and guest management."
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          function applyTheme() {
+            const highContrast =  true ;
+            const defaultTheme = 'auto';
+
+            
+            const themeMap = {
+              dark: highContrast ? 'tokyo-night' : 'nordic',
+              light: highContrast ? 'onenord-light' : 'onenord-day'
+            };
+
+            
+            let theme = window.localStorage?.getItem('theme');
+
+            if (!theme) {
+              
+              if (defaultTheme === 'auto') {
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                theme = prefersDark ? themeMap.dark : themeMap.light;
+              } else if (defaultTheme === 'dark') {
+                theme = themeMap.dark;
+              } else {
+                theme = themeMap.light;
+              }
+            }
+
+            
+            const validThemes = ['tokyo-night', 'nordic', 'onenord-light', 'onenord-day'];
+            if (!validThemes.includes(theme)) {
+              theme = themeMap.dark;
+            }
+
+            let isDark = theme === 'tokyo-night' || theme === 'nordic';
+            document.body.setAttribute('data-theme', theme);
+            document.body.setAttribute('theme', isDark ? 'dark' : 'light');
+          }
+
+          applyTheme();
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="My cool site">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/featured/"> Featured </a><a class="menu-item" href="/episodes/"> Episodes </a><a class="menu-item" href="/about/"> About </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="My cool site">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/featured/" title="">Feat</a><a class="menu-item" href="/episodes/" title="">Epi</a><a class="menu-item" href="/about/" title="">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single episode"><h1 class="single-title animate__animated animate__flipInX">Podcast Information Fields</h1><div class="featured-image-container episode-featured-overlay" data-position="lower-right">
+                <div class="featured-image episode-artwork"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/samples/sample-video-production.jpg"
+        data-srcset="/images/samples/sample-video-production.jpg, /images/samples/sample-video-production.jpg 1.5x, /images/samples/sample-video-production.jpg 2x"
+        data-sizes="auto"
+        alt="/images/samples/sample-video-production.jpg"
+        title="Complete guide to configuring podcast information in frontmatter: podcast name overrides, single and multiple hosts, and guest management." /><div class="featured-image-color-overlay" style="background: linear-gradient(135deg, rgba(100, 0, 200, 0.4), rgba(0, 100, 200, 0.4));"></div></div>
+                <div class="featured-metadata-overlay overlay-lower-right" style="--overlay-opacity: 0.85;">
+                    <div class="overlay-content"><div class="post-meta episode-meta"><div class="post-meta-line">
+                                    <span class="episode-number">
+                                        <i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>&nbsp;Episode 105.2
+                                    </span>
+                                </div><div class="post-meta-line">
+                                    <span class="episode-season">
+                                        <i class="fas fa-layer-group fa-fw" aria-hidden="true"></i>&nbsp;Season 1
+                                    </span>
+                                </div><div class="post-meta-line">
+                                    <span class="episode-duration">
+                                        <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;18:00
+                                    </span>
+                                </div><div class="post-meta-line">
+                                    <span class="episode-date">
+                                        <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="0001-01-01">0001-01-01</time>
+                                    </span>
+                                </div><div class="post-meta-line">
+                                    <span class="podcast-name">
+                                        <i class="fas fa-podcast fa-fw" aria-hidden="true"></i>&nbsp;Tokyo Dev Podcast
+                                    </span>
+                                </div><div class="post-meta-line">
+                                    <span class="episode-host">
+                                        <i class="fas fa-microphone fa-fw" aria-hidden="true"></i>&nbsp;Documentation Team
+                                    </span>
+                                </div></div>
+                    </div>
+                </div>
+            </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#about-this-guide">About This Guide</a></li>
+    <li><a href="#podcast-name">Podcast Name</a>
+      <ul>
+        <li><a href="#podcast">podcast</a></li>
+      </ul>
+    </li>
+    <li><a href="#host-information">Host Information</a>
+      <ul>
+        <li><a href="#host-single-host">host (Single Host)</a></li>
+        <li><a href="#host-multiple-hosts">host (Multiple Hosts)</a></li>
+      </ul>
+    </li>
+    <li><a href="#guest-information">Guest Information</a>
+      <ul>
+        <li><a href="#guests">guests</a></li>
+      </ul>
+    </li>
+    <li><a href="#common-configurations">Common Configurations</a>
+      <ul>
+        <li><a href="#solo-episode-default-host">Solo Episode (Default Host)</a></li>
+        <li><a href="#solo-episode-override-host">Solo Episode (Override Host)</a></li>
+        <li><a href="#co-hosted-episode">Co-Hosted Episode</a></li>
+        <li><a href="#interview-episode-single-guest">Interview Episode (Single Guest)</a></li>
+        <li><a href="#interview-episode-multiple-guests">Interview Episode (Multiple Guests)</a></li>
+        <li><a href="#multiple-hosts-with-guests">Multiple Hosts with Guests</a></li>
+      </ul>
+    </li>
+    <li><a href="#advanced-usage">Advanced Usage</a>
+      <ul>
+        <li><a href="#rotating-hosts">Rotating Hosts</a></li>
+        <li><a href="#guest-host-series">Guest Host Series</a></li>
+        <li><a href="#miniseries">Miniseries</a></li>
+      </ul>
+    </li>
+    <li><a href="#validation--fallbacks">Validation &amp; Fallbacks</a></li>
+    <li><a href="#display-examples">Display Examples</a></li>
+    <li><a href="#structured-data">Structured Data</a></li>
+    <li><a href="#quick-reference">Quick Reference</a></li>
+    <li><a href="#related-documentation">Related Documentation</a></li>
+    <li><a href="#image-attribution">Image Attribution</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content episode-content" id="content"><h2 id="about-this-guide">About This Guide</h2>
+<p>This guide covers podcast-specific frontmatter fields that control the podcast name, host information, and guest details for individual episodes.</p>
+<h2 id="podcast-name">Podcast Name</h2>
+<h3 id="podcast">podcast</h3>
+<ul>
+<li><strong>Type:</strong> String</li>
+<li><strong>Required:</strong> No</li>
+<li><strong>Default:</strong> Site-wide setting</li>
+<li><strong>Purpose:</strong> Override podcast name for special series</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">podcast</span>: <span style="color:#e6db74">&#34;Tokyo Dev Podcast&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># OR for special series</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcast</span>: <span style="color:#e6db74">&#34;Tokyo Dev: Behind the Scenes&#34;</span></span></span></code></pre></div><p><strong>When to override:</strong></p>
+<ul>
+<li>Special miniseries within your main podcast</li>
+<li>Guest-hosted series</li>
+<li>Seasonal variations</li>
+<li>Spin-off content</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Main podcast</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcast</span>: <span style="color:#e6db74">&#34;The Tech Show&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Holiday special</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcast</span>: <span style="color:#e6db74">&#34;The Tech Show: Holiday Special&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Guest series</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcast</span>: <span style="color:#e6db74">&#34;The Tech Show: Guest Host Series&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Miniseries</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">podcast</span>: <span style="color:#e6db74">&#34;The Tech Show: Deep Dive into AI&#34;</span></span></span></code></pre></div><p><strong>Site default:</strong>
+Set in <code>hugo.toml</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">podcast</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Your Podcast Name&#34;</span></span></span></code></pre></div><p>Episodes without <code>podcast</code> field will use this default.</p>
+<h2 id="host-information">Host Information</h2>
+<h3 id="host-single-host">host (Single Host)</h3>
+<ul>
+<li><strong>Type:</strong> String</li>
+<li><strong>Required:</strong> No</li>
+<li><strong>Default:</strong> Site-wide setting</li>
+<li><strong>Purpose:</strong> Episode host name</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Single host</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;John Doe&#34;</span></span></span></code></pre></div><p><strong>Best practices:</strong></p>
+<ul>
+<li>Use consistent name formatting across episodes</li>
+<li>Include full name, not just first name</li>
+<li>Match name to other platforms (Apple Podcasts, Spotify)</li>
+</ul>
+<h3 id="host-multiple-hosts">host (Multiple Hosts)</h3>
+<ul>
+<li><strong>Type:</strong> String or Array</li>
+<li><strong>Purpose:</strong> Multiple episode hosts</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Array format (recommended)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: [<span style="color:#e6db74">&#34;John Doe&#34;</span>, <span style="color:#e6db74">&#34;Jane Smith&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># String format (alternative)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;John Doe, Jane Smith&#34;</span></span></span></code></pre></div><p><strong>Array format vs String format:</strong></p>
+<p><strong>Array format</strong> (recommended):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">host</span>: [<span style="color:#e6db74">&#34;John Doe&#34;</span>, <span style="color:#e6db74">&#34;Jane Smith&#34;</span>, <span style="color:#e6db74">&#34;Alex Johnson&#34;</span>]</span></span></code></pre></div><ul>
+<li>Cleaner</li>
+<li>Easier to parse programmatically</li>
+<li>Better for structured data</li>
+<li>Works with theme templates</li>
+</ul>
+<p><strong>String format:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;John Doe, Jane Smith, Alex Johnson&#34;</span></span></span></code></pre></div><ul>
+<li>Simpler for quick edits</li>
+<li>Works for display purposes</li>
+<li>Less structured</li>
+</ul>
+<p><strong>Site default:</strong>
+Set in <code>hugo.toml</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">podcast</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">host</span> = <span style="color:#e6db74">&#34;Default Host Name&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># OR</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">host</span> = [<span style="color:#e6db74">&#34;Host 1&#34;</span>, <span style="color:#e6db74">&#34;Host 2&#34;</span>]</span></span></code></pre></div><p><strong>Display:</strong></p>
+<ul>
+<li>Shows as &ldquo;Hosted by John Doe and Jane Smith&rdquo;</li>
+<li>Appears in episode metadata</li>
+<li>Used in structured data (Schema.org)</li>
+</ul>
+<h2 id="guest-information">Guest Information</h2>
+<h3 id="guests">guests</h3>
+<ul>
+<li><strong>Type:</strong> Array</li>
+<li><strong>Required:</strong> No</li>
+<li><strong>Default:</strong> <code>[]</code> (no guests)</li>
+<li><strong>Purpose:</strong> Guest names for the episode</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">guests</span>: []  <span style="color:#75715e"># No guests</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">guests</span>: [<span style="color:#e6db74">&#34;Guest Name&#34;</span>]  <span style="color:#75715e"># Single guest</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">guests</span>: [<span style="color:#e6db74">&#34;Guest 1&#34;</span>, <span style="color:#e6db74">&#34;Guest 2&#34;</span>, <span style="color:#e6db74">&#34;Guest 3&#34;</span>]  <span style="color:#75715e"># Multiple</span></span></span></code></pre></div><p><strong>Examples:</strong></p>
+<p><strong>No guests:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">guests</span>: []</span></span></code></pre></div><p><strong>Single guest:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">guests</span>: [<span style="color:#e6db74">&#34;Dr. Jane Smith&#34;</span>]</span></span></code></pre></div><p><strong>Multiple guests:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">guests</span>: [<span style="color:#e6db74">&#34;Dr. Jane Smith&#34;</span>, <span style="color:#e6db74">&#34;Prof. John Doe&#34;</span>, <span style="color:#e6db74">&#34;Alex Developer&#34;</span>]</span></span></code></pre></div><p><strong>Best practices:</strong></p>
+<ul>
+<li>Include titles/credentials when relevant (Dr., Prof.)</li>
+<li>Use full names</li>
+<li>Order guests by prominence in episode</li>
+<li>Maintain consistent name formatting</li>
+</ul>
+<p><strong>Display:</strong></p>
+<ul>
+<li>Shows as &ldquo;With guests: Jane Smith and John Doe&rdquo;</li>
+<li>Appears below host information</li>
+<li>Used for interview episode types</li>
+<li>Can be styled differently in templates</li>
+</ul>
+<h2 id="common-configurations">Common Configurations</h2>
+<h3 id="solo-episode-default-host">Solo Episode (Default Host)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Solo Episode&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">created</span>: <span style="color:#e6db74">2025-10-27</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">42</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Uses site default host</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">guests</span>: []
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><h3 id="solo-episode-override-host">Solo Episode (Override Host)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Guest Host Episode&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">created</span>: <span style="color:#e6db74">2025-10-27</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">43</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;Special Guest Host&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">guests</span>: []
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><h3 id="co-hosted-episode">Co-Hosted Episode</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Co-Hosted Discussion&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">created</span>: <span style="color:#e6db74">2025-10-27</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">44</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: [<span style="color:#e6db74">&#34;Primary Host&#34;</span>, <span style="color:#e6db74">&#34;Co-Host&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">guests</span>: []
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><h3 id="interview-episode-single-guest">Interview Episode (Single Guest)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Interview with Dr. Smith&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">created</span>: <span style="color:#e6db74">2025-10-27</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">45</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeType</span>: <span style="color:#e6db74">&#34;interview&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;Host Name&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">guests</span>: [<span style="color:#e6db74">&#34;Dr. Jane Smith&#34;</span>]
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><h3 id="interview-episode-multiple-guests">Interview Episode (Multiple Guests)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Panel Discussion&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">created</span>: <span style="color:#e6db74">2025-10-27</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">46</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeType</span>: <span style="color:#e6db74">&#34;interview&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;Host Name&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">guests</span>: [<span style="color:#e6db74">&#34;Guest 1&#34;</span>, <span style="color:#e6db74">&#34;Guest 2&#34;</span>, <span style="color:#e6db74">&#34;Guest 3&#34;</span>]
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><h3 id="multiple-hosts-with-guests">Multiple Hosts with Guests</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Special Episode&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">created</span>: <span style="color:#e6db74">2025-10-27</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeNumber</span>: <span style="color:#ae81ff">47</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: [<span style="color:#e6db74">&#34;Host 1&#34;</span>, <span style="color:#e6db74">&#34;Host 2&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">guests</span>: [<span style="color:#e6db74">&#34;Special Guest&#34;</span>]
+</span></span><span style="display:flex;"><span>---</span></span></code></pre></div><h2 id="advanced-usage">Advanced Usage</h2>
+<h3 id="rotating-hosts">Rotating Hosts</h3>
+<p>For podcasts with rotating hosts, override per episode:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Episode 1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;Host A&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Episode 2</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;Host B&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Episode 3</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: [<span style="color:#e6db74">&#34;Host A&#34;</span>, <span style="color:#e6db74">&#34;Host C&#34;</span>]</span></span></code></pre></div><h3 id="guest-host-series">Guest Host Series</h3>
+<p>Special series with different hosts:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">podcast</span>: <span style="color:#e6db74">&#34;Main Podcast: Guest Host Series&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;Guest Host Name&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">episodeType</span>: <span style="color:#e6db74">&#34;full&#34;</span></span></span></code></pre></div><h3 id="miniseries">Miniseries</h3>
+<p>Override both podcast name and hosts:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">podcast</span>: <span style="color:#e6db74">&#34;Main Podcast: Special Miniseries&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">host</span>: <span style="color:#e6db74">&#34;Miniseries Host&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">season</span>: <span style="color:#ae81ff">1</span></span></span></code></pre></div><h2 id="validation--fallbacks">Validation &amp; Fallbacks</h2>
+<p><strong>If host field is missing:</strong></p>
+<ul>
+<li>Theme uses site-wide default from <code>hugo.toml</code></li>
+<li>Warning may appear in development mode</li>
+</ul>
+<p><strong>If guests field is missing:</strong></p>
+<ul>
+<li>Defaults to empty array <code>[]</code></li>
+<li>No guest information displayed</li>
+<li>No errors or warnings</li>
+</ul>
+<p><strong>If podcast field is missing:</strong></p>
+<ul>
+<li>Uses site-wide podcast name</li>
+<li>No errors or warnings</li>
+</ul>
+<h2 id="display-examples">Display Examples</h2>
+<p><strong>Single host, no guests:</strong></p>
+<pre tabindex="0"><code>Hosted by John Doe</code></pre><p><strong>Multiple hosts:</strong></p>
+<pre tabindex="0"><code>Hosted by John Doe and Jane Smith</code></pre><p><strong>With single guest:</strong></p>
+<pre tabindex="0"><code>Hosted by John Doe
+With guest: Dr. Jane Smith</code></pre><p><strong>With multiple guests:</strong></p>
+<pre tabindex="0"><code>Hosted by John Doe
+With guests: Dr. Jane Smith, Prof. John Doe, and Alex Developer</code></pre><h2 id="structured-data">Structured Data</h2>
+<p>These fields populate Schema.org structured data:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;@type&#34;</span>: <span style="color:#e6db74">&#34;PodcastEpisode&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Episode Title&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;author&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;@type&#34;</span>: <span style="color:#e6db74">&#34;Person&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Host Name&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;contributor&#34;</span>: [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;@type&#34;</span>: <span style="color:#e6db74">&#34;Person&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Guest Name&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div><p>This improves:</p>
+<ul>
+<li>Search engine understanding</li>
+<li>Rich snippets in search results</li>
+<li>Voice assistant integration</li>
+<li>Podcast app metadata</li>
+</ul>
+<h2 id="quick-reference">Quick Reference</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Field</th>
+          <th>Type</th>
+          <th>Required</th>
+          <th>Default</th>
+          <th>Example</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>podcast</code></td>
+          <td>string</td>
+          <td>No</td>
+          <td>Site default</td>
+          <td><code>&quot;Podcast Name&quot;</code></td>
+      </tr>
+      <tr>
+          <td><code>host</code></td>
+          <td>string/array</td>
+          <td>No</td>
+          <td>Site default</td>
+          <td><code>&quot;John Doe&quot;</code> or <code>[&quot;John&quot;, &quot;Jane&quot;]</code></td>
+      </tr>
+      <tr>
+          <td><code>guests</code></td>
+          <td>array</td>
+          <td>No</td>
+          <td><code>[]</code></td>
+          <td><code>[&quot;Guest 1&quot;, &quot;Guest 2&quot;]</code></td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="related-documentation">Related Documentation</h2>
+<ul>
+<li><a href="/episodes/frontmatter-essential-fields/" rel="">Essential Fields</a> - Required frontmatter</li>
+<li><a href="/episodes/episode-types-demo/" rel="">Episode Types</a> - Episode type configuration</li>
+<li><a href="/episodes/frontmatter-options-demo/" rel="">Complete Reference</a> - All frontmatter fields</li>
+<li><a href="/episodes/frontmatter-content-metadata/" rel="">Content Metadata</a> - Tags and descriptions</li>
+</ul>
+<h2 id="image-attribution">Image Attribution</h2>
+<p>Featured image: Photo by Donald Tong from Pexels (CC0 License)</p>
+<ul>
+<li>Source: <a href="https://www.pexels.com/photo/man-in-white-dress-shirt-sitting-on-black-rolling-chair-while-facing-black-computer-set-and-smiling-325229/" target="_blank" rel="noopener noreffer ">https://www.pexels.com/photo/man-in-white-dress-shirt-sitting-on-black-rolling-chair-while-facing-black-computer-set-and-smiling-325229/</a></li>
+<li>License: Creative Commons Zero (CC0)</li>
+<li>Free to use with no attribution required</li>
+</ul>
+<hr>
+<p><strong>Documentation Version:</strong> 1.0
+<strong>Last Updated:</strong> 2025-10-27
+<strong>Theme:</strong> Tokyo-Nord
+<strong>Hugo Version:</strong> 0.122+</p>
+</div><div class="podcast-subscribe-section">
+    <h3 class="subscribe-title">Subscribe to the podcast</h3><div class="subscribe-buttons-container"></div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span></span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A1313%2Fepisodes%2Ffrontmatter-podcast-info%2F&amp;text=Complete&#43;guide&#43;to&#43;configuring&#43;podcast&#43;information&#43;in&#43;frontmatter%3A&#43;podcast&#43;name&#43;overrides%2C&#43;single&#43;and&#43;multiple&#43;hosts%2C&#43;and&#43;guest&#43;management.&amp;hashtags=documentation%2Cfrontmatter%2Cpodcast%2Chosts%2Cguests" target="_blank" rel="noopener noreferrer" title="Share on X"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="https://www.facebook.com/sharer/sharer.php?u=http%253A%252F%252Flocalhost%253A1313%252Fepisodes%252Ffrontmatter-podcast-info%252F" target="_blank" rel="noopener noreferrer" title="Share on Facebook"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="https://www.linkedin.com/sharing/share-offsite/?url=http%253A%252F%252Flocalhost%253A1313%252Fepisodes%252Ffrontmatter-podcast-info%252F" target="_blank" rel="noopener noreferrer" title="Share on Linkedin"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="https://news.ycombinator.com/submitlink?u=http%253A%252F%252Flocalhost%253A1313%252Fepisodes%252Ffrontmatter-podcast-info%252F&t=Podcast%2bInformation%2bFields" target="_blank" rel="noopener noreferrer" title="Share on Hacker News"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="https://www.reddit.com/submit?url=http%253A%252F%252Flocalhost%253A1313%252Fepisodes%252Ffrontmatter-podcast-info%252F&title=Podcast%2bInformation%2bFields" target="_blank" rel="noopener noreferrer" title="Share on Reddit"><i class="fab fa-reddit fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%253A%252F%252Flocalhost%253A1313%252Fepisodes%252Ffrontmatter-podcast-info%252F&text=Complete%2bguide%2bto%2bconfiguring%2bpodcast%2binformation%2bin%2bfrontmatter%253A%2bpodcast%2bname%2boverrides%252C%2bsingle%2band%2bmultiple%2bhosts%252C%2band%2bguest%2bmanagement." target="_blank" rel="noopener noreferrer" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/documentation/">Documentation</a>,&nbsp;<a href="/tags/frontmatter/">Frontmatter</a>,&nbsp;<a href="/tags/podcast/">Podcast</a>,&nbsp;<a href="/tags/hosts/">Hosts</a>,&nbsp;<a href="/tags/guests/">Guests</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+            <a href="/episodes/frontmatter-essential-fields/" class="next" rel="next" title="Essential Frontmatter Fields">Essential Frontmatter Fields<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.151.2">Hugo</a> | Theme - <a href="https://github.com/gallo-s-chingon/Tokyo-Nord" target="_blank" rel="noopener noreffer" title="Tokyo-Nord 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> Tokyo-Nord</a>
+                </div>
+                <div class="footer-line">
+                    Created by <a href="https://github.com/gallo-s-chingon" target="_blank" rel="noopener noreferrer">Gallo Chingon</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">My cool site</a></span>&nbsp;|&nbsp;<span class="license"><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><script src="/lib/autocomplete/autocomplete.min.js"></script><script src="/lib/lunr/lunr.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script>window.config={"comment":{},"highContrast":true,"lightgallery":true,"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script src="/js/theme.min.js"></script></body>
+</html>

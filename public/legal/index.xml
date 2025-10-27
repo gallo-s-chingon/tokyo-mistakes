@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Legals on My cool site</title>
-    <link>http://localhost:1313/legal/</link>
+    <link>https://example.com/legal/</link>
     <description>Recent content in Legals on My cool site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 15 Jan 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/legal/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://example.com/legal/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cookie Policy</title>
-      <link>http://localhost:1313/legal/cookies/</link>
+      <link>https://example.com/legal/cookies/</link>
       <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/legal/cookies/</guid>
+      <guid>https://example.com/legal/cookies/</guid>
       <description>&lt;h2 id=&#34;what-are-cookies-no-not-that-kind&#34;&gt;What Are Cookies (No, Not That Kind)&lt;/h2&gt;&#xA;&lt;p&gt;Cookies are tiny text files that websites store on your device. They&amp;rsquo;re named after fortune cookies, not chocolate chip cookies, which is honestly disappointing.&lt;/p&gt;&#xA;&lt;p&gt;We wish this was about actual cookies. Those would be way more fun to write about.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Privacy Policy</title>
-      <link>http://localhost:1313/legal/privacy/</link>
+      <link>https://example.com/legal/privacy/</link>
       <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/legal/privacy/</guid>
+      <guid>https://example.com/legal/privacy/</guid>
       <description>&lt;h2 id=&#34;the-real-talk-version&#34;&gt;The Real Talk Version&lt;/h2&gt;&#xA;&lt;p&gt;We don&amp;rsquo;t want your data. We grew up before surveillance capitalism was a thing, and honestly, we miss those days. This site collects the bare minimum to function, and we&amp;rsquo;re not selling anything to anyone.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Terms of Use</title>
-      <link>http://localhost:1313/legal/terms/</link>
+      <link>https://example.com/legal/terms/</link>
       <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/legal/terms/</guid>
+      <guid>https://example.com/legal/terms/</guid>
       <description>&lt;h2 id=&#34;the-basics-tldr&#34;&gt;The Basics (TL;DR)&lt;/h2&gt;&#xA;&lt;p&gt;Don&amp;rsquo;t be a jerk. Don&amp;rsquo;t steal our stuff. Don&amp;rsquo;t sue us if you don&amp;rsquo;t like our opinions. We&amp;rsquo;re just people on the internet talking about things. If that sounds reasonable, welcome. If not, there&amp;rsquo;s the door.&lt;/p&gt;</description>
     </item>
   </channel>
