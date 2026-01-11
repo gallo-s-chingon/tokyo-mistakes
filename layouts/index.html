@@ -1,51 +1,41 @@
-{{/* saved as index.html in tokyo-mistakes/layouts */}} {{ define "main" }}
-<div class="home">
-  <div class="container">
-    <header class="home-header">
-      <h1 class="home-title">{{ .Site.Title }}</h1>
-      {{ if .Site.Params.description }}
-      <p class="home-description">{{ .Site.Params.description }}</p>
-      {{ end }}
-    </header>
+{{- define "content" -}}
+    {{- $params := .Scratch.Get "params" -}}
+    {{- $profile := .Site.Params.home.profile -}}
+    {{- $posts := .Site.Params.home.posts -}}
 
-    <!-- Featured Content -->
-    {{ $recentPosts := where .Site.RegularPages "Type" "in" (slice "podcast"
-    "featured") | first 3 }} {{ if $recentPosts }}
-    <section class="featured-content">
-      <h2>Latest Content</h2>
-      <div class="featured-grid">
-        {{ range $recentPosts }}
-        <article class="featured-post">
-          <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-          <p class="featured-meta">
-            {{ .Date.Format "Jan 2, 2006" }} • {{ .Section | title }}
-          </p>
-          {{ if .Summary }}
-          <p class="featured-summary">{{ .Summary | truncate 150 }}</p>
-          {{ end }}
-        </article>
-        {{ end }}
-      </div>
-    </section>
-    {{ end }}
+    <div class="page home"{{ if ne $posts.enable false }} data-home="posts"{{ end }}>
+        {{- /* Profile */ -}}
+        {{- if ne $profile.enable false -}}
+            {{- partial "home/profile.html" . -}}
+        {{- end -}}
 
-    <!-- Quick Links -->
-    <section class="home-links">
-      <div class="home-buttons">
-        <a href="/podcast/" class="home-btn">
-          <i class="fas fa-podcast"></i>
-          <span>Listen to The Podcast</span>
-        </a>
-        <a href="/featured/" class="home-btn">
-          <i class="fas fa-microphone"></i>
-          <span>Guest Appearances</span>
-        </a>
-        <a href="/about/" class="home-btn">
-          <i class="fas fa-user"></i>
-          <span>About Gallo</span>
-        </a>
-      </div>
-    </section>
-  </div>
-</div>
-{{ end }}
+        {{- /* Content */ -}}
+        {{- if .Content -}}
+            <div class="single">
+                <div class="content" id="content">
+                    {{- dict "Content" .Content "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
+                </div>
+            </div>
+        {{- end -}}
+
+        {{- /* Posts */ -}}
+        {{- if ne $posts.enable false | and .Site.RegularPages -}}
+            {{- /* Paginate */ -}}
+            {{- $pages := where .Site.RegularPages "Type" "posts" -}}
+            {{- if .Site.Params.page.hiddenFromHomePage -}}
+                {{- $pages = where $pages "Params.hiddenfromhomepage" false -}}
+            {{- else -}}
+                {{- $pages = where $pages "Params.hiddenfromhomepage" "!=" true -}}
+            {{- end -}}
+            {{- with $posts.paginate | default .Site.Params.paginate -}}
+                {{- $pages = $.Paginate $pages . -}}
+            {{- else -}}
+                {{- $pages = .Paginate $pages -}}
+            {{- end -}}
+            {{- range $pages.Pages -}}
+                {{- .Render "summary" -}}
+            {{- end -}}
+            {{- partial "paginator.html" . -}}
+        {{- end -}}
+    </div>
+{{- end -}}

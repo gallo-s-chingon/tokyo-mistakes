@@ -1,0 +1,199 @@
+baseURL = "https://schingon.com"
+languageCode = "en-us"
+title = "S Chingon"
+theme = "tokyo-mistakes"
+
+buildDrafts = false
+buildFuture = false
+canonifyURLs = true
+
+[taxonomies]
+tag = "tags"
+category = "categories"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        "block" = true
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = true
+    hl_Lines = ""
+    lineAnchors = ""
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false
+    style = "tokyonight-night"
+    tabWidth = 4
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 1
+
+[params]
+  # Author and description
+  author = "Author Name" # placeholder: string
+  description = "Insert your site description here" # placeholder: string
+
+  # Theme view system default setting
+  listViewDefault = "list" # placeholder: string, options: "list", "grid"
+
+  # Color scheme options
+  # Available schemes: "tokyo-night", "tomorrow-night-blue", "solarized"
+  # Default is "tokyo-night".
+  # Use boolean flags for modes: colorful_mode, gradient_mode (only one can be true).
+  color_schemes = ["tokyo-night", "tomorrow-night-blue", "solarized"] # placeholder: array of strings
+  color_scheme_default = "tokyo-night" # placeholder: string, must be one of the color_schemes
+  colorful_mode = false # placeholder: boolean
+  gradient_mode = false # placeholder: boolean
+
+  # Navigation bar behavior
+  navbar_hide_on_scroll = true # placeholder: boolean
+
+  # Table of Contents sidebar features
+  toc_sticky = true # placeholder: boolean
+  toc_highlight_active_section = true # placeholder: boolean
+  toc_smooth_scroll = true # placeholder: boolean
+
+  # Search overlay configuration
+  search_overlay_blur = true # placeholder: boolean
+
+  # Hero image system configurations
+  post_hero_image_display = "background" # placeholder: string, options: "background", "normal"
+  list_hero_image_fallback_priority_1 = "youtube_id" # placeholder: string, options: "youtube_id", "spotify_id", "post_image"
+  list_hero_image_fallback_priority_2 = "spotify_id" # placeholder: string, options: "youtube_id", "spotify_id", "post_image"
+  list_hero_image_fallback_priority_3 = "post_image" # placeholder: string, options: "youtube_id", "spotify_id", "post_image"
+
+  # Admonition types
+  admonitions = ["note", "tip", "info", "warning", "danger", "success"] # placeholder: array of strings
+
+  # Syntax highlighting style
+  syntax_highlight_style = "tokyonight-night" # placeholder: string, e.g., "monokai", "github", "tokyonight-night"
+
+  # SEO configurations
+  seo_structured_data = ["Article", "WebSite", "Person", "BreadcrumbList"] # placeholder: array of strings
+  seo_meta_tags = true # placeholder: boolean
+
+  # Build pipeline and optimization settings
+  image_lazy_loading = true # placeholder: boolean
+  script_deferred = true # placeholder: boolean
+  critical_css = true # placeholder: boolean
+
+  # Social Share Settings
+  # Placeholder: boolean (true/false) for enabling/disabling sharing buttons
+  share_facebook = true
+  share_linkedin = true
+  share_pinterest = true
+  share_reddit = true
+  share_telegram = true
+  share_twitter = true
+  share_whatsapp = true
+  share_email = true
+
+  # Country/Region specific social links or services
+  share_alipay = false # China
+  share_amazon = false # Global, but region-specific storefronts
+  share_amazon_aws = false # Global
+  share_apple = false # Global
+  share_appletv = false # Global
+  share_applemusic = false # Global
+  share_applepodcasts = false # Global
+  share_baidu = false # China
+  share_bilibili = false # Primarily China, also global presence
+  share_codepen = false # Global
+  share_douban = false # China
+  share_douyin = false # China (TikTok's Chinese version)
+  share_dribbble = false # Global
+  share_facebook_messenger = false # Global
+  share_figma = false # Global
+  share_foursquare = false # Global, check availability by region
+  share_google_drive = false # Global
+  share_google_plus = false # Deprecated, but historically global
+  share_instagram = false # Global
+  share_line = false # Asia, particularly Japan, Taiwan, Thailand, Indonesia
+  share_linkedin = true # Global
+  share_linkedin_ad_tracker = false # placeholder: string, for LinkedIn ad tracker ID
+  share_mastodon = false # Global, decentralized
+  share_medium = false # Global
+  share_messenger = false # Global
+  share_naver = false # South Korea
+  share_okid = false # Russia
+  share_pinterest = false # Global
+  share_pocket = false # Global
+  share_qq = false # China
+  share_reddit = false # Global
+  share_sinaweibo = false # China
+  share_slack = false # Global
+  share_snapchat = false # Global
+  share_spotify = false # Global
+  share_stack_overflow = false # Global
+  share_steam = false # Global
+  share_stumbleupon = false # Deprecated, was global
+  share_telegram = false # Global
+  share_tencent_wechat = false # China
+  share_tiktok = false # Global
+  share_tumblr = false # Global
+  share_twitch = false # Global
+  share_twitter = false # Global
+  share_viber = false # Global, popular in Eastern Europe, SE Asia, Middle East
+  share_vk = false # Russia and CIS countries
+  share_wechat = false # China
+  share_whatsapp = false # Global
+  share_xing = false # Primarily German-speaking countries, Central Europe
+  share_yahoo = false # Global, strong presence in Japan
+  share_yandex = false # Russia and CIS countries
+  share_youtube = false # Global
+
+  # Comment System Configuration (placeholder values)
+  [params.comment]
+    # Giscus Configuration
+    # Refer to Giscus documentation for setup: https://giscus.app/
+    # Steps:
+    # 1. Create a GitHub Discussion repository.
+    # 2. Configure Giscus app on your GitHub repository.
+    # 3. Obtain your Giscus repo and category information.
+    giscus_repo = "placeholder/repo" # placeholder: string, format: "owner/repo"
+    giscus_repo_id = "placeholder_repo_id" # placeholder: string
+    giscus_category = "General" # placeholder: string, the category name for discussions
+    giscus_category_id = "placeholder_category_id" # placeholder: string
+    giscus_mapping = "pathname" # placeholder: string, options: "pathname", "url", "title", "og:title"
+    giscus_strict_theme = false # placeholder: boolean, enforce theme strictly
+    giscus_theme = "preferred-color-scheme" # placeholder: string, options: "light", "dark", "transparent_theme", "preferred-color-scheme"
+    giscus_reactions_enabled = "1" # placeholder: string, options: "0" (disabled), "1" (enabled)
+    giscus_emit_metadata = "0" # placeholder: string, options: "0" (disabled), "1" (enabled)
+    giscus_input_position = "top" # placeholder: string, options: "top", "bottom"
+    giscus_loading = "lazy" # placeholder: string, options: "lazy", "eager"
+    giscus_cross_origin = "anonymous" # placeholder: string, options: "anonymous", "use-credentials"
+
+    # Other comment systems (placeholders and setup guidance)
+    # disqus_enable = false # placeholder: boolean
+    # disqus_shortname = "placeholder_disqus_shortname" # placeholder: string
+
+    # utterances_enable = false # placeholder: boolean
+    # utterances_repo = "placeholder/repo" # placeholder: string, format: "owner/repo"
+    # utterances_issue_term = "pathname" # placeholder: string, options: "pathname", "url", "title", "issue-number"
+    # utterances_theme = "github-light" # placeholder: string, options: "github-light", "github-dark", "preferred-color-scheme"
+    # utterances_label = "comments" # placeholder: string, label for issues created
+
+    # valine_enable = false # placeholder: boolean
+    # valine_appId = "placeholder_app_id" # placeholder: string
+    # valine_appKey = "placeholder_app_key" # placeholder: string
+    # valine_serverURLs = "placeholder_server_urls" # placeholder: string, comma-separated
+    # valine_placeholder = "Leave your comment here..." # placeholder: string
+    # valine_avatar = "retro" # placeholder: string, options: "constructor", "lb", "gravatar", "monsterid", "wavatar", "retro", "robohash", "identicon", "mm"
+    # valine_lang = "en" # placeholder: string
+
+    # Facebook Comments Configuration
+    # facebook_enable = false # placeholder: boolean
+    # facebook_appid = "placeholder_facebook_app_id" # placeholder: string
+
+    # Cusdis Configuration
+    # cusdis_enable = false # placeholder: boolean
+    # cusdis_app_id = "placeholder_cusdis_app_id" # placeholder: string
+    # cusdis_script_src = "https://example.com/widget.js" # placeholder: string
+
+# Theme features synopsis and pruning decisions will follow in the next steps.

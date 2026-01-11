@@ -1,29 +1,24 @@
-{{/* saved as single.html in tokyo-mistakes/layouts/_default */}} {{ define
-"main" }}
-<article class="container post">
-  <header class="post__header">
-    <h1 class="post__title">{{ .Title }}</h1>
-    <div class="post__meta">{{ partial "meta/post-meta.html" . }}</div>
-    {{ with (or .Params.post_image .Params.image) }}
-    <figure class="post__hero">
-      <img src="{{ . | absURL }}" alt="{{ $.Title }}" />
-    </figure>
-    {{ end }} {{ with .Params.youtube }} {{ partial "embeds/youtube-single.html"
-    (dict "ctx" $ "page" . "id" .) }} {{ end }} {{ with .Params.spotify }} {{
-    partial "embeds/spotify-single.html" (dict "ctx" $ "page" . "id" .) }} {{
-    end }}
-  </header>
+{{- define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end -}}
 
-  <div class="post__body">
-    <div class="post__content">{{ .Content }}</div>
-    <aside class="post__toc">{{ partial "post-toc.html" . }}</aside>
-  </div>
+{{- define "content" -}}
+    {{- $params := .Scratch.Get "params" -}}
+    <div class="page single special">
+        {{- /* Title */ -}}
+        <h1 class="single-title animate__animated animate__pulse animate__faster">
+            {{- .Title -}}
+        </h1>
 
-  {{ if or (and (isset .Params "comments") .Params.comments) (and (not (isset
-  .Params "comments")) .Site.Params.commentsDefault) }}
-  <section id="comments" data-comments-anchor>
-    {{ partial "comments/giscus.html" . }}
-  </section>
-  {{ end }}
-</article>
-{{ end }}
+        {{- /* Subtitle */ -}}
+        {{- with $params.subtitle -}}
+            <h2 class="single-subtitle">{{ . }}</h2>
+        {{- end -}}
+
+        {{- /* Content */ -}}
+        <div class="content" id="content">
+            {{- dict "Content" .Content "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
+        </div>
+
+        {{- /* Comment */ -}}
+        {{- partial "comment.html" . -}}
+    </div>
+{{- end -}}
